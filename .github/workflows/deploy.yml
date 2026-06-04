@@ -37,4 +37,3 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: it-history-journal
           directory: _site
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
