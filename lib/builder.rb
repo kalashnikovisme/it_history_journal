@@ -50,25 +50,51 @@ class Builder
     all_articles = load_articles
     build_redirect
     compile_css
-
-    LANGUAGES.each do |lang|
-      articles = all_articles.select { |a| a.lang == lang }
-                             .sort_by(&:sort_key).reverse
-      build_index(lang, articles)
-      build_calendar(lang, articles)
-      articles.each { |article| build_article(article, articles) }
-    end
-
+    build_all_html(all_articles)
     copy_assets
   end
 
+  def build_html
+    all_articles = load_articles
+    build_redirect
+    build_all_html(all_articles)
+  end
+
+  def rebuild_article(file_path)
+    all_articles = load_articles
+    article      = Article.parse(file_path, site_root: @site_root)
+    build_article(article, sorted_for_lang(all_articles, article.lang))
+  end
+
+  def rebuild_indexes
+    all_articles = load_articles
+    LANGUAGES.each do |lang|
+      articles = sorted_for_lang(all_articles, lang)
+      build_index(lang, articles)
+      build_calendar(lang, articles)
+    end
+  end
+
   def load_articles
-    Dir.glob(File.join(@site_root, 'articles', '**', '*.md')).map do |path|
+    Dir.glob(File.join(@site_root, 'articles', '**', 'content.md')).map do |path|
       Article.parse(path, site_root: @site_root)
     end
   end
 
   private
+
+  def sorted_for_lang(all_articles, lang)
+    all_articles.select { |a| a.lang == lang }.sort_by(&:sort_key).reverse
+  end
+
+  def build_all_html(all_articles)
+    LANGUAGES.each do |lang|
+      articles = sorted_for_lang(all_articles, lang)
+      build_index(lang, articles)
+      build_calendar(lang, articles)
+      articles.each { |article| build_article(article, articles) }
+    end
+  end
 
   def build_redirect
     html = render_template('redirect', {})
@@ -121,6 +147,11 @@ class Builder
     title = "#{article.title} — #{t[:site_name]}"
     html  = wrap_layout(article.lang, title, inner)
     write_file("#{article.lang}/#{article.date_path}/#{article.slug}/index.html", html)
+
+    if article.cover?
+      dst = File.join(@output_dir, article.lang, article.date_path, article.slug, File.basename(article.cover_path))
+      FileUtils.cp(article.cover_path, dst)
+    end
   end
 
   def build_calendar(lang, articles)

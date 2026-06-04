@@ -7,10 +7,11 @@ RSpec.describe Builder do
   let(:output_dir) { File.join(tmp_dir, '_site') }
   let(:builder)    { Builder.new(site_root: tmp_dir, output_dir: output_dir) }
 
-  def write_article(lang, date_path, filename, content)
-    dir = File.join(tmp_dir, 'articles', lang, date_path)
+  def write_article(lang, date_path, article_name, content, with_cover: false)
+    dir = File.join(tmp_dir, 'articles', lang, date_path, article_name)
     FileUtils.mkdir_p(dir)
-    File.write(File.join(dir, filename), content)
+    File.write(File.join(dir, 'content.md'), content)
+    File.write(File.join(dir, 'cover.png'), "\x89PNG") if with_cover
   end
 
   def write_asset
@@ -20,7 +21,7 @@ RSpec.describe Builder do
   end
 
   before do
-    write_article('en', 'may-19', 'james_gosling_was_born.md', <<~MD)
+    write_article('en', 'may-19', 'james_gosling_was_born', <<~MD)
       ---
       title: "May 19, 1955 — James Gosling Was Born"
       date: "May 19, 1955"
@@ -31,7 +32,7 @@ RSpec.describe Builder do
       James Gosling created Java.
     MD
 
-    write_article('en', 'may-18', 'facebook_ipo.md', <<~MD)
+    write_article('en', 'may-18', 'facebook_ipo', <<~MD)
       ---
       title: "May 18, 2012 — Facebook IPO"
       date: "May 18, 2012"
@@ -41,7 +42,7 @@ RSpec.describe Builder do
       Facebook went public.
     MD
 
-    write_article('ru', 'may-19', 'james_gosling_was_born.md', <<~MD)
+    write_article('ru', 'may-19', 'james_gosling_was_born', <<~MD)
       ---
       title: "19 мая 1955 — Родился Джеймс Гослинг"
       excerpt: "Джеймс Гослинг создал Java."
@@ -136,6 +137,29 @@ RSpec.describe Builder do
     it 'sets the correct lang attribute on the html element' do
       content = File.read(File.join(output_dir, 'en', 'index.html'))
       expect(content).to include('lang="en"').or include("lang='en'")
+    end
+
+    context 'when article has a cover image' do
+      before do
+        write_article('en', 'may-17', 'minecraft', <<~MD, with_cover: true)
+          ---
+          title: "May 17, 2009 — Minecraft"
+          excerpt: "Minecraft released."
+          ---
+          Minecraft released.
+        MD
+        builder.build
+      end
+
+      it 'copies cover.png to the article output directory' do
+        path = File.join(output_dir, 'en', 'may-17', 'minecraft', 'cover.png')
+        expect(File.exist?(path)).to be true
+      end
+
+      it 'includes the cover image tag in the article HTML' do
+        content = File.read(File.join(output_dir, 'en', 'may-17', 'minecraft', 'index.html'))
+        expect(content).to include('cover.png')
+      end
     end
   end
 

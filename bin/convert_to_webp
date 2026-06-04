@@ -1,0 +1,70 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'mini_magick'
+require 'optparse'
+
+options = {
+  quality:   80,
+  max_width: nil,
+  strip:     true,
+}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: bin/convert_to_webp [options] <image> [images...]\n\n" \
+                "Converts images to WebP for web use.\n\n"
+
+  opts.on('-q', '--quality N', Integer,   "WebP quality 1-100 (default: #{options[:quality]})") { |v| options[:quality] = v }
+  opts.on('-w', '--max-width N', Integer, 'Resize to fit within this width (preserves ratio)')  { |v| options[:max_width] = v }
+  opts.on('--[no-]strip',                 'Strip EXIF/metadata (default: yes)')                 { |v| options[:strip] = v }
+  opts.on('-h', '--help')                 { puts opts; exit }
+end.parse!
+
+if ARGV.empty?
+  warn "Error: no input files provided. Run with --help for usage."
+  exit 1
+end
+
+def format_bytes(n)
+  return "#{n} B"                       if n < 1_024
+  return "#{(n / 1_024.0).round(1)} KB" if n < 1_048_576
+  "#{(n / 1_048_576.0).round(1)} MB"
+end
+
+failures = 0
+
+ARGV.each do |input|
+  unless File.exist?(input)
+    warn "  skip    #{input}  (not found)"
+    failures += 1
+    next
+  end
+
+  output = File.join(File.dirname(input), "#{File.basename(input, '.*')}.webp")
+
+  begin
+    image = MiniMagick::Image.open(input)
+
+    if options[:max_width] && image.width > options[:max_width]
+      image.resize "#{options[:max_width]}x>"
+    end
+
+    image.strip if options[:strip]
+    image.format 'webp'
+    image.quality options[:quality].to_s
+    image.write output
+
+    src  = File.size(input)
+    dst  = File.size(output)
+    diff = ((1 - dst.to_f / src) * 100).round(1)
+    sign = diff >= 0 ? "-#{diff}%" : "+#{diff.abs}%"
+
+    puts "  #{File.basename(input).ljust(32)}→  #{File.basename(output)}  " \
+         "(#{format_bytes(src)} → #{format_bytes(dst)}, #{sign})"
+  rescue => e
+    warn "  fail    #{input}  #{e.message}"
+    failures += 1
+  end
+end
+
+exit(failures > 0 ? 1 : 0)

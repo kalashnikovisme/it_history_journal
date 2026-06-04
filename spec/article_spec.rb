@@ -3,9 +3,9 @@ require 'tmpdir'
 require 'fileutils'
 
 RSpec.describe Article do
-  let(:tmp_dir) { Dir.mktmpdir }
-  let(:article_dir) { File.join(tmp_dir, 'articles', 'en', 'may-19') }
-  let(:article_file) { File.join(article_dir, 'james_gosling_was_born.md') }
+  let(:tmp_dir)    { Dir.mktmpdir }
+  let(:article_dir) { File.join(tmp_dir, 'articles', 'en', 'may-19', 'james_gosling_was_born') }
+  let(:article_file) { File.join(article_dir, 'content.md') }
 
   before do
     FileUtils.mkdir_p(article_dir)
@@ -52,7 +52,7 @@ RSpec.describe Article do
       expect(article.date_path).to eq('may-19')
     end
 
-    it 'derives the slug from filename using dashes' do
+    it 'derives the slug from the article directory name' do
       expect(article.slug).to eq('james-gosling-was-born')
     end
 
@@ -67,6 +67,44 @@ RSpec.describe Article do
     it 'extracts content_md as the body without frontmatter' do
       expect(article.content_md).to include('James Gosling created Java.')
       expect(article.content_md).not_to include('title:')
+    end
+
+    it 'sets cover_path to nil when cover.png is absent' do
+      expect(article.cover_path).to be_nil
+    end
+
+    it 'sets cover_path when cover.png is present' do
+      File.write(File.join(article_dir, 'cover.png'), 'PNG')
+      expect(article.cover_path).to eq(File.join(article_dir, 'cover.png'))
+    end
+  end
+
+  describe '#cover?' do
+    it 'returns false when cover.png is absent' do
+      expect(article.cover?).to be false
+    end
+
+    it 'returns true when cover.png is present' do
+      File.write(File.join(article_dir, 'cover.png'), 'PNG')
+      expect(article.cover?).to be true
+    end
+  end
+
+  describe '#cover_url' do
+    it 'returns the cover URL using the actual cover filename' do
+      File.write(File.join(article_dir, 'cover.png'), 'PNG')
+      expect(article.cover_url).to eq('/en/may-19/james-gosling-was-born/cover.png')
+    end
+
+    it 'uses the webp filename when cover.webp is present' do
+      File.write(File.join(article_dir, 'cover.webp'), 'WEBP')
+      expect(article.cover_url).to eq('/en/may-19/james-gosling-was-born/cover.webp')
+    end
+
+    it 'prefers webp over png when both exist' do
+      File.write(File.join(article_dir, 'cover.webp'), 'WEBP')
+      File.write(File.join(article_dir, 'cover.png'), 'PNG')
+      expect(article.cover_url).to eq('/en/may-19/james-gosling-was-born/cover.webp')
     end
   end
 

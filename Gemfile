@@ -10,6 +10,9 @@ gem 'tailwindcss-ruby', '~> 3.4'
 gem 'rake', '~> 13.0'
 
 group :development do
+  gem 'benchmark'
+  gem 'listen', '~> 3.9'
+  gem 'mini_magick', '~> 4.12'
   gem 'rack', '~> 3.1'
   gem 'webrick', '~> 1.8'
 end

@@ -1,0 +1,83 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+
+require 'listen'
+require 'webrick'
+require 'builder'
+
+SITE_ROOT = File.expand_path('..', __dir__)
+SITE_DIR  = File.join(SITE_ROOT, '_site')
+PORT      = 4000
+
+def log(msg, color = :cyan)
+  codes = { cyan: 36, green: 32, yellow: 33, red: 31 }
+  ts = Time.now.strftime('%H:%M:%S')
+  puts "\e[#{codes[color]}m[#{ts}]\e[0m #{msg}"
+end
+
+def safely(label)
+  t = Time.now
+  yield
+  log("#{label} done in #{(Time.now - t).round(2)}s", :green)
+rescue => e
+  log("#{label} failed: #{e.message}", :red)
+  $stderr.puts e.backtrace.first(5).join("\n")
+end
+
+builder = Builder.new(site_root: SITE_ROOT)
+
+log("Initial build (CSS + HTML)...")
+safely("Initial build") { builder.build }
+
+Thread.new do
+  WEBrick::HTTPServer.new(
+    Port: PORT,
+    DocumentRoot: SITE_DIR,
+    Logger: WEBrick::Log.new(File::NULL),
+    AccessLog: []
+  ).start
+end
+
+log("Server: http://localhost:#{PORT}")
+log("Watching articles/ and templates/ — Ctrl+C to stop")
+
+listener = Listen.to(
+  File.join(SITE_ROOT, 'articles'),
+  File.join(SITE_ROOT, 'templates'),
+  only: /\.(md|haml|png|webp|jpe?g)$/
+) do |modified, added, _removed|
+  changed = modified + added
+
+  haml_files = changed.select { |f| f.end_with?('.haml') }
+  md_files   = changed.select { |f| f.end_with?('.md') }
+  png_files  = changed.select { |f| f.match?(/\.(png|webp|jpe?g)$/) }
+
+  if haml_files.any?
+    haml_files.each { |f| log("template: #{f.delete_prefix(SITE_ROOT + '/')}", :yellow) }
+    safely("Full HTML rebuild") { builder.build_html }
+  else
+    # Treat a new/changed cover.png as a change to its article
+    cover_md_files = png_files.map { |f| File.join(File.dirname(f), 'content.md') }
+                               .select { |f| File.exist?(f) }
+
+    all_md = (md_files + cover_md_files).uniq
+
+    if all_md.any?
+      all_md.each { |f| log("article:  #{f.delete_prefix(SITE_ROOT + '/')}", :yellow) }
+      safely("Article + index rebuild") do
+        all_md.each { |path| builder.rebuild_article(path) }
+        builder.rebuild_indexes
+      end
+    end
+  end
+end
+
+listener.start
+
+begin
+  sleep
+rescue Interrupt
+  log("Stopped")
+end

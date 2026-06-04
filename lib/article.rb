@@ -9,6 +9,8 @@ class Article
     9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December'
   }.freeze
 
+  COVER_EXTENSIONS = %w[webp png jpg jpeg].freeze
+
   MONTH_ABBR_MAP = {
     'jan' => 1, 'feb' => 2, 'mar' => 3, 'apr' => 4,
     'may' => 5, 'jun' => 6, 'jul' => 7, 'aug' => 8,
@@ -16,7 +18,7 @@ class Article
   }.freeze
 
   attr_reader :title, :date, :excerpt, :content_md, :slug, :lang,
-              :date_path, :file_path, :month, :day, :popular
+              :date_path, :file_path, :month, :day, :popular, :cover_path
 
   def self.parse(file_path, site_root: '.')
     raw = File.read(file_path)
@@ -25,14 +27,18 @@ class Article
     abs_articles = File.expand_path('articles', site_root)
     rel_path = file_path.delete_prefix(abs_articles + '/')
     parts = rel_path.split('/')
-    lang = parts[0]
-    date_path = parts[1]
-    filename = File.basename(file_path, '.md')
-    slug = filename.tr('_', '-')
+    lang       = parts[0]
+    date_path  = parts[1]
+    dir_name   = parts[2]
+    slug       = dir_name.tr('_', '-')
 
     month_abbr, day_str = date_path.split('-')
     month = MONTH_ABBR_MAP[month_abbr.downcase]
-    day = day_str.to_i
+    day   = day_str.to_i
+
+    article_dir = File.dirname(file_path)
+    cover = COVER_EXTENSIONS.map { |ext| File.join(article_dir, "cover.#{ext}") }
+                             .find { |path| File.exist?(path) }
 
     new(
       title:      parsed.front_matter['title'] || slug.gsub('-', ' ').capitalize,
@@ -45,7 +51,8 @@ class Article
       month:      month,
       day:        day,
       popular:    parsed.front_matter['popular'] || false,
-      file_path:  file_path
+      file_path:  file_path,
+      cover_path: cover
     )
   end
 
@@ -61,7 +68,7 @@ class Article
   end
 
   def initialize(title:, date:, excerpt:, content_md:, lang:, date_path:, slug:,
-                 month:, day:, popular:, file_path:)
+                 month:, day:, popular:, file_path:, cover_path: nil)
     @title      = title
     @date       = date
     @excerpt    = excerpt
@@ -73,6 +80,15 @@ class Article
     @day        = day
     @popular    = popular
     @file_path  = file_path
+    @cover_path = cover_path
+  end
+
+  def cover?
+    !cover_path.nil?
+  end
+
+  def cover_url
+    "#{url}/#{File.basename(cover_path)}"
   end
 
   def content_html

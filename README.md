@@ -6,11 +6,23 @@ Published at [history.purple-magic.com](https://history.purple-magic.com). Avail
 
 ## Structure
 
-- `articles/en/<mon-dd>/<slug>.md` — English articles
-- `articles/ru/<mon-dd>/<slug>.md` — Russian articles
-- `templates/` — HAML page templates
-- `lib/` — Ruby build scripts
-- `spec/` — RSpec tests
+```
+articles/
+  en/
+    may-19/
+      james_gosling_was_born/
+        content.md   ← article text + frontmatter
+        cover.png    ← optional cover image (webp preferred)
+  ru/
+    may-19/
+      james_gosling_was_born/
+        content.md
+        cover.png
+templates/           ← HAML page templates
+lib/                 ← Ruby build system
+bin/                 ← utility scripts
+spec/                ← RSpec tests
+```
 
 ### Article frontmatter
 
@@ -27,7 +39,16 @@ Article body in Markdown (GFM).
 
 ### URL mapping
 
-`articles/en/may-19/james_gosling_was_born.md` → `/en/may-19/james-gosling-was-born`
+`articles/en/may-19/james_gosling_was_born/content.md` → `/en/may-19/james-gosling-was-born`
+
+### Cover images
+
+Each article can have an optional cover image at `cover.webp` (preferred) or `cover.png` / `cover.jpg`.
+Convert existing images to WebP with:
+
+```bash
+dip convert_to_webp articles/en/may-19/james_gosling_was_born/cover.png
+```
 
 ## Local development
 
@@ -63,8 +84,33 @@ Builds the Docker image and installs gems.
 | `dip rspec` | Run RSpec tests |
 | `dip build` | Build the static site into `_site/` |
 | `dip serve` | Build and serve at http://localhost:4000 |
+| `dip watch` | Full build + file watcher + dev server at http://localhost:4000 |
+| `dip convert_to_webp <file> [files...]` | Convert images to WebP format |
 | `dip shell` | Open a shell in the container |
 | `dip bundle <args>` | Run bundler commands |
+
+### Watch mode
+
+`dip watch` does a full initial build (CSS + HTML), starts a server at http://localhost:4000, then listens for file changes:
+
+- **`.md` changed** — rebuilds the affected article page + all index/calendar pages (~0.1s)
+- **`.haml` changed** — rebuilds all HTML pages (~0.15s)
+- **cover image added/changed** — rebuilds the article the image belongs to
+
+### Scripts
+
+| Script | Description |
+|---|---|
+| `bin/watch` | Underlying script for `dip watch` |
+| `bin/convert_to_webp` | Convert images to WebP (requires ImageMagick; use `dip convert_to_webp` inside Docker) |
+
+`bin/convert_to_webp` options:
+
+| Flag | Default | Description |
+|---|---|---|
+| `-q`, `--quality N` | `80` | WebP quality 1–100 |
+| `-w`, `--max-width N` | — | Resize to fit within this width |
+| `--no-strip` | — | Keep EXIF metadata |
 
 ## Deployment
 

@@ -39,8 +39,20 @@ interaction:
     description: Serve the site locally on port 4000
     service: app
     command: bundle exec rake serve
-    ports:
-      - '4000:4000'
+    compose:
+      run_options: [no-deps]
+
+  convert_to_webp:
+    description: Convert images to WebP (args forwarded to bin/convert_to_webp)
+    service: app
+    command: bundle exec ruby bin/convert_to_webp
+    compose:
+      run_options: [no-deps]
+
+  watch:
+    description: Full build then watch articles/ and templates/, serves on http://localhost:4000
+    service: app
+    command: bundle exec ruby bin/watch
     compose:
       run_options: [no-deps]
 

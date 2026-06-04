@@ -8,6 +8,8 @@ RUN apt-get update -qq \
     git \
     curl \
     ca-certificates \
+    imagemagick \
+    webp \
   && rm -rf /var/lib/apt/lists/*
 
 CMD ["sleep", "infinity"]

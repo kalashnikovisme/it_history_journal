@@ -4,6 +4,8 @@ services:
       context: ..
       dockerfile: .dockerdev/Dockerfile.dev
     working_dir: /app
+    ports:
+      - '4000:4000'
     volumes:
       - ..:/app
       - bundle:/usr/local/bundle

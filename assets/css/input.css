@@ -9,16 +9,13 @@
 }
 
 @layer components {
-  .prose {
-    @apply text-gray-700;
+  .prose.prose-invert a {
+    @apply text-accent-muted hover:text-accent;
   }
-  .prose h1, .prose h2, .prose h3 {
-    @apply text-gray-900 font-bold;
+  .prose.prose-invert blockquote {
+    @apply border-white-20 text-white-60;
   }
-  .prose a {
-    @apply text-purple-700 hover:text-purple-900;
-  }
-  .prose blockquote {
-    @apply border-l-4 border-purple-200 text-gray-600;
+  .prose.prose-invert strong {
+    @apply text-white;
   }
 }
