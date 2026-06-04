@@ -16,3 +16,4 @@ Critics were loud: the company was overvalued, user growth was slowing, mobile m
 What happened next became one of the more remarkable reversals in corporate history. Facebook solved its mobile problem — and how. By 2013, mobile was driving majority of ad revenue. The stock recovered, then kept climbing.
 
 Today Facebook's parent company Meta has a market cap many times larger than that 2012 valuation. The IPO, so mocked at the time, turned out to be the beginning of an extraordinary run.
+
