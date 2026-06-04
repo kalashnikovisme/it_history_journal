@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %title IT History Journal
+    :javascript
+      (function() {
+        var lang = navigator.language || navigator.userLanguage || 'en';
+        window.location.replace(lang.toLowerCase().startsWith('ru') ? '/ru/' : '/en/');
+      })();
+    %noscript
+      %meta{'http-equiv' => 'refresh', content: '0; url=/en/'}
+  %body
+    %p
+      %a{href: '/en/'} IT History Journal

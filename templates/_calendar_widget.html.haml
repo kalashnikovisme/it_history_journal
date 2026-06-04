@@ -1,0 +1,27 @@
+- month_name = t[:months][current_month - 1]
+- days_in_month = Date.new(current_year, current_month, -1).day
+- first_dow = Date.new(current_year, current_month, 1).wday
+.bg-white.rounded-xl.border.border-gray-100.p-4
+  .flex.items-center.justify-between.mb-3
+    %h3.text-sm.font-semibold.text-gray-900
+      = "#{month_name} #{current_year}"
+    %a.text-xs.text-purple-700.hover:text-purple-900{href: "/#{lang}/calendar/"}
+      = t[:calendar] + " →"
+  .grid.grid-cols-7.gap-px.text-center.mb-1
+    - %w[Su Mo Tu We Th Fr Sa].each do |d|
+      %span.text-xs.text-gray-400.font-medium= d
+  .grid.grid-cols-7.gap-px.text-center
+    - first_dow.times do
+      %span
+    - (1..days_in_month).each do |d|
+      - article_url = days_with_articles[[current_month, d]]
+      - is_today = d == current_day
+      - if article_url
+        %a.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.font-medium.bg-purple-100.text-purple-700.hover:bg-purple-200.transition-colors{href: article_url, class: is_today ? 'ring-2 ring-purple-400' : ''}
+          = d
+      - elsif is_today
+        %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.bg-gray-900.text-white.font-semibold
+          = d
+      - else
+        %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.text-gray-400
+          = d
