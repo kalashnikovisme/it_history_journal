@@ -1,7 +1,7 @@
 ---
 title: "May 7, 1946 — Sony Was Founded"
 date: "May 7, 1946"
-excerpt: ""
+excerpt: "On May 7, 1946, a small company called Tokyo Tsushin Kogyo appeared in war-damaged Tokyo with twenty employees and $2,000 in capital. The world would later know it by a different name — Sony."
 ---
 
 On May 7, 1946, a small company called Tokyo Tsushin Kogyo appeared in war-damaged Tokyo. The world would later know it by a different name — Sony.

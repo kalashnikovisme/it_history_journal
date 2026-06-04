@@ -1,7 +1,7 @@
 ---
 title: "May 14, 1984 — Mark Zuckerberg Was Born"
 date: "May 14, 1984"
-excerpt: ""
+excerpt: "On May 14, 1984, Mark Zuckerberg was born — the person who built a website for Harvard students to communicate, then turned it into one of the most influential platforms in the history of the internet."
 ---
 
 On May 14, 1984, Mark Zuckerberg was born — the person who first built a website for Harvard students to communicate, then turned it into one of the most influential platforms in the history of the internet.

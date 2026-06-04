@@ -1,7 +1,7 @@
 ---
 title: "May 10, 1954 — Presentation of the Silicon Transistor"
 date: "May 10, 1954"
-excerpt: ""
+excerpt: "On May 10, 1954, Texas Instruments presented the silicon transistor at an IRE conference — the moment silicon began replacing germanium and set the foundation for every processor built since."
 ---
 
 At the time of writing, the overwhelming majority of processors use silicon as the main material for transistors. But silicon was not the first material used to manufacture them. In 1947, Bell Labs introduced transistors made from germanium. Germanium was technically easier to work with, but its problems became obvious almost immediately:

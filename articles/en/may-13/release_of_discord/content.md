@@ -1,7 +1,7 @@
 ---
 title: "May 13, 2015 — Release of Discord"
 date: "May 13, 2015"
-excerpt: ""
+excerpt: "Discord officially launched on May 13, 2015. Today it is hard to imagine the internet without it — a place where gaming clans, open source projects, and friend groups all make their home."
 ---
 
 Discord officially launched on May 13, 2015.

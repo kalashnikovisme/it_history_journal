@@ -1,7 +1,7 @@
 ---
 title: "May 15, 1929 — Frank Heart Was Born"
 date: "May 15, 1929"
-excerpt: ""
+excerpt: "Frank Heart was born on May 15, 1929 — an engineer without whom ARPANET might have remained just a beautiful theory. He led the BBN team that built the first IMP network nodes, the direct ancestors of modern routers."
 ---
 
 Frank Heart was born on May 15, 1929 — an engineer without whom ARPANET might have remained just a beautiful theory.
@@ -16,15 +16,11 @@ Heart was not the inventor of the internet itself. His role was different — he
 
 Under his leadership, the BBN team:
 
-designed the first IMP (Interface Message Processor) network nodes;
-
-created mechanisms for data exchange between nodes;
-
-ensured network fault tolerance;
-
-established stable 24/7 system operation;
-
-coordinated the connection of universities.
+- designed the first IMP (Interface Message Processor) network nodes
+- created mechanisms for data exchange between nodes
+- ensured network fault tolerance
+- established stable 24/7 system operation
+- coordinated the connection of universities
 
 The IMPs effectively became the ancestors of modern routers. It was through them that the first ARPANET messages traveled in 1969 between UCLA, Stanford Research Institute, UC Santa Barbara, and the University of Utah.
 
