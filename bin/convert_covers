@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 set -uo pipefail
 
-mapfile -t pngs < <(find articles -name "cover.png" | sort)
+mapfile -t covers < <(find articles \( -name "cover.png" -o -name "cover.jpg" \) | sort)
 
-if [ ${#pngs[@]} -eq 0 ]; then
-  echo "No cover.png files found in articles/."
+if [ ${#covers[@]} -eq 0 ]; then
+  echo "No cover.png or cover.jpg files found in articles/."
   exit 0
 fi
 
-echo "Found ${#pngs[@]} cover.png file(s):"
-printf '  %s\n' "${pngs[@]}"
+echo "Found ${#covers[@]} cover file(s):"
+printf '  %s\n' "${covers[@]}"
 echo
 
-if bundle exec ruby bin/convert_to_webp "${pngs[@]}"; then
+if bundle exec ruby bin/convert_to_webp "${covers[@]}"; then
   echo
-  echo "Removing original .png files..."
-  for f in "${pngs[@]}"; do
+  echo "Removing original files..."
+  for f in "${covers[@]}"; do
     rm -f "$f"
     echo "  removed  $f"
   done
@@ -23,8 +23,9 @@ else
   echo
   echo "Some conversions failed. Removing only successfully converted files..."
   failed=0
-  for f in "${pngs[@]}"; do
-    webp="${f%.png}.webp"
+  for f in "${covers[@]}"; do
+    ext="${f##*.}"
+    webp="${f%.$ext}.webp"
     if [ -f "$webp" ]; then
       rm -f "$f"
       echo "  removed  $f"
