@@ -1,7 +1,7 @@
 ---
 title: "April 29, 2015 — Release of Visual Studio Code"
 date: "April 29, 2015"
-excerpt: ""
+excerpt: "Visual Studio Code was introduced at Microsoft's Build conference on April 29, 2015. Today it is the dominant code editor worldwide — distributed under the MIT License, it has spawned several popular forks, including Cursor."
 ---
 
 Visual Studio Code is the dominant development environment (IDE) today. In most developer surveys about which IDE people use, VS Code ranks first by a wide margin.
@@ -10,4 +10,4 @@ On April 29, 2015, Microsoft introduced Visual Studio Code at the Build conferen
 
 Visual Studio Code is distributed under one of the most permissive software licenses — the MIT License. It allows developers to use the source code in their own products, even closed-source ones. This led to the emergence of several popular forks, with one of the most notable being Cursor — an IDE designed for working with large language models.
 
-Despite the name, Visual Studio Code is not actually related to Microsoft Visual Studio in terms of codebase. It does not include Visual Studio components, is not a “lightweight” version of it, and the only things they share are the name and being part of the Microsoft ecosystem.
+Despite the name, Visual Studio Code is not actually related to Microsoft Visual Studio in terms of codebase. It does not include Visual Studio components, is not a "lightweight" version of it, and the only things they share are the name and being part of the Microsoft ecosystem.
