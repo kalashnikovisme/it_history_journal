@@ -1,69 +1,53 @@
 ---
 title: "March 23, 1965 — The First Digital Computer Goes to Space"
 date: "March 23, 1965"
-excerpt: ""
+excerpt: "On March 23, 1965, NASA launched Gemini 3 — the first American spaceflight to carry a digital computer onboard. The computer couldn't make autonomous decisions, but it could calculate orbital positions faster than any human. A few years later, its descendants landed people on the Moon."
 ---
 
-A small computer, a big step
 On March 23, 1965, NASA launched the Gemini 3 mission. It became the first American spaceflight to carry a digital computer onboard.
 
-The mission itself was commanded by Virgil “Gus” Grissom, with John Young as the pilot.
+The mission was commanded by Virgil "Gus" Grissom, with John Young as the pilot.
 
-What computer was onboard
-The computer used in Gemini missions was the Gemini Guidance Computer (often called GGC). It was developed primarily by IBM, with key contributions from NASA engineers.
+## What computer was onboard
 
-This was not a “computer” in the modern sense. It had:
+The computer used in Gemini missions was the Gemini Guidance Computer (GGC), developed primarily by IBM with key contributions from NASA engineers.
 
-extremely limited memory
+This was not a "computer" in the modern sense. It had extremely limited memory and very low processing power. But it was reliable — and that mattered more than anything.
 
-very low processing power
+## What the computer actually did
 
-But it was reliable — and that mattered more than anything.
+The onboard computer had a very specific role: it helped with navigation and flight control. It could:
 
-What the computer actually did
-The onboard computer had a very specific role: it helped with navigation and flight control.
-
-It could:
-
-calculate the spacecraft’s position in orbit
-
-assist with trajectory adjustments
-
-support rendezvous calculations (important for future missions)
-
-process sensor data faster than humans could
+- calculate the spacecraft's position in orbit
+- assist with trajectory adjustments
+- support rendezvous calculations (critical for future missions)
+- process sensor data faster than humans could
 
 Before this, astronauts had to rely heavily on ground control and manual calculations. With Gemini 3, some of that responsibility moved onboard.
 
-What it could NOT do
-It is important to understand the limits.
+## What it could not do
 
-The computer:
+It is important to understand the limits. The computer:
 
-could not make autonomous decisions
-
-could not control the spacecraft on its own
-
-could not adapt to unexpected situations
-
-depended on pre-programmed instructions
+- could not make autonomous decisions
+- could not control the spacecraft on its own
+- could not adapt to unexpected situations
+- depended on pre-programmed instructions
 
 Astronauts were still in charge. The computer was an assistant, not a pilot.
 
-About Gemini 3
+## About Gemini 3
+
 Gemini 3 was the first crewed mission of the Gemini program. Its goals were very practical:
 
-test orbital maneuvering (changing orbit in space)
+- test orbital maneuvering (changing orbit in space)
+- evaluate spacecraft systems with a crew onboard
+- practice reentry and landing
 
-evaluate spacecraft systems with a crew onboard
+One of the key achievements was demonstrating that a spacecraft could change its orbit — something that Mercury missions could not do. This ability later became critical for docking with other spacecraft, including during Apollo missions to the Moon.
 
-practice reentry and landing
+## Why it mattered
 
-One of the key achievements was demonstrating that a spacecraft could change its orbit — something that Mercury missions could not do.
-
-This ability later became critical for docking with other spacecraft, including during Apollo missions to the Moon.
-
-Why it mattered
 Gemini 3 showed that computers could work in space — even with all the constraints of weight, power, and reliability.
 
 This idea evolved quickly. Just a few years later, the Apollo Guidance Computer would become one of the most famous computers in history, helping land humans on the Moon.

@@ -1,56 +1,53 @@
 ---
 title: "March 29, 1967 — The First Handheld Calculator Debuts"
 date: "March 29, 1967"
-excerpt: ""
+excerpt: "On March 29, 1967, Texas Instruments unveiled the Cal-Tech prototype — the first electronic handheld calculator. It could add, subtract, multiply, and divide, ran on batteries, and printed results on paper tape. The main point was proving what integrated circuits could do."
 ---
 
-On this day, Texas Instruments unveiled the prototype of the first electronic handheld calculator known as Cal‑Tech.
+On this day, Texas Instruments unveiled the prototype of the first electronic handheld calculator known as Cal-Tech.
 
-Before handheld calculators
+## Before handheld calculators
+
 Engineers had two main options besides doing calculations by hand:
 
-mechanical calculators such as slide rules
+- mechanical calculators and slide rules
+- large desktop electronic calculators
 
-large desktop electronic calculators
+By 1967, there had already been noticeable progress in desktop calculators. The mid-twentieth century marked a period of explosive growth in electronics and computing technology.
 
-By 1967, there had already been noticeable progress in desktop calculators. Just twenty years earlier, such machines would have seemed almost impossible. The mid‑twentieth century, however, marked a period of explosive growth in electronics and computing technology.
+## The idea of a handheld calculator
 
-The idea of a handheld calculator
-Beyond the obvious advantages of making electronic calculators smaller and more accessible, Texas Instruments had another strong motivation for developing a handheld device: the company was actively advancing integrated circuit technology.
+Beyond the obvious advantages of making electronic calculators smaller, Texas Instruments had another strong motivation: the company was actively advancing integrated circuit technology.
 
 Creating a consumer product would clearly demonstrate the potential of integrated circuits:
 
-smaller device size
+- smaller device size
+- lower power consumption
+- lower price compared with desktop machines
 
-lower power consumption
+For this reason, Texas Instruments began actively working on a handheld calculator project in the mid-1960s.
 
-lower price compared with desktop machines
+## Prototype demonstration
 
-For this reason, Texas Instruments began actively working on a handheld calculator project in the mid‑1960s.
+On March 29, 1967, the Cal-Tech (calculator technology) prototype was demonstrated to partners and electronics manufacturers.
 
-Prototype demonstration
-On March 29, 1967, the Cal‑Tech (calculator technology) prototype was demonstrated to partners and electronics manufacturers.
-
-The device was much larger than modern pocket calculators, but it was significantly smaller than any desktop calculator of its time.
+The device was much larger than modern pocket calculators, but significantly smaller than any desktop calculator of its time.
 
 During the presentation it was shown that the calculator could:
 
-accept numbers through a keyboard (still a notable feature in the 1960s)
+- accept numbers through a keyboard
+- print results on a paper tape
+- perform addition, subtraction, multiplication, and division
+- operate completely independently without a power outlet — a major breakthrough for the product
 
-print results on a paper tape (built‑in displays were still a luxury at the time)
+## Who worked on the prototype
 
-perform addition, subtraction, multiplication, and division (many desktop calculators of the 1960s did little more)
+- **Jerry Merryman** — the author of the idea
+- **Jack Kilby** — lead engineer and inventor of integrated circuit technology
+- **James Van Tassel** — responsible for hardware design
 
-operate completely independently without being connected to a power outlet — a major breakthrough for the product
+## From prototype to commercial products
 
-Who worked on the prototype?
-Jerry Merryman — the author of the idea
+The Cal-Tech prototype was primarily intended to demonstrate the capabilities of integrated circuits.
 
-Jack Kilby — lead engineer and inventor of integrated circuit technology
-
-James Van Tassel — responsible for hardware design
-
-From prototype to commercial products
-The Cal‑Tech prototype was primarily intended to demonstrate the capabilities of integrated circuits.
-
-The next step for the development team and Texas Instruments was to secure a patent for a “Miniature Electronic Calculator” and begin working with manufacturing partners. Together, they went on to create the first commercial versions of the device.
+The next step was to secure a patent for a "Miniature Electronic Calculator" and begin working with manufacturing partners to create the first commercial versions of the device.
