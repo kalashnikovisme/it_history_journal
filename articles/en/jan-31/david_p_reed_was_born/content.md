@@ -1,7 +1,7 @@
 ---
 title: "Jan 31, 1952 — David P. Reed Was Born"
 date: "January 31, 1952"
-excerpt: ""
+excerpt: "On January 31, 1952, David P. Reed was born — the quiet architect who co-designed TCP/IP, created UDP (the protocol behind every video call, live stream, and online game), and formulated the End-to-End principle that kept the internet scalable as it grew to billions of users."
 ---
 
 David P. Reed is the author of the UDP protocol (the reason you can watch live streams, play online games, and talk over video calls), one of the contributors to TCP/IP (which practically the entire internet runs on), and a person who made a profound impact on how networks work in general.

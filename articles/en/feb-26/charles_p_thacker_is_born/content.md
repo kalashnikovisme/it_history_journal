@@ -1,7 +1,7 @@
 ---
 title: "Feb 26, 1943 — Charles P. Thacker Is Born"
 date: "February 26, 1943"
-excerpt: ""
+excerpt: "On February 26, 1943, Charles P. Thacker was born — the lead hardware engineer behind the Xerox Alto (the first computer with a graphical interface, windows, and a mouse) and an early builder of Ethernet hardware at Xerox PARC, whose quiet work laid the foundation for every modern personal computer."
 ---
 
 On February 26, 1943, in Pasadena, California, Charles P. Thacker was born.

@@ -1,7 +1,7 @@
 ---
 title: "Jan 19, 1983 — Apple Lisa Release"
 date: "January 19, 1983"
-excerpt: ""
+excerpt: "On January 19, 1983, Apple released the Lisa — the first mass-produced personal computer with a graphical user interface and a mouse, priced at $9,995 and ultimately a commercial failure, yet a direct ancestor of every modern desktop operating system we use today."
 ---
 
 Apple Lisa is probably the most expensive “failed” project of Steve Jobs, and at the same time the one that completely changed how we interact with computers. It was named after Jobs’s daughter (although Apple tried for a long time to hide this fact, inventing awkward backronyms like Local Integrated Software Architecture).

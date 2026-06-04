@@ -1,7 +1,7 @@
 ---
 title: "Jan 30, 1925 — Douglas Engelbart Was Born"
 date: "January 30, 1925"
-excerpt: ""
+excerpt: "On January 30, 1925, Douglas Engelbart was born — the visionary who in 1968 demonstrated the computer mouse, hypertext, video conferencing, and collaborative document editing in a single 90-minute presentation now called 'The Mother of All Demos,' decades before any of these ideas became mainstream."
 ---
 
 If you think Steve Jobs or Bill Gates invented the modern computer, you’re mistaken. They packaged and sold ideas that Douglas Engelbart had already shown to the world back in the 1960s and 70s.

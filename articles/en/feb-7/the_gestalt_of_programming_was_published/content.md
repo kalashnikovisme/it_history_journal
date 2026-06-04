@@ -1,7 +1,7 @@
 ---
 title: 'Feb 7, 1956 — The "Gestalt of Programming" Was Published'
 date: "February 7, 1956"
-excerpt: ""
+excerpt: "On February 7, 1956, Douglas Ross published 'Gestalt Programming' — a radical proposal that computers should be programmed with intentions rather than step-by-step instructions, anticipating interactive computing, visual programming, and AI-assisted development by several decades."
 ---
 
 What Is the “Gestalt of Programming” Anyway?

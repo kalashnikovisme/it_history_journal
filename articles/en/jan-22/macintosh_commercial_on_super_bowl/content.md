@@ -1,7 +1,7 @@
 ---
 title: "Jan 22, 1984 — Macintosh Commercial on Super Bowl"
 date: "January 22, 1984"
-excerpt: ""
+excerpt: "On January 22, 1984, Apple aired the '1984' commercial during the Super Bowl — directed by Ridley Scott, it showed no product, ran only once on TV, yet became one of the most iconic advertisements in history and permanently defined Apple's identity as a rebel against corporate conformity."
 ---
 
 On January 22, 1984, Super Bowl viewers saw what is arguably the most famous commercial in the history of technology.
@@ -14,11 +14,7 @@ The commercial was simply called “1984.” It was directed by Ridley Scott, wh
 
 On the screen, there is a gray, totalitarian world. People dressed identically march into a massive hall and stare at a giant screen where a Big Brother figure delivers an ideological speech. A direct reference to George Orwell’s novel 1984.
 
-here is the image 1
-
 Then, suddenly, a young woman in bright athletic clothes runs into the hall with a hammer in her hands. Guards are chasing her. She swings — and throws the hammer into the screen. The screen explodes.
-
-here is the image 2
 
 A voiceover calmly says:
 

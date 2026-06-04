@@ -1,7 +1,7 @@
 ---
 title: "Jan 23, 1996 — Java (JDK 1.0) Was Released"
 date: "January 23, 1996"
-excerpt: ""
+excerpt: "On January 23, 1996, Sun Microsystems released Java Development Kit 1.0, introducing the 'Write Once, Run Anywhere' principle — programs compiled to bytecode ran on any machine with a JVM, a breakthrough that now powers Android apps, banking systems, and even Mars rovers."
 ---
 
 Today, January 23, marks the birthday of a technology that quite literally made the whole world speak the same language. In 1996, Sun Microsystems released Java Development Kit (JDK) 1.0.

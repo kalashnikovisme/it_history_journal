@@ -1,7 +1,7 @@
 ---
 title: "Jan 17, 1997 — Jython (JPython) First Release"
 date: "January 17, 1997"
-excerpt: ""
+excerpt: "On January 17, 1997, Jython (originally JPython) was released — an implementation of Python that runs on the Java Virtual Machine, allowing Python code to call Java libraries directly and giving developers the flexibility of Python with the full power of the JVM ecosystem."
 ---
 
 On January 17, the first version of Jython (JPython) was released.

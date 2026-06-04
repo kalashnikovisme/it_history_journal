@@ -1,7 +1,7 @@
 ---
 title: "Feb 15, 1934 — Niklaus Wirth Was Born"
 date: "February 15, 1934"
-excerpt: ""
+excerpt: "On February 15, 1934, Niklaus Wirth was born — the Swiss computer scientist who created Pascal, Modula-2, and Oberon in pursuit of a single idea: that programming languages should be simple and understandable, a philosophy that shaped how millions of students around the world first learned to code."
 ---
 
 On February 15, 1934, in Winterthur, Switzerland, Niklaus Wirth was born.

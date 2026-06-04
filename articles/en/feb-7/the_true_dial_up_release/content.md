@@ -1,7 +1,7 @@
 ---
 title: "Feb 7, 1998 — The True Dial-up Release"
 date: "February 7, 1998"
-excerpt: ""
+excerpt: "On February 7, 1998, the V.90 modem standard arrived — the 56k protocol that ended the format war between competing standards, negotiating the best possible speed by 'handshaking' between your modem and the ISP, and defining the peak of dial-up internet before broadband took over."
 ---
 
 What is a "Dial-Up Release" anyway?

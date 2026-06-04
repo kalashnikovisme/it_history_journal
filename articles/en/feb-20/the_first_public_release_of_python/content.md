@@ -1,7 +1,7 @@
 ---
 title: "Feb 20, 1991 — The First Public Release of Python"
 date: "February 20, 1991"
-excerpt: ""
+excerpt: "On February 20, 1991, Guido van Rossum released Python 0.9.0 on Usenet — a small, readable language built over the Christmas holidays that prioritized human clarity over machine efficiency, and grew into one of the most widely used programming languages in the world."
 ---
 
 On February 20, 1991, the first public version of the Python programming language was released.

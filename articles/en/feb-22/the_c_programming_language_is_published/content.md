@@ -1,7 +1,7 @@
 ---
 title: 'Feb 22, 1978 — "The C Programming Language" Is Published'
 date: "February 22, 1978"
-excerpt: ""
+excerpt: "On February 22, 1978, Kernighan and Ritchie published 'The C Programming Language' — a 270-page book so authoritative it served as the language's de facto specification for over a decade, teaching precision and clarity to a generation of programmers and shaping nearly every major language that followed."
 ---
 
 On February 22, 1978, the book "The C Programming Language" was officially published by Prentice Hall.

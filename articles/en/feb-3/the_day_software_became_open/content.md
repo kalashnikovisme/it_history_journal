@@ -1,7 +1,7 @@
 ---
 title: 'Feb 3, 1998 — The Day Software Became "Open"'
 date: "February 3, 1998"
-excerpt: ""
+excerpt: "On February 3, 1998, a small meeting in Palo Alto coined the term 'Open Source' — replacing ideologically charged 'free software' with a business-friendly brand that convinced corporations to embrace collaborative code, powering virtually all modern technology infrastructure."
 ---
 
 What is "Open Source" anyway?

@@ -1,7 +1,7 @@
 ---
 title: "Feb 17, 2008 — Information About the Mocmex Trojan Is Published"
 date: "February 17, 2008"
-excerpt: ""
+excerpt: "On February 17, 2008, researchers published details about the Mocmex trojan — a sophisticated piece of malware preinstalled on digital photo frames at the factory, one of the earliest high-profile supply chain attacks, warning the industry that the threat can already be inside the product when you buy it."
 ---
 
 On February 17, 2008, detailed information about a new and unusual piece of malware called Mocmex was publicly published in Seattle Post-Intelligencer.
