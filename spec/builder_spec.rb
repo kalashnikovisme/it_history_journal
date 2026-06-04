@@ -7,8 +7,8 @@ RSpec.describe Builder do
   let(:output_dir) { File.join(tmp_dir, '_site') }
   let(:builder)    { Builder.new(site_root: tmp_dir, output_dir: output_dir) }
 
-  def write_article(lang, date_path, article_name, content, with_cover: false)
-    dir = File.join(tmp_dir, 'articles', lang, date_path, article_name)
+  def write_article(lang, month, day, article_name, content, with_cover: false)
+    dir = File.join(tmp_dir, 'articles', lang, month, day.to_s, article_name)
     FileUtils.mkdir_p(dir)
     File.write(File.join(dir, 'content.md'), content)
     File.write(File.join(dir, 'cover.png'), "\x89PNG") if with_cover
@@ -21,7 +21,7 @@ RSpec.describe Builder do
   end
 
   before do
-    write_article('en', 'may-19', 'james_gosling_was_born', <<~MD)
+    write_article('en', 'may', 19, 'james_gosling_was_born', <<~MD)
       ---
       title: "May 19, 1955 — James Gosling Was Born"
       date: "May 19, 1955"
@@ -32,7 +32,7 @@ RSpec.describe Builder do
       James Gosling created Java.
     MD
 
-    write_article('en', 'may-18', 'facebook_ipo', <<~MD)
+    write_article('en', 'may', 18, 'facebook_ipo', <<~MD)
       ---
       title: "May 18, 2012 — Facebook IPO"
       date: "May 18, 2012"
@@ -42,7 +42,7 @@ RSpec.describe Builder do
       Facebook went public.
     MD
 
-    write_article('ru', 'may-19', 'james_gosling_was_born', <<~MD)
+    write_article('ru', 'may', 19, 'james_gosling_was_born', <<~MD)
       ---
       title: "19 мая 1955 — Родился Джеймс Гослинг"
       excerpt: "Джеймс Гослинг создал Java."
@@ -87,12 +87,12 @@ RSpec.describe Builder do
     end
 
     it 'creates the English article page with directory-based URL' do
-      path = File.join(output_dir, 'en', 'may-19', 'james-gosling-was-born', 'index.html')
+      path = File.join(output_dir, 'en', 'may', '19', 'james-gosling-was-born', 'index.html')
       expect(File.exist?(path)).to be true
     end
 
     it 'creates the Russian article page' do
-      path = File.join(output_dir, 'ru', 'may-19', 'james-gosling-was-born', 'index.html')
+      path = File.join(output_dir, 'ru', 'may', '19', 'james-gosling-was-born', 'index.html')
       expect(File.exist?(path)).to be true
     end
 
@@ -105,18 +105,18 @@ RSpec.describe Builder do
     end
 
     it 'renders the article title on the article page' do
-      content = File.read(File.join(output_dir, 'en', 'may-19', 'james-gosling-was-born', 'index.html'))
+      content = File.read(File.join(output_dir, 'en', 'may', '19', 'james-gosling-was-born', 'index.html'))
       expect(content).to include('James Gosling Was Born')
     end
 
     it 'renders the article content on the article page' do
-      content = File.read(File.join(output_dir, 'en', 'may-19', 'james-gosling-was-born', 'index.html'))
+      content = File.read(File.join(output_dir, 'en', 'may', '19', 'james-gosling-was-born', 'index.html'))
       expect(content).to include('James Gosling created Java.')
     end
 
     it 'renders article links in the English index' do
       content = File.read(File.join(output_dir, 'en', 'index.html'))
-      expect(content).to include('/en/may-19/james-gosling-was-born')
+      expect(content).to include('/en/may/19/james-gosling-was-born')
     end
 
     it 'uses Russian translations on the Russian index' do
@@ -141,7 +141,7 @@ RSpec.describe Builder do
 
     context 'when article has a cover image' do
       before do
-        write_article('en', 'may-17', 'minecraft', <<~MD, with_cover: true)
+        write_article('en', 'may', 17, 'minecraft', <<~MD, with_cover: true)
           ---
           title: "May 17, 2009 — Minecraft"
           excerpt: "Minecraft released."
@@ -152,12 +152,12 @@ RSpec.describe Builder do
       end
 
       it 'copies cover.png to the article output directory' do
-        path = File.join(output_dir, 'en', 'may-17', 'minecraft', 'cover.png')
+        path = File.join(output_dir, 'en', 'may', '17', 'minecraft', 'cover.png')
         expect(File.exist?(path)).to be true
       end
 
       it 'includes the cover image tag in the article HTML' do
-        content = File.read(File.join(output_dir, 'en', 'may-17', 'minecraft', 'index.html'))
+        content = File.read(File.join(output_dir, 'en', 'may', '17', 'minecraft', 'index.html'))
         expect(content).to include('cover.png')
       end
     end

@@ -49,6 +49,13 @@ interaction:
     compose:
       run_options: [no-deps]
 
+  convert_covers:
+    description: Convert all cover.png files in articles/ to WebP and remove the originals
+    service: app
+    command: bin/convert_covers
+    compose:
+      run_options: [no-deps]
+
   watch:
     description: Full build then watch articles/ and templates/, serves on http://localhost:4000
     service: app

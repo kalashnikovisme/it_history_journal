@@ -9,15 +9,16 @@ Published at [history.purple-magic.com](https://history.purple-magic.com). Avail
 ```
 articles/
   en/
-    may-19/
-      james_gosling_was_born/
-        content.md   ← article text + frontmatter
-        cover.png    ← optional cover image (webp preferred)
+    may/
+      19/
+        james_gosling_was_born/
+          content.md   ← article text + frontmatter
+          cover.webp   ← optional cover image (webp preferred)
   ru/
-    may-19/
-      james_gosling_was_born/
-        content.md
-        cover.png
+    may/
+      19/
+        james_gosling_was_born/
+          content.md
 templates/           ← HAML page templates
 lib/                 ← Ruby build system
 bin/                 ← utility scripts
@@ -39,15 +40,21 @@ Article body in Markdown (GFM).
 
 ### URL mapping
 
-`articles/en/may-19/james_gosling_was_born/content.md` → `/en/may-19/james-gosling-was-born`
+`articles/en/may/19/james_gosling_was_born/content.md` → `/en/may/19/james-gosling-was-born`
 
 ### Cover images
 
 Each article can have an optional cover image at `cover.webp` (preferred) or `cover.png` / `cover.jpg`.
-Convert existing images to WebP with:
+Convert a single image to WebP with:
 
 ```bash
-dip convert_to_webp articles/en/may-19/james_gosling_was_born/cover.png
+dip convert_to_webp articles/en/may/19/james_gosling_was_born/cover.png
+```
+
+Convert all `cover.png` files in the repository and remove the originals:
+
+```bash
+dip convert_covers
 ```
 
 ## Local development
@@ -86,6 +93,7 @@ Builds the Docker image and installs gems.
 | `dip serve` | Build and serve at http://localhost:4000 |
 | `dip watch` | Full build + file watcher + dev server at http://localhost:4000 |
 | `dip convert_to_webp <file> [files...]` | Convert images to WebP format |
+| `dip convert_covers` | Convert all `cover.png` files in `articles/` to WebP and remove the originals |
 | `dip shell` | Open a shell in the container |
 | `dip bundle <args>` | Run bundler commands |
 
@@ -103,6 +111,7 @@ Builds the Docker image and installs gems.
 |---|---|
 | `bin/watch` | Underlying script for `dip watch` |
 | `bin/convert_to_webp` | Convert images to WebP (requires ImageMagick; use `dip convert_to_webp` inside Docker) |
+| `bin/convert_covers` | Convert all `cover.png` files in `articles/` to WebP via dip, then delete the originals |
 
 `bin/convert_to_webp` options:
 

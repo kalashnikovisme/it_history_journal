@@ -28,13 +28,14 @@ class Article
     rel_path = file_path.delete_prefix(abs_articles + '/')
     parts = rel_path.split('/')
     lang       = parts[0]
-    date_path  = parts[1]
-    dir_name   = parts[2]
+    month_name = parts[1]
+    day_str    = parts[2]
+    dir_name   = parts[3]
     slug       = dir_name.tr('_', '-')
 
-    month_abbr, day_str = date_path.split('-')
-    month = MONTH_ABBR_MAP[month_abbr.downcase]
-    day   = day_str.to_i
+    month     = MONTH_ABBR_MAP[month_name.downcase]
+    day       = day_str.to_i
+    date_path = "#{month_name}/#{day}"
 
     article_dir = File.dirname(file_path)
     cover = COVER_EXTENSIONS.map { |ext| File.join(article_dir, "cover.#{ext}") }

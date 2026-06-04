@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+mapfile -t pngs < <(find articles -name "cover.png" | sort)
+
+if [ ${#pngs[@]} -eq 0 ]; then
+  echo "No cover.png files found in articles/."
+  exit 0
+fi
+
+echo "Found ${#pngs[@]} cover.png file(s):"
+printf '  %s\n' "${pngs[@]}"
+echo
+
+if bundle exec ruby bin/convert_to_webp "${pngs[@]}"; then
+  echo
+  echo "Removing original .png files..."
+  for f in "${pngs[@]}"; do
+    rm -f "$f"
+    echo "  removed  $f"
+  done
+else
+  echo
+  echo "Some conversions failed. Removing only successfully converted files..."
+  failed=0
+  for f in "${pngs[@]}"; do
+    webp="${f%.png}.webp"
+    if [ -f "$webp" ]; then
+      rm -f "$f"
+      echo "  removed  $f"
+    else
+      echo "  kept     $f  (conversion failed)"
+      failed=1
+    fi
+  done
+  exit $failed
+fi

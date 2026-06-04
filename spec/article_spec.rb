@@ -4,7 +4,7 @@ require 'fileutils'
 
 RSpec.describe Article do
   let(:tmp_dir)    { Dir.mktmpdir }
-  let(:article_dir) { File.join(tmp_dir, 'articles', 'en', 'may-19', 'james_gosling_was_born') }
+  let(:article_dir) { File.join(tmp_dir, 'articles', 'en', 'may', '19', 'james_gosling_was_born') }
   let(:article_file) { File.join(article_dir, 'content.md') }
 
   before do
@@ -49,7 +49,7 @@ RSpec.describe Article do
     end
 
     it 'detects the date_path from path' do
-      expect(article.date_path).to eq('may-19')
+      expect(article.date_path).to eq('may/19')
     end
 
     it 'derives the slug from the article directory name' do
@@ -93,24 +93,24 @@ RSpec.describe Article do
   describe '#cover_url' do
     it 'returns the cover URL using the actual cover filename' do
       File.write(File.join(article_dir, 'cover.png'), 'PNG')
-      expect(article.cover_url).to eq('/en/may-19/james-gosling-was-born/cover.png')
+      expect(article.cover_url).to eq('/en/may/19/james-gosling-was-born/cover.png')
     end
 
     it 'uses the webp filename when cover.webp is present' do
       File.write(File.join(article_dir, 'cover.webp'), 'WEBP')
-      expect(article.cover_url).to eq('/en/may-19/james-gosling-was-born/cover.webp')
+      expect(article.cover_url).to eq('/en/may/19/james-gosling-was-born/cover.webp')
     end
 
     it 'prefers webp over png when both exist' do
       File.write(File.join(article_dir, 'cover.webp'), 'WEBP')
       File.write(File.join(article_dir, 'cover.png'), 'PNG')
-      expect(article.cover_url).to eq('/en/may-19/james-gosling-was-born/cover.webp')
+      expect(article.cover_url).to eq('/en/may/19/james-gosling-was-born/cover.webp')
     end
   end
 
   describe '#url' do
     it 'builds the correct URL' do
-      expect(article.url).to eq('/en/may-19/james-gosling-was-born')
+      expect(article.url).to eq('/en/may/19/james-gosling-was-born')
     end
   end
 
