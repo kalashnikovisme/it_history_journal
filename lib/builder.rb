@@ -5,8 +5,9 @@ require_relative 'article'
 require_relative 'render_scope'
 
 class Builder
-  TEMPLATES_DIR = File.expand_path('../../templates', __FILE__)
-  LANGUAGES     = %w[en ru].freeze
+  TEMPLATES_DIR    = File.expand_path('../../templates', __FILE__)
+  LANGUAGES        = %w[en ru].freeze
+  ARTICLES_PER_PAGE = 20
 
   TRANSLATIONS = {
     'en' => {
@@ -15,6 +16,8 @@ class Builder
       recent_posts:  'Recent posts',
       popular_posts: 'Popular posts',
       related_posts: 'Related posts',
+      all_articles:  'All Articles',
+      more:          'More',
       calendar:      'Calendar',
       home:          'Home',
       read_more:     'Read more',
@@ -28,6 +31,8 @@ class Builder
       recent_posts:  'Последние записи',
       popular_posts: 'Популярные записи',
       related_posts: 'Похожие статьи',
+      all_articles:  'Все записи',
+      more:          'Ещё',
       calendar:      'Календарь',
       home:          'Главная',
       read_more:     'Читать далее',
@@ -37,10 +42,11 @@ class Builder
     }
   }.freeze
 
-  def initialize(site_root: '.', output_dir: '_site')
-    @site_root  = File.expand_path(site_root)
-    @output_dir = File.expand_path(output_dir)
-    @scope      = RenderScope.new
+  def initialize(site_root: '.', output_dir: '_site', articles_per_page: ARTICLES_PER_PAGE)
+    @site_root        = File.expand_path(site_root)
+    @output_dir       = File.expand_path(output_dir)
+    @scope            = RenderScope.new
+    @articles_per_page = articles_per_page
   end
 
   def build
@@ -72,6 +78,7 @@ class Builder
       articles = sorted_for_lang(all_articles, lang)
       build_index(lang, articles)
       build_calendar(lang, articles)
+      build_articles_pages(lang, articles)
     end
   end
 
@@ -92,6 +99,7 @@ class Builder
       articles = sorted_for_lang(all_articles, lang)
       build_index(lang, articles)
       build_calendar(lang, articles)
+      build_articles_pages(lang, articles)
       articles.each { |article| build_article(article, articles) }
     end
   end
@@ -126,6 +134,30 @@ class Builder
     })
     html = wrap_layout(lang, t[:site_name], inner)
     write_file("#{lang}/index.html", html)
+  end
+
+  def build_articles_pages(lang, articles)
+    t           = TRANSLATIONS[lang]
+    total_count = articles.size
+    pages       = articles.each_slice(@articles_per_page).to_a
+    pages       = [[]] if pages.empty?
+    total_pages = pages.size
+
+    pages.each_with_index do |page_articles, idx|
+      page_num = idx + 1
+      inner = render_template('articles', {
+        lang:        lang,
+        t:           t,
+        articles:    page_articles,
+        page:        page_num,
+        total_pages: total_pages,
+        total_count: total_count
+      })
+      title = "#{t[:all_articles]} — #{t[:site_name]}"
+      html  = wrap_layout(lang, title, inner)
+      path  = page_num == 1 ? "#{lang}/articles/index.html" : "#{lang}/articles/#{page_num}/index.html"
+      write_file(path, html)
+    end
   end
 
   def build_article(article, all_lang_articles)

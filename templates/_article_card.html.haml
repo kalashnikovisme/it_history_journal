@@ -1,13 +1,18 @@
+- link_cls     = featured ? 'flex flex-col sm:flex-row sm:items-start' : 'flex items-start'
+- img_wrap_cls = featured ? 'w-full h-36 sm:shrink-0 sm:w-24 sm:h-24 overflow-hidden' : 'shrink-0 w-24 h-24 overflow-hidden'
+- title_cls    = featured ? 'text-base' : 'text-sm'
+- excerpt_cls  = featured ? 'text-sm' : 'text-xs'
+
 %article.bg-card.rounded-xl.overflow-hidden.group
-  %a.flex.items-start{href: article.url}
+  %a{class: link_cls, href: article.url}
     - if article.cover?
-      .shrink-0.w-24.h-24.overflow-hidden
+      %div{class: img_wrap_cls}
         %img.w-full.h-full.object-cover{src: article.cover_url, alt: ''}
     .flex.items-start.justify-between.gap-3.p-4.flex-1.min-w-0
       .flex-1.min-w-0
-        %h3.font-semibold.text-white.text-sm.leading-snug.mb-1.group-hover:text-accent.transition-colors
+        %h3{class: "font-semibold text-white #{title_cls} leading-snug mb-1 group-hover:text-accent transition-colors"}
           = article.title
-        %p.text-white-55.text-xs.leading-relaxed.line-clamp-2
+        %p{class: "text-white-55 #{excerpt_cls} leading-relaxed line-clamp-2"}
           = article.excerpt
       .shrink-0.text-right
         %span.inline-block.bg-accent-dim.text-accent.text-xs.font-medium.rounded.px-2.py-1.whitespace-nowrap

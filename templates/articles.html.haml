@@ -1,0 +1,22 @@
+.flex.items-center.justify-between.mb-8
+  %h1.text-2xl.font-bold.text-white= t[:all_articles]
+  %span.text-sm.text-white-35= total_count
+
+.flex.flex-col.gap-3
+  - articles.each do |art|
+    != partial('article_card', article: art, t: t, featured: true)
+
+- if total_pages > 1
+  .flex.items-center.justify-center.gap-1.mt-10
+    - if page > 1
+      - prev_url = page == 2 ? "/#{lang}/articles/" : "/#{lang}/articles/#{page - 1}/"
+      %a.px-3.py-1.rounded.text-sm.text-accent-muted.hover:text-accent.transition-colors{href: prev_url} ←
+    - (1..total_pages).each do |p|
+      - if p == page
+        %span.px-3.py-1.rounded.text-sm.font-semibold.text-accent= p
+      - else
+        - page_url = p == 1 ? "/#{lang}/articles/" : "/#{lang}/articles/#{p}/"
+        %a.px-3.py-1.rounded.text-sm.text-accent-muted.hover:text-accent.transition-colors{href: page_url}= p
+    - if page < total_pages
+      - next_url = "/#{lang}/articles/#{page + 1}/"
+      %a.px-3.py-1.rounded.text-sm.text-accent-muted.hover:text-accent.transition-colors{href: next_url} →

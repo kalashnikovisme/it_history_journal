@@ -16,10 +16,12 @@
             %span.text-accent.text-xs.font-bold.tracking-tight ITH
           %span.font-semibold.text-white.text-base.group-hover:text-accent.transition-colors
             = t[:site_name]
-        %nav.flex.items-center.gap-5
+        %nav.flex.items-center.gap-3.sm:gap-5
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/"}
             = t[:home]
-          %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/calendar/"}
+          %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/articles/"}
+            = t[:all_articles]
+          %a.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/calendar/"}
             = t[:calendar]
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "https://patreon.com/cw/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"}
             Patreon
@@ -30,7 +32,7 @@
     %main.max-w-5xl.mx-auto.px-4.sm:px-6.py-8
       != content
     %footer.border-t.border-white-10.mt-16
-      .max-w-5xl.mx-auto.px-4.sm:px-6.py-8.flex.items-center.justify-between.text-sm.text-white-30
+      .max-w-5xl.mx-auto.px-4.sm:px-6.py-8.flex.flex-col.gap-3.sm:flex-row.items-start.sm:items-center.sm:justify-between.text-sm.text-white-30
         %span
           = "© #{year} IT History Journal"
         .flex.items-center.gap-4

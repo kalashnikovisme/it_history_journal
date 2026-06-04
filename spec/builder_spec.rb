@@ -134,6 +134,24 @@ RSpec.describe Builder do
       expect(content).to include('/en/calendar/')
     end
 
+    it 'creates the English articles index page' do
+      expect(File.exist?(File.join(output_dir, 'en', 'articles', 'index.html'))).to be true
+    end
+
+    it 'creates the Russian articles index page' do
+      expect(File.exist?(File.join(output_dir, 'ru', 'articles', 'index.html'))).to be true
+    end
+
+    it 'renders article titles on the articles page' do
+      content = File.read(File.join(output_dir, 'en', 'articles', 'index.html'))
+      expect(content).to include('James Gosling Was Born')
+    end
+
+    it 'includes a link to the articles page on the index' do
+      content = File.read(File.join(output_dir, 'en', 'index.html'))
+      expect(content).to include('/en/articles/')
+    end
+
     it 'sets the correct lang attribute on the html element' do
       content = File.read(File.join(output_dir, 'en', 'index.html'))
       expect(content).to include('lang="en"').or include("lang='en'")
@@ -160,6 +178,34 @@ RSpec.describe Builder do
         content = File.read(File.join(output_dir, 'en', 'may', '17', 'minecraft', 'index.html'))
         expect(content).to include('cover.png')
       end
+    end
+  end
+
+  describe 'articles pagination' do
+    let(:builder) { Builder.new(site_root: tmp_dir, output_dir: output_dir, articles_per_page: 1) }
+
+    before { builder.build }
+
+    it 'creates page 1 at the articles root path' do
+      expect(File.exist?(File.join(output_dir, 'en', 'articles', 'index.html'))).to be true
+    end
+
+    it 'creates page 2 when articles exceed one page' do
+      expect(File.exist?(File.join(output_dir, 'en', 'articles', '2', 'index.html'))).to be true
+    end
+
+    it 'does not create a page beyond the total count' do
+      expect(File.exist?(File.join(output_dir, 'en', 'articles', '3', 'index.html'))).to be false
+    end
+
+    it 'includes pagination links on page 1' do
+      content = File.read(File.join(output_dir, 'en', 'articles', 'index.html'))
+      expect(content).to include('/en/articles/2/')
+    end
+
+    it 'includes a back link to page 1 on page 2' do
+      content = File.read(File.join(output_dir, 'en', 'articles', '2', 'index.html'))
+      expect(content).to include('/en/articles/')
     end
   end
 
