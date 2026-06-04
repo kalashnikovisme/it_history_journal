@@ -1,7 +1,7 @@
 ---
 title: "15 апреля 1993 — Директива о запуске проекта Clipper Chip"
 date: "15 апреля 1993"
-excerpt: ""
+excerpt: "Администрация Клинтона объявила о проекте Clipper Chip — аппаратном модуле с бэкдором для спецслужб, который встретил жёсткое сопротивление криптографов и технологических компаний."
 ---
 
 Disclaimer: the author of this material is not a citizen of the United States and has no claims or questions for the U.S. government. The Clipper Chip project is criticized here ONLY for violating basic principles of information security:
