@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -uo pipefail
 
-mapfile -t covers < <(find articles \( -name "cover.png" -o -name "cover.jpg" \) | sort)
+mapfile -t covers < <(find articles \( -name "cover.png" -o -name "cover.jpg" -o -name "cover.jpeg" \) | sort)
 
 if [ ${#covers[@]} -eq 0 ]; then
-  echo "No cover.png or cover.jpg files found in articles/."
+  echo "No cover.png, cover.jpg, or cover.jpeg files found in articles/."
   exit 0
 fi
 
