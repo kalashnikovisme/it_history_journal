@@ -18,6 +18,10 @@ RSpec.describe Builder do
     dir = File.join(tmp_dir, 'assets', 'css')
     FileUtils.mkdir_p(dir)
     File.write(File.join(dir, 'input.css'), '@tailwind base;')
+    File.write(File.join(tmp_dir, 'assets', 'favicon.png'), "\x89PNG")
+    File.write(File.join(tmp_dir, 'assets', 'favicon.ico'), "ICO")
+    File.write(File.join(tmp_dir, 'assets', 'icon.svg'), '<svg/>')
+    File.write(File.join(tmp_dir, 'assets', 'apple-touch-icon.png'), "\x89PNG")
   end
 
   before do
@@ -155,6 +159,19 @@ RSpec.describe Builder do
     it 'sets the correct lang attribute on the html element' do
       content = File.read(File.join(output_dir, 'en', 'index.html'))
       expect(content).to include('lang="en"').or include("lang='en'")
+    end
+
+    it 'copies favicon files to the site root' do
+      expect(File.exist?(File.join(output_dir, 'favicon.ico'))).to be true
+      expect(File.exist?(File.join(output_dir, 'icon.svg'))).to be true
+      expect(File.exist?(File.join(output_dir, 'apple-touch-icon.png'))).to be true
+    end
+
+    it 'includes favicon links in the page head' do
+      content = File.read(File.join(output_dir, 'en', 'index.html'))
+      expect(content).to include("href='/favicon.ico'")
+      expect(content).to include("href='/icon.svg'")
+      expect(content).to include("href='/apple-touch-icon.png' rel='apple-touch-icon'")
     end
 
     context 'when article has a cover image' do

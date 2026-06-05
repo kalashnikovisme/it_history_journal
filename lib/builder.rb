@@ -58,6 +58,7 @@ class Builder
     compile_css
     build_all_html(all_articles)
     copy_assets
+    copy_favicon
   end
 
   def build_html
@@ -241,5 +242,15 @@ class Builder
     FileUtils.cp_r(Dir.glob("#{src}/*").reject { |f| f.end_with?('css') }, dst, remove_destination: false)
   rescue Errno::ENOENT
     nil
+  end
+
+  FAVICON_FILES = %w[favicon.ico favicon.png icon.svg apple-touch-icon.png].freeze
+
+  def copy_favicon
+    FAVICON_FILES.each do |file|
+      src = File.join(@site_root, 'assets', file)
+      next unless File.exist?(src)
+      FileUtils.cp(src, File.join(@output_dir, file))
+    end
   end
 end
