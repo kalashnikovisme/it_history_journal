@@ -114,7 +114,7 @@ class Builder
   def build_index(lang, articles)
     t       = TRANSLATIONS[lang]
     latest  = articles.first
-    recent  = articles.first(10)
+    recent  = articles.drop(1).first(10)
     popular = articles.select(&:popular).first(10)
     popular = recent.first(6) if popular.empty?
 
