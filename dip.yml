@@ -61,7 +61,7 @@ interaction:
     service: app
     command: bundle exec ruby bin/watch
     compose:
-      run_options: [no-deps]
+      run_options: [no-deps, service-ports]
 
 provision:
   - dip compose build

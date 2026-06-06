@@ -1,5 +1,5 @@
 .grid.grid-cols-1.lg:grid-cols-3.gap-8
-  %article.lg:col-span-2
+  %article.lg:col-span-2{'aria-label': article.title}
     %header.mb-8
       %span.inline-block.bg-accent-dim.text-accent.text-sm.font-medium.rounded-lg.px-3.py-1.mb-4
         = article.date_label
@@ -20,7 +20,7 @@
     .sticky.top-20.flex.flex-col.gap-6
 
       - unless related.empty?
-        %aside
+        %aside{'aria-label': t[:related_posts]}
           %h2.text-xs.font-semibold.text-white-35.uppercase.tracking-widest.mb-4
             = t[:related_posts]
           .flex.flex-col.gap-3
@@ -28,7 +28,7 @@
               != partial('article_card', article: art, t: t, featured: false)
 
       - unless popular.empty?
-        %aside
+        %aside{'aria-label': t[:popular_posts]}
           %h2.text-xs.font-semibold.text-white-35.uppercase.tracking-widest.mb-4
             = t[:popular_posts]
           .flex.flex-col.gap-3

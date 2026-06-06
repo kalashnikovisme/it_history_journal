@@ -49,6 +49,7 @@ RSpec.describe Builder do
     write_article('ru', 'may', 19, 'james_gosling_was_born', <<~MD)
       ---
       title: "19 мая 1955 — Родился Джеймс Гослинг"
+      date: "19 мая 1955"
       excerpt: "Джеймс Гослинг создал Java."
       ---
 
@@ -257,6 +258,45 @@ RSpec.describe Builder do
           expect(html).to include("content='summary_large_image'")
         end
       end
+    end
+  end
+
+  describe 'year pages' do
+    before { builder.build }
+
+    it 'creates a year page for each distinct article year' do
+      expect(File.exist?(File.join(output_dir, 'en', '1955', 'index.html'))).to be true
+      expect(File.exist?(File.join(output_dir, 'en', '2012', 'index.html'))).to be true
+    end
+
+    it 'creates year pages for Russian articles' do
+      expect(File.exist?(File.join(output_dir, 'ru', '1955', 'index.html'))).to be true
+    end
+
+    it 'renders the year as a heading on the year page' do
+      content = File.read(File.join(output_dir, 'en', '1955', 'index.html'))
+      expect(content).to include('1955')
+    end
+
+    it 'lists articles on the year page in chronological order' do
+      content = File.read(File.join(output_dir, 'en', '1955', 'index.html'))
+      expect(content).to include('James Gosling Was Born')
+    end
+
+    it 'does not include articles from other years on a year page' do
+      content = File.read(File.join(output_dir, 'en', '1955', 'index.html'))
+      expect(content).not_to include('Facebook IPO')
+    end
+
+    it 'includes year links on the index page' do
+      content = File.read(File.join(output_dir, 'en', 'index.html'))
+      expect(content).to include('/en/1955/')
+      expect(content).to include('/en/2012/')
+    end
+
+    it 'shows the browse by year heading on the index page' do
+      content = File.read(File.join(output_dir, 'en', 'index.html'))
+      expect(content).to include('Browse by year')
     end
   end
 

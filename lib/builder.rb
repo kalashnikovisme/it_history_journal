@@ -1,6 +1,7 @@
 require 'haml'
 require 'fileutils'
 require 'date'
+require 'json'
 require_relative 'article'
 require_relative 'render_scope'
 
@@ -12,34 +13,40 @@ class Builder
 
   TRANSLATIONS = {
     'en' => {
-      site_name:     'IT History Journal',
-      latest_post:   'Latest post',
-      recent_posts:  'Recent posts',
-      popular_posts: 'Popular posts',
-      related_posts: 'Related posts',
-      all_articles:  'All Articles',
-      more:          'More',
-      calendar:      'Calendar',
-      home:          'Home',
-      read_more:     'Read more',
-      lang_switch:   'RU',
-      months:        %w[January February March April May June
-                        July August September October November December]
+      site_name:             'IT History Journal',
+      latest_post:           'Latest post',
+      recent_posts:          'Recent posts',
+      popular_posts:         'Popular posts',
+      related_posts:         'Related posts',
+      all_articles:          'All Articles',
+      more:                  'More',
+      calendar:              'Calendar',
+      home:                  'Home',
+      read_more:             'Read more',
+      lang_switch:           'RU',
+      nav_label:             'Main navigation',
+      browse_by_year:        'Browse by year',
+      no_articles_this_year: 'No articles for this year yet.',
+      months:                %w[January February March April May June
+                                 July August September October November December]
     },
     'ru' => {
-      site_name:     'IT History Journal',
-      latest_post:   'Последняя запись',
-      recent_posts:  'Последние записи',
-      popular_posts: 'Популярные записи',
-      related_posts: 'Похожие статьи',
-      all_articles:  'Все записи',
-      more:          'Ещё',
-      calendar:      'Календарь',
-      home:          'Главная',
-      read_more:     'Читать далее',
-      lang_switch:   'EN',
-      months:        %w[Январь Февраль Март Апрель Май Июнь
-                        Июль Август Сентябрь Октябрь Ноябрь Декабрь]
+      site_name:             'IT History Journal',
+      latest_post:           'Последняя запись',
+      recent_posts:          'Последние записи',
+      popular_posts:         'Популярные записи',
+      related_posts:         'Похожие статьи',
+      all_articles:          'Все записи',
+      more:                  'Ещё',
+      calendar:              'Календарь',
+      home:                  'Главная',
+      read_more:             'Читать далее',
+      lang_switch:           'EN',
+      nav_label:             'Основная навигация',
+      browse_by_year:        'По годам',
+      no_articles_this_year: 'Статей за этот год пока нет.',
+      months:                %w[Январь Февраль Март Апрель Май Июнь
+                                 Июль Август Сентябрь Октябрь Ноябрь Декабрь]
     }
   }.freeze
 
@@ -81,6 +88,7 @@ class Builder
       build_index(lang, articles)
       build_calendar(lang, articles)
       build_articles_pages(lang, articles)
+      build_year_pages(lang, articles)
     end
   end
 
@@ -102,6 +110,7 @@ class Builder
       build_index(lang, articles)
       build_calendar(lang, articles)
       build_articles_pages(lang, articles)
+      build_year_pages(lang, articles)
       articles.each { |article| build_article(article, articles) }
     end
   end
@@ -114,7 +123,7 @@ class Builder
   def build_index(lang, articles)
     t       = TRANSLATIONS[lang]
     latest  = articles.first
-    recent  = articles.drop(1).first(10)
+    recent  = articles.drop(1).first(20)
     popular = articles.select(&:popular).first(10)
     popular = recent.first(6) if popular.empty?
 
@@ -122,6 +131,10 @@ class Builder
     days_with_articles = articles.each_with_object({}) do |a, h|
       h[[a.month, a.day]] = a.url
     end
+    years_with_counts = articles.group_by(&:year)
+                                .reject { |y, _| y.nil? }
+                                .transform_values(&:count)
+                                .sort_by { |y, _| y }
 
     inner = render_template('index', {
       lang:               lang,
@@ -129,6 +142,7 @@ class Builder
       latest:             latest,
       recent:             recent,
       popular:            popular,
+      years_with_counts:  years_with_counts,
       days_with_articles: days_with_articles,
       current_month:      today.month,
       current_year:       today.year,
@@ -185,7 +199,18 @@ class Builder
       url:         "#{BASE_URL}#{article.url}/",
       image:       article.cover? ? "#{BASE_URL}#{article.cover_url}" : nil
     }
-    html  = wrap_layout(article.lang, title, inner, og: og)
+    jsonld = {
+      '@context'        => 'https://schema.org',
+      '@type'           => 'Article',
+      'headline'        => article.title,
+      'description'     => article.excerpt,
+      'url'             => "#{BASE_URL}#{article.url}/",
+      'inLanguage'      => article.lang,
+      'publisher'       => { '@type' => 'Organization', 'name' => t[:site_name], 'url' => BASE_URL }
+    }
+    jsonld['datePublished'] = article.date if article.date
+    jsonld['image']         = "#{BASE_URL}#{article.cover_url}" if article.cover?
+    html  = wrap_layout(article.lang, title, inner, og: og, jsonld_json: jsonld.to_json)
     write_file("#{article.lang}/#{article.date_path}/#{article.slug}/index.html", html)
 
     if article.cover?
@@ -208,15 +233,34 @@ class Builder
     write_file("#{lang}/calendar/index.html", html)
   end
 
-  def wrap_layout(lang, title, content, og: nil)
+  def build_year_pages(lang, articles)
+    t = TRANSLATIONS[lang]
+    articles_by_year = articles.group_by(&:year).reject { |y, _| y.nil? }
+
+    articles_by_year.each do |year, year_articles|
+      sorted = year_articles.sort_by(&:sort_key)
+      inner = render_template('year', {
+        lang:     lang,
+        t:        t,
+        year:     year,
+        articles: sorted
+      })
+      title = "#{year} — #{t[:site_name]}"
+      html  = wrap_layout(lang, title, inner)
+      write_file("#{lang}/#{year}/index.html", html)
+    end
+  end
+
+  def wrap_layout(lang, title, content, og: nil, jsonld_json: nil)
     t = TRANSLATIONS[lang]
     render_template('layout', {
-      lang:    lang,
-      title:   title,
-      t:       t,
-      content: content,
-      year:    Date.today.year,
-      og:      og
+      lang:       lang,
+      title:      title,
+      t:          t,
+      content:    content,
+      year:       Date.today.year,
+      og:         og,
+      jsonld_json: jsonld_json
     })
   end
 

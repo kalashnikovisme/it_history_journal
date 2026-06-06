@@ -23,6 +23,9 @@
     %link{rel: 'preconnect', href: 'https://fonts.googleapis.com'}
     %link{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true}
     %link{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap'}
+    - if jsonld_json
+      %script{type: 'application/ld+json'}
+        != jsonld_json
     %script{async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-3CL3840NT7'}
     :javascript
       window.dataLayer = window.dataLayer || [];
@@ -36,7 +39,7 @@
           %img.w-8.h-8.rounded-full.shrink-0{src: '/icon.svg', alt: '', aria: {hidden: 'true'}}
           %span.font-semibold.text-white.text-base.group-hover:text-accent.transition-colors
             = t[:site_name]
-        %nav.flex.items-center.gap-3.sm:gap-5
+        %nav.flex.items-center.gap-3.sm:gap-5{'aria-label': t[:nav_label]}
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/"}
             = t[:home]
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/articles/"}

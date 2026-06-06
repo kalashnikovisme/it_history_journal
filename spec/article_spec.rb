@@ -64,6 +64,15 @@ RSpec.describe Article do
       expect(article.day).to eq(19)
     end
 
+    it 'parses the year from the date field' do
+      expect(article.year).to eq(1955)
+    end
+
+    it 'returns nil year when date is absent' do
+      File.write(article_file, "---\ntitle: No Date\n---\nContent.")
+      expect(Article.parse(article_file, site_root: tmp_dir).year).to be_nil
+    end
+
     it 'extracts content_md as the body without frontmatter' do
       expect(article.content_md).to include('James Gosling created Java.')
       expect(article.content_md).not_to include('title:')

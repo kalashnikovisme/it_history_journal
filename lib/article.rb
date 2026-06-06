@@ -18,7 +18,7 @@ class Article
   }.freeze
 
   attr_reader :title, :date, :excerpt, :content_md, :slug, :lang,
-              :date_path, :file_path, :month, :day, :popular, :cover_path
+              :date_path, :file_path, :month, :day, :popular, :cover_path, :year
 
   def self.parse(file_path, site_root: '.')
     raw = File.read(file_path)
@@ -41,9 +41,12 @@ class Article
     cover = COVER_EXTENSIONS.map { |ext| File.join(article_dir, "cover.#{ext}") }
                              .find { |path| File.exist?(path) }
 
+    raw_date = parsed.front_matter['date']
+    year = raw_date&.match(/(\d{4})$/)&.[](1)&.to_i
+
     new(
       title:      parsed.front_matter['title'] || slug.gsub('-', ' ').capitalize,
-      date:       parsed.front_matter['date'],
+      date:       raw_date,
       excerpt:    parsed.front_matter['excerpt'] || extract_excerpt(parsed.content),
       content_md: parsed.content,
       lang:       lang,
@@ -51,6 +54,7 @@ class Article
       slug:       slug,
       month:      month,
       day:        day,
+      year:       year,
       popular:    parsed.front_matter['popular'] || false,
       file_path:  file_path,
       cover_path: cover
@@ -69,7 +73,7 @@ class Article
   end
 
   def initialize(title:, date:, excerpt:, content_md:, lang:, date_path:, slug:,
-                 month:, day:, popular:, file_path:, cover_path: nil)
+                 month:, day:, year:, popular:, file_path:, cover_path: nil)
     @title      = title
     @date       = date
     @excerpt    = excerpt
@@ -79,6 +83,7 @@ class Article
     @slug       = slug
     @month      = month
     @day        = day
+    @year       = year
     @popular    = popular
     @file_path  = file_path
     @cover_path = cover_path

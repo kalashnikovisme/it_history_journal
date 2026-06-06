@@ -3,7 +3,7 @@
 - title_cls    = featured ? 'text-base' : 'text-sm'
 - excerpt_cls  = featured ? 'text-sm' : 'text-xs'
 
-%article.bg-card.rounded-xl.overflow-hidden.group
+%article.bg-card.rounded-xl.overflow-hidden.group.hover:bg-raised.transition-colors{'aria-label': article.title}
   %a{class: link_cls, href: article.url}
     - if article.cover?
       %div{class: img_wrap_cls}
