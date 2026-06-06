@@ -196,6 +196,68 @@ RSpec.describe Builder do
         expect(content).to include('cover.png')
       end
     end
+
+    context 'open graph meta tags on article pages' do
+      let(:article_html) do
+        File.read(File.join(output_dir, 'en', 'may', '19', 'james-gosling-was-born', 'index.html'))
+      end
+
+      it 'includes og:type article' do
+        expect(article_html).to include("property='og:type'").and include("content='article'")
+      end
+
+      it 'includes og:title with the article title' do
+        expect(article_html).to include("property='og:title'")
+          .and include('James Gosling Was Born')
+      end
+
+      it 'includes og:description with the article excerpt' do
+        expect(article_html).to include("property='og:description'")
+          .and include('James Gosling created Java.')
+      end
+
+      it 'includes og:url with the absolute article URL' do
+        expect(article_html).to include("property='og:url'")
+          .and include('https://history.purple-magic.com/en/may/19/james-gosling-was-born/')
+      end
+
+      it 'includes twitter:card meta tag' do
+        expect(article_html).to include("name='twitter:card'")
+      end
+
+      it 'does not include og:image when article has no cover' do
+        expect(article_html).not_to include("property='og:image'")
+      end
+
+      it 'does not render og tags on non-article pages' do
+        index_html = File.read(File.join(output_dir, 'en', 'index.html'))
+        expect(index_html).not_to include("property='og:type'")
+      end
+
+      context 'when article has a cover image' do
+        before do
+          write_article('en', 'may', 16, 'tetris', <<~MD, with_cover: true)
+            ---
+            title: "May 16, 1984 — Tetris"
+            excerpt: "Tetris was created."
+            ---
+            Tetris was created.
+          MD
+          builder.build
+        end
+
+        it 'includes og:image with the absolute cover URL' do
+          html = File.read(File.join(output_dir, 'en', 'may', '16', 'tetris', 'index.html'))
+          expect(html).to include("property='og:image'")
+            .and include('https://history.purple-magic.com/en/may/16/tetris/cover.png')
+        end
+
+        it 'sets twitter:card to summary_large_image' do
+          html = File.read(File.join(output_dir, 'en', 'may', '16', 'tetris', 'index.html'))
+          expect(html).to include("content='summary_large_image'")
+        end
+      end
+    end
   end
 
   describe 'articles pagination' do

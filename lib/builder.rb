@@ -8,6 +8,7 @@ class Builder
   TEMPLATES_DIR    = File.expand_path('../../templates', __FILE__)
   LANGUAGES        = %w[en ru].freeze
   ARTICLES_PER_PAGE = 20
+  BASE_URL         = 'https://history.purple-magic.com'
 
   TRANSLATIONS = {
     'en' => {
@@ -178,7 +179,13 @@ class Builder
       popular: popular
     })
     title = "#{article.title} — #{t[:site_name]}"
-    html  = wrap_layout(article.lang, title, inner)
+    og = {
+      title:       article.title,
+      description: article.excerpt,
+      url:         "#{BASE_URL}#{article.url}/",
+      image:       article.cover? ? "#{BASE_URL}#{article.cover_url}" : nil
+    }
+    html  = wrap_layout(article.lang, title, inner, og: og)
     write_file("#{article.lang}/#{article.date_path}/#{article.slug}/index.html", html)
 
     if article.cover?
@@ -201,14 +208,15 @@ class Builder
     write_file("#{lang}/calendar/index.html", html)
   end
 
-  def wrap_layout(lang, title, content)
+  def wrap_layout(lang, title, content, og: nil)
     t = TRANSLATIONS[lang]
     render_template('layout', {
       lang:    lang,
       title:   title,
       t:       t,
       content: content,
-      year:    Date.today.year
+      year:    Date.today.year,
+      og:      og
     })
   end
 
