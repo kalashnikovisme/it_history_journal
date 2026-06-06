@@ -2,6 +2,7 @@ require 'haml'
 require 'fileutils'
 require 'date'
 require 'json'
+require 'digest'
 require_relative 'article'
 require_relative 'render_scope'
 
@@ -58,6 +59,7 @@ class Builder
   end
 
   def build
+    @css_fingerprint = nil
     FileUtils.rm_rf(@output_dir)
     FileUtils.mkdir_p(@output_dir)
 
@@ -251,16 +253,24 @@ class Builder
     end
   end
 
+  def css_fingerprint
+    @css_fingerprint ||= begin
+      path = File.join(@output_dir, 'assets', 'css', 'output.css')
+      File.exist?(path) ? Digest::MD5.file(path).hexdigest[0, 8] : nil
+    end
+  end
+
   def wrap_layout(lang, title, content, og: nil, jsonld_json: nil)
     t = TRANSLATIONS[lang]
     render_template('layout', {
-      lang:       lang,
-      title:      title,
-      t:          t,
-      content:    content,
-      year:       Date.today.year,
-      og:         og,
-      jsonld_json: jsonld_json
+      lang:        lang,
+      title:       title,
+      t:           t,
+      content:     content,
+      year:        Date.today.year,
+      og:          og,
+      jsonld_json: jsonld_json,
+      css_ver:     css_fingerprint
     })
   end
 
