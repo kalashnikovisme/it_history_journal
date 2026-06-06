@@ -23,6 +23,12 @@
     %link{rel: 'preconnect', href: 'https://fonts.googleapis.com'}
     %link{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true}
     %link{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap'}
+    %script{async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-3CL3840NT7'}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3CL3840NT7');
   %body.bg-page.font-sans.text-white.min-h-screen
     %header.bg-card.border-b.border-white-10.sticky.top-0.z-50
       .max-w-5xl.mx-auto.px-4.sm:px-6.h-14.flex.items-center.justify-between
