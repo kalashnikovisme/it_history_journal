@@ -55,6 +55,19 @@
             = t[:lang_switch]
     %main.max-w-5xl.mx-auto.px-4.sm:px-6.py-8
       != content
+    :javascript
+      (function () {
+        var d = new Date();
+        var key = (d.getMonth() + 1) + '-' + d.getDate();
+        document.querySelectorAll('[data-cal-day="' + key + '"]').forEach(function (el) {
+          if (el.tagName === 'A') {
+            el.classList.add('ring-1', 'ring-accent');
+          } else {
+            el.classList.remove('text-white-20');
+            el.classList.add('bg-accent', 'text-page', 'font-semibold');
+          }
+        });
+      })();
     %footer.border-t.border-white-10.mt-16
       .max-w-5xl.mx-auto.px-4.sm:px-6.py-8.flex.flex-col.gap-3.sm:flex-row.items-start.sm:items-center.sm:justify-between.text-sm.text-white-30
         %span

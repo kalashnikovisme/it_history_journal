@@ -1,8 +1,7 @@
 %h1.text-2xl.font-bold.text-white.mb-8
   = t[:calendar]
 
-- today = Date.today
-- year  = today.year
+- year = Date.today.year
 
 .grid.grid-cols-1.sm:grid-cols-2.lg:grid-cols-3.gap-6
   - (1..12).each do |m|
@@ -21,13 +20,9 @@
           %span
         - (1..days_in_month).each do |d|
           - article_url = articles_by_month_day[[m, d]]&.first&.url
-          - is_today = (m == today.month && d == today.day)
           - if article_url
-            %a.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.font-medium.bg-accent-dim.text-accent.hover:bg-accent-high.transition-colors{href: article_url, class: is_today ? 'ring-1 ring-accent' : ''}
-              = d
-          - elsif is_today
-            %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.bg-accent.text-page.font-semibold
+            %a.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.font-medium.bg-accent-dim.text-accent.hover:bg-accent-high.transition-colors{href: article_url, 'data-cal-day': "#{m}-#{d}"}
               = d
           - else
-            %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.text-white-20
+            %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.text-white-20{'data-cal-day': "#{m}-#{d}"}
               = d

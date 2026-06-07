@@ -147,8 +147,7 @@ class Builder
       years_with_counts:  years_with_counts,
       days_with_articles: days_with_articles,
       current_month:      today.month,
-      current_year:       today.year,
-      current_day:        today.day
+      current_year:       today.year
     })
     html = wrap_layout(lang, t[:site_name], inner)
     write_file("#{lang}/index.html", html)

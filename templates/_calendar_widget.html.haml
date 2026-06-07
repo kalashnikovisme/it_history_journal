@@ -15,13 +15,9 @@
       %span
     - (1..days_in_month).each do |d|
       - article_url = days_with_articles[[current_month, d]]
-      - is_today = d == current_day
       - if article_url
-        %a.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.font-medium.bg-accent-dim.text-accent.hover:bg-accent-high.transition-colors{href: article_url, class: is_today ? 'ring-1 ring-accent' : ''}
-          = d
-      - elsif is_today
-        %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.bg-accent.text-page.font-semibold
+        %a.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.font-medium.bg-accent-dim.text-accent.hover:bg-accent-high.transition-colors{href: article_url, 'data-cal-day': "#{current_month}-#{d}"}
           = d
       - else
-        %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.text-white-20
+        %span.block.w-full.aspect-square.flex.items-center.justify-center.rounded.text-xs.text-white-20{'data-cal-day': "#{current_month}-#{d}"}
           = d
