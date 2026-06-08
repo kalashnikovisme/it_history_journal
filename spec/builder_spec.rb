@@ -373,6 +373,38 @@ RSpec.describe Builder do
     end
   end
 
+  describe 'today article on index' do
+    context 'when an article matches today month/day' do
+      before do
+        allow(Date).to receive(:today).and_return(Date.new(2012, 5, 18))
+        builder.build
+      end
+
+      it 'shows the today article as latest post' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        latest_section_pos = content.index('Latest post')
+        facebook_pos       = content.index('Facebook IPO')
+        gosling_pos        = content.index('James Gosling Was Born')
+        expect(facebook_pos).to be < gosling_pos
+        expect(latest_section_pos).to be < facebook_pos
+      end
+    end
+
+    context 'when no article matches today month/day' do
+      before do
+        allow(Date).to receive(:today).and_return(Date.new(2012, 5, 20))
+        builder.build
+      end
+
+      it 'shows the most recent article as latest post' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        latest_section_pos = content.index('Latest post')
+        gosling_pos        = content.index('James Gosling Was Born')
+        expect(latest_section_pos).to be < gosling_pos
+      end
+    end
+  end
+
   describe '#load_articles' do
     it 'loads articles from the articles directory' do
       articles = builder.load_articles

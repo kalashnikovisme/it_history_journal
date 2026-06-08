@@ -125,9 +125,11 @@ class Builder
   end
 
   def build_index(lang, articles)
-    t       = TRANSLATIONS[lang]
-    latest  = articles.first
-    recent  = articles.drop(1).first(20)
+    t     = TRANSLATIONS[lang]
+    today = Date.today
+    today_article = articles.find { |a| a.month == today.month && a.day == today.day }
+    latest = today_article || articles.first
+    recent = articles.reject { |a| a == latest }.first(20)
     popular = articles.select(&:popular).first(10)
     popular = recent.first(6) if popular.empty?
 
