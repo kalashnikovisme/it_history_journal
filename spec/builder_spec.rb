@@ -328,6 +328,51 @@ RSpec.describe Builder do
     end
   end
 
+  describe 'RSS feeds' do
+    before { builder.build }
+
+    it 'creates an English RSS feed' do
+      expect(File.exist?(File.join(output_dir, 'en', 'feed.xml'))).to be true
+    end
+
+    it 'creates a Russian RSS feed' do
+      expect(File.exist?(File.join(output_dir, 'ru', 'feed.xml'))).to be true
+    end
+
+    it 'is a valid RSS 2.0 document' do
+      content = File.read(File.join(output_dir, 'en', 'feed.xml'))
+      expect(content).to include('<?xml version="1.0" encoding="UTF-8"?>')
+      expect(content).to include('<rss version="2.0"')
+      expect(content).to include('</rss>')
+    end
+
+    it 'includes article titles in the English feed' do
+      content = File.read(File.join(output_dir, 'en', 'feed.xml'))
+      expect(content).to include('James Gosling Was Born')
+    end
+
+    it 'includes absolute article URLs in the feed' do
+      content = File.read(File.join(output_dir, 'en', 'feed.xml'))
+      expect(content).to include('https://history.purple-magic.com/en/may/19/james-gosling-was-born/')
+    end
+
+    it 'includes the atom:link self-reference' do
+      content = File.read(File.join(output_dir, 'en', 'feed.xml'))
+      expect(content).to include('https://history.purple-magic.com/en/feed.xml')
+    end
+
+    it 'includes pubDate for articles with known dates' do
+      content = File.read(File.join(output_dir, 'en', 'feed.xml'))
+      expect(content).to include('<pubDate>')
+      expect(content).to include('1955')
+    end
+
+    it 'includes article excerpts as descriptions' do
+      content = File.read(File.join(output_dir, 'en', 'feed.xml'))
+      expect(content).to include('James Gosling created Java.')
+    end
+  end
+
   describe '#load_articles' do
     it 'loads articles from the articles directory' do
       articles = builder.load_articles

@@ -91,6 +91,7 @@ class Builder
       build_calendar(lang, articles)
       build_articles_pages(lang, articles)
       build_year_pages(lang, articles)
+      build_rss(lang, articles)
     end
   end
 
@@ -113,6 +114,7 @@ class Builder
       build_calendar(lang, articles)
       build_articles_pages(lang, articles)
       build_year_pages(lang, articles)
+      build_rss(lang, articles)
       articles.each { |article| build_article(article, articles) }
     end
   end
@@ -313,5 +315,52 @@ class Builder
       next unless File.exist?(src)
       FileUtils.cp(src, File.join(@output_dir, file))
     end
+  end
+
+  def build_rss(lang, articles)
+    t          = TRANSLATIONS[lang]
+    feed_url   = "#{BASE_URL}/#{lang}/feed.xml"
+    channel_url = "#{BASE_URL}/#{lang}/"
+
+    items = articles.first(20).map do |article|
+      pub_date = rss_pub_date(article)
+      lines = []
+      lines << "    <item>"
+      lines << "      <title>#{xml_escape(article.title)}</title>"
+      lines << "      <link>#{BASE_URL}#{article.url}/</link>"
+      lines << "      <guid isPermaLink=\"true\">#{BASE_URL}#{article.url}/</guid>"
+      lines << "      <description>#{xml_escape(article.excerpt)}</description>"
+      lines << "      <pubDate>#{pub_date}</pubDate>" if pub_date
+      lines << "    </item>"
+      lines.join("\n")
+    end
+
+    xml = <<~XML
+      <?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+        <channel>
+          <title>#{xml_escape(t[:site_name])}</title>
+          <link>#{channel_url}</link>
+          <atom:link href="#{feed_url}" rel="self" type="application/rss+xml"/>
+          <description>#{xml_escape(t[:site_name])}</description>
+          <language>#{lang}</language>
+          <lastBuildDate>#{Time.now.strftime('%a, %d %b %Y %H:%M:%S +0000')}</lastBuildDate>
+      #{items.join("\n")}
+        </channel>
+      </rss>
+    XML
+
+    write_file("#{lang}/feed.xml", xml)
+  end
+
+  def rss_pub_date(article)
+    return nil unless article.year && article.month && article.day
+    Date.new(article.year, article.month, article.day).strftime('%a, %d %b %Y 00:00:00 +0000')
+  rescue ArgumentError
+    nil
+  end
+
+  def xml_escape(str)
+    str.to_s.gsub('&', '&amp;').gsub('<', '&lt;').gsub('>', '&gt;').gsub('"', '&quot;')
   end
 end

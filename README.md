@@ -121,6 +121,17 @@ Builds the Docker image and installs gems.
 | `-w`, `--max-width N` | — | Resize to fit within this width |
 | `--no-strip` | — | Keep EXIF metadata |
 
+## RSS feeds
+
+The build generates an RSS 2.0 feed for each language:
+
+| URL | Feed |
+|---|---|
+| `/en/feed.xml` | English articles |
+| `/ru/feed.xml` | Russian articles |
+
+Feeds are regenerated automatically on every full build and every time an article is added or changed (watch mode).
+
 ## Deployment
 
 Deployed to Cloudflare Pages via GitHub Actions on every push to `main`.
