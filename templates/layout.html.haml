@@ -24,6 +24,7 @@
     %link{rel: 'preconnect', href: 'https://fonts.googleapis.com'}
     %link{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true}
     %link{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap'}
+    %link{rel: 'alternate', type: 'application/rss+xml', title: t[:site_name], href: "/#{lang}/feed.xml"}
     - if jsonld_json
       %script{type: 'application/ld+json'}
         != jsonld_json
@@ -47,6 +48,8 @@
             = t[:all_articles]
           %a.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/calendar/"}
             = t[:calendar]
+          %a.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/feed.xml", title: 'RSS feed'}
+            RSS
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "https://patreon.com/cw/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"}
             Patreon
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "https://boosty.to/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"}
@@ -78,5 +81,6 @@
           %a.hover:text-white-60.transition-colors{href: "https://patreon.com/cw/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"} Patreon
           %a.hover:text-white-60.transition-colors{href: "https://boosty.to/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"} Boosty
           %a.hover:text-white-60.transition-colors{href: "https://paypal.me/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"} PayPal
+          %a.hover:text-white-60.transition-colors{href: "/#{lang}/feed.xml", title: 'RSS feed'} RSS
           %a.hover:text-white-60.transition-colors{href: "/en/"} EN
           %a.hover:text-white-60.transition-colors{href: "/ru/"} RU
