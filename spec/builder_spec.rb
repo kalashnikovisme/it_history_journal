@@ -382,11 +382,17 @@ RSpec.describe Builder do
 
       it 'shows the today article as latest post' do
         content = File.read(File.join(output_dir, 'en', 'index.html'))
-        latest_section_pos = content.index('Latest post')
-        facebook_pos       = content.index('Facebook IPO')
-        gosling_pos        = content.index('James Gosling Was Born')
+        today_section_pos = content.index('On this day')
+        facebook_pos      = content.index('Facebook IPO')
+        gosling_pos       = content.index('James Gosling Was Born')
         expect(facebook_pos).to be < gosling_pos
-        expect(latest_section_pos).to be < facebook_pos
+        expect(today_section_pos).to be < facebook_pos
+      end
+
+      it 'shows the today in history label' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        expect(content).to include('On this day')
+        expect(content).not_to include('Latest post')
       end
     end
 

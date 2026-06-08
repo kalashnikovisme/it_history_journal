@@ -16,6 +16,7 @@ class Builder
     'en' => {
       site_name:             'IT History Journal',
       latest_post:           'Latest post',
+      today_in_history:      'On this day',
       recent_posts:          'Recent posts',
       popular_posts:         'Popular posts',
       related_posts:         'Related posts',
@@ -34,6 +35,7 @@ class Builder
     'ru' => {
       site_name:             'IT History Journal',
       latest_post:           'Последняя запись',
+      today_in_history:      'В этот день',
       recent_posts:          'Последние записи',
       popular_posts:         'Популярные записи',
       related_posts:         'Похожие статьи',
@@ -129,11 +131,11 @@ class Builder
     today = Date.today
     today_article = articles.find { |a| a.month == today.month && a.day == today.day }
     latest = today_article || articles.first
+    latest_label = today_article ? t[:today_in_history] : t[:latest_post]
     recent = articles.reject { |a| a == latest }.first(20)
     popular = articles.select(&:popular).first(10)
     popular = recent.first(6) if popular.empty?
 
-    today = Date.today
     days_with_articles = articles.each_with_object({}) do |a, h|
       h[[a.month, a.day]] = a.url
     end
@@ -146,6 +148,7 @@ class Builder
       lang:               lang,
       t:                  t,
       latest:             latest,
+      latest_label:       latest_label,
       recent:             recent,
       popular:            popular,
       years_with_counts:  years_with_counts,
