@@ -21,3 +21,7 @@ Jefferson went even further, arguing that a machine would also have to understan
 An interesting point is that today a machine can certainly write a sonnet, yet it is difficult to claim that it does so based on its own thoughts and emotions. That leads to another question: what exactly is "understanding"? How do we know that we ourselves understand something? How can we determine whether a machine understands anything at all? Answering those questions requires digging deep into several fields of study, and in some of them we still lack enough evidence to draw firm conclusions.
 
 The lecture had a lasting impact on the industry. In 1950, Alan Turing published his landmark paper Computing Machinery and Intelligence, where he directly addressed Jefferson's position. Public debates between great scientists and engineers have often helped entire industries move forward, and this was no exception. Jefferson's lecture became part of the intellectual foundation of early artificial intelligence research, influencing how many of the era's leading thinkers framed and discussed the possibility of machine intelligence.
+
+## Turing's Response Was Immediate
+
+Just two days later, on June 11, 1949, Alan Turing gave an interview to The Times in which he directly addressed the question of whether a machine could write a sonnet. It may be a coincidence that two thinkers arrived at the same comparison independently — or perhaps the debates around computers and what was essentially artificial intelligence in 1949 moved just as fast as they do today.
