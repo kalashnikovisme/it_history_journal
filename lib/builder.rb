@@ -138,7 +138,7 @@ class Builder
     candidates       = [today_article, tomorrow_article].compact.uniq
     fallback         = candidates.empty? ? articles.first : nil
 
-    recent  = articles.reject { |a| candidates.include?(a) || a == fallback }.first(20)
+    recent  = articles.reject { |a| a == fallback }.first(20)
     popular = articles.select(&:popular).first(10)
     popular = recent.first(6) if popular.empty?
 

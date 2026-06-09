@@ -404,6 +404,12 @@ RSpec.describe Builder do
         recent_pos    = content.index('Recent posts')
         expect(today_key_pos).to be < recent_pos
       end
+
+      it 'includes both candidates in recent list with data-recent-key wrappers' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        expect(content).to include("data-recent-key='5-18'")
+        expect(content).to include("data-recent-key='5-19'")
+      end
     end
 
     context 'when an article matches tomorrow month/day only (May 19)' do

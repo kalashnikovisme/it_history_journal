@@ -111,6 +111,10 @@
         if (!found) {
           var fb = document.getElementById('today-fallback');
           if (fb) fb.classList.remove('hidden');
+        } else {
+          document.querySelectorAll('[data-recent-key="' + key + '"]').forEach(function (el) {
+            el.classList.add('hidden');
+          });
         }
       })();
     :javascript
