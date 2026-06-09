@@ -129,12 +129,16 @@ class Builder
   end
 
   def build_index(lang, articles)
-    t     = TRANSLATIONS[lang]
-    today = Date.today
-    today_article = articles.find { |a| a.month == today.month && a.day == today.day }
-    latest = today_article || articles.first
-    latest_label = today_article ? t[:today_in_history] : t[:latest_post]
-    recent = articles.reject { |a| a == latest }.first(20)
+    t        = TRANSLATIONS[lang]
+    today    = Date.today
+    tomorrow = today + 1
+
+    today_article    = articles.find { |a| a.month == today.month    && a.day == today.day }
+    tomorrow_article = articles.find { |a| a.month == tomorrow.month && a.day == tomorrow.day }
+    candidates       = [today_article, tomorrow_article].compact.uniq
+    fallback         = candidates.empty? ? articles.first : nil
+
+    recent  = articles.reject { |a| candidates.include?(a) || a == fallback }.first(20)
     popular = articles.select(&:popular).first(10)
     popular = recent.first(6) if popular.empty?
 
@@ -149,8 +153,9 @@ class Builder
     inner = render_template('index', {
       lang:               lang,
       t:                  t,
-      latest:             latest,
-      latest_label:       latest_label,
+      today_article:      today_article,
+      tomorrow_article:   tomorrow_article,
+      fallback:           fallback,
       recent:             recent,
       popular:            popular,
       years_with_counts:  years_with_counts,

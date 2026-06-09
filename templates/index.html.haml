@@ -1,20 +1,37 @@
-- if latest
-  %section.mb-10{'aria-label': latest_label}
+- [today_article, tomorrow_article].compact.uniq.each do |art|
+  %section.mb-10.hidden{'aria-label': t[:today_in_history], 'data-today-key': "#{art.month}-#{art.day}"}
     %p.text-xs.font-semibold.text-accent-muted.uppercase.tracking-widest.mb-3
-      = latest_label
-    %a.flex.flex-col.sm:flex-row.sm:items-stretch.bg-card.rounded-2xl.overflow-hidden.group{href: latest.url}
-      - if latest.cover?
+      = t[:today_in_history]
+    %a.flex.flex-col.sm:flex-row.sm:items-stretch.bg-card.rounded-2xl.overflow-hidden.group{href: art.url}
+      - if art.cover?
         .w-full.h-44.sm:h-auto.sm:shrink-0.sm:w-72.overflow-hidden
-          %img.w-full.h-full.object-cover{src: latest.hero_url, alt: ''}
+          %img.w-full.h-full.object-cover{src: art.hero_url, alt: ''}
       .flex.items-start.justify-between.gap-4.p-4.sm:gap-6.sm:p-6.flex-1.min-w-0
         .flex-1.min-w-0
           %h2.text-xl.sm:text-2xl.font-bold.text-white.leading-tight.mb-3.group-hover:text-accent.transition-colors
-            = latest.title
+            = art.title
           %p.text-white-55.leading-relaxed.line-clamp-3
-            = latest.excerpt
+            = art.excerpt
         .shrink-0
           %span.hidden.md:inline-block.bg-accent-dim.text-accent.text-sm.font-medium.rounded-lg.px-3.py-1.whitespace-nowrap
-            = latest.date_label
+            = art.date_label
+- if fallback
+  %section.mb-10.hidden#today-fallback{'aria-label': t[:latest_post]}
+    %p.text-xs.font-semibold.text-accent-muted.uppercase.tracking-widest.mb-3
+      = t[:latest_post]
+    %a.flex.flex-col.sm:flex-row.sm:items-stretch.bg-card.rounded-2xl.overflow-hidden.group{href: fallback.url}
+      - if fallback.cover?
+        .w-full.h-44.sm:h-auto.sm:shrink-0.sm:w-72.overflow-hidden
+          %img.w-full.h-full.object-cover{src: fallback.hero_url, alt: ''}
+      .flex.items-start.justify-between.gap-4.p-4.sm:gap-6.sm:p-6.flex-1.min-w-0
+        .flex-1.min-w-0
+          %h2.text-xl.sm:text-2xl.font-bold.text-white.leading-tight.mb-3.group-hover:text-accent.transition-colors
+            = fallback.title
+          %p.text-white-55.leading-relaxed.line-clamp-3
+            = fallback.excerpt
+        .shrink-0
+          %span.hidden.md:inline-block.bg-accent-dim.text-accent.text-sm.font-medium.rounded-lg.px-3.py-1.whitespace-nowrap
+            = fallback.date_label
 
 - cal_locals = {lang: lang, t: t, days_with_articles: days_with_articles, current_month: current_month, current_year: current_year}
 

@@ -374,39 +374,72 @@ RSpec.describe Builder do
   end
 
   describe 'today article on index' do
-    context 'when an article matches today month/day' do
+    context 'when an article matches today month/day (May 18)' do
       before do
         allow(Date).to receive(:today).and_return(Date.new(2012, 5, 18))
         builder.build
       end
 
-      it 'shows the today article as latest post' do
+      it 'renders the today candidate with the correct data-today-key' do
         content = File.read(File.join(output_dir, 'en', 'index.html'))
-        today_section_pos = content.index('On this day')
-        facebook_pos      = content.index('Facebook IPO')
-        gosling_pos       = content.index('James Gosling Was Born')
-        expect(facebook_pos).to be < gosling_pos
-        expect(today_section_pos).to be < facebook_pos
+        expect(content).to include("data-today-key='5-18'")
+        expect(content).to include('Facebook IPO')
       end
 
-      it 'shows the today in history label' do
+      it 'renders the tomorrow candidate (May 19) as second candidate' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        expect(content).to include("data-today-key='5-19'")
+        expect(content).to include('James Gosling Was Born')
+      end
+
+      it 'includes On this day label and no Latest post fallback' do
         content = File.read(File.join(output_dir, 'en', 'index.html'))
         expect(content).to include('On this day')
         expect(content).not_to include('Latest post')
       end
+
+      it 'renders candidate sections before recent articles' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        today_key_pos = content.index('data-today-key')
+        recent_pos    = content.index('Recent posts')
+        expect(today_key_pos).to be < recent_pos
+      end
     end
 
-    context 'when no article matches today month/day' do
+    context 'when an article matches tomorrow month/day only (May 19)' do
+      before do
+        # today = May 19 means tomorrow = May 20 (no article), today = May 19 matches Gosling
+        allow(Date).to receive(:today).and_return(Date.new(2012, 5, 19))
+        builder.build
+      end
+
+      it 'renders the today candidate (May 19) with correct key' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        expect(content).to include("data-today-key='5-19'")
+      end
+
+      it 'does not render a Latest post fallback' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        expect(content).not_to include('Latest post')
+      end
+    end
+
+    context 'when no article matches today or tomorrow' do
       before do
         allow(Date).to receive(:today).and_return(Date.new(2012, 5, 20))
         builder.build
       end
 
-      it 'shows the most recent article as latest post' do
+      it 'renders no data-today-key candidate sections' do
         content = File.read(File.join(output_dir, 'en', 'index.html'))
-        latest_section_pos = content.index('Latest post')
-        gosling_pos        = content.index('James Gosling Was Born')
-        expect(latest_section_pos).to be < gosling_pos
+        expect(content).not_to match(/data-today-key='[\d-]+'/)
+      end
+
+      it 'shows the fallback Latest post section before recent articles' do
+        content = File.read(File.join(output_dir, 'en', 'index.html'))
+        fallback_pos = content.index('Latest post')
+        gosling_pos  = content.index('James Gosling Was Born')
+        expect(fallback_pos).to be < gosling_pos
       end
     end
   end

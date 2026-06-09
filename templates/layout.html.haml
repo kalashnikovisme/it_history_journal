@@ -101,6 +101,22 @@
       (function () {
         var d = new Date();
         var key = (d.getMonth() + 1) + '-' + d.getDate();
+        var found = false;
+        document.querySelectorAll('[data-today-key]').forEach(function (el) {
+          if (el.getAttribute('data-today-key') === key) {
+            el.classList.remove('hidden');
+            found = true;
+          }
+        });
+        if (!found) {
+          var fb = document.getElementById('today-fallback');
+          if (fb) fb.classList.remove('hidden');
+        }
+      })();
+    :javascript
+      (function () {
+        var d = new Date();
+        var key = (d.getMonth() + 1) + '-' + d.getDate();
         document.querySelectorAll('[data-cal-day="' + key + '"]').forEach(function (el) {
           if (el.tagName === 'A') {
             el.classList.add('ring-1', 'ring-accent');
