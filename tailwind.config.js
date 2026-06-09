@@ -34,6 +34,7 @@ module.exports = {
   },
   safelist: [
     'ring-1', 'ring-accent', 'bg-accent', 'text-page',
+    'translate-x-0', 'opacity-60',
   ],
   plugins: [
     require('@tailwindcss/typography'),

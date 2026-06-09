@@ -27,6 +27,7 @@ class Builder
       read_more:             'Read more',
       lang_switch:           'RU',
       nav_label:             'Main navigation',
+      close_menu:            'Close',
       browse_by_year:        'Browse by year',
       no_articles_this_year: 'No articles for this year yet.',
       months:                %w[January February March April May June
@@ -46,6 +47,7 @@ class Builder
       read_more:             'Читать далее',
       lang_switch:           'EN',
       nav_label:             'Основная навигация',
+      close_menu:            'Закрыть',
       browse_by_year:        'По годам',
       no_articles_this_year: 'Статей за этот год пока нет.',
       months:                %w[Январь Февраль Март Апрель Май Июнь

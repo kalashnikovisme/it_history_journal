@@ -37,18 +37,22 @@
   %body.bg-page.font-sans.text-white.min-h-screen
     %header.bg-card.border-b.border-white-10.sticky.top-0.z-50
       .max-w-5xl.mx-auto.px-4.sm:px-6.h-14.flex.items-center.justify-between
-        %a.flex.items-center.gap-2.group{href: "/#{lang}/"}
-          %img.w-8.h-8.rounded-full.shrink-0{src: '/icon.svg', alt: '', aria: {hidden: 'true'}}
-          %span.font-semibold.text-white.text-base.group-hover:text-accent.transition-colors
-            = t[:site_name]
+        .flex.items-center.gap-3
+          %button#nav-open.sm:hidden.flex.items-center.justify-center.text-white-60.hover:text-white.transition-colors.p-1{type: 'button', 'aria-label': 'Open menu'}
+            %svg.w-6.h-6{fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', viewBox: '0 0 24 24', 'aria-hidden': 'true'}
+              %path{d: 'M4 6h16M4 12h16M4 18h16'}
+          %a.flex.items-center.gap-2.group{href: "/#{lang}/"}
+            %img.w-8.h-8.rounded-full.shrink-0{src: '/icon.svg', alt: '', aria: {hidden: 'true'}}
+            %span.font-semibold.text-white.text-base.group-hover:text-accent.transition-colors
+              = t[:site_name]
         %nav.flex.items-center.gap-3.sm:gap-5{'aria-label': t[:nav_label]}
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/"}
             = t[:home]
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/articles/"}
             = t[:all_articles]
-          %a.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/calendar/"}
+          %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/calendar/"}
             = t[:calendar]
-          %a.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/feed.xml", title: 'RSS feed'}
+          %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "/#{lang}/feed.xml", title: 'RSS feed'}
             RSS
           %a.hidden.sm:block.text-sm.text-white-60.hover:text-white.transition-colors{href: "https://patreon.com/cw/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"}
             Patreon
@@ -62,6 +66,35 @@
             Telegram
           %a.text-sm.font-medium.text-accent-muted.hover:text-accent.border.border-white-20.rounded.px-2.py-0.5.transition-colors{href: "/#{lang == 'en' ? 'ru' : 'en'}/"}
             = t[:lang_switch]
+    #mobile-nav.hidden.fixed.inset-0.z-50
+      #mobile-backdrop.absolute.inset-0.bg-black.opacity-0.transition-opacity.duration-300
+      #mobile-drawer.absolute.top-0.left-0.h-full.w-72.bg-card.flex.flex-col.-translate-x-full.transition-transform.duration-300.ease-in-out
+        %nav.flex-1.overflow-y-auto.flex.flex-col.gap-1.px-4.pt-4{'aria-label': t[:nav_label]}
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: "/#{lang}/"}
+            = t[:home]
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: "/#{lang}/articles/"}
+            = t[:all_articles]
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: "/#{lang}/calendar/"}
+            = t[:calendar]
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: "/#{lang}/feed.xml"}
+            RSS
+          .my-2.border-t.border-white-10
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: "https://patreon.com/cw/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"}
+            Patreon
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: "https://boosty.to/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"}
+            Boosty
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: "https://paypal.me/kalashnikovisme", target: "_blank", rel: "noopener noreferrer"}
+            PayPal
+          %a.block.py-3.px-3.text-lg.text-white-60.hover:text-white.hover:bg-raised.rounded-xl.transition-colors{href: 'https://t.me/it_history_journal', target: '_blank', rel: 'noopener noreferrer'}
+            Telegram
+          .my-2.border-t.border-white-10
+          %a.block.py-3.px-3.text-lg.font-medium.text-accent-muted.hover:text-accent.hover:bg-raised.rounded-xl.transition-colors{href: "/#{lang == 'en' ? 'ru' : 'en'}/"}
+            = t[:lang_switch]
+        .p-4.border-t.border-white-10
+          %button#nav-close.flex.items-center.justify-center.gap-2.w-full.bg-raised.hover:bg-accent-dim.text-white.font-semibold.py-5.text-xl.rounded-xl.transition-colors{type: 'button'}
+            %svg.w-6.h-6{fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', viewBox: '0 0 24 24', 'aria-hidden': 'true'}
+              %path{d: 'M6 18L18 6M6 6l12 12'}
+            = t[:close_menu]
     %main.max-w-5xl.mx-auto.px-4.sm:px-6.py-8
       != content
     :javascript
@@ -76,6 +109,36 @@
             el.classList.add('bg-accent', 'text-page', 'font-semibold');
           }
         });
+      })();
+    :javascript
+      (function() {
+        var open = document.getElementById('nav-open');
+        if (!open) return;
+        var nav = document.getElementById('mobile-nav');
+        var drawer = document.getElementById('mobile-drawer');
+        var backdrop = document.getElementById('mobile-backdrop');
+        function openMenu() {
+          nav.classList.remove('hidden');
+          requestAnimationFrame(function() {
+            drawer.classList.remove('-translate-x-full');
+            drawer.classList.add('translate-x-0');
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-60');
+          });
+          document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+          drawer.classList.add('-translate-x-full');
+          drawer.classList.remove('translate-x-0');
+          backdrop.classList.add('opacity-0');
+          backdrop.classList.remove('opacity-60');
+          document.body.style.overflow = '';
+          setTimeout(function() { nav.classList.add('hidden'); }, 300);
+        }
+        open.addEventListener('click', openMenu);
+        document.getElementById('nav-close').addEventListener('click', closeMenu);
+        backdrop.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
       })();
     %footer.border-t.border-white-10.mt-16
       .max-w-5xl.mx-auto.px-4.sm:px-6.py-8.flex.flex-col.gap-3.sm:flex-row.items-start.sm:items-center.sm:justify-between.text-sm.text-white-30
