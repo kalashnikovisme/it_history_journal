@@ -7,7 +7,7 @@
   %a{class: link_cls, href: article.url}
     - if article.cover?
       %div{class: img_wrap_cls}
-        %img.w-full.h-full.object-cover{src: article.cover_url, alt: ''}
+        %img.w-full.h-full.object-cover{src: article.thumb_url, alt: ''}
     .flex.items-start.justify-between.gap-3.p-4.flex-1.min-w-0
       .flex-1.min-w-0
         %h3{class: "font-semibold text-white #{title_cls} leading-snug mb-1 group-hover:text-accent transition-colors"}

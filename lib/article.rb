@@ -18,7 +18,7 @@ class Article
   }.freeze
 
   attr_reader :title, :date, :excerpt, :content_md, :slug, :lang,
-              :date_path, :file_path, :month, :day, :popular, :cover_path, :year
+              :date_path, :file_path, :month, :day, :popular, :cover_path, :thumb_path, :year
 
   def self.parse(file_path, site_root: '.')
     raw = File.read(file_path)
@@ -40,6 +40,8 @@ class Article
     article_dir = File.dirname(file_path)
     cover = COVER_EXTENSIONS.map { |ext| File.join(article_dir, "cover.#{ext}") }
                              .find { |path| File.exist?(path) }
+    thumb = File.join(article_dir, 'thumb.webp')
+    thumb = nil unless File.exist?(thumb)
 
     raw_date = parsed.front_matter['date']
     year = raw_date&.match(/(\d{4})$/)&.[](1)&.to_i
@@ -57,7 +59,8 @@ class Article
       year:       year,
       popular:    parsed.front_matter['popular'] || false,
       file_path:  file_path,
-      cover_path: cover
+      cover_path: cover,
+      thumb_path: thumb
     )
   end
 
@@ -73,7 +76,7 @@ class Article
   end
 
   def initialize(title:, date:, excerpt:, content_md:, lang:, date_path:, slug:,
-                 month:, day:, year:, popular:, file_path:, cover_path: nil)
+                 month:, day:, year:, popular:, file_path:, cover_path: nil, thumb_path: nil)
     @title      = title
     @date       = date
     @excerpt    = excerpt
@@ -87,6 +90,7 @@ class Article
     @popular    = popular
     @file_path  = file_path
     @cover_path = cover_path
+    @thumb_path = thumb_path
   end
 
   def cover?
@@ -95,6 +99,10 @@ class Article
 
   def cover_url
     "#{url}/#{File.basename(cover_path)}"
+  end
+
+  def thumb_url
+    thumb_path ? "#{url}/thumb.webp" : cover_url
   end
 
   def content_html

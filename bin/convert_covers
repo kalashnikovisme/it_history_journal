@@ -1,38 +1,50 @@
 #!/usr/bin/env bash
 set -uo pipefail
 
+# Phase 1: convert any non-WebP covers to cover.webp and remove the originals
 mapfile -t covers < <(find articles \( -name "cover.png" -o -name "cover.jpg" -o -name "cover.jpeg" \) | sort)
 
-if [ ${#covers[@]} -eq 0 ]; then
-  echo "No cover.png, cover.jpg, or cover.jpeg files found in articles/."
+if [ ${#covers[@]} -gt 0 ]; then
+  echo "Found ${#covers[@]} cover file(s) to convert:"
+  printf '  %s\n' "${covers[@]}"
+  echo
+
+  if bundle exec ruby bin/convert_to_webp "${covers[@]}"; then
+    echo
+    echo "Removing original files..."
+    for f in "${covers[@]}"; do
+      rm -f "$f"
+      echo "  removed  $f"
+    done
+  else
+    echo
+    echo "Some conversions failed. Removing only successfully converted files..."
+    failed=0
+    for f in "${covers[@]}"; do
+      ext="${f##*.}"
+      webp="${f%.$ext}.webp"
+      if [ -f "$webp" ]; then
+        rm -f "$f"
+        echo "  removed  $f"
+      else
+        echo "  kept     $f  (conversion failed)"
+        failed=1
+      fi
+    done
+    exit $failed
+  fi
+else
+  echo "No cover.png / cover.jpg / cover.jpeg files found — skipping conversion."
+fi
+
+# Phase 2: generate 192×192 thumbnails from cover.webp for the article list
+echo
+mapfile -t webp_covers < <(find articles -name "cover.webp" | sort)
+
+if [ ${#webp_covers[@]} -eq 0 ]; then
+  echo "No cover.webp files found — skipping thumbnail generation."
   exit 0
 fi
 
-echo "Found ${#covers[@]} cover file(s):"
-printf '  %s\n' "${covers[@]}"
-echo
-
-if bundle exec ruby bin/convert_to_webp "${covers[@]}"; then
-  echo
-  echo "Removing original files..."
-  for f in "${covers[@]}"; do
-    rm -f "$f"
-    echo "  removed  $f"
-  done
-else
-  echo
-  echo "Some conversions failed. Removing only successfully converted files..."
-  failed=0
-  for f in "${covers[@]}"; do
-    ext="${f##*.}"
-    webp="${f%.$ext}.webp"
-    if [ -f "$webp" ]; then
-      rm -f "$f"
-      echo "  removed  $f"
-    else
-      echo "  kept     $f  (conversion failed)"
-      failed=1
-    fi
-  done
-  exit $failed
-fi
+echo "Generating thumbnails for ${#webp_covers[@]} cover(s):"
+bundle exec ruby bin/convert_to_webp --thumb-only 192 "${webp_covers[@]}"

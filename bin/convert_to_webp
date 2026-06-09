@@ -5,19 +5,21 @@ require 'mini_magick'
 require 'optparse'
 
 options = {
-  quality:   80,
-  max_width: nil,
-  strip:     true,
+  quality:    80,
+  max_width:  nil,
+  strip:      true,
+  thumb_only: nil,
 }
 
 OptionParser.new do |opts|
   opts.banner = "Usage: bin/convert_to_webp [options] <image> [images...]\n\n" \
                 "Converts images to WebP for web use.\n\n"
 
-  opts.on('-q', '--quality N', Integer,   "WebP quality 1-100 (default: #{options[:quality]})") { |v| options[:quality] = v }
-  opts.on('-w', '--max-width N', Integer, 'Resize to fit within this width (preserves ratio)')  { |v| options[:max_width] = v }
-  opts.on('--[no-]strip',                 'Strip EXIF/metadata (default: yes)')                 { |v| options[:strip] = v }
-  opts.on('-h', '--help')                 { puts opts; exit }
+  opts.on('-q', '--quality N',     Integer, "WebP quality 1-100 (default: #{options[:quality]})") { |v| options[:quality] = v }
+  opts.on('-w', '--max-width N',   Integer, 'Resize to fit within this width (preserves ratio)')  { |v| options[:max_width] = v }
+  opts.on('-t', '--thumb-only N',  Integer, 'Write a NxN square thumbnail to thumb.webp only')    { |v| options[:thumb_only] = v }
+  opts.on('--[no-]strip',                   'Strip EXIF/metadata (default: yes)')                 { |v| options[:strip] = v }
+  opts.on('-h', '--help')                   { puts opts; exit }
 end.parse!
 
 if ARGV.empty?
@@ -37,6 +39,31 @@ ARGV.each do |input|
   unless File.exist?(input)
     warn "  skip    #{input}  (not found)"
     failures += 1
+    next
+  end
+
+  if options[:thumb_only]
+    size       = options[:thumb_only]
+    thumb_path = File.join(File.dirname(input), 'thumb.webp')
+
+    begin
+      image = MiniMagick::Image.open(input)
+      image.combine_options do |c|
+        c.thumbnail "#{size}x#{size}^"
+        c.gravity   'center'
+        c.extent    "#{size}x#{size}"
+      end
+      image.strip if options[:strip]
+      image.format 'webp'
+      image.quality options[:quality].to_s
+      image.write thumb_path
+
+      puts "  #{File.basename(input).ljust(32)}→  thumb.webp  (#{size}×#{size})"
+    rescue => e
+      warn "  fail    #{input}  #{e.message}"
+      failures += 1
+    end
+
     next
   end
 

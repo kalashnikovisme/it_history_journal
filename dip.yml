@@ -50,7 +50,7 @@ interaction:
       run_options: [no-deps]
 
   convert_covers:
-    description: Convert all cover.png files in articles/ to WebP and remove the originals
+    description: Convert non-WebP covers to cover.webp, then generate 192×192 thumb.webp from each cover.webp
     service: app
     command: bin/convert_covers
     compose:

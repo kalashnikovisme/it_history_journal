@@ -93,7 +93,7 @@ Builds the Docker image and installs gems.
 | `dip serve` | Build and serve at http://localhost:4000 |
 | `dip watch` | Full build + file watcher + dev server at http://localhost:4000 |
 | `dip convert_to_webp <file> [files...]` | Convert images to WebP format |
-| `dip convert_covers` | Convert all `cover.png` files in `articles/` to WebP and remove the originals |
+| `dip convert_covers` | Convert non-WebP covers to `cover.webp`, then generate `thumb.webp` (192×192) from each `cover.webp` |
 | `dip shell` | Open a shell in the container |
 | `dip bundle <args>` | Run bundler commands |
 
@@ -111,7 +111,7 @@ Builds the Docker image and installs gems.
 |---|---|
 | `bin/watch` | Underlying script for `dip watch` |
 | `bin/convert_to_webp` | Convert images to WebP (requires ImageMagick; use `dip convert_to_webp` inside Docker) |
-| `bin/convert_covers` | Convert all `cover.png` files in `articles/` to WebP via dip, then delete the originals |
+| `bin/convert_covers` | Phase 1: convert non-WebP covers to `cover.webp` and delete originals. Phase 2: generate `thumb.webp` (192×192) from every `cover.webp` |
 
 `bin/convert_to_webp` options:
 
@@ -119,6 +119,7 @@ Builds the Docker image and installs gems.
 |---|---|---|
 | `-q`, `--quality N` | `80` | WebP quality 1–100 |
 | `-w`, `--max-width N` | — | Resize to fit within this width |
+| `-t`, `--thumb-only N` | — | Write a N×N square thumbnail to `thumb.webp` only (skips main output) |
 | `--no-strip` | — | Keep EXIF metadata |
 
 ## RSS feeds
