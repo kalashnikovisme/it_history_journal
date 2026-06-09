@@ -4,7 +4,7 @@
 
 - **README.md must stay current.** Whenever you add a script to `bin/` or a command to `dip.yml`, add a row to the relevant table in README.md before finishing the task.
 - **Tests must pass.** Run `bundle exec rspec` after every change. All examples must be green.
-- **Build must succeed.** Run `bundle exec rake build` after any template or builder change.
+- **Build must succeed.** Run `bundle exec rake build` after every task that involves code changes.
 
 ## Project overview
 

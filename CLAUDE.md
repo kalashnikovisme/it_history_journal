@@ -4,7 +4,7 @@
 
 - **README.md must stay current.** Whenever you add a script to `bin/` or a command to `dip.yml`, document it in the README under the relevant table before finishing the task.
 - **Run tests after every change.** Use `bundle exec rspec`. All 44+ examples must pass before reporting a task as done.
-- **Run `bundle exec rake build` after template or builder changes** to confirm the site builds without errors.
+- **Run `bundle exec rake build` after every task that involves code changes** to confirm the site builds without errors.
 
 ## Tech stack
 
