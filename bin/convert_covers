@@ -37,7 +37,7 @@ else
   echo "No cover.png / cover.jpg / cover.jpeg files found — skipping conversion."
 fi
 
-# Phase 2: generate 192×192 thumbnails from cover.webp for the article list
+# Phase 2: generate 192×192 thumbnails and 576×384 hero images from cover.webp
 echo
 mapfile -t webp_covers < <(find articles -name "cover.webp" | sort)
 
@@ -46,5 +46,25 @@ if [ ${#webp_covers[@]} -eq 0 ]; then
   exit 0
 fi
 
-echo "Generating thumbnails for ${#webp_covers[@]} cover(s):"
-bundle exec ruby bin/convert_to_webp --thumb-only 192 "${webp_covers[@]}"
+missing_thumbs=()
+missing_heroes=()
+for f in "${webp_covers[@]}"; do
+  dir="$(dirname "$f")"
+  [ ! -f "$dir/thumb.webp" ] && missing_thumbs+=("$f")
+  [ ! -f "$dir/hero.webp"  ] && missing_heroes+=("$f")
+done
+
+if [ ${#missing_thumbs[@]} -gt 0 ]; then
+  echo "Generating list thumbnails (192×192) for ${#missing_thumbs[@]} cover(s):"
+  bundle exec ruby bin/convert_to_webp --thumb-only 192 "${missing_thumbs[@]}"
+else
+  echo "All list thumbnails already exist — skipping."
+fi
+
+echo
+if [ ${#missing_heroes[@]} -gt 0 ]; then
+  echo "Generating hero images (576×384) for ${#missing_heroes[@]} cover(s):"
+  bundle exec ruby bin/convert_to_webp --thumb-only 576x384 --thumb-name hero.webp "${missing_heroes[@]}"
+else
+  echo "All hero images already exist — skipping."
+fi

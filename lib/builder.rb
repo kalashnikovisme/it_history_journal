@@ -230,6 +230,11 @@ class Builder
       dst = File.join(@output_dir, article.lang, article.date_path, article.slug, 'thumb.webp')
       FileUtils.cp(article.thumb_path, dst)
     end
+
+    if article.hero_path
+      dst = File.join(@output_dir, article.lang, article.date_path, article.slug, 'hero.webp')
+      FileUtils.cp(article.hero_path, dst)
+    end
   end
 
   def build_calendar(lang, articles)

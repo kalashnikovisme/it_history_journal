@@ -111,7 +111,7 @@ Builds the Docker image and installs gems.
 |---|---|
 | `bin/watch` | Underlying script for `dip watch` |
 | `bin/convert_to_webp` | Convert images to WebP (requires ImageMagick; use `dip convert_to_webp` inside Docker) |
-| `bin/convert_covers` | Phase 1: convert non-WebP covers to `cover.webp` and delete originals. Phase 2: generate `thumb.webp` (192×192) from every `cover.webp` |
+| `bin/convert_covers` | Phase 1: convert non-WebP covers to `cover.webp` and delete originals. Phase 2: generate `thumb.webp` (192×192) and `hero.webp` (576×384) from every `cover.webp` |
 
 `bin/convert_to_webp` options:
 
@@ -119,7 +119,8 @@ Builds the Docker image and installs gems.
 |---|---|---|
 | `-q`, `--quality N` | `80` | WebP quality 1–100 |
 | `-w`, `--max-width N` | — | Resize to fit within this width |
-| `-t`, `--thumb-only N` | — | Write a N×N square thumbnail to `thumb.webp` only (skips main output) |
+| `-t`, `--thumb-only WxH` | — | Write a W×H centered crop to `thumb.webp` only — use `N` for a square or `WxH` for a rectangle (skips main output) |
+| `-n`, `--thumb-name NAME` | `thumb.webp` | Override the output filename for `--thumb-only` |
 | `--no-strip` | — | Keep EXIF metadata |
 
 ## RSS feeds

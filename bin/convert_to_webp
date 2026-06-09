@@ -9,17 +9,19 @@ options = {
   max_width:  nil,
   strip:      true,
   thumb_only: nil,
+  thumb_name: 'thumb.webp',
 }
 
 OptionParser.new do |opts|
   opts.banner = "Usage: bin/convert_to_webp [options] <image> [images...]\n\n" \
                 "Converts images to WebP for web use.\n\n"
 
-  opts.on('-q', '--quality N',     Integer, "WebP quality 1-100 (default: #{options[:quality]})") { |v| options[:quality] = v }
-  opts.on('-w', '--max-width N',   Integer, 'Resize to fit within this width (preserves ratio)')  { |v| options[:max_width] = v }
-  opts.on('-t', '--thumb-only N',  Integer, 'Write a NxN square thumbnail to thumb.webp only')    { |v| options[:thumb_only] = v }
-  opts.on('--[no-]strip',                   'Strip EXIF/metadata (default: yes)')                 { |v| options[:strip] = v }
-  opts.on('-h', '--help')                   { puts opts; exit }
+  opts.on('-q', '--quality N',      Integer, "WebP quality 1-100 (default: #{options[:quality]})")          { |v| options[:quality] = v }
+  opts.on('-w', '--max-width N',    Integer, 'Resize to fit within this width (preserves ratio)')           { |v| options[:max_width] = v }
+  opts.on('-t', '--thumb-only WxH', String,  'Write a WxH (or NxN square) crop to thumb.webp only')        { |v| options[:thumb_only] = v }
+  opts.on('-n', '--thumb-name NAME', String, 'Output filename for --thumb-only (default: thumb.webp)')      { |v| options[:thumb_name] = v }
+  opts.on('--[no-]strip',                    'Strip EXIF/metadata (default: yes)')                          { |v| options[:strip] = v }
+  opts.on('-h', '--help')                    { puts opts; exit }
 end.parse!
 
 if ARGV.empty?
@@ -33,6 +35,17 @@ def format_bytes(n)
   "#{(n / 1_048_576.0).round(1)} MB"
 end
 
+def parse_dimensions(spec)
+  if spec =~ /\A(\d+)x(\d+)\z/i
+    [$1.to_i, $2.to_i]
+  elsif spec =~ /\A(\d+)\z/
+    n = $1.to_i
+    [n, n]
+  else
+    raise ArgumentError, "invalid dimensions '#{spec}' — use N or WxH"
+  end
+end
+
 failures = 0
 
 ARGV.each do |input|
@@ -43,22 +56,23 @@ ARGV.each do |input|
   end
 
   if options[:thumb_only]
-    size       = options[:thumb_only]
-    thumb_path = File.join(File.dirname(input), 'thumb.webp')
+    w, h       = parse_dimensions(options[:thumb_only])
+    out_name   = options[:thumb_name]
+    thumb_path = File.join(File.dirname(input), out_name)
 
     begin
       image = MiniMagick::Image.open(input)
       image.combine_options do |c|
-        c.thumbnail "#{size}x#{size}^"
+        c.thumbnail "#{w}x#{h}^"
         c.gravity   'center'
-        c.extent    "#{size}x#{size}"
+        c.extent    "#{w}x#{h}"
       end
       image.strip if options[:strip]
       image.format 'webp'
       image.quality options[:quality].to_s
       image.write thumb_path
 
-      puts "  #{File.basename(input).ljust(32)}→  thumb.webp  (#{size}×#{size})"
+      puts "  #{File.basename(input).ljust(32)}→  #{out_name}  (#{w}×#{h})"
     rescue => e
       warn "  fail    #{input}  #{e.message}"
       failures += 1
