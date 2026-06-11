@@ -1,7 +1,7 @@
 ---
 title: "March 29, 1967 — The First Handheld Calculator Debuts"
 date: "March 29, 1967"
-excerpt: "On March 29, 1967, Texas Instruments unveiled the Cal-Tech prototype — the first electronic handheld calculator. It could add, subtract, multiply, and divide, ran on batteries, and printed results on paper tape. The main point was proving what integrated circuits could do."
+excerpt: "Texas Instruments unveiled the first handheld calculator capable of basic arithmetic and printing on tape"
 ---
 
 On this day, Texas Instruments unveiled the prototype of the first electronic handheld calculator known as Cal-Tech.

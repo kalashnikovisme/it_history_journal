@@ -1,7 +1,7 @@
 ---
 title: 'Feb 11, 2001 — The "Anna Kournikova" Worm and the Power of a Famous Name'
 date: "February 11, 2001"
-excerpt: "On February 11, 2001, the 'Anna Kournikova' worm spread globally by exploiting one thing: curiosity — a fake celebrity photo attachment flooded corporate mail servers worldwide and proved that social engineering is more powerful than any technical exploit."
+excerpt: "The worm spread via a fake celebrity photo attachment exploiting curiosity and social engineering"
 ---
 
 On February 11, 2001, a computer worm began spreading across the internet through email.

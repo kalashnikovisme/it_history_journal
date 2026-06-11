@@ -4,3 +4,4 @@ vendor/
 *.gem
 .DS_Store
 Gemfile.lock
+.env.dev

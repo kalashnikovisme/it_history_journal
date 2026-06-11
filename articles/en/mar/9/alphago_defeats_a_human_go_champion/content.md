@@ -1,7 +1,7 @@
 ---
 title: "March 9, 2016 — AlphaGo Defeats a Human Go Champion"
 date: "March 9, 2016"
-excerpt: "On March 9, 2016, AlphaGo defeated Lee Sedol — one of the strongest Go players in the world. Go had long been considered beyond the reach of computers. The match became a global media event and marked the beginning of a new era in artificial intelligence."
+excerpt: "AlphaGo defeated Lee Sedol, one of the strongest Go players in the world, marking a new era in AI"
 ---
 
 On March 9, 2016, the artificial intelligence system AlphaGo, developed by DeepMind (a company later acquired by Google), defeated Lee Sedol, one of the strongest Go players in the world.

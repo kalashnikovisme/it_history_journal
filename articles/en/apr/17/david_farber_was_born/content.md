@@ -1,7 +1,7 @@
 ---
 title: "April 17, 1934 — David Farber, the Grandfather of the Internet, Was Born"
 date: "April 17, 1934"
-excerpt: "David Farber was born on April 17, 1934. Known as the 'Grandfather of the Internet,' he mentored many of the people who shaped the modern web — including Steve Crocker, author of RFC 1, and Jon Postel, one of the architects of TCP/IP and DNS."
+excerpt: "Mentored key figures like Steve Crocker and Jon Postel"
 ---
 
 As I often say, this is someone who has influenced your life far more than Taylor Swift or Sydney Sweeney, yet very few people know his name.

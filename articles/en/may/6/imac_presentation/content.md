@@ -1,7 +1,7 @@
 ---
 title: "May 6, 1998 — iMac Presentation"
 date: "May 6, 1998"
-excerpt: "On May 6, 1998, Steve Jobs presented the iMac — Apple's first major product since his return. An all-in-one machine in translucent plastic with no floppy drive and a single USB port, it looked unlike anything else on the market and became a symbol of Apple's revival."
+excerpt: "Steve Jobs presented the all-in-one iMac with translucent plastic, no floppy drive, and one USB port becoming a symbol of Apple's revival"
 ---
 
 In 1997, Steve Jobs returned to Apple — the story of the relationship between the founder and the company is one of the most fascinating in IT history. Jobs came back more than 10 years after being forced out and immediately started pushing bold, memorable products. The iMac became a symbol of his return and Apple's comeback as an innovative company — both in technology and design.

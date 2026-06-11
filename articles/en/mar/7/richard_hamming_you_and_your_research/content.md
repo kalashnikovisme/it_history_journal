@@ -1,7 +1,7 @@
 ---
 title: "March 7, 1986 — Richard Hamming: \"You and Your Research\""
 date: "March 7, 1986"
-excerpt: "On March 7, 1986, Richard Hamming delivered a talk called \"You and Your Research\" at Bell Communications Research. It became one of the most widely circulated reflections on how important work actually happens — and why so few scientists produce truly great results despite sufficient talent."
+excerpt: "Richard Hamming delivered \"You and Your Research\" to scientists and engineers at Bell Communications Research"
 ---
 
 On March 7, 1986, mathematician and computer scientist Richard Hamming delivered a talk titled "You and Your Research." The lecture took place at Bell Communications Research (Bellcore) and was addressed to scientists and engineers early in their careers.

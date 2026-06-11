@@ -94,6 +94,7 @@ Builds the Docker image and installs gems.
 | `dip watch` | Full build + file watcher + dev server at http://localhost:4000 |
 | `dip convert_to_webp <file> [files...]` | Convert images to WebP format |
 | `dip convert_covers` | Convert non-WebP covers to `cover.webp`, then generate `thumb.webp` (192×192) from each `cover.webp` |
+| `dip rewrite_excerpts [jun-10]` | Rewrite article excerpts via OpenAI API (reads `OPENAI_API_KEY` from `.env.dev`). Pass a date like `jun-10` to limit to that day; omit to rewrite all articles. |
 | `dip shell` | Open a shell in the container |
 | `dip bundle <args>` | Run bundler commands |
 
@@ -112,6 +113,7 @@ Builds the Docker image and installs gems.
 | `bin/watch` | Underlying script for `dip watch` |
 | `bin/convert_to_webp` | Convert images to WebP (requires ImageMagick; use `dip convert_to_webp` inside Docker) |
 | `bin/convert_covers` | Phase 1: convert non-WebP covers to `cover.webp` and delete originals. Phase 2: generate `thumb.webp` (192×192) and `hero.webp` (576×384) from every `cover.webp` |
+| `bin/rewrite_excerpts` | Rewrites all article excerpts to short, date-free fact sentences via OpenAI API (gpt-4.1-nano). Run as `OPENAI_API_KEY=sk-... ruby bin/rewrite_excerpts`. Add `--dry-run` to preview without writing. |
 
 `bin/convert_to_webp` options:
 

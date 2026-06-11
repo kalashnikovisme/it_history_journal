@@ -1,7 +1,7 @@
 ---
 title: "Jan 17, 1949 — Anita Borg Is Born"
 date: "January 17, 1949"
-excerpt: "On January 17, 1949, Anita Borg was born — an American computer scientist who founded Systers in 1987, the first large-scale online community for women in computing, and later established the Institute for Women in Technology, which continues to support women in tech to this day."
+excerpt: "Founded Systers, the first large-scale online community for women in computing"
 ---
 
 Today, January 17, is the birthday of Anita Borg (1949–2003).

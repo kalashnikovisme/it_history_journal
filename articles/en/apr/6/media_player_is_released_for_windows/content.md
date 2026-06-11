@@ -1,7 +1,7 @@
 ---
 title: "April 6, 1992 — Media Player Is Released for Windows"
 date: "April 6, 1992"
-excerpt: "Windows Media Player, released with Windows 3.1 on April 6, 1992, was the application through which the majority of computer users first heard digital audio. Pre-installed on every Windows PC, it dominated an entire era of personal computing."
+excerpt: "Windows Media Player introduced most users to digital audio and dominated the personal computing era"
 ---
 
 Windows Media Player is one of the most legendary programs in history. The overwhelming majority of computer users listened to their first digital audio file through this program.

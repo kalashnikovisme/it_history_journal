@@ -1,7 +1,7 @@
 ---
 title: "March 19, 1997 — Visual Studio 97 Was Released"
 date: "March 19, 1997"
-excerpt: "On March 19, 1997, Microsoft released Visual Studio 97 — the first version of what would later become one of the most widely used development environments in the world. It bundled Visual Basic, Visual C++, Visual FoxPro, and Visual J++ into a single package for the first time."
+excerpt: "Microsoft released Visual Studio 97 combining Visual Basic C++ FoxPro and J++ into one package"
 ---
 
 On March 19, 1997, Microsoft released Visual Studio 97 — the first version of what would later become one of the main tools for developers around the world.

@@ -1,7 +1,7 @@
 ---
 title: "June 10, 1924 — Friedrich Ludwig Bauer Was Born"
 date: "June 10, 1924"
-excerpt: "Friedrich Ludwig Bauer was born on June 10, 1924. He coined the term \"software engineering\", invented the stack-based expression evaluation method used in virtually every modern compiler, and was one of the founders of computer science in Germany."
+excerpt: "coined \"software engineering\" term and invented stack-based expression evaluation methods"
 ---
 
 Friedrich Ludwig Bauer was a German mathematician and one of the most influential European computer scientists of the postwar era. His name is far less well known than those of Turing or Dijkstra, yet many ideas that are now considered fundamental to programming are closely associated with his work.

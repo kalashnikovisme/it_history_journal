@@ -1,7 +1,7 @@
 ---
 title: "Apr 30, 1916 — Claude Shannon Was Born"
 date: "April 30, 1916"
-excerpt: "Claude Shannon was born on April 30, 1916. He formalized the concept of the 'bit,' showed that information can be measured and encoded mathematically, and connected logic with electrical circuits. His paper 'A Mathematical Theory of Communication' remains one of the most important works in computing history."
+excerpt: "Formalized the concept of the 'bit' and linked logic with electrical circuits in information theory"
 ---
 
 Claude Shannon was a mathematician and the author of information theory. He showed that information can be measured — that it can be encoded, compressed, transmitted, and restored. People had practical ideas about this before him, but Shannon turned it into mathematics.

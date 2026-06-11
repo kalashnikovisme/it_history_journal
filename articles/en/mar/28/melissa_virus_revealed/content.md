@@ -1,7 +1,7 @@
 ---
 title: "Mar 28, 1999 — Melissa Virus Revealed"
 date: "March 28, 1999"
-excerpt: "In late March 1999, the Melissa virus spread from a single Usenet post to tens of millions of computers in days. It came from trusted contacts, caused $80 million in damage, and forced companies worldwide to shut down their email systems — one of the first mass internet attacks to cause real economic harm."
+excerpt: "Melissa virus spread to tens of millions of computers within days causing $80 million in damage"
 ---
 
 ## March 1999 — the virus is created

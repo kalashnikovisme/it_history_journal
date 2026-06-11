@@ -1,7 +1,7 @@
 ---
 title: "June 9, 1949 — The Mind of Mechanical Man"
 date: "June 9, 1949"
-excerpt: "In 1949, neurosurgeon Geoffrey Jefferson challenged the growing idea that computers could think, arguing there is a vast gulf between computation and true thought — a debate that remains strikingly relevant today."
+excerpt: "Neurosurgeon Geoffrey Jefferson said there's a vast gulf between computation and true thought"
 ---
 
 "Can machines think?" That question has been on everyone's mind over the last few years. The rise and widespread adoption of neural networks has sparked large-scale discussions about intelligence, the nature of consciousness, emotions, and many other related topics.

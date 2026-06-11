@@ -1,7 +1,7 @@
 ---
 title: "May 11, 1930 — Edsger Dijkstra Was Born"
 date: "May 11, 1930"
-excerpt: "Edsger Dijkstra was born on May 11, 1930. Creator of the famous shortest-path algorithm, he spent his career arguing that programming is a mathematical discipline — and left behind ideas that still shape computer science today."
+excerpt: "Created Dijkstra's algorithm, argued programming is a mathematical discipline and shaped computer science"
 ---
 
 Dijkstra's algorithm is one of the core algorithms taught in almost every computer science program. To be honest, when I first heard about it, I assumed Dijkstra was some mathematician from Euler's era. The algorithm is so elegant and memorable, yet incredibly practical for working with graphs. Later, I realized that Dijkstra was actually our contemporary.

@@ -1,7 +1,7 @@
 ---
 title: "June 12, 1918 — Kurt Lehovec Is Born"
 date: "June 12, 1918"
-excerpt: "Born on June 12, 1918, Kurt Lehovec was the physicist whose p-n junction isolation technique solved the key problem standing between early transistors and practical integrated circuits."
+excerpt: "Kurt Lehovec's p-n junction isolation technique helped make integrated circuits practical"
 ---
 
 Kurt Lehovec was an American physicist and engineer whose name is far less well known than those of fellow integrated circuit pioneers Jack Kilby and Robert Noyce. Yet his work played a crucial role in making integrated circuits practical.

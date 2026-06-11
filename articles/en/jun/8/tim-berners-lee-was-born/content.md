@@ -1,7 +1,7 @@
 ---
 title: "June 8, 1955 — Tim Berners-Lee Was Born"
 date: "June 8, 1955"
-excerpt: "Tim Berners-Lee was born on June 8, 1955, in London. He went on to create the World Wide Web — the technology that made the Internet accessible to everyone and became the foundation of the modern digital world."
+excerpt: "Created the World Wide Web, making the Internet accessible to everyone and shaping the digital world"
 ---
 
 Computer networks had existed in one form or another since the 1960s, but the Internet did not gain a truly global user base until the 1990s. This was driven both by advances in networking technology and by the emergence of the web. It was the web that made the Internet accessible and understandable to ordinary users. The creator of the first version of the World Wide Web was Tim Berners-Lee.

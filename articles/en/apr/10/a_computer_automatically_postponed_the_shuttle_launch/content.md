@@ -1,7 +1,7 @@
 ---
 title: "April 10, 1981 — A Computer Automatically Postponed the Shuttle Launch"
 date: "April 10, 1981"
-excerpt: "On April 10, 1981, sixteen minutes before the first Space Shuttle launch, one of the onboard IBM computers reported data that didn't match the others — and automatically halted the countdown. It was the first time in history a computer stopped a space mission launch."
+excerpt: "A computer automatically halted the Shuttle launch 16 minutes before liftoff due to data mismatch"
 ---
 
 The very first mission of the Space Shuttle program was marked by the first launch delay in history caused by a computer error.

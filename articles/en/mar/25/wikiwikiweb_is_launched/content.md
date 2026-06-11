@@ -1,7 +1,7 @@
 ---
 title: "March 25, 1995 — WikiWikiWeb Is Launched"
 date: "March 25, 1995"
-excerpt: "On March 25, 1995, Ward Cunningham launched WikiWikiWeb — the first website that let anyone edit any page directly in a browser. The web had been mostly static until that moment. This simple idea later became the foundation for Wikipedia, Confluence, Notion, and most modern collaborative documentation tools."
+excerpt: "WikiWikiWeb allowed anyone to create and edit pages directly in a browser"
 ---
 
 On March 25, 1995, Ward Cunningham launched WikiWikiWeb — the first website that allowed users to create and edit pages directly in the browser.

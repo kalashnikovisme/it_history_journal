@@ -1,7 +1,7 @@
 ---
 title: "April 29, 2015 — Release of Visual Studio Code"
 date: "April 29, 2015"
-excerpt: "Visual Studio Code was introduced at Microsoft's Build conference on April 29, 2015. Today it is the dominant code editor worldwide — distributed under the MIT License, it has spawned several popular forks, including Cursor."
+excerpt: "Visual Studio Code is the most used IDE today, ranking first in surveys worldwide"
 ---
 
 Visual Studio Code is the dominant development environment (IDE) today. In most developer surveys about which IDE people use, VS Code ranks first by a wide margin.

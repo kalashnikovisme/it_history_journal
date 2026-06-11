@@ -1,7 +1,7 @@
 ---
 title: "April 22, 1993 — Release of the Mosaic Browser"
 date: "April 22, 1993"
-excerpt: "Released on April 22, 1993, Mosaic was the browser that made the web mainstream. It introduced the graphical interface elements we now take for granted — Back and Forward buttons, clickable links, an address bar — and was the first browser to display images inline on web pages."
+excerpt: "Mosaic was the first browser with inline images and graphical features like Back and Forward buttons"
 ---
 
 Mosaic was the browser that made the web mainstream. The World Wide Web, which appeared in 1991, initially contained only text and links. To use it, you had to install complex software available only on NeXT computers.

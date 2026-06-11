@@ -1,7 +1,7 @@
 ---
 title: "April 3, 1991 — AT&T Sues BSD"
 date: "April 3, 1991"
-excerpt: "In April 1991, AT&T sued BSD, claiming its Unix System V code had been used without permission. The three-year legal battle froze BSD development at a critical moment — and inadvertently handed Linux the window it needed to dominate."
+excerpt: "AT&T sued BSD for using Unix System V code without permission, halting BSD development and aiding Linux's rise"
 ---
 
 The development of technology is influenced not only by great achievements, discoveries, and economic events, but also by legal and court events. The dispute between AT&T and the University of Berkeley significantly changed the balance of power between operating systems and influenced the entire history of the IT industry.

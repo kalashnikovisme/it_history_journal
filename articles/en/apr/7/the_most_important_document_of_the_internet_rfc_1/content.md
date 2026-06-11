@@ -1,7 +1,7 @@
 ---
 title: "Apr 7, 1969 — The Most Important Document of the Internet: RFC 1"
 date: "April 7, 1969"
-excerpt: "On April 7, 1969, Steve Crocker published RFC 1 — not as a standard or specification, but as an invitation to discuss. That simple idea of open, collaborative communication became the foundation of how the internet is still built today."
+excerpt: "RFC 1 invited discussion, laying the foundation for the internet's collaborative nature"
 ---
 
 The Internet is essentially a miracle because it did not emerge in laboratories and technology companies. Practically anyone had the opportunity to participate in its development.

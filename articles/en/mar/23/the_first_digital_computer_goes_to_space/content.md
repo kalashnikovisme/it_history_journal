@@ -1,7 +1,7 @@
 ---
 title: "March 23, 1965 — The First Digital Computer Goes to Space"
 date: "March 23, 1965"
-excerpt: "On March 23, 1965, NASA launched Gemini 3 — the first American spaceflight to carry a digital computer onboard. The computer couldn't make autonomous decisions, but it could calculate orbital positions faster than any human. A few years later, its descendants landed people on the Moon."
+excerpt: "NASA launched the first American spaceflight with a digital computer calculating orbital positions faster than humans"
 ---
 
 On March 23, 1965, NASA launched the Gemini 3 mission. It became the first American spaceflight to carry a digital computer onboard.

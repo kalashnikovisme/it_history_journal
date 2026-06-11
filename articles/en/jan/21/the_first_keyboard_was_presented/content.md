@@ -1,7 +1,7 @@
 ---
 title: "Jan 21 — The First Keyboard Was Presented"
 date: "January 21"
-excerpt: "On January 21, ENIAC — the 27-ton room-filling computer — took its first step toward modern human-computer interaction when an adapted teletype was connected directly to its memory, giving engineers a seated workstation to type input and read output in real time."
+excerpt: "The ENIAC connected a teletype to its memory for real-time input and output"
 ---
 
 The first computer keyboard was created for the ENIAC computer. Quick reminder, that this was the 1940s - there were no home computers at the time. So “the ENIAC computer” does not refer to a series of machines, but to one specific device.

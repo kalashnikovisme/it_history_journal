@@ -1,7 +1,7 @@
 ---
 title: "March 18, 2004 — Phatbot (Polybot) Is Revealed"
 date: "March 18, 2004"
-excerpt: "On March 18, 2004, security researchers reported Phatbot — an unusually advanced malware framework written in C++ with object-oriented design. It wasn't just a worm; it was a modular platform for building botnets, and it marked a turning point in how malware was designed."
+excerpt: "Phatbot was an advanced modular malware platform written in C++ for building botnets"
 ---
 
 On March 18, 2004, security researchers reported a new and unusually advanced computer worm known as Phatbot (also called Polybot). It quickly drew attention because it was not just another piece of malware — it was a modular platform for building large-scale botnets.

@@ -1,7 +1,7 @@
 ---
 title: "March 21, 2006 — The First Tweet Was Published"
 date: "March 21, 2006"
-excerpt: "On March 21, 2006, Jack Dorsey posted the first tweet: \"just setting up my twttr.\" It looked like nothing at the time. It became the starting point of microblogging — a format that changed how people share news, opinions, and reactions in real time."
+excerpt: "The first tweet \"just setting up my twttr\" marked the start of microblogging that changed communication"
 ---
 
 On March 21, 2006, a small message appeared online that would later change how people communicate across the world.

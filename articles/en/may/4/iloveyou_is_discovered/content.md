@@ -1,7 +1,7 @@
 ---
 title: "May 4, 2000 — ILOVEYOU Is Discovered"
 date: "May 4, 2000"
-excerpt: "On May 4, 2000, a 16-line Visual Basic script called ILOVEYOU infected tens of millions of computers within hours. It arrived from trusted contacts, overwrote files, and caused an estimated $5–10 billion in damage — one of the most destructive pieces of malware in history."
+excerpt: "ILOVEYOU infected tens of millions of computers, overwrote files, causing $5–10 billion in damage"
 ---
 
 On May 4, 2000, email stopped being just a convenient tool. Within a few hours, a simple message with the subject "ILOVEYOU" turned into a global outbreak.

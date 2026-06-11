@@ -1,7 +1,7 @@
 ---
 title: "Apr 16, 1971 — The First File Transfer Protocol: FTP"
 date: "April 16, 1971"
-excerpt: "On April 16, 1971, RFC 114 described the first version of FTP — a protocol for transferring files between computers on ARPANET. Before the web existed, FTP was the primary way to distribute software, source code, and scientific data across the early internet."
+excerpt: "RFC 114 described the first FTP protocol for file transfer between ARPANET computers"
 ---
 
 On April 16, 1971, one of the earliest file exchange protocols appeared on the ARPANET network — FTP (File Transfer Protocol). Its description was published in RFC 114.

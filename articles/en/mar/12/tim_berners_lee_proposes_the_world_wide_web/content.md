@@ -1,7 +1,7 @@
 ---
 title: "March 12, 1989 — Tim Berners-Lee Proposes the World Wide Web"
 date: "March 12, 1989"
-excerpt: "On March 12, 1989, Tim Berners-Lee submitted a proposal at CERN titled 'Information Management: A Proposal.' His manager wrote 'Vague, but exciting.' Two years later, that vague idea became the World Wide Web."
+excerpt: "Tim Berners-Lee submitted the proposal that became the World Wide Web at CERN"
 ---
 
 On March 12, 1989, Tim Berners-Lee, a British software engineer working at CERN (the European Organization for Nuclear Research), submitted a proposal titled "Information Management: A Proposal."

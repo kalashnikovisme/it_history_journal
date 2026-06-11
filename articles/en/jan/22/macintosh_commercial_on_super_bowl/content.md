@@ -1,7 +1,7 @@
 ---
 title: "Jan 22, 1984 — Macintosh Commercial on Super Bowl"
 date: "January 22, 1984"
-excerpt: "On January 22, 1984, Apple aired the '1984' commercial during the Super Bowl — directed by Ridley Scott, it showed no product, ran only once on TV, yet became one of the most iconic advertisements in history and permanently defined Apple's identity as a rebel against corporate conformity."
+excerpt: "Apple aired the iconic 1984 commercial during the Super Bowl, directed by Ridley Scott, only once"
 ---
 
 On January 22, 1984, Super Bowl viewers saw what is arguably the most famous commercial in the history of technology.

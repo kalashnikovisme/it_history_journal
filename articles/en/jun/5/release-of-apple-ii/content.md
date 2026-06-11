@@ -1,7 +1,7 @@
 ---
 title: "June 5, 1977 — Release of Apple II"
 date: "June 5, 1977"
-excerpt: "The Apple II was Apple's first mass-market product: sold fully assembled, connectable to a regular TV, and adaptable enough to run VisiCalc — the killer app that turned it into a business staple. Its profits effectively financed the development of both Lisa and Macintosh."
+excerpt: "Apple sold its first mass-market product, the Apple II, fully assembled, connectable to a TV, running VisiCalc"
 ---
 
 Sometimes it feels like IT History Journal is really just an Apple History Journal. Still, it's impossible to tell the story of the technology industry without constantly mentioning one of its most influential companies.

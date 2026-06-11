@@ -1,7 +1,7 @@
 ---
 title: "Jan 18, 1995 — The Registration of Yahoo.com Domain"
 date: "January 18, 1995"
-excerpt: "On January 18, 1995, Jerry Yang and David Filo registered yahoo.com — what began as a hand-curated web directory grew into a global internet giant that shaped mass adoption of web-based email and online services, and for years was the most visited site on the internet."
+excerpt: "Yahoo.com was registered and grew into a web giant shaping email and online services"
 ---
 
 Today, January 18, marks the registration date of the domain Yahoo.com.

@@ -1,7 +1,7 @@
 ---
 title: "Apr 1, 2003 — The Evil Bit Standard Is Published"
 date: "April 1, 2003"
-excerpt: "RFC 3514, published on April 1, 2003, proposed a radical solution to internet security: requiring attackers to mark their malicious packets with a special \"Evil Bit.\" Several software systems later claimed they had implemented support for it."
+excerpt: "RFC 3514 proposed marking malicious packets with an \"Evil Bit\" set to \"1\" for attack indication"
 ---
 
 The RFC 3514 described a very important proposal for the early 2000s. Attackers were suggested to mark their malicious packets with a special bit called the "Evil Bit." If this bit contained "1", the attacker would thereby indicate that the packet was malicious. Writing "0" in this bit was suggested for all other applications that did not contain malicious content.

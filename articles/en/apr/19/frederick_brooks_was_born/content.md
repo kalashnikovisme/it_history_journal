@@ -1,7 +1,7 @@
 ---
 title: "April 19, 1931 — Frederick Brooks Was Born"
 date: "April 19, 1931"
-excerpt: "Frederick Brooks was born on April 19, 1931. He led the development of OS/360 for the IBM System/360 mainframe, and later wrote The Mythical Man-Month — still considered essential reading for software project managers fifty years after publication."
+excerpt: "Authored The Mythical Man-Month, a vital book for software project managers and engineers"
 ---
 
 Frederick Brooks is best known in the industry as the author of the legendary book "The Mythical Man-Month." Despite being published in 1975, the book is still considered essential reading for managers not only in IT but in many other engineering fields. In this book, Brooks explored the relationship between software architecture, team collaboration, and business goals.

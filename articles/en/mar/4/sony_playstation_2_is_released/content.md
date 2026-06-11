@@ -1,7 +1,7 @@
 ---
 title: "March 4, 2000 — Sony PlayStation 2 Is Released"
 date: "March 4, 2000"
-excerpt: "On March 4, 2000, Sony released the PlayStation 2 in Japan. It became the best-selling video game console in history at over 155 million units, and for many households it doubled as their first DVD player — accelerating the global adoption of the format."
+excerpt: "Sony released PlayStation 2 in Japan, selling over 155 million units and boosting DVD adoption"
 ---
 
 On March 4, 2000, Sony released the PlayStation 2 (PS2) in Japan. It became one of the most influential gaming systems ever created and eventually the best-selling video game console in history, with more than 155 million units sold worldwide.

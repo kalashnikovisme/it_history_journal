@@ -1,7 +1,7 @@
 ---
 title: "May 8, 1984 — John Resig Was Born"
 date: "May 8, 1984"
-excerpt: "John Resig is the creator of jQuery. In the 2000s, when JavaScript was widely dismissed, jQuery helped hundreds of thousands of developers build millions of websites — and helped make JavaScript a language worth taking seriously."
+excerpt: "jQuery helped millions of websites and made JavaScript a serious language"
 ---
 
 John Resig is probably the youngest person ever mentioned in the IT History Journal. At the time of writing, he is only 42 years old. Still, his place here is absolutely deserved. He is the creator of jQuery.

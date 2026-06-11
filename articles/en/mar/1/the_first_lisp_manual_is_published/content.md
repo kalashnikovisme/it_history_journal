@@ -1,7 +1,7 @@
 ---
 title: "Mar 1, 1960 — The First LISP Manual Is Published"
 date: "March 1, 1960"
-excerpt: "On March 1, 1960, John McCarthy published the first official description of LISP — a language where code and data shared the same structure, and recursion was a central concept. It became the foundation of early AI research and influenced nearly every functional language that followed."
+excerpt: "The first official description of LISP introduced shared code and data, with central recursion"
 ---
 
 On March 1, 1960, John McCarthy published the first official description of the LISP programming language.

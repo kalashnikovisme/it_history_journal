@@ -1,7 +1,7 @@
 ---
 title: "April 20, 1966 — David Filo Was Born"
 date: "April 20, 1966"
-excerpt: "David Filo was born on April 20, 1966. As co-founder of Yahoo, he and Jerry Yang built one of the first large-scale internet search platforms — starting with a manually curated list of links that two people could realistically maintain when the web was just three years old."
+excerpt: "co-founded Yahoo and built one of the first large-scale internet search platforms"
 ---
 
 One of the first billionaire tech entrepreneurs, co-founder of Yahoo, and co-creator of one of the first mass internet search platforms.

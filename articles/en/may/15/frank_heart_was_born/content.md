@@ -1,7 +1,7 @@
 ---
 title: "May 15, 1929 — Frank Heart Was Born"
 date: "May 15, 1929"
-excerpt: "Frank Heart was born on May 15, 1929 — an engineer without whom ARPANET might have remained just a beautiful theory. He led the BBN team that built the first IMP network nodes, the direct ancestors of modern routers."
+excerpt: "Led the team that built the first IMP network nodes, the ancestors of modern routers"
 ---
 
 Frank Heart was born on May 15, 1929 — an engineer without whom ARPANET might have remained just a beautiful theory.

@@ -1,7 +1,7 @@
 ---
 title: "Jan 27, 2010 — The First iPad Was Presented"
 date: "January 27, 2010"
-excerpt: "On January 27, 2010, Steve Jobs introduced the iPad — the device that created the modern tablet category, forced developers to rethink UI for large touch screens, and proved that a device between a smartphone and a laptop could be genuinely better than either for everyday tasks."
+excerpt: "Apple introduced the iPad, creating the modern tablet category and transforming UI for large touch screens"
 ---
 
 Steve Jobs took part in reinventing several categories of devices: personal computers, music players, and smartphones.

@@ -1,7 +1,7 @@
 ---
 title: "Feb 10, 1996 — Six Games Against Humanity"
 date: "February 10, 1996"
-excerpt: "In February 1996, IBM's Deep Blue played six games against world chess champion Garry Kasparov — and won the first, a historic shock that showed machines could compete at the highest level of human intelligence, even as Kasparov ultimately won the match 4–2."
+excerpt: "Deep Blue won its first game against Kasparov in history for AI in chess"
 ---
 
 Disclaimer from the human

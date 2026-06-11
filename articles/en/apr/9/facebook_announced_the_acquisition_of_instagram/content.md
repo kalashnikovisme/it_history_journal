@@ -1,7 +1,7 @@
 ---
 title: "April 9, 2012 — Facebook Announced the Acquisition of Instagram"
 date: "April 9, 2012"
-excerpt: "On April 9, 2012, Facebook acquired Instagram for $1 billion — before the app even had Android support or revenue. The deal legitimized billion-dollar startup acquisitions based on audience growth rather than profit, and changed the industry forever."
+excerpt: "Facebook acquired Instagram for $1 billion before Android support or revenue"
 ---
 
 The purchase by Facebook of the rapidly growing platform Instagram is not just another deal. It legitimized and launched several important processes in the industry.

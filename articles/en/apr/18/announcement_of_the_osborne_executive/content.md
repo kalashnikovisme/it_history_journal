@@ -1,7 +1,7 @@
 ---
 title: "Apr 18, 1983 — Announcement of the Osborne Executive and the Beginning of the Osborne Effect"
 date: "April 18, 1983"
-excerpt: "On April 18, 1983, Osborne Computer previewed its upcoming models to industry insiders before they were ready to ship. Word spread immediately, dealers stopped ordering the current model, and the company filed for bankruptcy five months later — giving the industry a term it still uses: the Osborne effect."
+excerpt: "Preview of upcoming models caused dealers to stop orders and led to bankruptcy"
 ---
 
 The Osborne effect is a term used in marketing, economics, and the IT industry to describe a drop in sales caused by announcing a new version of a product too early.

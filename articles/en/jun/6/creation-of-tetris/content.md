@@ -1,7 +1,7 @@
 ---
 title: "June 6, 1984 — Tetris Is Created"
 date: "June 6, 1984"
-excerpt: "On June 6, 1984, Alexey Pajitnov completed the first working version of Tetris on a Soviet computer — a game that would become one of the most recognized in history."
+excerpt: "Alexey Pajitnov completed the first working version of Tetris on an Elektronika-60 computer"
 ---
 
 On June 6, 1984, programmer Alexey Pajitnov completed the first working version of Tetris on an Elektronika-60 computer at the Computing Center of the USSR Academy of Sciences.

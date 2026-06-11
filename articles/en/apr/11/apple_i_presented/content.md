@@ -1,7 +1,7 @@
 ---
 title: "Apr 11, 1976 — Apple I Presented"
 date: "April 11, 1976"
-excerpt: "On April 11, 1976, Steve Jobs and Steve Wozniak presented the Apple I at a Homebrew Computer Club meeting — essentially a circuit board you could connect to a keyboard and TV. A computer store owner in the audience immediately ordered 50 units, starting Apple's commercial history."
+excerpt: "Steve Jobs and Wozniak presented the Apple I circuit board connected to a keyboard and TV"
 ---
 
 Apple presentations have been important events for almost 40 years. The company set the standard for large, carefully staged product launches and updates.

@@ -1,7 +1,7 @@
 ---
 title: "May 17, 2009 — Minecraft Became Publicly Available"
 date: "May 17, 2009"
-excerpt: "On May 17, 2009, Markus Persson released the first public version of Minecraft — a sandbox without goals, a world without limits, and a development model that changed the industry."
+excerpt: "Minecraft's first public version featured a primitive world of cubes and simple terrain generation"
 ---
 
 On May 17, 2009, Markus Persson, better known as Notch, released the first public version of Minecraft.

@@ -1,7 +1,7 @@
 ---
 title: "Feb 13, 1991 — Borland Pascal Comes to Windows"
 date: "February 13, 1991"
-excerpt: "On February 13, 1991, Borland released Pascal for Windows, bringing the hugely popular teaching language into the GUI era and introducing a generation of programmers to event-driven development — a stepping stone that led directly to Delphi, one of the most productive Windows IDEs of the 1990s."
+excerpt: "Borland released Pascal for Windows, introducing event-driven development and leading to Delphi"
 ---
 
 It was a big moment. Pascal was already one of the most popular programming languages in the world. But until then, most Pascal developers worked in DOS. Windows was growing fast, and developers needed new tools.

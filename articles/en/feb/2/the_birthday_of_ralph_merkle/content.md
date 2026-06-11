@@ -1,7 +1,7 @@
 ---
 title: "Feb 2, 1952 — The Birthday of Ralph Merkle"
 date: "February 2, 1952"
-excerpt: "On February 2, 1952, Ralph Merkle was born — the cryptographer who independently invented public-key cryptography and Merkle Trees, mathematical foundations so fundamental that they now secure every HTTPS connection on the internet and underpin every blockchain."
+excerpt: "Ralph Merkle invented public-key cryptography and Merkle Trees crucial for internet security"
 ---
 
 Imagine you want to send a locked box to a friend, but you’ve never met them in person to give them the key. If you mail the key, a nosy mailman could just copy it. This was the "Key Distribution Problem," and for decades, even the smartest scientists thought it was impossible to solve.

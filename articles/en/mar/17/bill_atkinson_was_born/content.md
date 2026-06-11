@@ -1,7 +1,7 @@
 ---
 title: "March 17, 1951 — Bill Atkinson Was Born"
 date: "March 17, 1951"
-excerpt: "Bill Atkinson was born on March 17, 1951. He created QuickDraw, MacPaint, and HyperCard — three pieces of software that defined what a graphical user interface could be. Before Atkinson and his colleagues, computers were text-based and inaccessible to most people."
+excerpt: "Created QuickDraw, MacPaint, and HyperCard, shaping modern graphical user interfaces"
 ---
 
 On March 17, 1951, Bill Atkinson was born in the United States. He would become one of the key engineers behind the first generation of graphical user interfaces (GUI) at Apple, helping define how modern computers look and feel today.

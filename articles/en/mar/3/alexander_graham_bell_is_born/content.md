@@ -1,7 +1,7 @@
 ---
 title: "March 3, 1847 — Alexander Graham Bell Is Born"
 date: "March 3, 1847"
-excerpt: "Alexander Graham Bell was born on March 3, 1847 in Edinburgh. His work on the telephone created the network infrastructure that later carried modems, influenced packet switching, and gave birth to Bell Labs — the research organization that produced the transistor, Unix, and information theory."
+excerpt: "His work on the telephone created a network infrastructure influencing modems, packet switching, and Bell Labs"
 ---
 
 On March 3, 1847, in Edinburgh, Scotland, Alexander Graham Bell was born.

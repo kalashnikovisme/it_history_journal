@@ -1,7 +1,7 @@
 ---
 title: "March 9, 2026 — 50 Days of IT History Journal"
 date: "March 9, 2026"
-excerpt: "Fifty days ago the IT History Journal started with a simple idea: every day, look at the calendar and find what happened in computing on that exact date. This is a reflection on what those first fifty days covered — and why the calendar structure makes it different."
+excerpt: "Started with a simple idea to find historical computing events on each calendar date"
 ---
 
 Fifty days ago this project quietly started with a simple idea: every day, look at the calendar and find what happened in the history of computing on that exact date.

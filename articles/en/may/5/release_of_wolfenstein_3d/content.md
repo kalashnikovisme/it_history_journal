@@ -1,7 +1,7 @@
 ---
 title: "May 5, 1992 — Release of Wolfenstein 3D"
 date: "May 5, 1992"
-excerpt: "Wolfenstein 3D, released on May 5, 1992, is considered the game that defined the first-person shooter genre. Though technically a 2D ray-casting engine simulating depth, it established the mechanics and perspective that shaped every FPS that followed — from DOOM to Call of Duty."
+excerpt: "Wolfenstein 3D defined the FPS genre with a 2D ray-casting engine and core gameplay mechanics"
 ---
 
 First-person shooters are one of the most important game genres. In these games, the player controls a character from a first-person perspective and, in most cases, uses firearms.

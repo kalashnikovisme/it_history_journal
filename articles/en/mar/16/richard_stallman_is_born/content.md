@@ -1,7 +1,7 @@
 ---
 title: "March 16, 1953 — Richard Stallman Is Born"
 date: "March 16, 1953"
-excerpt: "Richard Stallman was born on March 16, 1953. He launched the GNU Project, founded the Free Software Foundation, and authored the GPL — the license that established copyleft and created the legal foundation for most of the open-source ecosystem we use today."
+excerpt: "Launched GNU, founded Free Software Foundation, authored the GPL license"
 ---
 
 On March 16, 1953, Richard Matthew Stallman was born in New York City, United States. He would later become one of the most influential figures in the history of software and computing ethics.

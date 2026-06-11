@@ -1,7 +1,7 @@
 ---
 title: "Jan 26, 2000 — XHTML Was Released"
 date: "January 26, 2000"
-excerpt: "On January 26, 2000, the W3C released XHTML — an attempt to bring XML's strict discipline to web markup — which ironically became the standard everyone claimed to follow but almost no one implemented correctly, yet raised the culture of clean, structured HTML that persists to this day."
+excerpt: "XHTML aimed to bring XML's strict rules to HTML but was widely adopted incorrectly"
 ---
 
 If you open the source code of a website built in the mid-2000s, there is a 90% chance the very first line you will see is a long declaration:

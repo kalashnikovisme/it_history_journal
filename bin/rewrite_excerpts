@@ -1,0 +1,113 @@
+#!/usr/bin/env ruby
+# Rewrites all article excerpts to short, date-free fact sentences.
+# Usage: ruby bin/rewrite_excerpts [jun-10] [--dry-run]
+#
+#   jun-10      — rewrite only articles for that date (all languages)
+#   (no date)   — rewrite every article
+#   --dry-run   — print new excerpts without writing files
+
+require 'net/http'
+require 'json'
+require 'front_matter_parser'
+
+DRY_RUN    = ARGV.include?('--dry-run')
+DATE_FILTER = ARGV.reject { |a| a.start_with?('-') }.first
+
+if ENV['OPENAI_API_KEY'].nil? || ENV['OPENAI_API_KEY'].empty?
+  env_file = File.join(__dir__, '..', '.env.dev')
+  if File.exist?(env_file)
+    File.readlines(env_file).each do |line|
+      line = line.strip
+      next if line.empty? || line.start_with?('#')
+      key, value = line.split('=', 2)
+      ENV[key] = value if key && value
+    end
+  end
+end
+
+API_KEY = ENV['OPENAI_API_KEY']
+abort 'Set OPENAI_API_KEY in .env.dev or the environment before running this script.' if API_KEY.nil? || API_KEY.empty?
+
+def rewrite_excerpt(title, current_excerpt, body)
+  uri = URI('https://api.openai.com/v1/chat/completions')
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+
+  prompt = <<~PROMPT
+    Article title: #{title}
+    Current excerpt: #{current_excerpt}
+    Article body (first 300 chars): #{body[0, 300]}
+
+    Rewrite the excerpt as a single short fact sentence (max 110 characters). Rules:
+    - No date, no "On [date]", no year at the start
+    - Start with what the subject did or what happened, not a person's name alone
+    - Keep specific numbers/figures if they are striking (e.g. "376 bytes", "$2.5 billion")
+    - Match the language of the original excerpt (Russian stays Russian, English stays English)
+    - No trailing period
+    - Output only the rewritten excerpt, nothing else
+  PROMPT
+
+  body_json = JSON.generate({
+    model: 'gpt-4.1-nano',
+    max_tokens: 150,
+    messages: [{ role: 'user', content: prompt }]
+  })
+
+  request = Net::HTTP::Post.new(uri.path)
+  request['Content-Type']  = 'application/json'
+  request['Authorization'] = "Bearer #{API_KEY}"
+  request.body = body_json
+
+  response = http.request(request)
+  data = JSON.parse(response.body)
+  data.dig('choices', 0, 'message', 'content')&.strip
+rescue => e
+  warn "API error: #{e.message}"
+  nil
+end
+
+if DATE_FILTER
+  mon, day = DATE_FILTER.split('-')
+  abort "Invalid date format — use e.g. jun-10" unless mon && day && day.match?(/^\d+$/)
+  pattern = File.join(__dir__, '..', 'articles', '*', mon.downcase, day.to_i.to_s, '*', 'content.md')
+else
+  pattern = File.join(__dir__, '..', 'articles', '**', 'content.md')
+end
+
+article_files = Dir.glob(pattern)
+abort "No articles found for '#{DATE_FILTER}'" if article_files.empty?
+
+total = article_files.size
+label = DATE_FILTER ? "'#{DATE_FILTER}'" : 'all dates'
+puts "Found #{total} articles (#{label}). DRY_RUN=#{DRY_RUN}"
+
+article_files.each_with_index do |path, idx|
+  raw    = File.read(path)
+  parsed = FrontMatterParser::Parser.new(:md).call(raw)
+  fm     = parsed.front_matter
+
+  old_excerpt = fm['excerpt']
+  next if old_excerpt.nil? || old_excerpt.strip.empty?
+
+  print "[#{idx + 1}/#{total}] #{File.dirname(path).split('/')[-2..].join('/')} ... "
+  $stdout.flush
+
+  new_excerpt = rewrite_excerpt(fm['title'].to_s, old_excerpt, parsed.content.to_s)
+
+  if new_excerpt.nil? || new_excerpt.empty?
+    puts 'SKIPPED (API error)'
+    next
+  end
+
+  puts new_excerpt
+
+  next if DRY_RUN
+
+  # Replace only the excerpt line in the raw frontmatter, preserving everything else
+  updated = raw.sub(/^excerpt:.*$/, "excerpt: #{new_excerpt.to_json}")
+  File.write(path, updated)
+
+  sleep 0.1  # stay well under rate limits
+end
+
+puts "\nDone."

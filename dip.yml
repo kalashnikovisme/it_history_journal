@@ -56,6 +56,13 @@ interaction:
     compose:
       run_options: [no-deps]
 
+  rewrite_excerpts:
+    description: "Rewrite article excerpts via OpenAI API. Optional: pass a date like jun-10 to limit to one day"
+    service: app
+    command: ruby bin/rewrite_excerpts
+    compose:
+      run_options: [no-deps]
+
   watch:
     description: Full build then watch articles/ and templates/, serves on http://localhost:4000
     service: app

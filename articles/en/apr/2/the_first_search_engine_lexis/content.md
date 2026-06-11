@@ -1,7 +1,7 @@
 ---
 title: "April 2, 1973 — The First Search Engine: Lexis"
 date: "April 2, 1973"
-excerpt: "Lexis, officially presented on April 2, 1973, was one of the first computerized search systems in history. It allowed lawyers to search court decisions and statutes via terminal — at up to several hundred dollars per hour."
+excerpt: "Lexis let lawyers search court decisions and statutes via terminal for several hundred dollars per hour"
 ---
 
 Lexis (LexisNexis) — the first search engine for legal information and one of the first search systems in history. This system allowed users to search for information about laws, court decisions, and other related documents.

@@ -1,7 +1,7 @@
 ---
 title: "Apr 26, 1986 — The SCALA System at the Chernobyl Nuclear Power Plant"
 date: "April 26, 1986"
-excerpt: "On April 26, 1986, the worst man-made disaster in history took place at Chernobyl. The SCALA computer system was well-designed and working correctly — but it had no ability to block operator actions without human consent. The operators disabled the alarms and proceeded anyway."
+excerpt: "The SCALA system was well-designed but could not block operator actions without human consent"
 ---
 
 On April 26, 1986, the worst man-made disaster in history took place — the explosion at the Chernobyl Nuclear Power Plant.

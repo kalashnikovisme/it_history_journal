@@ -1,7 +1,7 @@
 ---
 title: "May 16, 1938 — Ivan Sutherland Was Born"
 date: "May 16, 1938"
-excerpt: "Ivan Sutherland was born on May 16, 1938. He is often called one of the creators of modern computer graphics. In 1963 he built Sketchpad — a program that first demonstrated interactive graphics, windows, and object-oriented manipulation."
+excerpt: "created Sketchpad, a revolutionary interactive graphics program demonstrating windows and object manipulation"
 ---
 
 Ivan Sutherland was born on May 16, 1938. He is often called one of the creators of modern computer graphics.

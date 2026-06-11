@@ -1,7 +1,7 @@
 ---
 title: 'Feb 9, 2009 — Facebook Invents "Like" Button'
 date: "February 9, 2009"
-excerpt: "On February 9, 2009, Facebook launched the Like button — a single click that replaced words with signals, turned attention into a measurable metric, trained the algorithm that now shapes what billions of people see online, and quietly reshaped how the entire internet communicates."
+excerpt: "Facebook launched the Like button, turning signals into measurable metrics and shaping online communication"
 ---
 
 When do you think the "Like" button appeared?

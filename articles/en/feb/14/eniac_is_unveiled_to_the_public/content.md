@@ -1,7 +1,7 @@
 ---
 title: "Feb 14, 1946 — ENIAC Is Unveiled to the Public"
 date: "February 14, 1946"
-excerpt: "On February 14, 1946, ENIAC — 30 tons of vacuum tubes, the first general-purpose fully electronic digital computer — was unveiled to the public at the University of Pennsylvania, performing thousands of calculations per second and proving that programmable electronic computing was real."
+excerpt: "ENIAC, a 30-ton fully electronic digital computer, performed thousands of calculations per second"
 ---
 
 On February 14, 1946, the ENIAC was officially presented to the public at the University of Pennsylvania.

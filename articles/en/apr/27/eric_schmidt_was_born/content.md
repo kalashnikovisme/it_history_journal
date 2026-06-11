@@ -1,7 +1,7 @@
 ---
 title: "April 27, 1955 — Eric Schmidt Was Born"
 date: "April 27, 1955"
-excerpt: "Eric Schmidt was born on April 27, 1955. As Google's CEO from 2001 to 2011, he guided the company through the dot-com crash, the launch of Gmail and Google Maps, and the acquisition of Android — helping turn a search engine into the most influential internet company in the world."
+excerpt: "Guided Google through the dot-com crash, launched Gmail and Maps, acquired Android, shaping the internet giant"
 ---
 
 Eric Schmidt is one of the most influential managers in the history of IT.

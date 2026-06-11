@@ -1,7 +1,7 @@
 ---
 title: "Feb 1, 1972 — The HP-35 Was Released"
 date: "February 1, 1972"
-excerpt: "On February 1, 1972, Hewlett-Packard released the HP-35 — the world's first scientific pocket calculator, which used Reverse Polish Notation, displayed results on bright red LEDs, cost $395 (over $2,800 today), and killed the slide rule within just a few years."
+excerpt: "Hewlett-Packard released the first scientific pocket calculator, the HP-35, with RPN, bright red LEDs, costing $395"
 ---
 
 Exactly 54 years ago today, on February 1, 1972, the world of math changed forever. Hewlett-Packard released the HP-35, and it wasn't just a new gadget — it was the beginning of the end for the slide rule.

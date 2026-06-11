@@ -1,7 +1,7 @@
 ---
 title: "March 10, 2000 — The Peak of the Dot-Com Bubble"
 date: "March 10, 2000"
-excerpt: "On March 10, 2000, the NASDAQ reached 5048 points — the peak of the dot-com bubble. Within weeks the crash began. By 2002 the index had lost nearly 78% of its value, wiping out hundreds of billions of dollars and thousands of companies. The survivors became the foundations of the modern internet."
+excerpt: "NASDAQ reached 5048.62 points, the peak of the dot-com bubble before a major crash"
 ---
 
 On March 10, 2000, the NASDAQ Composite index reached 5048.62 points, the highest level in its history at that time. This moment is widely considered the peak of the dot-com bubble, the speculative boom that defined the late 1990s internet economy.

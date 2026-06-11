@@ -1,7 +1,7 @@
 ---
 title: "April 28, 2003 — Launch of the iTunes Music Store"
 date: "April 28, 2003"
-excerpt: "On April 28, 2003, Apple launched the iTunes Music Store — making it possible to buy a single track for $0.99. In its first week, one million tracks were sold, proving that people would pay for music if you made it easy enough."
+excerpt: "iTunes Music Store sold one million tracks in its first week at $0.99 each"
 ---
 
 iTunes Music Store was Apple's digital marketplace for buying music, and it completely changed how people consumed music.

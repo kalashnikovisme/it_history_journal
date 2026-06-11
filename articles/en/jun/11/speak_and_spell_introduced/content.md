@@ -1,7 +1,7 @@
 ---
 title: "June 11, 1978 — Texas Instruments Introduces Speak & Spell"
 date: "June 11, 1978"
-excerpt: "On June 11, 1978, Texas Instruments unveiled Speak & Spell — the first mass-market consumer device to use a dedicated speech-synthesis chip, generating human speech electronically rather than playing back recordings."
+excerpt: "Texas Instruments introduced the first mass-market device with a dedicated speech-synthesis chip"
 ---
 
 On this day, Texas Instruments introduced Speak & Spell, an educational electronic toy that became many children's first experience with a "talking computer."

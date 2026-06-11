@@ -1,7 +1,7 @@
 ---
 title: "April 3, 1975 — Microsoft Is Founded"
 date: "April 3, 1975"
-excerpt: "On April 3, 1975, Bill Gates and Paul Allen registered Microsoft — originally called Micro-Soft, with a hyphen. The company started by building a BASIC interpreter for the Altair 8800, a computer they had never even touched before writing the software."
+excerpt: "Microsoft was registered as Micro-Soft, building a BASIC interpreter for the Altair 8800"
 ---
 
 On this day the company was registered by Bill Gates and Paul Allen.
