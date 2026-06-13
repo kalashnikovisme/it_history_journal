@@ -124,7 +124,9 @@ class Builder
   end
 
   def build_redirect
-    html = render_template('redirect', {})
+    html = render_template('redirect', {
+      jsonld_json: site_jsonld.to_json
+    })
     write_file('index.html', html)
   end
 
@@ -163,7 +165,12 @@ class Builder
       current_month:      today.month,
       current_year:       today.year
     })
-    html = wrap_layout(lang, t[:site_name], inner)
+    html = wrap_layout(
+      lang,
+      t[:site_name],
+      inner,
+      jsonld_json: page_jsonld(lang, t[:site_name], "/#{lang}/", main_entity: item_list_jsonld(recent)).to_json
+    )
     write_file("#{lang}/index.html", html)
   end
 
@@ -185,7 +192,19 @@ class Builder
         total_count: total_count
       })
       title = "#{t[:all_articles]} — #{t[:site_name]}"
-      html  = wrap_layout(lang, title, inner)
+      path = page_num == 1 ? "/#{lang}/articles/" : "/#{lang}/articles/#{page_num}/"
+      html  = wrap_layout(
+        lang,
+        title,
+        inner,
+        jsonld_json: page_jsonld(
+          lang,
+          title,
+          path,
+          type: 'CollectionPage',
+          main_entity: item_list_jsonld(page_articles)
+        ).to_json
+      )
       path  = page_num == 1 ? "#{lang}/articles/index.html" : "#{lang}/articles/#{page_num}/index.html"
       write_file(path, html)
     end
@@ -254,7 +273,18 @@ class Builder
       articles_by_month_day: articles_by_month_day
     })
     title = "#{t[:calendar]} — #{t[:site_name]}"
-    html  = wrap_layout(lang, title, inner)
+    html  = wrap_layout(
+      lang,
+      title,
+      inner,
+      jsonld_json: page_jsonld(
+        lang,
+        title,
+        "/#{lang}/calendar/",
+        type: 'CollectionPage',
+        main_entity: item_list_jsonld(articles.sort_by(&:sort_key))
+      ).to_json
+    )
     write_file("#{lang}/calendar/index.html", html)
   end
 
@@ -271,7 +301,18 @@ class Builder
         articles: sorted
       })
       title = "#{year} — #{t[:site_name]}"
-      html  = wrap_layout(lang, title, inner)
+      html  = wrap_layout(
+        lang,
+        title,
+        inner,
+        jsonld_json: page_jsonld(
+          lang,
+          title,
+          "/#{lang}/#{year}/",
+          type: 'CollectionPage',
+          main_entity: item_list_jsonld(sorted)
+        ).to_json
+      )
       write_file("#{lang}/#{year}/index.html", html)
     end
   end
@@ -302,6 +343,47 @@ class Builder
     raise "Template not found: #{path}" unless File.exist?(path)
     src = File.read(path)
     Haml::Template.new { src }.render(@scope, locals)
+  end
+
+  def site_jsonld
+    {
+      '@context' => 'https://schema.org',
+      '@type'    => 'WebSite',
+      'name'     => TRANSLATIONS['en'][:site_name],
+      'url'      => BASE_URL,
+      'inLanguage' => LANGUAGES
+    }
+  end
+
+  def page_jsonld(lang, title, path, type: 'WebPage', main_entity: nil)
+    jsonld = {
+      '@context'   => 'https://schema.org',
+      '@type'      => type,
+      'name'       => title,
+      'url'        => "#{BASE_URL}#{path}",
+      'inLanguage' => lang,
+      'isPartOf'   => {
+        '@type' => 'WebSite',
+        'name'  => TRANSLATIONS[lang][:site_name],
+        'url'   => BASE_URL
+      }
+    }
+    jsonld['mainEntity'] = main_entity if main_entity
+    jsonld
+  end
+
+  def item_list_jsonld(articles)
+    {
+      '@type' => 'ItemList',
+      'itemListElement' => articles.each_with_index.map do |article, idx|
+        {
+          '@type'    => 'ListItem',
+          'position' => idx + 1,
+          'name'     => article.title,
+          'url'      => "#{BASE_URL}#{article.url}/"
+        }
+      end
+    }
   end
 
   def write_file(relative_path, content)

@@ -24,6 +24,14 @@ RSpec.describe Builder do
     File.write(File.join(tmp_dir, 'assets', 'apple-touch-icon.png'), "\x89PNG")
   end
 
+  def jsonld_for(relative_path)
+    content = File.read(File.join(output_dir, relative_path))
+    match = content.match(%r{<script type='application/ld\+json'>\s*(.*?)\s*</script>}m)
+    raise "No JSON-LD found in #{relative_path}" unless match
+
+    JSON.parse(match[1])
+  end
+
   before do
     write_article('en', 'may', 19, 'james_gosling_was_born', <<~MD)
       ---
@@ -173,6 +181,48 @@ RSpec.describe Builder do
       expect(content).to include("href='/favicon.ico'")
       expect(content).to include("href='/icon.svg'")
       expect(content).to include("href='/apple-touch-icon.png' rel='apple-touch-icon'")
+    end
+
+    it 'adds WebSite schema.org JSON-LD to the root redirect page' do
+      jsonld = jsonld_for('index.html')
+
+      expect(jsonld['@context']).to eq('https://schema.org')
+      expect(jsonld['@type']).to eq('WebSite')
+      expect(jsonld['url']).to eq('https://history.purple-magic.com')
+      expect(jsonld['inLanguage']).to eq(%w[en ru])
+    end
+
+    it 'adds WebPage schema.org JSON-LD to language home pages' do
+      jsonld = jsonld_for('en/index.html')
+
+      expect(jsonld['@type']).to eq('WebPage')
+      expect(jsonld['url']).to eq('https://history.purple-magic.com/en/')
+      expect(jsonld['inLanguage']).to eq('en')
+      expect(jsonld['mainEntity']['@type']).to eq('ItemList')
+    end
+
+    it 'adds CollectionPage schema.org JSON-LD to article index pages' do
+      jsonld = jsonld_for('en/articles/index.html')
+
+      expect(jsonld['@type']).to eq('CollectionPage')
+      expect(jsonld['url']).to eq('https://history.purple-magic.com/en/articles/')
+      expect(jsonld['mainEntity']['itemListElement'].first['@type']).to eq('ListItem')
+    end
+
+    it 'adds CollectionPage schema.org JSON-LD to calendar pages' do
+      jsonld = jsonld_for('en/calendar/index.html')
+
+      expect(jsonld['@type']).to eq('CollectionPage')
+      expect(jsonld['url']).to eq('https://history.purple-magic.com/en/calendar/')
+      expect(jsonld['mainEntity']['@type']).to eq('ItemList')
+    end
+
+    it 'adds CollectionPage schema.org JSON-LD to year pages' do
+      jsonld = jsonld_for('en/1955/index.html')
+
+      expect(jsonld['@type']).to eq('CollectionPage')
+      expect(jsonld['url']).to eq('https://history.purple-magic.com/en/1955/')
+      expect(jsonld['mainEntity']['itemListElement'].first['name']).to include('James Gosling')
     end
 
     context 'when article has a cover image' do

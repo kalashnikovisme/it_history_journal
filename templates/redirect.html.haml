@@ -3,6 +3,9 @@
   %head
     %meta{charset: 'utf-8'}
     %title IT History Journal
+    - if jsonld_json
+      %script{type: 'application/ld+json'}
+        != jsonld_json
     :javascript
       (function() {
         var lang = navigator.language || navigator.userLanguage || 'en';
