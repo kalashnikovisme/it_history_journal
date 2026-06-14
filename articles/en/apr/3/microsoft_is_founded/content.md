@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 3, 1975 — Microsoft Is Founded"
 date: "April 3, 1975"
 excerpt: "Microsoft was registered as Micro-Soft, building a BASIC interpreter for the Altair 8800"

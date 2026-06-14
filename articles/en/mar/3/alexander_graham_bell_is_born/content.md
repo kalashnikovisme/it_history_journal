@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 3, 1847 — Alexander Graham Bell Is Born"
 date: "March 3, 1847"
 excerpt: "His work on the telephone created a network infrastructure influencing modems, packet switching, and Bell Labs"

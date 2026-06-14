@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 18, 1995 — The Registration of Yahoo.com Domain"
 date: "January 18, 1995"
 excerpt: "Yahoo.com was registered and grew into a web giant shaping email and online services"

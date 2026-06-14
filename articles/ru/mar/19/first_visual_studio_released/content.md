@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "19 марта 1997 — Вышла первая Visual Studio"
 date: "19 марта 1997"
 excerpt: "Microsoft выпустила Visual Studio 97 — объединенную среду для разных инструментов разработчика"

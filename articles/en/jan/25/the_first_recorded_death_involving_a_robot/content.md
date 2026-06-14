@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 25, 1979 — The First Recorded Death Involving a Robot"
 date: "January 25, 1979"
 excerpt: "Robert Williams was killed by an industrial robot, leading to safety standards protecting workers today"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 18, 1977 — The First Version Control System Was Released"
 date: "February 18, 1977"
 excerpt: "SCCS introduced structured revision history stored as deltas shaping future version control systems"

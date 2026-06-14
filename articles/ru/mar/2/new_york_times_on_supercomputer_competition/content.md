@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "2 марта 1993 — The New York Times пишет о конкуренции в суперкомпьютерах"
 date: "2 марта 1993"
 excerpt: "The New York Times зафиксировала стратегическую конкуренцию между Cray Research и NEC в сфере суперкомпьютеров"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 1, 1972 — The HP-35 Was Released"
 date: "February 1, 1972"
 excerpt: "Hewlett-Packard released the first scientific pocket calculator, the HP-35, with RPN, bright red LEDs, costing $395"

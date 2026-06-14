@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 9, 2012 — Facebook Announced the Acquisition of Instagram"
 date: "April 9, 2012"
 excerpt: "Facebook acquired Instagram for $1 billion before Android support or revenue"

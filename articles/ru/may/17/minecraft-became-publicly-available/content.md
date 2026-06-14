@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "17 мая 2009 — Minecraft вышел в публичный доступ"
 date: "17 мая 2009"
 excerpt: "Minecraft was first released as a primitive sandbox game with block worlds and open-ended building"

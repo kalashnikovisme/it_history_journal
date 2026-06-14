@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "21 марта 2006 — Написан самый первый твит"
 date: "21 марта 2006"
 excerpt: "Первый твит — «just setting up my twttr» — запустил микроблогинг и новый слой коммуникации"

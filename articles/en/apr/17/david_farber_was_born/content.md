@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 17, 1934 — David Farber, the Grandfather of the Internet, Was Born"
 date: "April 17, 1934"
 excerpt: "Mentored key figures like Steve Crocker and Jon Postel"

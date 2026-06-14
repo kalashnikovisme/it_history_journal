@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 5, 1992 — Release of Wolfenstein 3D"
 date: "May 5, 1992"
 excerpt: "Wolfenstein 3D defined the FPS genre with a 2D ray-casting engine and core gameplay mechanics"

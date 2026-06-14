@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 18, 2012 — Facebook IPO"
 date: "May 18, 2012"
 excerpt: "Facebook listed shares on NASDAQ at $38 per share, valuing the company at about $104 billion"

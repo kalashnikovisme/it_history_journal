@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "20 января 1934 — Основана Fujifilm"
 date: "20 января 1934"
 excerpt: "Fujifilm создала первый японский компьютер FUJIC и разработала формат LTO-лент"

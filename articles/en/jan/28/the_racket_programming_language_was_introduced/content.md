@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 28, 1995 — The Racket Programming Language Was Introduced"
 date: "January 28, 1995"
 excerpt: "Racket (then PLT Scheme) was introduced as a Lisp platform for building new languages with macros"

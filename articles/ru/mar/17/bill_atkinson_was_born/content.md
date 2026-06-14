@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "17 марта 1951 — Родился Билл Аткинсон"
 date: "17 марта 1951"
 excerpt: "Создатель QuickDraw, MacPaint и HyperCard, сформировал визуальный язык вычислений, ныне используемый миллиардами"

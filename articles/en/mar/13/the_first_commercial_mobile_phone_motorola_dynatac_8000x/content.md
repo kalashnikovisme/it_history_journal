@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Mar 13, 1983 — The First Commercial Mobile Phone: Motorola DynaTAC 8000X"
 date: "March 13, 1983"
 excerpt: "The Motorola DynaTAC 8000X was the first commercially available handheld mobile phone with 30 minutes talk time and cost $3,995"

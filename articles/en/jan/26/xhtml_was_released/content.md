@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 26, 2000 — XHTML Was Released"
 date: "January 26, 2000"
 excerpt: "XHTML aimed to bring XML's strict rules to HTML but was widely adopted incorrectly"

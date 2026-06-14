@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 1, 2019 — FTX Was Founded"
 date: "May 1, 2019"
 excerpt: "FTX filed for bankruptcy 3.5 years after founding; founder Sam Bankman-Fried was sentenced to 25 years"

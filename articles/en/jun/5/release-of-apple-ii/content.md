@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 5, 1977 — Release of Apple II"
 date: "June 5, 1977"
 excerpt: "Apple sold its first mass-market product, the Apple II, fully assembled, connectable to a TV, running VisiCalc"

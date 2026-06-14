@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 19, 1983 — Apple Lisa Release"
 date: "January 19, 1983"
 excerpt: "Apple released the Lisa, the first mass-produced personal computer with GUI and mouse, at $9,995"

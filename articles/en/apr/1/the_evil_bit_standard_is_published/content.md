@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 1, 2003 — The Evil Bit Standard Is Published"
 date: "April 1, 2003"
 excerpt: "RFC 3514 proposed marking malicious packets with an \"Evil Bit\" set to \"1\" for attack indication"

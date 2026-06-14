@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 16, 1995 — The .ai Domain Is Released"
 date: "February 16, 1995"
 excerpt: "The .ai domain was delegated to Anguilla, becoming a highly sought-after extension decades later"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "29 апреля 2015 — Релиз Visual Studio Code"
 date: "29 апреля 2015"
 excerpt: "Visual Studio Code занимает первое место в опросах программистов и породил популярные форки"

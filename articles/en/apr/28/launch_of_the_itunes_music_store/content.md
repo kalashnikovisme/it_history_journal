@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 28, 2003 — Launch of the iTunes Music Store"
 date: "April 28, 2003"
 excerpt: "iTunes Music Store sold one million tracks in its first week at $0.99 each"

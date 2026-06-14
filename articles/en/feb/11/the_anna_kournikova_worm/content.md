@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: 'Feb 11, 2001 — The "Anna Kournikova" Worm and the Power of a Famous Name'
 date: "February 11, 2001"
 excerpt: "The worm spread via a fake celebrity photo attachment exploiting curiosity and social engineering"

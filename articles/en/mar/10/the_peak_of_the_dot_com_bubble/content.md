@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 10, 2000 — The Peak of the Dot-Com Bubble"
 date: "March 10, 2000"
 excerpt: "NASDAQ reached 5048.62 points, the peak of the dot-com bubble before a major crash"

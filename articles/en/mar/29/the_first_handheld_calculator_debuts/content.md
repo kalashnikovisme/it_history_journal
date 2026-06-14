@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 29, 1967 — The First Handheld Calculator Debuts"
 date: "March 29, 1967"
 excerpt: "Texas Instruments unveiled the first handheld calculator capable of basic arithmetic and printing on tape"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 4, 2000 — ILOVEYOU Is Discovered"
 date: "May 4, 2000"
 excerpt: "ILOVEYOU infected tens of millions of computers, overwrote files, causing $5–10 billion in damage"

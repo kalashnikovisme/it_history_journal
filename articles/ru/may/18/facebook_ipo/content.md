@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "18 мая 2012 — IPO Facebook"
 date: "18 мая 2012"
 excerpt: "Facebook разместила акции на NASDAQ по $38 за акцию, привлекла $16 миллиардов и оценка превысила 100 миллиардов"

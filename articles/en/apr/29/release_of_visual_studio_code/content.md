@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 29, 2015 — Release of Visual Studio Code"
 date: "April 29, 2015"
 excerpt: "Visual Studio Code is the most used IDE today, ranking first in surveys worldwide"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 23, 2005 — The First Video Uploaded to YouTube"
 date: "April 23, 2005"
 excerpt: "Jawed Karim uploaded the first YouTube video, 'Me at the zoo,' which has 388 million views"

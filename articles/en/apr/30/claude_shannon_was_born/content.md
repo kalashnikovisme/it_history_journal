@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 30, 1916 — Claude Shannon Was Born"
 date: "April 30, 1916"
 excerpt: "Formalized the concept of the 'bit' and linked logic with electrical circuits in information theory"

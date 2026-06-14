@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 17, 1951 — Bill Atkinson Was Born"
 date: "March 17, 1951"
 excerpt: "Created QuickDraw, MacPaint, and HyperCard, shaping modern graphical user interfaces"

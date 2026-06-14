@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 11, 1976 — Apple I Presented"
 date: "April 11, 1976"
 excerpt: "Steve Jobs and Wozniak presented the Apple I circuit board connected to a keyboard and TV"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "17 января 1997 — Первый релиз Jython (JPython)"
 date: "17 января 1997"
 excerpt: "Вышел Jython — реализация Python для JVM, позволяющая использовать Java-библиотеки через import"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 12, 1989 — Release of Teenage Mutant Ninja Turtles"
 date: "May 12, 1989"
 excerpt: "Teenage Mutant Ninja Turtles for NES became one of the hardest games of its generation"

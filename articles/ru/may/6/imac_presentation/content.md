@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "6 мая 1998 — Презентация iMac"
 date: "6 мая 1998"
 excerpt: "Презентовали iMac — моноблок без дисковода и с одним USB, символ возрождения Apple"

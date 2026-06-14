@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 22, 1984 — Macintosh Commercial on Super Bowl"
 date: "January 22, 1984"
 excerpt: "Apple aired the iconic 1984 commercial during the Super Bowl, directed by Ridley Scott, only once"

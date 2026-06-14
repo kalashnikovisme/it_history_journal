@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 11, 1930 — Edsger Dijkstra Was Born"
 date: "May 11, 1930"
 excerpt: "Created Dijkstra's algorithm, argued programming is a mathematical discipline and shaped computer science"

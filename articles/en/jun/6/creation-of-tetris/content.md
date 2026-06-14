@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 6, 1984 — Tetris Is Created"
 date: "June 6, 1984"
 excerpt: "Alexey Pajitnov completed the first working version of Tetris on an Elektronika-60 computer"

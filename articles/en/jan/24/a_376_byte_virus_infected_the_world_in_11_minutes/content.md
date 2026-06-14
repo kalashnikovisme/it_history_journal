@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 24, 2003 — A 376-Byte Virus Infected the World in 11 Minutes"
 date: "January 24, 2003"
 excerpt: "SQL Slammer infected 75,000 servers in 11 minutes, causing $750M–$1.2B in damage"

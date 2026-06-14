@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 8, 1984 — John Resig Was Born"
 date: "May 8, 1984"
 excerpt: "jQuery helped millions of websites and made JavaScript a serious language"

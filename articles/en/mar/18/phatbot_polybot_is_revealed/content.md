@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 18, 2004 — Phatbot (Polybot) Is Revealed"
 date: "March 18, 2004"
 excerpt: "Phatbot was an advanced modular malware platform written in C++ for building botnets"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: 'Feb 22, 1978 — "The C Programming Language" Is Published'
 date: "February 22, 1978"
 excerpt: "Published \"The C Programming Language,\" a 270-page book that defined the language's standard for over a decade"

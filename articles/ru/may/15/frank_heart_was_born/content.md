@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "15 мая 1929 — Родился Френк Харт"
 date: "15 мая 1929"
 excerpt: "Фрэнк Харт руководил командой BBN, построившей первые узлы IMP для ARPANET"

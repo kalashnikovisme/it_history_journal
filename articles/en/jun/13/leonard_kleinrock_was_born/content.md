@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 13, 1934 — Leonard Kleinrock Is Born"
 date: "June 13, 1934"
 excerpt: "Leonard Kleinrock developed the mathematical model for packet switching and helped build the first ARPANET node"

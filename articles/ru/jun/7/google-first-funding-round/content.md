@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "7 июня 1999 — Google привлекла первые крупные инвестиции"
 date: "7 июня 1999"
 excerpt: "Google привлекла первый крупный раунд инвестиций — $25 млн от Sequoia Capital и Kleiner Perkins"

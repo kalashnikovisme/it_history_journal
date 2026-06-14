@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 19, 1931 — Frederick Brooks Was Born"
 date: "April 19, 1931"
 excerpt: "Authored The Mythical Man-Month, a vital book for software project managers and engineers"

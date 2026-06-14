@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 10, 1996 — The First Kasparov–Deep Blue Game"
 date: "February 10, 1996"
 excerpt: "Deep Blue won the opening game against Kasparov marking a historic moment in human vs machine chess"

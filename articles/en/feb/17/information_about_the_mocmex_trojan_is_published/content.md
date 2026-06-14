@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 17, 2008 — Information About the Mocmex Trojan Is Published"
 date: "February 17, 2008"
 excerpt: "Researchers published details about the Mocmex trojan preinstalled on digital photo frames at the factory"

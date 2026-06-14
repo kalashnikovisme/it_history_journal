@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "12 марта 1989 — Тим Бернерс-Ли предлагает World Wide Web"
 date: "12 марта 1989"
 excerpt: "Тим Бернерс-Ли отправил предложение, которое стало началом World Wide Web с URL, HTTP и HTML"

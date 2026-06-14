@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 20, 1934 — Fujifilm Founded"
 date: "January 20, 1934"
 excerpt: "Fujifilm supplied floppy disks and tapes and adapted film chemistry for LCD coatings in smartphones"

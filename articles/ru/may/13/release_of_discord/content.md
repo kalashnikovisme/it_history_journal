@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "13 мая 2015 — Релиз Discord"
 date: "13 мая 2015"
 excerpt: "Discord был выпущен публично и стал популярной платформой для сообществ и чатов"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 2, 1983 — Microsoft Released the Two-Button Mouse"
 date: "May 2, 1983"
 excerpt: "Microsoft released the first widely available two-button mouse, setting the standard for computer mice ever since"

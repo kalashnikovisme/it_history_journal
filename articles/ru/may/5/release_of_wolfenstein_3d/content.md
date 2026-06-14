@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "5 мая 1992 — Релиз Wolfenstein 3D"
 date: "5 мая 1992"
 excerpt: "Wolfenstein 3D создал механики и перспективу, заложившие основы FPS-гейминга"

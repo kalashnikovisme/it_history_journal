@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 15, 1993 — Directive to Launch the Clipper Chip Project"
 date: "April 15, 1993"
 excerpt: "The Clipper Chip used government-backed encryption with a built-in backdoor"

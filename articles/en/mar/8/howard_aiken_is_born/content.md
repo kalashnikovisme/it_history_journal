@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 8, 1900 — Howard Aiken Is Born"
 date: "March 8, 1900"
 excerpt: "Built the Harvard Mark I, one of the first large-scale automatic computers in the US"

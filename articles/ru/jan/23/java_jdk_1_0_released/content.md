@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "23 января 1996 — Релиз Java (JDK 1.0)"
 date: "23 января 1996"
 excerpt: "Sun Microsystems выпустила Java JDK 1.0 с принципом «Write Once, Run Anywhere»"

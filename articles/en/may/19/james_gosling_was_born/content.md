@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 19, 1955 — James Gosling Was Born"
 date: "May 19, 1955"
 excerpt: "Considered the main creator of Java with many other important achievements in his career"

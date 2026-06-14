@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 5, 1957 — FORTRAN Is Published"
 date: "March 5, 1957"
 excerpt: "IBM published FORTRAN, the first widely adopted high-level language for efficient scientific coding"

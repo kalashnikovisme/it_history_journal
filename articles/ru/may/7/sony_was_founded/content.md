@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "7 мая 1946 — Основана Sony"
 date: "7 мая 1946"
 excerpt: "Небольшая компания Tokyo Tsushin Kogyo с 20 сотрудниками и 190 тысячами иен основана в Токио после войны, позже стала Sony"

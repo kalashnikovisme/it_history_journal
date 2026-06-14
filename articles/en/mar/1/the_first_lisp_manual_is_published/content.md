@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Mar 1, 1960 — The First LISP Manual Is Published"
 date: "March 1, 1960"
 excerpt: "The first official description of LISP introduced shared code and data, with central recursion"

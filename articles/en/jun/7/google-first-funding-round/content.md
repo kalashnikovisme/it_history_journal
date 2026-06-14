@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 7, 1999 — Google Raises Its First Major Investment Round"
 date: "June 7, 1999"
 excerpt: "Google raised a $25 million funding round from Sequoia Capital and Kleiner Perkins"

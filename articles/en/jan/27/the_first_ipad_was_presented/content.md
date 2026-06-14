@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 27, 2010 — The First iPad Was Presented"
 date: "January 27, 2010"
 excerpt: "Apple introduced the iPad, creating the modern tablet category and transforming UI for large touch screens"

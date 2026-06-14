@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 15, 1934 — Niklaus Wirth Was Born"
 date: "February 15, 1934"
 excerpt: "Created Pascal, Modula-2, and Oberon to simplify and clarify programming languages"

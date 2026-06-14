@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 20, 1966 — David Filo Was Born"
 date: "April 20, 1966"
 excerpt: "co-founded Yahoo and built one of the first large-scale internet search platforms"

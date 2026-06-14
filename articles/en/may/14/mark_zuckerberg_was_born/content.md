@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 14, 1984 — Mark Zuckerberg Was Born"
 date: "May 14, 1984"
 excerpt: "Facebook started as a small Harvard website before becoming an influential internet platform"

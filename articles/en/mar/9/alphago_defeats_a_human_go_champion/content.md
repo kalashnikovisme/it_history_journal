@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 9, 2016 — AlphaGo Defeats a Human Go Champion"
 date: "March 9, 2016"
 excerpt: "AlphaGo defeated Lee Sedol, one of the strongest Go players in the world, marking a new era in AI"

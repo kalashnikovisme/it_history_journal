@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 30, 1925 — Douglas Engelbart Was Born"
 date: "January 30, 1925"
 excerpt: "Demonstrated the computer mouse, hypertext, and video conferencing in 90 minutes in 1968"

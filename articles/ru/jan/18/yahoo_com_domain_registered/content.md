@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "18 января 1995 — Зарегистрирован домен Yahoo.com"
 date: "18 января 1995"
 excerpt: "Yahoo зарегистрировал домен yahoo.com и стал поисковым и почтовым гигантом"

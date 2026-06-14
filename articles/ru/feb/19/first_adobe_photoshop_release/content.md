@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "19 февраля 1990 — Релиз первого Adobe Photoshop"
 date: "19 февраля 1990"
 excerpt: "Вышел Photoshop 1.0 для Mac, сделав качественную обработку изображений доступной на ПК"

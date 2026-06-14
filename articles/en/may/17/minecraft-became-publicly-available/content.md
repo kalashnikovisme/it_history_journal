@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 17, 2009 — Minecraft Became Publicly Available"
 date: "May 17, 2009"
 excerpt: "Minecraft's first public version featured a primitive world of cubes and simple terrain generation"

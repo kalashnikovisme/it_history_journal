@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 9, 1969 — Marc Ewing Was Born"
 date: "May 9, 1969"
 excerpt: "Helped legitimize open source for corporations and introduced a funding business model"

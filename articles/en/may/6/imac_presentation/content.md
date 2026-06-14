@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 6, 1998 — iMac Presentation"
 date: "May 6, 1998"
 excerpt: "Steve Jobs presented the all-in-one iMac with translucent plastic, no floppy drive, and one USB port becoming a symbol of Apple's revival"

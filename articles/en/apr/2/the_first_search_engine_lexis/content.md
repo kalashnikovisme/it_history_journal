@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 2, 1973 — The First Search Engine: Lexis"
 date: "April 2, 1973"
 excerpt: "Lexis let lawyers search court decisions and statutes via terminal for several hundred dollars per hour"

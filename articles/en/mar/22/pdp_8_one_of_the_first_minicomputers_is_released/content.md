@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 22, 1965 — PDP-8, One of the First Minicomputers, Is Released"
 date: "March 22, 1965"
 excerpt: "Digital Equipment Corporation released the PDP-8 for $18,000, making computers affordable for many new users"

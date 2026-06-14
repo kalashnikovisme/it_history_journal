@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 8, 1955 — Tim Berners-Lee Was Born"
 date: "June 8, 1955"
 excerpt: "Created the World Wide Web, making the Internet accessible to everyone and shaping the digital world"

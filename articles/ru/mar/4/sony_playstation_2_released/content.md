@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "4 марта 2000 — Выпущена Sony PlayStation 2"
 date: "4 марта 2000"
 excerpt: "Sony PlayStation 2 стала самой продаваемой игровой консолью с 155 миллионами устройств"

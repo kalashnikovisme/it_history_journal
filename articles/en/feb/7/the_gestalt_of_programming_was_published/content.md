@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: 'Feb 7, 1956 — The "Gestalt of Programming" Was Published'
 date: "February 7, 1956"
 excerpt: "Published 'Gestalt Programming' proposing computers be programmed with intentions, not step-by-step instructions"

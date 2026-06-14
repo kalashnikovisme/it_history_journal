@@ -15,6 +15,7 @@ RSpec.describe Article do
       date: "May 19, 1955"
       excerpt: "James Gosling is considered the main creator of Java."
       popular: true
+      author: "Pasha Kalashnikov"
       ---
 
       James Gosling created Java.
@@ -42,6 +43,10 @@ RSpec.describe Article do
 
     it 'reads the popular flag' do
       expect(article.popular).to be true
+    end
+
+    it 'reads the author from frontmatter' do
+      expect(article.author).to eq('Pasha Kalashnikov')
     end
 
     it 'detects the language from path' do

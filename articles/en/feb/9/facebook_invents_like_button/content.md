@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: 'Feb 9, 2009 — Facebook Invents "Like" Button'
 date: "February 9, 2009"
 excerpt: "Facebook launched the Like button, turning signals into measurable metrics and shaping online communication"

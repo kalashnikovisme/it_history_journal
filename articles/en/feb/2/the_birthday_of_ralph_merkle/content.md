@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 2, 1952 — The Birthday of Ralph Merkle"
 date: "February 2, 1952"
 excerpt: "Ralph Merkle invented public-key cryptography and Merkle Trees crucial for internet security"

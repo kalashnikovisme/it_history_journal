@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 10, 1981 — A Computer Automatically Postponed the Shuttle Launch"
 date: "April 10, 1981"
 excerpt: "A computer automatically halted the Shuttle launch 16 minutes before liftoff due to data mismatch"

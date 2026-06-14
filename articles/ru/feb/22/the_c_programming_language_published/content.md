@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "22 февраля 1978 — Опубликована книга «The C Programming Language»"
 date: "22 февраля 1978"
 excerpt: "Книга «The C Programming Language» стала фактическим стандартом языка C задолго до ANSI"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 12, 1989 — Tim Berners-Lee Proposes the World Wide Web"
 date: "March 12, 1989"
 excerpt: "Tim Berners-Lee submitted the proposal that became the World Wide Web at CERN"

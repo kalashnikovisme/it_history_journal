@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 6, 1992 — Media Player Is Released for Windows"
 date: "April 6, 1992"
 excerpt: "Windows Media Player introduced most users to digital audio and dominated the personal computing era"

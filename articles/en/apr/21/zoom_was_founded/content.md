@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 21, 2011 — Zoom Was Founded"
 date: "April 21, 2011"
 excerpt: "Eric Yuan, a Cisco VP, founded Zoom after being unhappy with WebEx's evolution"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 23, 1965 — The First Digital Computer Goes to Space"
 date: "March 23, 1965"
 excerpt: "NASA launched the first American spaceflight with a digital computer calculating orbital positions faster than humans"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 18, 1983 — Announcement of the Osborne Executive and the Beginning of the Osborne Effect"
 date: "April 18, 1983"
 excerpt: "Preview of upcoming models caused dealers to stop orders and led to bankruptcy"

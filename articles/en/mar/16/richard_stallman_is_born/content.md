@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 16, 1953 — Richard Stallman Is Born"
 date: "March 16, 1953"
 excerpt: "Launched GNU, founded Free Software Foundation, authored the GPL license"

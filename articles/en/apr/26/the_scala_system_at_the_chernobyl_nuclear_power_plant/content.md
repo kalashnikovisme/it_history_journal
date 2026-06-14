@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 26, 1986 — The SCALA System at the Chernobyl Nuclear Power Plant"
 date: "April 26, 1986"
 excerpt: "The SCALA system was well-designed but could not block operator actions without human consent"

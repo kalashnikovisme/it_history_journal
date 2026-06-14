@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Apr 7, 1969 — The Most Important Document of the Internet: RFC 1"
 date: "April 7, 1969"
 excerpt: "RFC 1 invited discussion, laying the foundation for the internet's collaborative nature"

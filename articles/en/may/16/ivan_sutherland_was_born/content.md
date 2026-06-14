@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 16, 1938 — Ivan Sutherland Was Born"
 date: "May 16, 1938"
 excerpt: "created Sketchpad, a revolutionary interactive graphics program demonstrating windows and object manipulation"

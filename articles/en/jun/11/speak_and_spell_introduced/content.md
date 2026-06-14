@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 11, 1978 — Texas Instruments Introduces Speak & Spell"
 date: "June 11, 1978"
 excerpt: "Texas Instruments introduced the first mass-market device with a dedicated speech-synthesis chip"

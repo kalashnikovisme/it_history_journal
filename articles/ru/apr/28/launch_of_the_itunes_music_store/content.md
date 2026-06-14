@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "28 апреля 2003 — Запуск iTunes Music Store"
 date: "28 апреля 2003"
 excerpt: "iTunes Music Store продал более миллиона треков за первую неделю, навсегда изменив цифровую музыку"

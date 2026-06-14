@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 19, 1997 — Visual Studio 97 Was Released"
 date: "March 19, 1997"
 excerpt: "Microsoft released Visual Studio 97 combining Visual Basic C++ FoxPro and J++ into one package"

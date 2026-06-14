@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 14, 1965 — Yukihiro Matsumoto Was Born"
 date: "April 14, 1965"
 excerpt: "Created the Ruby programming language in 1993 and released it in December 1995 known as Matz"

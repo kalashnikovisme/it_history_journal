@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 7, 1986 — Richard Hamming: \"You and Your Research\""
 date: "March 7, 1986"
 excerpt: "Richard Hamming delivered \"You and Your Research\" to scientists and engineers at Bell Communications Research"

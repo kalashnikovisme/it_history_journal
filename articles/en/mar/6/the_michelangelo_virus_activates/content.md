@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 6, 1992 — The Michelangelo Virus Activates"
 date: "March 6, 1992"
 excerpt: "The Michelangelo virus activated worldwide, marking the first major cybersecurity scare"

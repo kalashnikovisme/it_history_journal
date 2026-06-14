@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 31, 1952 — David P. Reed Was Born"
 date: "January 31, 1952"
 excerpt: "co-designed TCP/IP, created UDP, and formulated the End-to-End principle for scalable networking"

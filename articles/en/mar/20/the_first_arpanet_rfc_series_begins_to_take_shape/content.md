@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 20, 1970 — The First ARPANET RFC Series Begins to Take Shape"
 date: "March 20, 1970"
 excerpt: "Early RFCs captured the internet's invention as engineering conversations in real time"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 13, 1991 — Borland Pascal Comes to Windows"
 date: "February 13, 1991"
 excerpt: "Borland released Pascal for Windows, introducing event-driven development and leading to Delphi"

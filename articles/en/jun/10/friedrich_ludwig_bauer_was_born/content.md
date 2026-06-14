@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 10, 1924 — Friedrich Ludwig Bauer Was Born"
 date: "June 10, 1924"
 excerpt: "coined \"software engineering\" term and invented stack-based expression evaluation methods"

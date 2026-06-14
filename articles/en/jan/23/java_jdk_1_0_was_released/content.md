@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 23, 1996 — Java (JDK 1.0) Was Released"
 date: "January 23, 1996"
 excerpt: "Java’s 'Write Once, Run Anywhere' allows bytecode to run on any JVM-powered machine"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 26, 1943 — Charles P. Thacker Is Born"
 date: "February 26, 1943"
 excerpt: "Lead hardware engineer of the Xerox Alto and Ethernet hardware builder at Xerox PARC"

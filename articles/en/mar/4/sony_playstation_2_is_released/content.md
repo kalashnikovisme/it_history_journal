@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 4, 2000 — Sony PlayStation 2 Is Released"
 date: "March 4, 2000"
 excerpt: "Sony released PlayStation 2 in Japan, selling over 155 million units and boosting DVD adoption"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 9, 2026 — 50 Days of IT History Journal"
 date: "March 9, 2026"
 excerpt: "Started with a simple idea to find historical computing events on each calendar date"

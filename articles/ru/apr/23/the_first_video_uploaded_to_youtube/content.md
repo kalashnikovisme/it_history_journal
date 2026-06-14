@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "23 апреля 2005 — Загружено первое видео на YouTube"
 date: "23 апреля 2005"
 excerpt: "Первое видео на YouTube «Me at the zoo» загрузил со-основатель, с почти 400 млн просмотров"

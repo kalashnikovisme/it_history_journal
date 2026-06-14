@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 22, 1993 — Release of the Mosaic Browser"
 date: "April 22, 1993"
 excerpt: "Mosaic was the first browser with inline images and graphical features like Back and Forward buttons"

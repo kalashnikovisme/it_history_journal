@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 7, 1946 — Sony Was Founded"
 date: "May 7, 1946"
 excerpt: "A small company with 20 employees and $2,000 in capital appeared in war-damaged Tokyo, later called Sony"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "12 мая 1989 — Релиз Teenage Mutant Ninja Turtles"
 date: "12 мая 1989"
 excerpt: "Teenage Mutant Ninja Turtles на NES стала одной из самых сложных игр своего поколения и заметных релизов индустрии"

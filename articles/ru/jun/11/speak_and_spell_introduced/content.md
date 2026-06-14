@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "11 июня 1978 — Texas Instruments представляет Speak & Spell"
 date: "11 июня 1978"
 excerpt: "Texas Instruments представила Speak & Spell — первое устройство с синтезом речи, создающим её электронным способом"

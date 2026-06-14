@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Jan 21 — The First Keyboard Was Presented"
 date: "January 21"
 excerpt: "The ENIAC connected a teletype to its memory for real-time input and output"

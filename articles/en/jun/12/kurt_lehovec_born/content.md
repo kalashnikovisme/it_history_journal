@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "June 12, 1918 — Kurt Lehovec Is Born"
 date: "June 12, 1918"
 excerpt: "Kurt Lehovec's p-n junction isolation technique helped make integrated circuits practical"

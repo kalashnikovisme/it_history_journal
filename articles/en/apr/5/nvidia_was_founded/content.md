@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 5, 1993 — NVIDIA Was Founded"
 date: "April 5, 1993"
 excerpt: "NVIDIA was founded by three microprocessor developers to build a dedicated chip for 3D graphics"

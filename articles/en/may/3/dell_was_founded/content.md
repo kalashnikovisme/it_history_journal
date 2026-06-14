@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 3, 1984 — Dell Was Founded"
 date: "May 3, 1984"
 excerpt: "Michael Dell registered PC's Limited to build computers to order and sell directly"

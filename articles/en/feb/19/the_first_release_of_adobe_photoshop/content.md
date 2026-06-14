@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 19, 1990 — The First Release of Adobe Photoshop"
 date: "February 19, 1990"
 excerpt: "Adobe Photoshop 1.0 was released for Macintosh, enabling high-quality image editing on a personal computer"

@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "16 марта 1953 — Родился Ричард Столлман"
 date: "16 марта 1953"
 excerpt: "Основатель GNU, Free Software Foundation, создатель GPL и идеи copyleft, заложили основу Linux"

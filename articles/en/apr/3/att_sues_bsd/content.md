@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "April 3, 1991 — AT&T Sues BSD"
 date: "April 3, 1991"
 excerpt: "AT&T sued BSD for using Unix System V code without permission, halting BSD development and aiding Linux's rise"

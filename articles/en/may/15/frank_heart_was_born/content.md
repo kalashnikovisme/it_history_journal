@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 15, 1929 — Frank Heart Was Born"
 date: "May 15, 1929"
 excerpt: "Led the team that built the first IMP network nodes, the ancestors of modern routers"

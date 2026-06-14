@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "Feb 24, 1955 — Steve Jobs Is Born"
 date: "February 24, 1955"
 excerpt: "Founded Apple, drove the Macintosh, iPhone, iPad, and led the first $1 trillion company"

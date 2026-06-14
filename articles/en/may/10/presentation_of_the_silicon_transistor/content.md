@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "May 10, 1954 — Presentation of the Silicon Transistor"
 date: "May 10, 1954"
 excerpt: "Silicon transistors began replacing germanium and laid the foundation for modern processors"

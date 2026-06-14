@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 2, 1993 — The New York Times Writes About Supercomputers Competitors"
 date: "March 2, 1993"
 excerpt: "The New York Times covered NEC and Cray Research's rivalry in the supercomputer market"

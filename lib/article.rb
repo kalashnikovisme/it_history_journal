@@ -18,7 +18,7 @@ class Article
   }.freeze
 
   attr_reader :title, :date, :excerpt, :content_md, :slug, :lang,
-              :date_path, :file_path, :month, :day, :popular, :cover_path, :thumb_path, :hero_path, :year
+              :date_path, :file_path, :month, :day, :popular, :cover_path, :thumb_path, :hero_path, :year, :author
 
   def self.parse(file_path, site_root: '.')
     raw = File.read(file_path)
@@ -60,6 +60,7 @@ class Article
       day:        day,
       year:       year,
       popular:    parsed.front_matter['popular'] || false,
+      author:     parsed.front_matter['author'],
       file_path:  file_path,
       cover_path: cover,
       thumb_path: thumb,
@@ -79,7 +80,7 @@ class Article
   end
 
   def initialize(title:, date:, excerpt:, content_md:, lang:, date_path:, slug:,
-                 month:, day:, year:, popular:, file_path:, cover_path: nil, thumb_path: nil, hero_path: nil)
+                 month:, day:, year:, popular:, author:, file_path:, cover_path: nil, thumb_path: nil, hero_path: nil)
     @title      = title
     @date       = date
     @excerpt    = excerpt
@@ -91,6 +92,7 @@ class Article
     @day        = day
     @year       = year
     @popular    = popular
+    @author     = author
     @file_path  = file_path
     @cover_path = cover_path
     @thumb_path = thumb_path

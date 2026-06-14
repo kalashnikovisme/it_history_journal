@@ -1,4 +1,5 @@
 ---
+author: "Pasha Kalashnikov"
 title: "March 15, 1985 — The First .com Domain Name"
 date: "March 15, 1985"
 excerpt: "symbolics.com became the first registered .com domain with no registrars or fees"
