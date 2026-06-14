@@ -7,7 +7,7 @@ excerpt: "The first step toward automated computation: a mechanical device that 
 
 When does the history of computer science begin? With the unveiling of the first computer? With the first message sent over ARPANET, the network that later evolved into the Internet? Or perhaps with Aristotle?
 
-I like to include in the history of computing and information technology the scientists and inventors who worked on automating calculation. By that definition, Charles Babbage and his Difference Engine unquestionably belong in that story.
+I consider everyone who worked on automating calculation to be part of IT history, and Charles Babbage certainly fits that description.
 
 On June 14, 1822, English mathematician and inventor Charles Babbage presented a paper titled *"Note on the Application of Machinery to the Computation of Astronomical and Mathematical Tables"* to the Royal Astronomical Society.
 
