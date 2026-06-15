@@ -176,6 +176,24 @@ RSpec.describe Builder do
       expect(File.exist?(File.join(output_dir, 'apple-touch-icon.png'))).to be true
     end
 
+    it 'creates robots.txt with a sitemap reference' do
+      content = File.read(File.join(output_dir, 'robots.txt'))
+
+      expect(content).to include('User-agent: *')
+      expect(content).to include('Allow: /')
+      expect(content).to include('Sitemap: https://history.purple-magic.com/sitemap.xml')
+    end
+
+    it 'creates sitemap.xml with all article URLs' do
+      content = File.read(File.join(output_dir, 'sitemap.xml'))
+
+      expect(content).to include('<?xml version="1.0" encoding="UTF-8"?>')
+      expect(content).to include('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+      expect(content).to include('<loc>https://history.purple-magic.com/en/may/18/facebook-ipo/</loc>')
+      expect(content).to include('<loc>https://history.purple-magic.com/en/may/19/james-gosling-was-born/</loc>')
+      expect(content).to include('<loc>https://history.purple-magic.com/ru/may/19/james-gosling-was-born/</loc>')
+    end
+
     it 'includes favicon links in the page head' do
       content = File.read(File.join(output_dir, 'en', 'index.html'))
       expect(content).to include("href='/favicon.ico'")

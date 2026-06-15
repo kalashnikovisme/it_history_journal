@@ -136,6 +136,17 @@ The build generates an RSS 2.0 feed for each language:
 
 Feeds are regenerated automatically on every full build and every time an article is added or changed (watch mode).
 
+## Search indexing
+
+The build generates root-level crawler files:
+
+| URL | Purpose |
+|---|---|
+| `/robots.txt` | Allows crawlers and points them to `/sitemap.xml` |
+| `/sitemap.xml` | Lists every published article URL |
+
+When adding a new article, run `bundle exec rake build` and verify `_site/sitemap.xml` contains the new article URL.
+
 ## Deployment
 
 Deployed to Cloudflare Pages via GitHub Actions on every push to `main`.

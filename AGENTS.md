@@ -20,6 +20,12 @@ articles/{lang}/{mon-dd}/{slug}/
 
 `lang` is `en` or `ru`. `slug` uses underscores on disk, dashes in URLs.
 
+## Adding a new article
+
+1. Add the article under `articles/{lang}/{mon-dd}/{slug}/content.md`.
+2. Run `bundle exec rake build` so `_site/sitemap.xml` is regenerated with the new published article URL.
+3. Verify `_site/sitemap.xml` contains the new article URL before finishing.
+
 ## Key conventions
 
 - **HAML 6 API**: `Haml::Template.new { source }.render(scope, locals)` — not `Haml::Engine.new(source)`.

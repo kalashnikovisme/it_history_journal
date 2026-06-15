@@ -71,6 +71,8 @@ class Builder
     build_redirect
     compile_css
     build_all_html(all_articles)
+    build_robots
+    build_sitemap(all_articles)
     copy_assets
     copy_favicon
   end
@@ -79,6 +81,8 @@ class Builder
     all_articles = load_articles
     build_redirect
     build_all_html(all_articles)
+    build_robots
+    build_sitemap(all_articles)
   end
 
   def rebuild_article(file_path)
@@ -97,6 +101,7 @@ class Builder
       build_year_pages(lang, articles)
       build_rss(lang, articles)
     end
+    build_sitemap(all_articles)
   end
 
   def load_articles
@@ -128,6 +133,36 @@ class Builder
       jsonld_json: site_jsonld.to_json
     })
     write_file('index.html', html)
+  end
+
+  def build_robots
+    content = <<~TXT
+      User-agent: *
+      Allow: /
+
+      Sitemap: #{BASE_URL}/sitemap.xml
+    TXT
+
+    write_file('robots.txt', content)
+  end
+
+  def build_sitemap(all_articles)
+    urls = all_articles.sort_by { |article| article.url }.map do |article|
+      <<~XML.chomp
+        <url>
+          <loc>#{xml_escape("#{BASE_URL}#{article.url}/")}</loc>
+        </url>
+      XML
+    end
+
+    xml = <<~XML
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      #{urls.join("\n")}
+      </urlset>
+    XML
+
+    write_file('sitemap.xml', xml)
   end
 
   def build_index(lang, articles)
