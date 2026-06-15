@@ -16,6 +16,20 @@ RSpec.describe Article do
       excerpt: "James Gosling is considered the main creator of Java."
       popular: true
       author: "Pasha Kalashnikov"
+      event_date: "1955-05-19"
+      event_year: 1955
+      topics:
+        - programming languages
+        - Java
+      people:
+        - James Gosling
+      organizations:
+        - Sun Microsystems
+      technologies:
+        - Java
+      sources:
+        - title: "Java History"
+          url: "https://example.com/java-history"
       ---
 
       James Gosling created Java.
@@ -47,6 +61,32 @@ RSpec.describe Article do
 
     it 'reads the author from frontmatter' do
       expect(article.author).to eq('Pasha Kalashnikov')
+    end
+
+    it 'reads the event date as a Date' do
+      expect(article.event_date).to eq(Date.new(1955, 5, 19))
+    end
+
+    it 'reads structured topics from frontmatter' do
+      expect(article.topics).to eq(['programming languages', 'Java'])
+    end
+
+    it 'reads structured people from frontmatter' do
+      expect(article.people).to eq(['James Gosling'])
+    end
+
+    it 'reads structured organizations from frontmatter' do
+      expect(article.organizations).to eq(['Sun Microsystems'])
+    end
+
+    it 'reads structured technologies from frontmatter' do
+      expect(article.technologies).to eq(['Java'])
+    end
+
+    it 'reads structured sources from frontmatter' do
+      expect(article.sources).to eq([
+        { 'title' => 'Java History', 'url' => 'https://example.com/java-history' }
+      ])
     end
 
     it 'detects the language from path' do
@@ -138,6 +178,28 @@ RSpec.describe Article do
     it 'renders markdown to HTML' do
       expect(article.content_html).to include('<p>')
       expect(article.content_html).to include('James Gosling created Java.')
+    end
+  end
+
+  describe '#key_facts' do
+    it 'returns visible structured facts' do
+      expect(article.key_facts).to include(['Event date', '1955-05-19'])
+      expect(article.key_facts).to include(['People', 'James Gosling'])
+      expect(article.key_facts).to include(['Organizations', 'Sun Microsystems'])
+      expect(article.key_facts).to include(['Technologies', 'Java'])
+      expect(article.key_facts).to include(['Topics', 'programming languages, Java'])
+    end
+  end
+
+  describe '#modified_date' do
+    it 'returns the content file modification date in ISO format' do
+      expect(article.modified_date).to match(/\A\d{4}-\d{2}-\d{2}\z/)
+    end
+  end
+
+  describe '#word_count' do
+    it 'counts body words' do
+      expect(article.word_count).to be > 0
     end
   end
 

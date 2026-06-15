@@ -37,8 +37,22 @@ RSpec.describe Builder do
       ---
       title: "May 19, 1955 — James Gosling Was Born"
       date: "May 19, 1955"
+      event_date: "1955-05-19"
+      event_year: 1955
       excerpt: "James Gosling created Java."
       popular: true
+      author: "Pasha Kalashnikov"
+      topics:
+        - programming languages
+      people:
+        - James Gosling
+      organizations:
+        - Sun Microsystems
+      technologies:
+        - Java
+      sources:
+        - title: "Java History"
+          url: "https://example.com/java-history"
       ---
 
       James Gosling created Java.
@@ -188,10 +202,27 @@ RSpec.describe Builder do
       content = File.read(File.join(output_dir, 'sitemap.xml'))
 
       expect(content).to include('<?xml version="1.0" encoding="UTF-8"?>')
-      expect(content).to include('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+      expect(content).to include('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')
       expect(content).to include('<loc>https://history.purple-magic.com/en/may/18/facebook-ipo/</loc>')
       expect(content).to include('<loc>https://history.purple-magic.com/en/may/19/james-gosling-was-born/</loc>')
       expect(content).to include('<loc>https://history.purple-magic.com/ru/may/19/james-gosling-was-born/</loc>')
+      expect(content).to include('<lastmod>')
+    end
+
+    it 'includes image metadata in sitemap entries for articles with covers' do
+      write_article('en', 'may', 17, 'minecraft', <<~MD, with_cover: true)
+        ---
+        title: "May 17, 2009 — Minecraft"
+        excerpt: "Minecraft released."
+        ---
+        Minecraft released.
+      MD
+      builder.build
+
+      content = File.read(File.join(output_dir, 'sitemap.xml'))
+      expect(content).to include('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"')
+      expect(content).to include('<image:loc>https://history.purple-magic.com/en/may/17/minecraft/cover.png</image:loc>')
+      expect(content).to include('<image:title>May 17, 2009 — Minecraft</image:title>')
     end
 
     it 'includes favicon links in the page head' do
@@ -241,6 +272,43 @@ RSpec.describe Builder do
       expect(jsonld['@type']).to eq('CollectionPage')
       expect(jsonld['url']).to eq('https://history.purple-magic.com/en/1955/')
       expect(jsonld['mainEntity']['itemListElement'].first['name']).to include('James Gosling')
+    end
+
+    it 'adds canonical and hreflang links to pages' do
+      content = File.read(File.join(output_dir, 'en', 'index.html'))
+
+      expect(content).to include("rel='canonical'")
+      expect(content).to include("href='https://history.purple-magic.com/en/'")
+      expect(content).to include("hreflang='en'")
+      expect(content).to include("hreflang='ru'")
+      expect(content).to include("hreflang='x-default'")
+    end
+
+    it 'renders article key facts and sources when frontmatter provides them' do
+      content = File.read(File.join(output_dir, 'en', 'may', '19', 'james-gosling-was-born', 'index.html'))
+
+      expect(content).to include('Key facts')
+      expect(content).to include('1955-05-19')
+      expect(content).to include('James Gosling')
+      expect(content).to include('Sun Microsystems')
+      expect(content).to include('Java History')
+      expect(content).to include('https://example.com/java-history')
+    end
+
+    it 'adds richer Article schema.org JSON-LD to article pages' do
+      jsonld = jsonld_for('en/may/19/james-gosling-was-born/index.html')
+
+      expect(jsonld['@type']).to eq('Article')
+      expect(jsonld['mainEntityOfPage']['@id']).to eq('https://history.purple-magic.com/en/may/19/james-gosling-was-born/')
+      expect(jsonld['author']).to eq({ '@type' => 'Person', 'name' => 'Pasha Kalashnikov' })
+      expect(jsonld['datePublished']).to eq('1955-05-19')
+      expect(jsonld['dateModified']).to match(/\A\d{4}-\d{2}-\d{2}\z/)
+      expect(jsonld['isAccessibleForFree']).to be true
+      expect(jsonld['publisher']['logo']['url']).to eq('https://history.purple-magic.com/icon.svg')
+      expect(jsonld['about']).to include({ '@type' => 'Thing', 'name' => 'programming languages' })
+      expect(jsonld['mentions']).to include({ '@type' => 'Thing', 'name' => 'Java' })
+      expect(jsonld['citation']).to eq(['https://example.com/java-history'])
+      expect(jsonld['wordCount']).to be > 0
     end
 
     context 'when article has a cover image' do

@@ -31,12 +31,27 @@ spec/                ← RSpec tests
 ---
 title: "May 19, 1955 — James Gosling Was Born"
 date: "May 19, 1955"
+event_date: "1955-05-19"
+event_year: 1955
 excerpt: "Short summary shown in article cards."
 popular: true
+topics:
+  - programming languages
+people:
+  - James Gosling
+organizations:
+  - Sun Microsystems
+technologies:
+  - Java
+sources:
+  - title: "Official Java history"
+    url: "https://example.com/java-history"
 ---
 
 Article body in Markdown (GFM).
 ```
+
+`event_date`, `topics`, `people`, `organizations`, `technologies`, and `sources` power the visible Key facts/Sources sections, Article JSON-LD, and sitemap metadata. Add at least one source for each new article.
 
 ### URL mapping
 
@@ -145,7 +160,7 @@ The build generates root-level crawler files:
 | `/robots.txt` | Allows crawlers and points them to `/sitemap.xml` |
 | `/sitemap.xml` | Lists every published article URL |
 
-When adding a new article, run `bundle exec rake build` and verify `_site/sitemap.xml` contains the new article URL.
+When adding a new article, run `bundle exec rake build` and verify `_site/sitemap.xml` contains the new article URL, `<lastmod>`, and image metadata when the article has a cover image.
 
 ## Deployment
 

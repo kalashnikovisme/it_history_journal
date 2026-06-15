@@ -1,6 +1,7 @@
 require 'front_matter_parser'
 require 'kramdown'
 require 'kramdown-parser-gfm'
+require 'date'
 
 class Article
   MONTH_NAMES = {
@@ -17,8 +18,9 @@ class Article
     'sep' => 9, 'oct' => 10, 'nov' => 11, 'dec' => 12
   }.freeze
 
-  attr_reader :title, :date, :excerpt, :content_md, :slug, :lang,
-              :date_path, :file_path, :month, :day, :popular, :cover_path, :thumb_path, :hero_path, :year, :author
+  attr_reader :title, :date, :event_date, :excerpt, :content_md, :slug, :lang,
+              :date_path, :file_path, :month, :day, :popular, :cover_path, :thumb_path, :hero_path, :year,
+              :author, :topics, :people, :organizations, :technologies, :sources
 
   def self.parse(file_path, site_root: '.')
     raw = File.read(file_path)
@@ -45,13 +47,16 @@ class Article
     hero = File.join(article_dir, 'hero.webp')
     hero = nil unless File.exist?(hero)
 
-    raw_date = parsed.front_matter['date']
-    year = raw_date&.match(/(\d{4})$/)&.[](1)&.to_i
+    front_matter = parsed.front_matter
+    raw_date = front_matter['date']
+    event_date = normalize_event_date(front_matter['event_date'], raw_date)
+    year = front_matter['event_year'] || extract_year(raw_date) || event_date&.year
 
     new(
-      title:      parsed.front_matter['title'] || slug.gsub('-', ' ').capitalize,
+      title:      front_matter['title'] || slug.gsub('-', ' ').capitalize,
       date:       raw_date,
-      excerpt:    parsed.front_matter['excerpt'] || extract_excerpt(parsed.content),
+      event_date: event_date,
+      excerpt:    front_matter['excerpt'] || extract_excerpt(parsed.content),
       content_md: parsed.content,
       lang:       lang,
       date_path:  date_path,
@@ -59,13 +64,65 @@ class Article
       month:      month,
       day:        day,
       year:       year,
-      popular:    parsed.front_matter['popular'] || false,
-      author:     parsed.front_matter['author'],
+      popular:    front_matter['popular'] || false,
+      author:     front_matter['author'],
+      topics:     normalize_list(front_matter['topics']),
+      people:     normalize_list(front_matter['people']),
+      organizations: normalize_list(front_matter['organizations']),
+      technologies: normalize_list(front_matter['technologies']),
+      sources:    normalize_sources(front_matter['sources']),
       file_path:  file_path,
       cover_path: cover,
       thumb_path: thumb,
       hero_path:  hero
     )
+  end
+
+  def self.normalize_event_date(event_date, raw_date)
+    return event_date if event_date.is_a?(Date)
+    return Date.iso8601(event_date.to_s) if event_date && !event_date.to_s.empty?
+    return nil unless raw_date
+
+    parsed = Date.parse(raw_date.to_s)
+    raw_year = extract_year(raw_date)
+    return nil if raw_year && parsed.year != raw_year
+
+    parsed
+  rescue ArgumentError
+    nil
+  end
+
+  def self.extract_year(raw_date)
+    raw_date.to_s.match(/(\d{4})/)&.[](1)&.to_i
+  end
+
+  def self.normalize_list(value)
+    case value
+    when nil
+      []
+    when Array
+      value.map(&:to_s).map(&:strip).reject(&:empty?)
+    else
+      value.to_s.split(',').map(&:strip).reject(&:empty?)
+    end
+  end
+
+  def self.normalize_sources(value)
+    Array(value).filter_map do |source|
+      case source
+      when Hash
+        title = source['title'] || source[:title]
+        url = source['url'] || source[:url]
+        next if title.to_s.strip.empty? || url.to_s.strip.empty?
+
+        { 'title' => title.to_s.strip, 'url' => url.to_s.strip }
+      else
+        url = source.to_s.strip
+        next if url.empty?
+
+        { 'title' => url, 'url' => url }
+      end
+    end
   end
 
   def self.extract_excerpt(content, max_length: 200)
@@ -79,10 +136,12 @@ class Article
     first_para.length > max_length ? "#{first_para[0, max_length]}..." : first_para
   end
 
-  def initialize(title:, date:, excerpt:, content_md:, lang:, date_path:, slug:,
-                 month:, day:, year:, popular:, author:, file_path:, cover_path: nil, thumb_path: nil, hero_path: nil)
+  def initialize(title:, date:, event_date:, excerpt:, content_md:, lang:, date_path:, slug:,
+                 month:, day:, year:, popular:, author:, topics:, people:, organizations:, technologies:, sources:,
+                 file_path:, cover_path: nil, thumb_path: nil, hero_path: nil)
     @title      = title
     @date       = date
+    @event_date = event_date
     @excerpt    = excerpt
     @content_md = content_md
     @lang       = lang
@@ -93,6 +152,11 @@ class Article
     @year       = year
     @popular    = popular
     @author     = author
+    @topics     = topics
+    @people     = people
+    @organizations = organizations
+    @technologies = technologies
+    @sources    = sources
     @file_path  = file_path
     @cover_path = cover_path
     @thumb_path = thumb_path
@@ -117,6 +181,29 @@ class Article
 
   def content_html
     Kramdown::Document.new(content_md, input: 'GFM').to_html
+  end
+
+  def key_facts
+    facts = []
+    facts << ['Event date', event_date.iso8601] if event_date
+    facts << ['People', people.join(', ')] unless people.empty?
+    facts << ['Organizations', organizations.join(', ')] unless organizations.empty?
+    facts << ['Technologies', technologies.join(', ')] unless technologies.empty?
+    facts << ['Topics', topics.join(', ')] unless topics.empty?
+    facts
+  end
+
+  def modified_date
+    File.mtime(file_path).utc.to_date.iso8601
+  end
+
+  def word_count
+    content_md
+      .gsub(/```.*?```/m, ' ')
+      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1')
+      .gsub(/[#*_>`\-\[\]().,;:!?"]/, ' ')
+      .split
+      .size
   end
 
   def url

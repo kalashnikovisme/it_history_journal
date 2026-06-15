@@ -30,6 +30,8 @@ class Builder
       close_menu:            'Close',
       browse_by_year:        'Browse by year',
       no_articles_this_year: 'No articles for this year yet.',
+      key_facts:             'Key facts',
+      sources:               'Sources',
       months:                %w[January February March April May June
                                  July August September October November December]
     },
@@ -50,6 +52,8 @@ class Builder
       close_menu:            'Закрыть',
       browse_by_year:        'По годам',
       no_articles_this_year: 'Статей за этот год пока нет.',
+      key_facts:             'Ключевые факты',
+      sources:               'Источники',
       months:                %w[Январь Февраль Март Апрель Май Июнь
                                  Июль Август Сентябрь Октябрь Ноябрь Декабрь]
     }
@@ -88,7 +92,7 @@ class Builder
   def rebuild_article(file_path)
     all_articles = load_articles
     article      = Article.parse(file_path, site_root: @site_root)
-    build_article(article, sorted_for_lang(all_articles, article.lang))
+    build_article(article, sorted_for_lang(all_articles, article.lang), all_articles)
   end
 
   def rebuild_indexes
@@ -124,7 +128,7 @@ class Builder
       build_articles_pages(lang, articles)
       build_year_pages(lang, articles)
       build_rss(lang, articles)
-      articles.each { |article| build_article(article, articles) }
+      articles.each { |article| build_article(article, articles, all_articles) }
     end
   end
 
@@ -148,16 +152,28 @@ class Builder
 
   def build_sitemap(all_articles)
     urls = all_articles.sort_by { |article| article.url }.map do |article|
+      image_xml = if article.cover?
+        <<~XML.chomp
+          <image:image>
+            <image:loc>#{xml_escape("#{BASE_URL}#{article.cover_url}")}</image:loc>
+            <image:title>#{xml_escape(article.title)}</image:title>
+          </image:image>
+        XML
+      end
+
       <<~XML.chomp
         <url>
           <loc>#{xml_escape("#{BASE_URL}#{article.url}/")}</loc>
+          <lastmod>#{xml_escape(article.modified_date)}</lastmod>
+      #{image_xml}
         </url>
       XML
     end
 
     xml = <<~XML
       <?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+              xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
       #{urls.join("\n")}
       </urlset>
     XML
@@ -204,7 +220,9 @@ class Builder
       lang,
       t[:site_name],
       inner,
-      jsonld_json: page_jsonld(lang, t[:site_name], "/#{lang}/", main_entity: item_list_jsonld(recent)).to_json
+      jsonld_json: page_jsonld(lang, t[:site_name], "/#{lang}/", main_entity: item_list_jsonld(recent)).to_json,
+      canonical_url: absolute_url("/#{lang}/"),
+      alternates: language_alternates("/#{lang}/")
     )
     write_file("#{lang}/index.html", html)
   end
@@ -238,14 +256,16 @@ class Builder
           path,
           type: 'CollectionPage',
           main_entity: item_list_jsonld(page_articles)
-        ).to_json
+        ).to_json,
+        canonical_url: absolute_url(path),
+        alternates: language_alternates(path)
       )
       path  = page_num == 1 ? "#{lang}/articles/index.html" : "#{lang}/articles/#{page_num}/index.html"
       write_file(path, html)
     end
   end
 
-  def build_article(article, all_lang_articles)
+  def build_article(article, all_lang_articles, all_articles = load_articles)
     t       = TRANSLATIONS[article.lang]
     related = all_lang_articles
       .reject { |a| a == article }
@@ -273,13 +293,43 @@ class Builder
       '@type'           => 'Article',
       'headline'        => article.title,
       'description'     => article.excerpt,
-      'url'             => "#{BASE_URL}#{article.url}/",
+      'url'             => absolute_url("#{article.url}/"),
+      'mainEntityOfPage' => {
+        '@type' => 'WebPage',
+        '@id'   => absolute_url("#{article.url}/")
+      },
       'inLanguage'      => article.lang,
-      'publisher'       => { '@type' => 'Organization', 'name' => t[:site_name], 'url' => BASE_URL }
+      'isAccessibleForFree' => true,
+      'wordCount'       => article.word_count,
+      'publisher'       => {
+        '@type' => 'Organization',
+        'name'  => t[:site_name],
+        'url'   => BASE_URL,
+        'logo'  => {
+          '@type' => 'ImageObject',
+          'url'   => "#{BASE_URL}/icon.svg"
+        }
+      }
     }
-    jsonld['datePublished'] = article.date if article.date
-    jsonld['image']         = "#{BASE_URL}#{article.cover_url}" if article.cover?
-    html  = wrap_layout(article.lang, title, inner, og: og, jsonld_json: jsonld.to_json)
+    jsonld['author'] = { '@type' => 'Person', 'name' => article.author } if article.author
+    jsonld['datePublished'] = article.event_date.iso8601 if article.event_date
+    jsonld['dateModified']  = article.modified_date
+    jsonld['image']         = absolute_url(article.cover_url) if article.cover?
+    jsonld['about']         = article.topics.map { |name| { '@type' => 'Thing', 'name' => name } } unless article.topics.empty?
+    mentions = (article.people + article.organizations + article.technologies).map do |name|
+      { '@type' => 'Thing', 'name' => name }
+    end
+    jsonld['mentions'] = mentions unless mentions.empty?
+    jsonld['citation'] = article.sources.map { |source| source['url'] } unless article.sources.empty?
+    html  = wrap_layout(
+      article.lang,
+      title,
+      inner,
+      og: og,
+      jsonld_json: jsonld.to_json,
+      canonical_url: absolute_url("#{article.url}/"),
+      alternates: article_alternates(article, all_articles)
+    )
     write_file("#{article.lang}/#{article.date_path}/#{article.slug}/index.html", html)
 
     if article.cover?
@@ -318,7 +368,9 @@ class Builder
         "/#{lang}/calendar/",
         type: 'CollectionPage',
         main_entity: item_list_jsonld(articles.sort_by(&:sort_key))
-      ).to_json
+      ).to_json,
+      canonical_url: absolute_url("/#{lang}/calendar/"),
+      alternates: language_alternates("/#{lang}/calendar/")
     )
     write_file("#{lang}/calendar/index.html", html)
   end
@@ -346,7 +398,9 @@ class Builder
           "/#{lang}/#{year}/",
           type: 'CollectionPage',
           main_entity: item_list_jsonld(sorted)
-        ).to_json
+        ).to_json,
+        canonical_url: absolute_url("/#{lang}/#{year}/"),
+        alternates: language_alternates("/#{lang}/#{year}/")
       )
       write_file("#{lang}/#{year}/index.html", html)
     end
@@ -359,7 +413,7 @@ class Builder
     end
   end
 
-  def wrap_layout(lang, title, content, og: nil, jsonld_json: nil)
+  def wrap_layout(lang, title, content, og: nil, jsonld_json: nil, canonical_url: nil, alternates: [])
     t = TRANSLATIONS[lang]
     render_template('layout', {
       lang:        lang,
@@ -369,7 +423,9 @@ class Builder
       year:        Date.today.year,
       og:          og,
       jsonld_json: jsonld_json,
-      css_ver:     css_fingerprint
+      css_ver:     css_fingerprint,
+      canonical_url: canonical_url,
+      alternates:  alternates
     })
   end
 
@@ -405,6 +461,36 @@ class Builder
     }
     jsonld['mainEntity'] = main_entity if main_entity
     jsonld
+  end
+
+  def absolute_url(path)
+    "#{BASE_URL}#{path}"
+  end
+
+  def language_alternates(path)
+    LANGUAGES.map do |lang|
+      {
+        lang: lang,
+        url: absolute_url(path.sub(%r{\A/(en|ru)(/|\z)}, "/#{lang}\\2"))
+      }
+    end
+  end
+
+  def article_alternates(article, all_articles)
+    alternates = [{ lang: article.lang, url: absolute_url("#{article.url}/") }]
+
+    (LANGUAGES - [article.lang]).each do |lang|
+      candidates = all_articles.select do |candidate|
+        candidate.lang == lang &&
+          candidate.date_path == article.date_path &&
+          candidate.year == article.year
+      end
+      next unless candidates.size == 1
+
+      alternates << { lang: lang, url: absolute_url("#{candidates.first.url}/") }
+    end
+
+    alternates.sort_by { |alternate| alternate[:lang] }
   end
 
   def item_list_jsonld(articles)

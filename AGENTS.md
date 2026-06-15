@@ -23,8 +23,9 @@ articles/{lang}/{mon-dd}/{slug}/
 ## Adding a new article
 
 1. Add the article under `articles/{lang}/{mon-dd}/{slug}/content.md`.
-2. Run `bundle exec rake build` so `_site/sitemap.xml` is regenerated with the new published article URL.
-3. Verify `_site/sitemap.xml` contains the new article URL before finishing.
+2. Include AIEO frontmatter when the facts are known: `event_date`, `event_year`, `topics`, `people`, `organizations`, `technologies`, and at least one `sources` entry with `title` and `url`.
+3. Run `bundle exec rake build` so `_site/sitemap.xml` is regenerated with the new published article URL.
+4. Verify `_site/sitemap.xml` contains the new article URL, `<lastmod>`, and cover image metadata when a cover exists before finishing.
 
 ## Key conventions
 
