@@ -21,9 +21,9 @@ Creative Commons — это некоммерческая организация,
 
 ## Интересные ссылки
 
-* Creative Commons — https://creativecommons.org
-* История Creative Commons — https://creativecommons.org/about/history
-* Creative Commons Rights Expression Language (ccREL) — https://wiki.creativecommons.org/wiki/CcREL
-* Wikimedia Commons — https://commons.wikimedia.org
-* Openverse — https://openverse.org
-* Creative Commons Summit - https://wiki.creativecommons.org/wiki/Creative_Commons_Technology_Summit_2008-06-18
+* [Creative Commons](https://creativecommons.org)
+* [История Creative Commons](https://creativecommons.org/about/history)
+* [Creative Commons Rights Expression Language (ccREL)](https://wiki.creativecommons.org/wiki/CcREL)
+* [Wikimedia Commons](https://commons.wikimedia.org)
+* [Openverse](https://openverse.org)
+* [Creative Commons Technology Summit 2008](https://wiki.creativecommons.org/wiki/Creative_Commons_Technology_Summit_2008-06-18)

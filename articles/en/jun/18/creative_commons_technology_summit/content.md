@@ -21,9 +21,9 @@ The 2008 summit did not result in a new protocol or software product. However, i
 
 ## Links
 
-* Creative Commons — https://creativecommons.org
-* History of Creative Commons — https://creativecommons.org/about/history
-* Creative Commons Rights Expression Language (ccREL) — https://wiki.creativecommons.org/wiki/CcREL
-* Wikimedia Commons — https://commons.wikimedia.org
-* Openverse — https://openverse.org
-* Creative Commons Summit - https://wiki.creativecommons.org/wiki/Creative_Commons_Technology_Summit_2008-06-18
+* [Creative Commons](https://creativecommons.org)
+* [History of Creative Commons](https://creativecommons.org/about/history)
+* [Creative Commons Rights Expression Language (ccREL)](https://wiki.creativecommons.org/wiki/CcREL)
+* [Wikimedia Commons](https://commons.wikimedia.org)
+* [Openverse](https://openverse.org)
+* [Creative Commons Technology Summit 2008](https://wiki.creativecommons.org/wiki/Creative_Commons_Technology_Summit_2008-06-18)
