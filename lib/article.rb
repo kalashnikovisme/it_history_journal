@@ -180,7 +180,8 @@ class Article
   end
 
   def content_html
-    Kramdown::Document.new(autolinked_md, input: 'GFM').to_html
+    html = Kramdown::Document.new(autolinked_md, input: 'GFM').to_html
+    html.gsub(/<a href=/, '<a target="_blank" rel="noopener noreferrer" href=')
   end
 
   def key_facts
