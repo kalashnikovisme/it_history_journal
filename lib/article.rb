@@ -180,7 +180,7 @@ class Article
   end
 
   def content_html
-    Kramdown::Document.new(content_md, input: 'GFM').to_html
+    Kramdown::Document.new(autolinked_md, input: 'GFM').to_html
   end
 
   def key_facts
@@ -216,5 +216,15 @@ class Article
 
   def sort_key
     month * 100 + day
+  end
+
+  private
+
+  # kramdown-parser-gfm doesn't implement GFM extended autolinks (bare URLs).
+  # Convert bare https?:// URLs to angle-bracket autolinks so kramdown renders
+  # them as <a> tags. Skip URLs already inside markdown links [t](url),
+  # code spans `url`, or angle brackets <url>.
+  def autolinked_md
+    content_md.gsub(/(?<![(\[<`"])(https?:\/\/[^\s\])"<`]+)/) { "<#{$1}>" }
   end
 end
