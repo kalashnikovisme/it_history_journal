@@ -5,6 +5,9 @@ date: "20 июня 1954"
 excerpt: "Инженер, создавший MP3 и доказавший, что музыку можно сжать без потери слышимого качества — и тем самым открывший эпоху цифровой музыки в интернете"
 updated_at: "2026-06-20"
 en: "/en/jun/20/karlheinz-brandenburg-was-born"
+sources:
+  - title: "MP3 | Make Software, Change the World! | Computer History Museum"
+    url: "https://www.computerhistory.org/makesoftware/exhibit/mp3/"
 ---
 
 Его часто называют «отцом MP3». Карлхайнц Бранденбург родился в городе Эрланген в ФРГ. Он учился в Университете Эрлангена-Нюрнберга и защитил докторскую диссертацию в 1989 году.

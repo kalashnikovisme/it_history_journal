@@ -5,6 +5,9 @@ date: "June 20, 1954"
 excerpt: "The engineer behind MP3 who reduced audio file sizes without noticeable quality loss, making digital music practical for the internet age"
 updated_at: "2026-06-20"
 ru: "/ru/jun/20/karlheinz-brandenburg-was-born"
+sources:
+  - title: "MP3 | Make Software, Change the World! | Computer History Museum"
+    url: "https://www.computerhistory.org/makesoftware/exhibit/mp3/"
 ---
 
 Karlheinz Brandenburg is often called the "father of MP3." He was born in Erlangen, West Germany, and studied at the University of Erlangen–Nuremberg, where he earned his PhD in 1989.
