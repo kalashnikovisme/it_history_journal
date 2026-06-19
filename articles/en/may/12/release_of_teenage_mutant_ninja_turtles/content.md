@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "May 12, 1989 — Release of Teenage Mutant Ninja Turtles"
 date: "May 12, 1989"
 excerpt: "Teenage Mutant Ninja Turtles for NES became one of the hardest games of its generation"
+updated_at: "2026-06-14"
+ru: "/ru/may/12/release-of-teenage-mutant-ninja-turtles"
 ---
 
 Video games are an important part of the IT industry. One of the most notable releases in gaming history was Teenage Mutant Ninja Turtles for the NES. The game was not revolutionary from a technological standpoint — its main achievements were tied to game design and commercial success.

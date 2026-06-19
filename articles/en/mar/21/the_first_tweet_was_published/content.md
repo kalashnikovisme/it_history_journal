@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "March 21, 2006 — The First Tweet Was Published"
 date: "March 21, 2006"
 excerpt: "The first tweet \"just setting up my twttr\" marked the start of microblogging that changed communication"
+updated_at: "2026-06-14"
 ---
 
 On March 21, 2006, a small message appeared online that would later change how people communicate across the world.

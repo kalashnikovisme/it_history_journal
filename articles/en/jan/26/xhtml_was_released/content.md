@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Jan 26, 2000 — XHTML Was Released"
 date: "January 26, 2000"
 excerpt: "XHTML aimed to bring XML's strict rules to HTML but was widely adopted incorrectly"
+updated_at: "2026-06-14"
 ---
 
 If you open the source code of a website built in the mid-2000s, there is a 90% chance the very first line you will see is a long declaration:

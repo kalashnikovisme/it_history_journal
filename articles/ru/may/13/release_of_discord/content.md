@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "13 мая 2015 — Релиз Discord"
 date: "13 мая 2015"
 excerpt: "Discord был выпущен публично и стал популярной платформой для сообществ и чатов"
+updated_at: "2026-06-14"
+en: "/en/may/13/release-of-discord"
 ---
 
 13 мая 2015 года состоялся публичный релиз **Discord**.

@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 14, 1946 — ENIAC Is Unveiled to the Public"
 date: "February 14, 1946"
 excerpt: "ENIAC, a 30-ton fully electronic digital computer, performed thousands of calculations per second"
+updated_at: "2026-06-14"
 ---
 
 On February 14, 1946, the ENIAC was officially presented to the public at the University of Pennsylvania.

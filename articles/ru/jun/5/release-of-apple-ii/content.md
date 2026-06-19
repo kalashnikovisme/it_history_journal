@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "5 июня 1977 — Релиз Apple II"
 date: "5 июня 1977"
 excerpt: "Apple II стал первым массовым продуктом компании, продавался в сборе и подключался к телевизору"
+updated_at: "2026-06-14"
+en: "/en/jun/5/release-of-apple-ii"
 ---
 
 Порой мне кажется, что IT History Journal — это Apple IT History Journal. Тем не менее рассказывать про историю ИТ-индустрии, не упоминая постоянно величайшую компанию, невозможно.

@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "June 16, 1911 — Computing-Tabulating-Recording Company Founded, the Future IBM"
 date: "June 16, 1911"
 excerpt: "Financier Charles Flint merged three companies into CTR, and Thomas Watson turned it into IBM — one of the greatest corporate giants in the history of IT"
+updated_at: "2026-06-15"
+ru: "/ru/jun/16/computing-tabulating-recording-was-founded"
 ---
 
 IBM is, without exaggeration, one of the greatest companies in the history of information technology. Although ordinary users have rarely interacted directly with its products — which is fitting given the name International Business Machines — its influence on the development of the entire industry is hard to overstate.

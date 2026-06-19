@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "28 апреля 2003 — Запуск iTunes Music Store"
 date: "28 апреля 2003"
 excerpt: "iTunes Music Store продал более миллиона треков за первую неделю, навсегда изменив цифровую музыку"
+updated_at: "2026-06-14"
+en: "/en/apr/28/launch-of-the-itunes-music-store"
 ---
 
 **iTunes Music Store** — цифровая площадка Apple по покупке музыки, полностью изменила индустрию потребления музыки в мире.

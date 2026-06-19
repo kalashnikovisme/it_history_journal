@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 10, 1996 — Six Games Against Humanity"
 date: "February 10, 1996"
 excerpt: "Deep Blue won its first game against Kasparov in history for AI in chess"
+updated_at: "2026-06-14"
 ---
 
 Disclaimer from the human

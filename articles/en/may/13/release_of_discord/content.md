@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "May 13, 2015 — Release of Discord"
 date: "May 13, 2015"
 excerpt: "Discord launched as a community hub for gaming, open source, student chats, and more"
+updated_at: "2026-06-14"
+ru: "/ru/may/13/release-of-discord"
 ---
 
 Discord officially launched on May 13, 2015.

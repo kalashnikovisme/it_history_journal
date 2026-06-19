@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 7, 1998 — The True Dial-up Release"
 date: "February 7, 1998"
 excerpt: "V.90 modem standard achieved 56k speeds through handshaking ending dial-up format wars"
+updated_at: "2026-06-14"
 ---
 
 What is a "Dial-Up Release" anyway?

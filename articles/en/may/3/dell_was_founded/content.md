@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "May 3, 1984 — Dell Was Founded"
 date: "May 3, 1984"
 excerpt: "Michael Dell registered PC's Limited to build computers to order and sell directly"
+updated_at: "2026-06-14"
+ru: "/ru/may/3/dell-was-founded"
 ---
 
 On May 3, 1984, 19-year-old student Michael Dell registered a company called PC's Limited in Austin, Texas. He assembled computers in his dorm room and sold them directly to customers.

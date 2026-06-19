@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Jan 17, 1949 — Anita Borg Is Born"
 date: "January 17, 1949"
 excerpt: "Founded Systers, the first large-scale online community for women in computing"
+updated_at: "2026-06-14"
 ---
 
 Today, January 17, is the birthday of Anita Borg (1949–2003).

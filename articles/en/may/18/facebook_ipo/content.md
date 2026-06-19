@@ -4,6 +4,8 @@ title: "May 18, 2012 — Facebook IPO"
 date: "May 18, 2012"
 excerpt: "Facebook listed shares on NASDAQ at $38 per share, valuing the company at about $104 billion"
 popular: true
+updated_at: "2026-06-14"
+ru: "/ru/may/18/facebook-ipo"
 ---
 
 On May 18, 2012, Facebook held one of the most talked-about IPOs in tech history. Mark Zuckerberg's company listed its shares on the NASDAQ exchange at $38 per share, valuing the company at about $104 billion.

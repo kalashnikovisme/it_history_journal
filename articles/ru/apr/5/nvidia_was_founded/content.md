@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "5 апреля 1993 — Основана компания NVIDIA"
 date: "5 апреля 1993"
 excerpt: "Три специалиста зарегистрировали компанию для разработки графических процессоров под растущий рынок 3D"
+updated_at: "2026-06-14"
+en: "/en/apr/5/nvidia-was-founded"
 ---
 
 В этот день три специалиста по микропроцессорам **Jensen Huang**, Chris Malachowsky, Curtis Priem зарегистрировали свою компанию.

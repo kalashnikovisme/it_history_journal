@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Jan 20, 1934 — Fujifilm Founded"
 date: "January 20, 1934"
 excerpt: "Fujifilm supplied floppy disks and tapes and adapted film chemistry for LCD coatings in smartphones"
+updated_at: "2026-06-14"
+ru: "/ru/jan/20/fujifilm-founded"
 ---
 
 Many people know Fujifilm for its cameras, but in the history of IT, Fujifilm is the “kings of storage media.” If you lived through the floppy disk era, you probably remember their logo on colorful disks in plastic cases. For decades, Fujifilm was one of the main suppliers of data-storage consumables - from the iconic 3.5-inch floppy disks to professional magnetic tapes.

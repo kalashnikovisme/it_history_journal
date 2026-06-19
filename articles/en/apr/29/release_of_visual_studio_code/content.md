@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 29, 2015 — Release of Visual Studio Code"
 date: "April 29, 2015"
 excerpt: "Visual Studio Code is the most used IDE today, ranking first in surveys worldwide"
+updated_at: "2026-06-14"
+ru: "/ru/apr/29/release-of-visual-studio-code"
 ---
 
 Visual Studio Code is the dominant development environment (IDE) today. In most developer surveys about which IDE people use, VS Code ranks first by a wide margin.

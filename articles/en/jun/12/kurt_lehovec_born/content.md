@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "June 12, 1918 — Kurt Lehovec Is Born"
 date: "June 12, 1918"
 excerpt: "Kurt Lehovec's p-n junction isolation technique helped make integrated circuits practical"
+updated_at: "2026-06-14"
+ru: "/ru/jun/12/kurt-lehovec-born"
 ---
 
 Kurt Lehovec was an American physicist and engineer whose name is far less well known than those of fellow integrated circuit pioneers Jack Kilby and Robert Noyce. Yet his work played a crucial role in making integrated circuits practical.

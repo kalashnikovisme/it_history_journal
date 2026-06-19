@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Jan 24, 2003 — A 376-Byte Virus Infected the World in 11 Minutes"
 date: "January 24, 2003"
 excerpt: "SQL Slammer infected 75,000 servers in 11 minutes, causing $750M–$1.2B in damage"
+updated_at: "2026-06-14"
 ---
 
 SQL Slammer virus erupted on January 24 and, in just a few hours, managed to disrupt large parts of the global internet. It was arguably the fastest-spreading worm in history.

@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "May 14, 1984 — Mark Zuckerberg Was Born"
 date: "May 14, 1984"
 excerpt: "Facebook started as a small Harvard website before becoming an influential internet platform"
+updated_at: "2026-06-14"
+ru: "/ru/may/14/mark-zuckerberg-was-born"
 ---
 
 On May 14, 1984, Mark Zuckerberg was born — the person who first built a website for Harvard students to communicate, then turned it into one of the most influential platforms in the history of the internet.

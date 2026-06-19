@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Apr 23, 2005 — The First Video Uploaded to YouTube"
 date: "April 23, 2005"
 excerpt: "Jawed Karim uploaded the first YouTube video, 'Me at the zoo,' which has 388 million views"
+updated_at: "2026-06-14"
+ru: "/ru/apr/23/the-first-video-uploaded-to-youtube"
 ---
 
 YouTube has completely taken over the planet. The service has more than 2.5 billion monthly users. People use YouTube for entertainment, education, political messaging, as a search engine, and for many other things. Video as a source of information has proven its advantages over "boring" reading.

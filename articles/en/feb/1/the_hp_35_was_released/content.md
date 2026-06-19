@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 1, 1972 — The HP-35 Was Released"
 date: "February 1, 1972"
 excerpt: "Hewlett-Packard released the first scientific pocket calculator, the HP-35, with RPN, bright red LEDs, costing $395"
+updated_at: "2026-06-14"
 ---
 
 Exactly 54 years ago today, on February 1, 1972, the world of math changed forever. Hewlett-Packard released the HP-35, and it wasn't just a new gadget — it was the beginning of the end for the slide rule.

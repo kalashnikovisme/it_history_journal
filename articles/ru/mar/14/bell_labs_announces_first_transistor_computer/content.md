@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "14 марта 1955 — Bell Labs объявляет о первом транзисторном компьютере"
 date: "14 марта 1955"
 excerpt: "Bell Labs представила TRADIC — первый полностью транзисторный компьютер, заменивший вакуумные лампы"
+updated_at: "2026-06-14"
 ---
 
 14 марта 1955 года лаборатория Bell Telephone Laboratories объявила о создании **TRADIC** — первого полностью транзисторного цифрового компьютера. Название TRADIC расшифровывалось как TRAnsistor DIgital Computer.

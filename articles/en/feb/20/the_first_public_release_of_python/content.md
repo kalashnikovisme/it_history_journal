@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 20, 1991 — The First Public Release of Python"
 date: "February 20, 1991"
 excerpt: "Python 0.9.0 was released on Usenet, emphasizing clarity over efficiency"
+updated_at: "2026-06-14"
 ---
 
 On February 20, 1991, the first public version of the Python programming language was released.

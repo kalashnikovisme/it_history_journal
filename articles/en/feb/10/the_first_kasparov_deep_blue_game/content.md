@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 10, 1996 — The First Kasparov–Deep Blue Game"
 date: "February 10, 1996"
 excerpt: "Deep Blue won the opening game against Kasparov marking a historic moment in human vs machine chess"
+updated_at: "2026-06-14"
 ---
 
 In February 1996, the world of chess and technology reached a turning point. For the first time, a reigning world chess champion sat down to play a full match against a computer. The players were Garry Kasparov, the most dominant chess player of his era, and Deep Blue, a machine built by IBM.

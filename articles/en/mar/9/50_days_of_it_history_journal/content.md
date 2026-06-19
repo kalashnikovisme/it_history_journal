@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "March 9, 2026 — 50 Days of IT History Journal"
 date: "March 9, 2026"
 excerpt: "Started with a simple idea to find historical computing events on each calendar date"
+updated_at: "2026-06-14"
+ru: "/ru/mar/9/50-days-of-it-history-journal"
 ---
 
 Fifty days ago this project quietly started with a simple idea: every day, look at the calendar and find what happened in the history of computing on that exact date.

@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "March 8, 1900 — Howard Aiken Is Born"
 date: "March 8, 1900"
 excerpt: "Built the Harvard Mark I, one of the first large-scale automatic computers in the US"
+updated_at: "2026-06-14"
 ---
 
 On March 8, 1900, Howard Hathaway Aiken was born in Hoboken. He became one of the key figures in the early history of computing and is best known as the creator of the Harvard Mark I, one of the first large-scale automatic computers built in the United States.

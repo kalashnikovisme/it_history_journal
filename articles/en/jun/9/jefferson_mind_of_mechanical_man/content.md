@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "June 9, 1949 — The Mind of Mechanical Man"
 date: "June 9, 1949"
 excerpt: "Neurosurgeon Geoffrey Jefferson said there's a vast gulf between computation and true thought"
+updated_at: "2026-06-14"
+ru: "/ru/jun/9/jefferson-mind-of-mechanical-man"
 ---
 
 "Can machines think?" That question has been on everyone's mind over the last few years. The rise and widespread adoption of neural networks has sparked large-scale discussions about intelligence, the nature of consciousness, emotions, and many other related topics.

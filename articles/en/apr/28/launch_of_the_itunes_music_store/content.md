@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 28, 2003 — Launch of the iTunes Music Store"
 date: "April 28, 2003"
 excerpt: "iTunes Music Store sold one million tracks in its first week at $0.99 each"
+updated_at: "2026-06-14"
+ru: "/ru/apr/28/launch-of-the-itunes-music-store"
 ---
 
 iTunes Music Store was Apple's digital marketplace for buying music, and it completely changed how people consumed music.

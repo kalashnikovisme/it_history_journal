@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "29 апреля 2015 — Релиз Visual Studio Code"
 date: "29 апреля 2015"
 excerpt: "Visual Studio Code занимает первое место в опросах программистов и породил популярные форки"
+updated_at: "2026-06-14"
+en: "/en/apr/29/release-of-visual-studio-code"
 ---
 
 **Visual Studio Code** — доминирующая среда разработки (IDE) сегодня. В большинстве опросов программистов о том, какую IDE они используют, VS Code будет занимать первое место с внушительным отрывом.

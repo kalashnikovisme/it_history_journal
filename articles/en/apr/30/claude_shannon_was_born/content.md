@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Apr 30, 1916 — Claude Shannon Was Born"
 date: "April 30, 1916"
 excerpt: "Formalized the concept of the 'bit' and linked logic with electrical circuits in information theory"
+updated_at: "2026-06-14"
+ru: "/ru/apr/30/claude-shannon-was-born"
 ---
 
 Claude Shannon was a mathematician and the author of information theory. He showed that information can be measured — that it can be encoded, compressed, transmitted, and restored. People had practical ideas about this before him, but Shannon turned it into mathematics.

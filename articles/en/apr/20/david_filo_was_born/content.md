@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 20, 1966 — David Filo Was Born"
 date: "April 20, 1966"
 excerpt: "co-founded Yahoo and built one of the first large-scale internet search platforms"
+updated_at: "2026-06-14"
+ru: "/ru/apr/20/david-filo-was-born"
 ---
 
 One of the first billionaire tech entrepreneurs, co-founder of Yahoo, and co-creator of one of the first mass internet search platforms.

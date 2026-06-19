@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 17, 1934 — David Farber, the Grandfather of the Internet, Was Born"
 date: "April 17, 1934"
 excerpt: "Mentored key figures like Steve Crocker and Jon Postel"
+updated_at: "2026-06-14"
+ru: "/ru/apr/17/david-farber-was-born"
 ---
 
 As I often say, this is someone who has influenced your life far more than Taylor Swift or Sydney Sweeney, yet very few people know his name.

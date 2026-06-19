@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "May 15, 1929 — Frank Heart Was Born"
 date: "May 15, 1929"
 excerpt: "Led the team that built the first IMP network nodes, the ancestors of modern routers"
+updated_at: "2026-06-14"
+ru: "/ru/may/15/frank-heart-was-born"
 ---
 
 Frank Heart was born on May 15, 1929 — an engineer without whom ARPANET might have remained just a beautiful theory.

@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 9, 2012 — Facebook Announced the Acquisition of Instagram"
 date: "April 9, 2012"
 excerpt: "Facebook acquired Instagram for $1 billion before Android support or revenue"
+updated_at: "2026-06-14"
+ru: "/ru/apr/9/facebook-announced-the-acquisition-of-instagram"
 ---
 
 The purchase by Facebook of the rapidly growing platform Instagram is not just another deal. It legitimized and launched several important processes in the industry.

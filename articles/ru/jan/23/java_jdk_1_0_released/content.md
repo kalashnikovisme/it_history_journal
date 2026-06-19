@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "23 января 1996 — Релиз Java (JDK 1.0)"
 date: "23 января 1996"
 excerpt: "Sun Microsystems выпустила Java JDK 1.0 с принципом «Write Once, Run Anywhere»"
+updated_at: "2026-06-14"
 ---
 
 Сегодня, 23 января, день рождения технологии, которая буквально заставила весь мир говорить на одном языке. В 1996 году компания Sun Microsystems представила **Java Development Kit** (JDK) 1.0.

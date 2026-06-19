@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "June 14, 1822 — Charles Babbage Presented the Difference Engine"
 date: "June 14, 1822"
 excerpt: "The first step toward automated computation: a mechanical device that calculates without human intervention"
+updated_at: "2026-06-15"
+ru: "/ru/jun/14/charles-babbage-presented-difference-engine"
 ---
 
 When does the history of computer science begin? With the unveiling of the first computer? With the first message sent over ARPANET, the network that later evolved into the Internet? Or perhaps with Aristotle?

@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 27, 1955 — Eric Schmidt Was Born"
 date: "April 27, 1955"
 excerpt: "Guided Google through the dot-com crash, launched Gmail and Maps, acquired Android, shaping the internet giant"
+updated_at: "2026-06-14"
+ru: "/ru/apr/27/eric-schmidt-was-born"
 ---
 
 Eric Schmidt is one of the most influential managers in the history of IT.

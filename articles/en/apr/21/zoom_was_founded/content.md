@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 21, 2011 — Zoom Was Founded"
 date: "April 21, 2011"
 excerpt: "Eric Yuan, a Cisco VP, founded Zoom after being unhappy with WebEx's evolution"
+updated_at: "2026-06-14"
+ru: "/ru/apr/21/zoom-was-founded"
 ---
 
 Eric Yuan worked at Cisco. At that time, Cisco was a dominant force in the market for business audio and video communications. The company had its own video conferencing application, WebEx. Eric Yuan was a vice president at Cisco, and he was unhappy with how the WebEx product was evolving. He left the company to build a video conferencing product according to his own vision.

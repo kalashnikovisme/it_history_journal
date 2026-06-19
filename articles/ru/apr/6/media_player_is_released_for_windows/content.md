@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "6 апреля 1992 — Релиз Media Player для Windows"
 date: "6 апреля 1992"
 excerpt: "Media Player стал первым цифровым аудиопроигрывателем для большинства пользователей"
+updated_at: "2026-06-14"
+en: "/en/apr/6/media-player-is-released-for-windows"
 ---
 
 **Windows Media Player** — одна из самых легендарных программ в истории. Подавляющее большинство пользователей компьютера свой первый цифровой аудио-файл прослушала именно через эту программу.

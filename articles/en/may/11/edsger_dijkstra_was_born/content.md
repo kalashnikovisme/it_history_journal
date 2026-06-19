@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "May 11, 1930 — Edsger Dijkstra Was Born"
 date: "May 11, 1930"
 excerpt: "Created Dijkstra's algorithm, argued programming is a mathematical discipline and shaped computer science"
+updated_at: "2026-06-14"
+ru: "/ru/may/11/edsger-dijkstra-was-born"
 ---
 
 Dijkstra's algorithm is one of the core algorithms taught in almost every computer science program. To be honest, when I first heard about it, I assumed Dijkstra was some mathematician from Euler's era. The algorithm is so elegant and memorable, yet incredibly practical for working with graphs. Later, I realized that Dijkstra was actually our contemporary.

@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Feb 15, 1934 — Niklaus Wirth Was Born"
 date: "February 15, 1934"
 excerpt: "Created Pascal, Modula-2, and Oberon to simplify and clarify programming languages"
+updated_at: "2026-06-14"
+ru: "/ru/feb/15/niklaus-wirth-was-born"
 ---
 
 On February 15, 1934, in Winterthur, Switzerland, Niklaus Wirth was born.

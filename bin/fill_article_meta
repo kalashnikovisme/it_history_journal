@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Fills updated_at and alternate-language URL into every article's frontmatter.
+# updated_at  — last git commit date for the file (falls back to mtime)
+# en / ru     — URL to the counterpart article in the other language (if it exists)
+
+ARTICLES_ROOT = File.expand_path('../articles', __dir__)
+
+def last_updated(file_path)
+  date = `git log -1 --format="%ad" --date=format:"%Y-%m-%d" -- "#{file_path}"`.strip
+  date.empty? ? File.mtime(file_path).strftime('%Y-%m-%d') : date
+end
+
+# Rewrite one field inside the frontmatter block (lines between the two ---).
+# Adds the line if absent, replaces it if present.
+def set_fm_field(fm_lines, key, value)
+  quoted = "#{key}: \"#{value}\""
+  idx = fm_lines.index { |l| l.start_with?("#{key}:") }
+  if idx
+    fm_lines[idx] = quoted
+  else
+    fm_lines << quoted
+  end
+end
+
+updated = 0
+skipped = 0
+
+Dir.glob("#{ARTICLES_ROOT}/**/content.md").sort.each do |file_path|
+  rel   = file_path.delete_prefix("#{ARTICLES_ROOT}/")
+  parts = rel.split('/')
+  # parts: lang / month / day / slug / content.md
+  next unless parts.length == 5
+
+  lang, month, day, dir_name = parts[0], parts[1], parts[2], parts[3]
+  slug       = dir_name.tr('_', '-')
+  other_lang = lang == 'en' ? 'ru' : 'en'
+
+  counterpart = "#{ARTICLES_ROOT}/#{other_lang}/#{month}/#{day}/#{dir_name}/content.md"
+  alt_url     = File.exist?(counterpart) ? "/#{other_lang}/#{month}/#{day}/#{slug}" : nil
+
+  raw = File.read(file_path)
+
+  unless raw.start_with?("---\n")
+    warn "  skip (no frontmatter): #{rel}"
+    skipped += 1
+    next
+  end
+
+  fm_end = raw.index("\n---\n", 4)
+  unless fm_end
+    warn "  skip (unclosed frontmatter): #{rel}"
+    skipped += 1
+    next
+  end
+
+  fm_lines = raw[4...fm_end].split("\n")
+  body     = raw[fm_end + 5..]
+
+  set_fm_field(fm_lines, 'updated_at', last_updated(file_path))
+  set_fm_field(fm_lines, other_lang, alt_url) if alt_url
+
+  File.write(file_path, "---\n#{fm_lines.join("\n")}\n---\n#{body}")
+  updated += 1
+end
+
+puts "Done. #{updated} articles updated, #{skipped} skipped."

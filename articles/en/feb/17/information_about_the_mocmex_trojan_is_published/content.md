@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 17, 2008 — Information About the Mocmex Trojan Is Published"
 date: "February 17, 2008"
 excerpt: "Researchers published details about the Mocmex trojan preinstalled on digital photo frames at the factory"
+updated_at: "2026-06-14"
 ---
 
 On February 17, 2008, detailed information about a new and unusual piece of malware called Mocmex was publicly published in Seattle Post-Intelligencer.

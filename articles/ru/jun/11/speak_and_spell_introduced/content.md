@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "11 июня 1978 — Texas Instruments представляет Speak & Spell"
 date: "11 июня 1978"
 excerpt: "Texas Instruments представила Speak & Spell — первое устройство с синтезом речи, создающим её электронным способом"
+updated_at: "2026-06-14"
+en: "/en/jun/11/speak-and-spell-introduced"
 ---
 
 В этот день компания Texas Instruments представила Speak & Spell — электронную обучающую игрушку, которая для многих детей стала первым «говорящим компьютером» в жизни.

@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "June 8, 1955 — Tim Berners-Lee Was Born"
 date: "June 8, 1955"
 excerpt: "Created the World Wide Web, making the Internet accessible to everyone and shaping the digital world"
+updated_at: "2026-06-14"
+ru: "/ru/jun/8/tim-berners-lee-was-born"
 ---
 
 Computer networks had existed in one form or another since the 1960s, but the Internet did not gain a truly global user base until the 1990s. This was driven both by advances in networking technology and by the emergence of the web. It was the web that made the Internet accessible and understandable to ordinary users. The creator of the first version of the World Wide Web was Tim Berners-Lee.

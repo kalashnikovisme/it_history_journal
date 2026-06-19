@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "13 февраля 1991 — Borland Pascal приходит в Windows"
 date: "13 февраля 1991"
 excerpt: "Pascal вошёл в графические интерфейсы с Borland Pascal for Windows, начав событийное программирование"
+updated_at: "2026-06-14"
+en: "/en/feb/13/borland-pascal-comes-to-windows"
 ---
 
 Это был важный момент. **Pascal** уже был одним из самых популярных языков программирования. Но до этого большинство разработчиков работали в DOS. Windows быстро набирала популярность, и программистам нужны были новые инструменты.

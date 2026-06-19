@@ -2,10 +2,12 @@
 
 ## Mandatory rules
 
+- **Adding an instruction.** When asked to add or remember a reusable rule, create `.agents/{instruction-name}.md` and add a summary bullet to both `AGENTS.md` and `CLAUDE.md`. See `.agents/create-instruction.md`.
 - **README.md must stay current.** Whenever you add a script to `bin/` or a command to `dip.yml`, document it in the README under the relevant table before finishing the task.
 - **Run tests after every change.** Use `bundle exec rspec`. All 44+ examples must pass before reporting a task as done.
 - **Run `bundle exec rake build` after every task that involves code changes** to confirm the site builds without errors.
 - **Convert plain URLs to markdown links when preparing articles.** Any bare URL in the article body or links section must become `[Label](url)`. Use the site title or a short descriptive label — never leave a raw URL.
+- **Update `updated_at` on every article edit.** Whenever you modify a `content.md` file, set `updated_at` in its frontmatter to today's date (`YYYY-MM-DD`). Never leave `updated_at` stale after an edit.
 
 ## Tech stack
 
@@ -54,6 +56,27 @@ Dark theme using Patreon-sourced colors defined in `tailwind.config.js`:
 | `templates/calendar.html.haml` | Full calendar page |
 | `bin/watch` | Dev server + incremental rebuilds |
 | `bin/convert_to_webp` | Image → WebP conversion |
+
+## Detailed instructions
+
+### Article editing rules
+
+When editing or preparing an article for publication, do not use H1 headings (`# Heading`) inside the article body. Use H2 (`##`) or lower for any section headings.
+
+### How to add a new instruction
+
+When the user asks to "add an instruction" or "remember that …" for a reusable rule:
+
+1. **Create `.agents/{instruction-name}.md`** — write the full instruction there. Use a short kebab-case name that describes the rule (e.g. `updated-at-rule.md`).
+
+2. **Add a bullet to `AGENTS.md`** under the relevant section (usually `## Mandatory rules`). Keep it one concise sentence; link or quote the key constraint. Example:
+   ```
+   - **Rule label.** Short description. See `.agents/instruction-name.md`.
+   ```
+
+3. **Add the same bullet to `CLAUDE.md`** under `## Mandatory rules` using identical wording so both files stay in sync.
+
+The `.agents/` file holds the detailed rationale and edge cases; the bullet in `AGENTS.md` / `CLAUDE.md` is the actionable summary that is always in context.
 
 ## Development commands
 

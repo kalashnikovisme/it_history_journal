@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 26, 1943 — Charles P. Thacker Is Born"
 date: "February 26, 1943"
 excerpt: "Lead hardware engineer of the Xerox Alto and Ethernet hardware builder at Xerox PARC"
+updated_at: "2026-06-14"
 ---
 
 On February 26, 1943, in Pasadena, California, Charles P. Thacker was born.

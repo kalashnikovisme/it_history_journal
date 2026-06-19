@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "May 5, 1992 — Release of Wolfenstein 3D"
 date: "May 5, 1992"
 excerpt: "Wolfenstein 3D defined the FPS genre with a 2D ray-casting engine and core gameplay mechanics"
+updated_at: "2026-06-14"
+ru: "/ru/may/5/release-of-wolfenstein-3d"
 ---
 
 First-person shooters are one of the most important game genres. In these games, the player controls a character from a first-person perspective and, in most cases, uses firearms.

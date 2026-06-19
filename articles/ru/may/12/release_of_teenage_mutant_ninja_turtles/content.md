@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "12 мая 1989 — Релиз Teenage Mutant Ninja Turtles"
 date: "12 мая 1989"
 excerpt: "Teenage Mutant Ninja Turtles на NES стала одной из самых сложных игр своего поколения и заметных релизов индустрии"
+updated_at: "2026-06-14"
+en: "/en/may/12/release-of-teenage-mutant-ninja-turtles"
 ---
 
 Компьютерные игры — это важная часть ИТ-индустрии. Один из самых заметных релизов в истории была **Teenage Mutant Ninja Turtles** на платформе NES. Эта игра не стала революционной с технологической точки зрения, главные её особенности и достижения связаны с игровым дизайном и продажами.

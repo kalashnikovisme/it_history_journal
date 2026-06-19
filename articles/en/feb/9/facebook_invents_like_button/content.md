@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: 'Feb 9, 2009 — Facebook Invents "Like" Button'
 date: "February 9, 2009"
 excerpt: "Facebook launched the Like button, turning signals into measurable metrics and shaping online communication"
+updated_at: "2026-06-14"
+ru: "/ru/feb/9/facebook-invents-like-button"
 ---
 
 When do you think the "Like" button appeared?

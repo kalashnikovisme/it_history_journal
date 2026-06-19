@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "March 2, 1993 — The New York Times Writes About Supercomputers Competitors"
 date: "March 2, 1993"
 excerpt: "The New York Times covered NEC and Cray Research's rivalry in the supercomputer market"
+updated_at: "2026-06-14"
 ---
 
 On March 2, 1993, The New York Times published an article about competition in the supercomputer market. It focused on the growing presence of the Japanese company NEC and the long-established American manufacturer Cray Research.

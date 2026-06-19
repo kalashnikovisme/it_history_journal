@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Apr 7, 1969 — The Most Important Document of the Internet: RFC 1"
 date: "April 7, 1969"
 excerpt: "RFC 1 invited discussion, laying the foundation for the internet's collaborative nature"
+updated_at: "2026-06-14"
+ru: "/ru/apr/7/the-most-important-document-of-the-internet-rfc-1"
 ---
 
 The Internet is essentially a miracle because it did not emerge in laboratories and technology companies. Practically anyone had the opportunity to participate in its development.

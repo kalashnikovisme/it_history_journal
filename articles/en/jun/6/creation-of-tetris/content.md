@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "June 6, 1984 — Tetris Is Created"
 date: "June 6, 1984"
 excerpt: "Alexey Pajitnov completed the first working version of Tetris on an Elektronika-60 computer"
+updated_at: "2026-06-14"
+ru: "/ru/jun/6/creation-of-tetris"
 ---
 
 On June 6, 1984, programmer Alexey Pajitnov completed the first working version of Tetris on an Elektronika-60 computer at the Computing Center of the USSR Academy of Sciences.

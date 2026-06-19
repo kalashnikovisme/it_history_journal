@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 24, 1955 — Steve Jobs Is Born"
 date: "February 24, 1955"
 excerpt: "Founded Apple, drove the Macintosh, iPhone, iPad, and led the first $1 trillion company"
+updated_at: "2026-06-14"
 ---
 
 On February 24, 1955, in San Francisco, California, Steve Jobs was born.

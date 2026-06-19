@@ -20,7 +20,8 @@ class Article
 
   attr_reader :title, :date, :event_date, :excerpt, :content_md, :slug, :lang,
               :date_path, :file_path, :month, :day, :popular, :cover_path, :thumb_path, :hero_path, :year,
-              :author, :topics, :people, :organizations, :technologies, :sources
+              :author, :topics, :people, :organizations, :technologies, :sources,
+              :updated_at, :alternate_url
 
   def self.parse(file_path, site_root: '.')
     raw = File.read(file_path)
@@ -71,6 +72,8 @@ class Article
       organizations: normalize_list(front_matter['organizations']),
       technologies: normalize_list(front_matter['technologies']),
       sources:    normalize_sources(front_matter['sources']),
+      updated_at:    front_matter['updated_at'],
+      alternate_url: front_matter[lang == 'en' ? 'ru' : 'en'],
       file_path:  file_path,
       cover_path: cover,
       thumb_path: thumb,
@@ -138,6 +141,7 @@ class Article
 
   def initialize(title:, date:, event_date:, excerpt:, content_md:, lang:, date_path:, slug:,
                  month:, day:, year:, popular:, author:, topics:, people:, organizations:, technologies:, sources:,
+                 updated_at:, alternate_url:,
                  file_path:, cover_path: nil, thumb_path: nil, hero_path: nil)
     @title      = title
     @date       = date
@@ -156,7 +160,9 @@ class Article
     @people     = people
     @organizations = organizations
     @technologies = technologies
-    @sources    = sources
+    @sources      = sources
+    @updated_at   = updated_at
+    @alternate_url = alternate_url
     @file_path  = file_path
     @cover_path = cover_path
     @thumb_path = thumb_path

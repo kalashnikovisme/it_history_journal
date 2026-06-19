@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "March 15, 1985 — The First .com Domain Name"
 date: "March 15, 1985"
 excerpt: "symbolics.com became the first registered .com domain with no registrars or fees"
+updated_at: "2026-06-14"
 ---
 
 On March 15, 1985, the first domain name in the .com zone was registered: symbolics.com.

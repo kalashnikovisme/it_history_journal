@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "March 25, 1995 — WikiWikiWeb Is Launched"
 date: "March 25, 1995"
 excerpt: "WikiWikiWeb allowed anyone to create and edit pages directly in a browser"
+updated_at: "2026-06-14"
 ---
 
 On March 25, 1995, Ward Cunningham launched WikiWikiWeb — the first website that allowed users to create and edit pages directly in the browser.

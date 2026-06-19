@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Jan 30, 1925 — Douglas Engelbart Was Born"
 date: "January 30, 1925"
 excerpt: "Demonstrated the computer mouse, hypertext, and video conferencing in 90 minutes in 1968"
+updated_at: "2026-06-14"
+ru: "/ru/jan/30/douglas-engelbart-was-born"
 ---
 
 If you think Steve Jobs or Bill Gates invented the modern computer, you’re mistaken. They packaged and sold ideas that Douglas Engelbart had already shown to the world back in the 1960s and 70s.

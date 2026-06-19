@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "16 апреля 1971 — Первый протокол передачи файлов FTP"
 date: "16 апреля 1971"
 excerpt: "В сети ARPANET появился RFC 114 с описанием первого протокола передачи файлов FTP"
+updated_at: "2026-06-14"
+en: "/en/apr/16/the-first-file-transfer-protocol-ftp"
 ---
 
 16 апреля 1971 года в сети ARPANET появился один из первых сетевых протоколов обмена файлами — **FTP** (File Transfer Protocol). Его описание было опубликовано в RFC 114.

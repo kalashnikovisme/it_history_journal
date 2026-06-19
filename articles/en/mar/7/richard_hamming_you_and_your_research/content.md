@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "March 7, 1986 — Richard Hamming: \"You and Your Research\""
 date: "March 7, 1986"
 excerpt: "Richard Hamming delivered \"You and Your Research\" to scientists and engineers at Bell Communications Research"
+updated_at: "2026-06-14"
+ru: "/ru/mar/7/richard-hamming-you-and-your-research"
 ---
 
 On March 7, 1986, mathematician and computer scientist Richard Hamming delivered a talk titled "You and Your Research." The lecture took place at Bell Communications Research (Bellcore) and was addressed to scientists and engineers early in their careers.

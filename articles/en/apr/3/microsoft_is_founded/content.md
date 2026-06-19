@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 3, 1975 — Microsoft Is Founded"
 date: "April 3, 1975"
 excerpt: "Microsoft was registered as Micro-Soft, building a BASIC interpreter for the Altair 8800"
+updated_at: "2026-06-14"
+ru: "/ru/apr/3/microsoft-is-founded"
 ---
 
 On this day the company was registered by Bill Gates and Paul Allen.

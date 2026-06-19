@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "3 февраля 1998 — Появился термин OpenSource"
 date: "3 февраля 1998"
 excerpt: "Термин «open source» придумали, чтобы бизнес начал воспринимать свободное ПО всерьез"
+updated_at: "2026-06-14"
 ---
 
 ## Что такое open source?

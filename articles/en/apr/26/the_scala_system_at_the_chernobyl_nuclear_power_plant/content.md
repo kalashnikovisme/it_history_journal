@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Apr 26, 1986 — The SCALA System at the Chernobyl Nuclear Power Plant"
 date: "April 26, 1986"
 excerpt: "The SCALA system was well-designed but could not block operator actions without human consent"
+updated_at: "2026-06-14"
+ru: "/ru/apr/26/the-scala-system-at-the-chernobyl-nuclear-power-plant"
 ---
 
 On April 26, 1986, the worst man-made disaster in history took place — the explosion at the Chernobyl Nuclear Power Plant.

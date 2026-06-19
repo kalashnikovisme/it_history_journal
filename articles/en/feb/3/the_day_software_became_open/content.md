@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: 'Feb 3, 1998 — The Day Software Became "Open"'
 date: "February 3, 1998"
 excerpt: "The term 'Open Source' was created to replace 'free software' and help businesses use collaborative code"
+updated_at: "2026-06-14"
 ---
 
 What is "Open Source" anyway?

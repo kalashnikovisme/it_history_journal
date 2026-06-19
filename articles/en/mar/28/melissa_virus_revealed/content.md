@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Mar 28, 1999 — Melissa Virus Revealed"
 date: "March 28, 1999"
 excerpt: "Melissa virus spread to tens of millions of computers within days causing $80 million in damage"
+updated_at: "2026-06-14"
 ---
 
 ## March 1999 — the virus is created

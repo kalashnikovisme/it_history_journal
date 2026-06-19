@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: 'Feb 22, 1978 — "The C Programming Language" Is Published'
 date: "February 22, 1978"
 excerpt: "Published \"The C Programming Language,\" a 270-page book that defined the language's standard for over a decade"
+updated_at: "2026-06-14"
 ---
 
 On February 22, 1978, the book "The C Programming Language" was officially published by Prentice Hall.

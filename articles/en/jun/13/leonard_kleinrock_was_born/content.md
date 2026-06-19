@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "June 13, 1934 — Leonard Kleinrock Is Born"
 date: "June 13, 1934"
 excerpt: "Leonard Kleinrock developed the mathematical model for packet switching and helped build the first ARPANET node"
+updated_at: "2026-06-14"
+ru: "/ru/jun/13/leonard-kleinrock-was-born"
 ---
 
 The vast majority of modern networks — mobile, local, and otherwise — rely on packet switching. The idea of transmitting data between computers without dedicating an entire communication channel to a single connection, instead breaking information into smaller units called packets, was developed independently in the mid-20th century by three researchers: Paul Baran, Donald Davies, and Leonard Kleinrock.

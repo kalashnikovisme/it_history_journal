@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: 'Feb 11, 2001 — The "Anna Kournikova" Worm and the Power of a Famous Name'
 date: "February 11, 2001"
 excerpt: "The worm spread via a fake celebrity photo attachment exploiting curiosity and social engineering"
+updated_at: "2026-06-14"
 ---
 
 On February 11, 2001, a computer worm began spreading across the internet through email.

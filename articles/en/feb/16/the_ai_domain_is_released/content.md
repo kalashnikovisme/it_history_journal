@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Feb 16, 1995 — The .ai Domain Is Released"
 date: "February 16, 1995"
 excerpt: "The .ai domain was delegated to Anguilla, becoming a highly sought-after extension decades later"
+updated_at: "2026-06-14"
 ---
 
 On February 16, 1995, the country code top-level domain .ai was officially delegated.

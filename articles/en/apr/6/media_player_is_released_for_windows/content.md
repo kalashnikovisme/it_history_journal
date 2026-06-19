@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 6, 1992 — Media Player Is Released for Windows"
 date: "April 6, 1992"
 excerpt: "Windows Media Player introduced most users to digital audio and dominated the personal computing era"
+updated_at: "2026-06-14"
+ru: "/ru/apr/6/media-player-is-released-for-windows"
 ---
 
 Windows Media Player is one of the most legendary programs in history. The overwhelming majority of computer users listened to their first digital audio file through this program.

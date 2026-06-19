@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Apr 11, 1976 — Apple I Presented"
 date: "April 11, 1976"
 excerpt: "Steve Jobs and Wozniak presented the Apple I circuit board connected to a keyboard and TV"
+updated_at: "2026-06-14"
+ru: "/ru/apr/11/apple-i-presented"
 ---
 
 Apple presentations have been important events for almost 40 years. The company set the standard for large, carefully staged product launches and updates.

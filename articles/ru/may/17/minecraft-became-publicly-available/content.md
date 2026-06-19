@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "17 мая 2009 — Minecraft вышел в публичный доступ"
 date: "17 мая 2009"
 excerpt: "Minecraft was first released as a primitive sandbox game with block worlds and open-ended building"
+updated_at: "2026-06-14"
+en: "/en/may/17/minecraft-became-publicly-available"
 ---
 
 17 мая 2009 года **Маркус Перссон**, более известный как **Notch**, опубликовал первую публичную версию **Minecraft**.

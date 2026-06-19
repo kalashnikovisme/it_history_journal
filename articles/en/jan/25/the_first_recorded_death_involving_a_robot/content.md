@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Jan 25, 1979 — The First Recorded Death Involving a Robot"
 date: "January 25, 1979"
 excerpt: "Robert Williams was killed by an industrial robot, leading to safety standards protecting workers today"
+updated_at: "2026-06-14"
 ---
 
 On January 25, 1979, Robert Williams, a worker at a Ford Motor Company plant in Michigan, was tragically killed in an accident involving an industrial robot.

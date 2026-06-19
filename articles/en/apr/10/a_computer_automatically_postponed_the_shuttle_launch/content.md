@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "April 10, 1981 — A Computer Automatically Postponed the Shuttle Launch"
 date: "April 10, 1981"
 excerpt: "A computer automatically halted the Shuttle launch 16 minutes before liftoff due to data mismatch"
+updated_at: "2026-06-14"
+ru: "/ru/apr/10/a-computer-automatically-postponed-the-shuttle-launch"
 ---
 
 The very first mission of the Space Shuttle program was marked by the first launch delay in history caused by a computer error.

@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "27 апреля 1955 — Родился Эрик Шмидт"
 date: "27 апреля 1955"
 excerpt: "Google пережил крах доткомов, запустил Gmail и Maps, купил Android и стал ведущей интернет-компанией"
+updated_at: "2026-06-14"
+en: "/en/apr/27/eric-schmidt-was-born"
 ---
 
 **Эрик Шмидт** — один из величайших управленцев в истории ИТ.

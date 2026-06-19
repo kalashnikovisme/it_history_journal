@@ -3,6 +3,8 @@ author: "Pasha Kalashnikov"
 title: "Apr 1, 2003 — The Evil Bit Standard Is Published"
 date: "April 1, 2003"
 excerpt: "RFC 3514 proposed marking malicious packets with an \"Evil Bit\" set to \"1\" for attack indication"
+updated_at: "2026-06-14"
+ru: "/ru/apr/1/the-evil-bit-standard-is-published"
 ---
 
 The RFC 3514 described a very important proposal for the early 2000s. Attackers were suggested to mark their malicious packets with a special bit called the "Evil Bit." If this bit contained "1", the attacker would thereby indicate that the packet was malicious. Writing "0" in this bit was suggested for all other applications that did not contain malicious content.

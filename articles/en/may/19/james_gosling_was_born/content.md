@@ -4,6 +4,8 @@ title: "May 19, 1955 — James Gosling Was Born"
 date: "May 19, 1955"
 excerpt: "Considered the main creator of Java with many other important achievements in his career"
 popular: true
+updated_at: "2026-06-14"
+ru: "/ru/may/19/james-gosling-was-born"
 ---
 
 James Gosling is considered the main creator of Java, but his career included many other important achievements. Still, Java is clearly his defining contribution.

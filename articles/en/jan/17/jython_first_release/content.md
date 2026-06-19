@@ -3,6 +3,7 @@ author: "Pasha Kalashnikov"
 title: "Jan 17, 1997 — Jython (JPython) First Release"
 date: "January 17, 1997"
 excerpt: "Jython (formerly JPython) runs on the Java Virtual Machine enabling Python to call Java libraries"
+updated_at: "2026-06-14"
 ---
 
 On January 17, the first version of Jython (JPython) was released.
