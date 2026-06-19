@@ -11,6 +11,8 @@ module IthGrowth
 
       def run(path)
         article = Article::Parser.new.parse(path)
+        article_rel_dir = article_relative_dir(article.path)
+        dist_writer = Outputs::Writer.new(base_dir: config.distribution_output_dir)
         with_logging(name: "distribution", input_files: [path]) do
           PLATFORMS.map do |platform|
             markdown = prompt_runner.run(
@@ -18,9 +20,17 @@ module IthGrowth
               variables: common_variables(article).merge(platform: platform),
               model: config.ai_model
             )
-            writer.write("articles/#{article.slug}/distribution/#{platform}.md", markdown)
+            dist_writer.write("articles/#{article_rel_dir}/#{platform}.md", markdown)
           end
         end
+      end
+
+      private
+
+      def article_relative_dir(article_path)
+        content_dir = config.content_dir&.chomp("/") || "articles"
+        rel = article_path.delete_prefix("#{content_dir}/")
+        File.dirname(rel)
       end
     end
   end

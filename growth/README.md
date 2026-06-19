@@ -78,24 +78,32 @@ bin/ith report weekly
 
 ## Outputs
 
-Article outputs are written under:
+Distribution drafts (per-platform Markdown files) are written to the project root:
 
 ```text
-output/articles/<article-slug>/
+distribution/articles/<lang>/<mon>/<dd>/<slug>/<platform>.md
+```
+
+Other article outputs (analysis, SEO, conversion) are written under:
+
+```text
+growth/output/articles/<article-slug>/
 ```
 
 Logs are JSON lines under:
 
 ```text
-output/logs/YYYY-MM-DD.log
+growth/output/logs/YYYY-MM-DD.log
 ```
 
 Reports are written to:
 
 ```text
-output/reports/daily/YYYY-MM-DD.md
-output/reports/weekly/YYYY-WW.md
+growth/output/reports/daily/YYYY-MM-DD.md
+growth/output/reports/weekly/YYYY-WW.md
 ```
+
+The `growth/output/` directory is gitignored. The `distribution/` directory at the project root is tracked in git.
 
 ## Example Workflow
 

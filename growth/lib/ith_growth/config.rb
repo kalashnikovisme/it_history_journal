@@ -30,6 +30,10 @@ module IthGrowth
       dig(:project, :output_dir) || "./output"
     end
 
+    def distribution_output_dir
+      dig(:distribution, :output_dir) || "distribution"
+    end
+
     def content_dir
       dig(:project, :content_dir)
     end
