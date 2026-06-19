@@ -1,35 +1,40 @@
-**Platform: Hacker News**
+**Platform: Hacker News (hacker_news)**
 
-**With CTA (Patreon/Boosty):**
+**Version with CTA:**
 
 Title:  
-The Birth of a Legend: June 19, 1999 — The Release of the Very First Counter-Strike
+The Birth of Counter-Strike: How a Fan Mod Changed Gaming Forever
 
-Post:  
-On June 19, 1999, the first public beta of Counter-Strike was released—a Half-Life mod that would revolutionize multiplayer gaming. Created by enthusiasts Minh Le and Jess Cliffe, it introduced team-based, objective-driven gameplay that differed from the arena shooters of the time. The mod’s popularity grew rapidly, leading Valve to hire the developers and release Counter-Strike as a standalone product in 2000.
+Body:  
+June 19, 1999 marks the release of the first public beta of Counter-Strike, a Half-Life mod that would go on to influence countless multiplayer shooters. Created by enthusiasts Minh Le and Jess Cliffe, the mod introduced team-based, objective-driven gameplay with features like two teams, one life per round, and weapon purchases—elements that remain core today.  
 
-If you’re interested in the history of gaming innovations like this, consider supporting the project on Patreon or Boosty:  
-[Patreon](https://patreon.com/YOUR_PAGE) | [Boosty](https://boosty.to/YOUR_PAGE)
+This milestone exemplifies how passionate hobbyists can shape the industry, as Valve later recognized their work by hiring Minh and Jess and releasing Counter-Strike as a standalone product in 2000.  
 
-Read the full story here: {{ARTICLE_URL}}
+If you're interested in the history of gaming innovations, I explore more stories like this on the [IT History Journal](https://history.purple-magic.com). Support my work on Patreon or Boosty to keep these insights coming:  
+Patreon: https://www.patreon.com/cw/kalashnikovisme  
+Boosty: https://boosty.to/kalashnikovisme
+
+[Read the full article here: {{ARTICLE_URL}}]
 
 ---
 
-**Without CTA:**
+**Version without CTA:**
 
 Title:  
-June 19, 1999 — The Release of the Very First Counter-Strike
+The Birth of Counter-Strike: How a Fan Mod Changed Gaming Forever
 
-Post:  
-On this day in 1999, the first public beta of Counter-Strike was released as a Half-Life mod created by Minh Le and Jess Cliffe. It introduced a team-based, objective-focused multiplayer experience that stood out from other arena shooters of the era. Its success led Valve to hire the developers and release Counter-Strike as an official product in 2000, marking a significant milestone in gaming history.
+Body:  
+June 19, 1999 marks the release of the first public beta of Counter-Strike, a Half-Life mod that would go on to influence countless multiplayer shooters. Created by enthusiasts Minh Le and Jess Cliffe, the mod introduced team-based, objective-driven gameplay with features like two teams, one life per round, and weapon purchases—elements that remain core today.  
 
-For those interested in the origins of influential multiplayer games, this story offers a fascinating look into grassroots innovation shaping the industry.
+This milestone exemplifies how passionate hobbyists can shape the industry, as Valve later recognized their work by hiring Minh and Jess and releasing Counter-Strike as a standalone product in 2000.  
 
-Read the full article here: {{ARTICLE_URL}}
+For more stories on the history of gaming and technology, visit the [IT History Journal](https://history.purple-magic.com).  
+
+[Read the full article here: {{ARTICLE_URL}}]
 
 ---
 
 **Notes:**  
-- Keep the tone factual, curious, and respectful of community guidelines.  
-- Do not claim the post has been published; simply share the information.  
-- Use the placeholder {{ARTICLE_URL}} for the article link.
+- Keep the tone factual and historically curious.  
+- Do not claim the post has been published.  
+- Include the article URL placeholder {{ARTICLE_URL}}.

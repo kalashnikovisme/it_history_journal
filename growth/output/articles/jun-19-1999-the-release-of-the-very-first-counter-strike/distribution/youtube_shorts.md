@@ -1,45 +1,23 @@
-**YouTube Shorts Distribution Draft**
+**Platform: YouTube Shorts (Distribution Drafts)**
 
-*Version with CTA (Patreon/Boosty)*
+**Version with CTA (Patreon/Boosty)**
 
----
+🕹️ Did you know? On June 19, 1999, the first public beta of *Counter-Strike* was released — a Half-Life mod that would revolutionize multiplayer shooters. Created by Minh Le and Jess Cliffe, it introduced team-based, objective-driven gameplay that still influences gaming today.  
+Want to support more deep dives into gaming history? Consider visiting our Patreon or Boosty:  
+🔗 Patreon: https://www.patreon.com/cw/kalashnikovisme  
+🔗 Boosty: https://boosty.to/kalashnikovisme  
+Read the full story at: {{ARTICLE_URL}}  
+#GamingHistory #CounterStrike #GameDevelopment
 
-**Title:**  
-The Birth of Counter-Strike: June 19, 1999
+**Version without CTA (for communities where self-promotion is risky)**
 
-**Description:**  
-Did you know? On June 19, 1999, the first public beta of Counter-Strike was released — a Half-Life mod that would revolutionize multiplayer gaming. Created by Minh Le and Jess Cliffe, it introduced team-based, objective-driven gameplay that still influences shooters today.  
-Support more gaming history stories on Patreon: https://patreon.com/YOUR_PAGE or Boosty: https://boosty.to/YOUR_PAGE  
-Learn more: https://history.purple-magic.com/{{ARTICLE_URL}}
-
-**Script:**  
-"On June 19, 1999, the first beta of Counter-Strike was released — a mod for Half-Life created by fans Minh Le and Jess Cliffe. It introduced teams, objectives, and a new way to play multiplayer. This simple mod would become one of the most influential shooters in gaming history. Want to explore more gaming history? Support us on Patreon or Boosty!"
-
-**Hashtags:**  
-#CounterStrike #GamingHistory #HalfLife #Esports #YouTubeShorts
+🕹️ Did you know? On June 19, 1999, the first public beta of *Counter-Strike* was released — a Half-Life mod that would revolutionize multiplayer shooters. Created by Minh Le and Jess Cliffe, it introduced team-based, objective-driven gameplay that still influences gaming today.  
+Learn more about this pivotal moment in gaming history at: {{ARTICLE_URL}}  
+#GamingHistory #CounterStrike #GameDevelopment
 
 ---
 
-*Version without CTA*
-
----
-
-**Title:**  
-The First Counter-Strike: June 19, 1999
-
-**Description:**  
-On June 19, 1999, the first public beta of Counter-Strike was released as a Half-Life mod. Created by Minh Le and Jess Cliffe, it introduced team-based, objective-focused multiplayer gameplay that would shape the future of shooters. Discover the origins of this iconic game.  
-More stories at https://history.purple-magic.com/{{ARTICLE_URL}}
-
-**Script:**  
-"June 19, 1999, marked the release of the first Counter-Strike beta — a Half-Life mod made by fans Minh Le and Jess Cliffe. It featured teams, objectives, and a new approach to multiplayer gaming. This simple mod would grow into one of the most influential games in history."
-
-**Hashtags:**  
-#CounterStrike #GamingHistory #HalfLife #Esports #YouTubeShorts
-
----
-
-**Notes:**  
-- Replace `{{ARTICLE_URL}}` with the actual article URL placeholder.  
-- Adjust the Patreon and Boosty URLs with your actual pages.  
-- Keep the tone factual, curious, and respectful of the historical significance.
+**Notes for Implementation:**  
+- Keep the visuals engaging with vintage game footage or screenshots from the early Counter-Strike beta.  
+- Use clear, concise text overlays highlighting key facts (e.g., release date, creators, gameplay features).  
+- Maintain a factual, curious tone to match the original article's style.

@@ -1,38 +1,35 @@
-**LinkedIn Distribution Drafts for "Jun 19, 1999 — The Release of the Very First Counter-Strike"**
+Certainly! Here are platform-specific distribution drafts for LinkedIn, following your guidelines:
 
 ---
 
-**Version 1: With a Soft Patreon/Boosty CTA**
+### **LinkedIn Post with CTA (Patreon/Boosty)**
 
-🔍 **Exploring the Origins of Counter-Strike**  
-On June 19, 1999, the first public beta of Counter-Strike was released—a mod that would revolutionize multiplayer gaming. Created by enthusiasts Minh Le and Jess Cliffe, it introduced team-based, objective-driven gameplay that differed from the arena shooters of the time.  
+🚀 **Remembering the Birth of Counter-Strike: June 19, 1999** 🚀
 
-This milestone exemplifies how passionate hobbyist developers can influence the industry, turning a mod into a major commercial success. Today, Counter-Strike remains a cornerstone of multiplayer gaming, inspiring countless titles and competitive scenes.  
+On this day in 1999, the first public beta of *Counter-Strike* was released—a mod for Half-Life that would revolutionize multiplayer gaming. Created by enthusiasts Minh Le and Jess Cliffe, it introduced team-based, objective-driven gameplay that differed from the arena shooters of the time.
 
-Curious about the history of gaming innovations? Dive deeper into the story here: {{ARTICLE_URL}}  
+From its humble beginnings as a free mod with just a handful of maps and weapons, it grew into a global phenomenon, eventually becoming a standalone product under Valve in 2000. Its influence persists today, shaping countless tactical shooters.
 
-If you find value in exploring the roots of gaming history, consider supporting our work on Patreon or Boosty:  
-🔗 [Patreon](https://patreon.com/YOUR_PAGE)  
-🔗 [Boosty](https://boosty.to/YOUR_PAGE)  
+Curious about the full story? Dive into the details here: {{ARTICLE_URL}}
 
-#GamingHistory #CounterStrike #GameDevelopment #Esports
+If you find value in exploring the history of gaming and technology, consider supporting my work on Patreon or Boosty:
+- Patreon: [https://www.patreon.com/cw/kalashnikovisme](https://www.patreon.com/cw/kalashnikovisme)
+- Boosty: [https://boosty.to/kalashnikovisme](https://boosty.to/kalashnikovisme)
 
----
-
-**Version 2: Without CTA (for communities where self-promotion is risky)**
-
-🔍 **Exploring the Origins of Counter-Strike**  
-On June 19, 1999, the first public beta of Counter-Strike was released—a mod that would revolutionize multiplayer gaming. Created by enthusiasts Minh Le and Jess Cliffe, it introduced team-based, objective-driven gameplay that differed from the arena shooters of the time.  
-
-This milestone exemplifies how passionate hobbyist developers can influence the industry, turning a mod into a major commercial success. Today, Counter-Strike remains a cornerstone of multiplayer gaming, inspiring countless titles and competitive scenes.  
-
-For those interested in gaming history, the story of Counter-Strike offers valuable insights into community-driven innovation and the evolution of multiplayer design. Read more here: {{ARTICLE_URL}}
-
-#GamingHistory #CounterStrike #GameDevelopment #Esports
+Your support helps keep these stories alive! 🎮
 
 ---
 
-**Notes:**  
-- Replace `{{ARTICLE_URL}}` with the actual article link when distributing.  
-- Adjust the hashtags as needed for your target audience.  
-- Ensure the tone remains factual, curious, and respectful of the historical significance.
+### **LinkedIn Post without CTA**
+
+🚀 **Remembering the Birth of Counter-Strike: June 19, 1999** 🚀
+
+On this day in 1999, the first public beta of *Counter-Strike* was released—a Half-Life mod created by Minh Le and Jess Cliffe that would go on to become one of the most influential multiplayer shooters in history.
+
+Starting as a free modification with just a few maps and weapons, it introduced team-based, objective-focused gameplay that set new standards for multiplayer gaming. Its success led to an official release by Valve in 2000, marking a milestone where a fan-made mod became a major commercial product.
+
+Discover the full story and its significance in gaming history: {{ARTICLE_URL}}
+
+---
+
+Let me know if you'd like adjustments or additional formats!
