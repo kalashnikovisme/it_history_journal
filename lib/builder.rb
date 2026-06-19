@@ -161,11 +161,22 @@ class Builder
         XML
       end
 
+      alternate_xml = if article.alternate_url
+        other_lang = article.lang == 'en' ? 'ru' : 'en'
+        <<~XML.chomp
+          <xhtml:link rel="alternate" hreflang="#{article.lang}" href="#{xml_escape("#{BASE_URL}#{article.url}/")}"/>
+          <xhtml:link rel="alternate" hreflang="#{other_lang}" href="#{xml_escape("#{BASE_URL}#{article.alternate_url}/")}"/>
+        XML
+      end
+
+      lastmod = article.updated_at || article.modified_date
+
       <<~XML.chomp
         <url>
           <loc>#{xml_escape("#{BASE_URL}#{article.url}/")}</loc>
-          <lastmod>#{xml_escape(article.modified_date)}</lastmod>
+          <lastmod>#{xml_escape(lastmod)}</lastmod>
       #{image_xml}
+      #{alternate_xml}
         </url>
       XML
     end
@@ -173,7 +184,8 @@ class Builder
     xml = <<~XML
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-              xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+              xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml">
       #{urls.join("\n")}
       </urlset>
     XML
