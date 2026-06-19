@@ -85,8 +85,11 @@ ARGV.each do |input|
 
   begin
     image = MiniMagick::Image.open(input)
+    orig_w = image.width
+    orig_h = image.height
+    will_resize = options[:max_width] && orig_w > options[:max_width]
 
-    if options[:max_width] && image.width > options[:max_width]
+    if will_resize
       image.resize "#{options[:max_width]}x>"
     end
 
@@ -100,8 +103,15 @@ ARGV.each do |input|
     diff = ((1 - dst.to_f / src) * 100).round(1)
     sign = diff >= 0 ? "-#{diff}%" : "+#{diff.abs}%"
 
+    if will_resize
+      out_image = MiniMagick::Image.open(output)
+      dim = "#{orig_w}×#{orig_h} → #{out_image.width}×#{out_image.height}"
+    else
+      dim = "#{orig_w}×#{orig_h}"
+    end
+
     puts "  #{File.basename(input).ljust(32)}→  #{File.basename(output)}  " \
-         "(#{format_bytes(src)} → #{format_bytes(dst)}, #{sign})"
+         "(#{format_bytes(src)} → #{format_bytes(dst)}, #{sign}, #{dim})"
   rescue => e
     warn "  fail    #{input}  #{e.message}"
     failures += 1
