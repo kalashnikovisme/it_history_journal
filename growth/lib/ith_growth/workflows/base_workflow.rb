@@ -1,5 +1,6 @@
 require "json"
 require "time"
+require "colorize"
 
 module IthGrowth
   module Workflows
@@ -16,8 +17,12 @@ module IthGrowth
       private
 
       def with_logging(name:, input_files: [])
+        $stdout.puts "▶ #{name}".yellow.bold
         started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
         output_files = yield
+        elapsed_s = elapsed(started)
+        $stdout.puts "  ✓ done in #{elapsed_s}s".green
+        output_files.each { |f| $stdout.puts "    #{f}".cyan }
         logger.log(
           command: $PROGRAM_NAME,
           workflow: name,
@@ -25,10 +30,11 @@ module IthGrowth
           output_files: output_files,
           ai_provider: prompt_runner.client.provider,
           model: config.ai_model,
-          duration_seconds: elapsed(started)
+          duration_seconds: elapsed_s
         )
         output_files
       rescue StandardError => e
+        $stdout.puts "  ✗ #{e.class}: #{e.message}".red
         logger.log(
           command: $PROGRAM_NAME,
           workflow: name,

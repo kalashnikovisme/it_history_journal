@@ -1,3 +1,5 @@
+require "colorize"
+
 module IthGrowth
   module AI
     class PromptRunner
@@ -10,6 +12,8 @@ module IthGrowth
       end
 
       def run(template:, variables:, system: nil, model: nil, temperature: 0.4)
+        label = "#{template}/#{variables[:platform] || "default"}".light_black
+        $stdout.puts "  #{label}  →  #{client.provider}/#{model || "default"}".light_black
         prompt = render(template: template, variables: variables)
         client.complete(prompt: prompt, system: system, model: model, temperature: temperature)
       end

@@ -14,6 +14,7 @@ require "ith_growth/workflows/seo_workflow"
 require "ith_growth/workflows/conversion_workflow"
 require "ith_growth/workflows/daily_workflow"
 require "ith_growth/workflows/weekly_workflow"
+require "ith_growth/analytics/ga_client"
 
 module IthGrowth
   class CLI < Thor
@@ -47,11 +48,10 @@ module IthGrowth
       desc "promote PATH", "Generate analysis, distribution, SEO, and conversion drafts"
       def promote(path)
         ctx = IthGrowth::CLI.context
-        files = ctx.workflow(:analysis).run(path) +
-          ctx.workflow(:distribution).run(path) +
-          ctx.workflow(:seo).run(path) +
-          ctx.workflow(:conversion).run(path)
-        files.each { |file| say file }
+        ctx.workflow(:analysis).run(path)
+        ctx.workflow(:distribution).run(path)
+        ctx.workflow(:seo).run(path)
+        ctx.workflow(:conversion).run(path)
       end
     }
 
@@ -87,6 +87,26 @@ module IthGrowth
       end
     }
 
+    desc "analytics SUBCOMMAND", "Google Analytics commands"
+    subcommand "analytics", Class.new(Thor) {
+      desc "top", "Show top pages from GA4 (last N days)"
+      option :days, type: :numeric, default: 7
+      option :limit, type: :numeric, default: 20
+      def top
+        config = IthGrowth::CLI.context.config
+        unless config.ga4_property_id && config.ga4_credentials_path
+          say "Analytics not configured. Add analytics.ga4_property_id and analytics.credentials_path to config.yml"
+          return
+        end
+        client = IthGrowth::Analytics::GaClient.new(
+          property_id: config.ga4_property_id,
+          credentials_path: config.ga4_credentials_path
+        )
+        pages = client.top_pages(days: options[:days], limit: options[:limit])
+        say client.format_as_markdown(pages)
+      end
+    }
+
     desc "report NAME", "Generate report: weekly"
     def report(name)
       abort "Only weekly report is supported" unless name == "weekly"
@@ -109,6 +129,8 @@ module IthGrowth
     end
 
     class Context
+      attr_reader :config
+
       def initialize(config:, writer:, logger:, prompt_runner:)
         @config = config
         @writer = writer

@@ -1,5 +1,6 @@
 require "date"
 require "ith_growth/workflows/base_workflow"
+require "ith_growth/analytics/ga_client"
 
 module IthGrowth
   module Workflows
@@ -11,7 +12,8 @@ module IthGrowth
             template: "weekly_report",
             variables: {
               project_name: config.dig(:project, :name),
-              generated_outputs: content
+              generated_outputs: content,
+              traffic_data: fetch_traffic_data
             },
             model: config.ai_model
           )
@@ -20,6 +22,18 @@ module IthGrowth
       end
 
       private
+
+      def fetch_traffic_data
+        return "_Analytics not configured._" unless config.ga4_property_id && config.ga4_credentials_path
+
+        client = Analytics::GaClient.new(
+          property_id: config.ga4_property_id,
+          credentials_path: config.ga4_credentials_path
+        )
+        client.format_as_markdown(client.top_pages(days: 7, limit: 20))
+      rescue => e
+        "_Analytics unavailable: #{e.message}_"
+      end
 
       def recent_output_files
         since = Time.now - (7 * 24 * 60 * 60)

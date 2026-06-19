@@ -15,9 +15,9 @@ interaction:
       run_options: [no-deps]
 
   bundle:
-    description: Run bundler commands
+    description: Run bundler commands for both Gemfiles
     service: app
-    command: bundle
+    command: sh -c 'bundle "$@" && BUNDLE_GEMFILE=/app/growth/Gemfile bundle "$@"' --
     compose:
       run_options: [no-deps]
 
@@ -85,20 +85,19 @@ interaction:
       run_options: [no-deps]
 
   growth:
-    description: Run the ith CLI
+    description: Run the growth CLI
     service: growth_app
-    command: bin/growth
+    command: bundle exec ruby -I growth/lib growth/bin/growth
     compose:
       run_options: [no-deps]
 
   growth_test:
     description: Run growth tests
     service: growth_app
-    command: bundle exec rake test
+    command: sh -c "cd /app/growth && bundle exec rake test"
     compose:
       run_options: [no-deps]
 
 provision:
   - dip compose build
   - dip bundle install
-  - dip growth_bundle install

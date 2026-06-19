@@ -1,8 +1,13 @@
 # IT History Journal — Claude Instructions
 
+## Growth orchestrator
+
+When any discussion involves the `growth/` directory, the growth CLI, growth workflows, or audience/SEO/distribution strategy, read `growth/docs/orchestration.md` first before responding.
+
 ## Mandatory rules
 
 - **Adding an instruction.** When asked to add or remember a reusable rule, create `.agents/{instruction-name}.md` and add a summary bullet to both `AGENTS.md` and `CLAUDE.md`. See `.agents/create-instruction.md`.
+- **Update growth docs on every growth change.** Whenever you add or modify anything in `growth/` (CLI commands, workflows, clients, config fields), update `growth/docs/` to reflect it before finishing. See `.agents/update-growth-docs.md`.
 - **README.md must stay current.** Whenever you add a script to `bin/` or a command to `dip.yml`, document it in the README under the relevant table before finishing the task.
 - **Run tests after every change.** Use `bundle exec rspec`. All 44+ examples must pass before reporting a task as done.
 - **Run `bundle exec rake build` after every task that involves code changes** to confirm the site builds without errors.

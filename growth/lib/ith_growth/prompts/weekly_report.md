@@ -13,6 +13,10 @@ Return:
 - Engineering tasks
 - Risks and missing information
 
-Generated outputs:
+## Traffic data (last 7 days)
+
+{{traffic_data}}
+
+## Generated outputs
 
 {{generated_outputs}}

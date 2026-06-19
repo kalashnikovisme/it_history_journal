@@ -15,17 +15,17 @@ services:
   growth_app:
     build:
       context: ..
-      dockerfile: .dockerdev/Dockerfile.growth.dev
+      dockerfile: .dockerdev/Dockerfile.dev
     working_dir: /app
     env_file:
       - ../.env.dev
     volumes:
       - ..:/app
-      - growth_bundle:/usr/local/bundle
+      - bundle:/usr/local/bundle
     environment:
+      BUNDLE_GEMFILE: /app/growth/Gemfile
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
-      ITH_GROWTH_CONFIG: ${ITH_GROWTH_CONFIG:-config/config.yml}
+      ITH_GROWTH_CONFIG: ${ITH_GROWTH_CONFIG:-growth/config/config.yml}
 
 volumes:
   bundle:
-  growth_bundle:

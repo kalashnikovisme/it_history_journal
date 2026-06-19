@@ -46,6 +46,16 @@ module IthGrowth
       dig(:ai, :model)
     end
 
+    def ga4_property_id
+      dig(:analytics, :ga4_property_id)
+    end
+
+    def ga4_credentials_path
+      raw = dig(:analytics, :credentials_path)
+      return nil unless raw
+      File.expand_path(raw, File.dirname(File.dirname(File.expand_path(path))))
+    end
+
     class Error < StandardError; end
   end
 end
