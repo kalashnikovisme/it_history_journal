@@ -1,0 +1,36 @@
+project:
+  name: "IT History Journal"
+  site_url: "https://history.purple-magic.com"
+  content_dir: "articles"
+  output_dir: "growth/output"
+
+ai:
+  provider: "openai"
+  model: "gpt-4.1-nano"
+  fallback_model: "gpt-4.1-nano"
+
+growth:
+  patreon_url: "https://www.patreon.com/cw/kalashnikovisme"
+  boosty_url: "https://boosty.to/kalashnikovisme"
+  default_language: "en"
+  supported_languages:
+    - "en"
+    - "ru"
+
+analytics:
+  ga4_property_id: "540478723"
+  credentials_path: "config/ga4_credentials.json"
+
+distribution:
+  platforms:
+    - twitter
+    - telegram
+    - linkedin
+    - reddit
+    - hacker_news
+    - lobsters
+    - bluesky
+    - devto
+    - medium
+    - youtube_shorts
+    - tiktok

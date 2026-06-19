@@ -5,3 +5,4 @@ vendor/
 .DS_Store
 Gemfile.lock
 .env.dev
+growth/config/ga4_credentials.json

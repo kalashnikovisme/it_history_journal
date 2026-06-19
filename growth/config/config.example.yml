@@ -1,0 +1,36 @@
+project:
+  name: "IT History Journal"
+  site_url: "https://history.purple-magic.com"
+  content_dir: "../history-site/content"
+  output_dir: "./output"
+
+ai:
+  provider: "openai"
+  model: "gpt-4.1"
+  fallback_model: "gpt-4.1-mini"
+
+growth:
+  patreon_url: "https://patreon.com/YOUR_PAGE"
+  boosty_url: "https://boosty.to/YOUR_PAGE"
+  default_language: "en"
+  supported_languages:
+    - "en"
+    - "ru"
+
+analytics:
+  ga4_property_id: "YOUR_GA4_PROPERTY_ID"
+  credentials_path: "config/ga4_credentials.json"
+
+distribution:
+  platforms:
+    - twitter
+    - telegram
+    - linkedin
+    - reddit
+    - hacker_news
+    - lobsters
+    - bluesky
+    - devto
+    - medium
+    - youtube_shorts
+    - tiktok

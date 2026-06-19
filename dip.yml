@@ -15,9 +15,9 @@ interaction:
       run_options: [no-deps]
 
   bundle:
-    description: Run bundler commands
+    description: Run bundler commands for both Gemfiles
     service: app
-    command: bundle
+    command: sh -c 'bundle "$@" && BUNDLE_GEMFILE=/app/growth/Gemfile bundle "$@"' --
     compose:
       run_options: [no-deps]
 
@@ -69,6 +69,34 @@ interaction:
     command: bundle exec ruby bin/watch
     compose:
       run_options: [no-deps, service-ports]
+
+  growth_shell:
+    description: Open a shell in the growth app container
+    service: growth_app
+    command: bash
+    compose:
+      run_options: [no-deps]
+
+  growth_bundle:
+    description: Run bundler in the growth app container
+    service: growth_app
+    command: bundle
+    compose:
+      run_options: [no-deps]
+
+  growth:
+    description: Run the growth CLI
+    service: growth_app
+    command: bundle exec ruby -I growth/lib growth/bin/growth
+    compose:
+      run_options: [no-deps]
+
+  growth_test:
+    description: Run growth tests
+    service: growth_app
+    command: sh -c "cd /app/growth && bundle exec rake test"
+    compose:
+      run_options: [no-deps]
 
 provision:
   - dip compose build
