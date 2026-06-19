@@ -70,6 +70,35 @@ interaction:
     compose:
       run_options: [no-deps, service-ports]
 
+  growth_shell:
+    description: Open a shell in the growth app container
+    service: growth_app
+    command: bash
+    compose:
+      run_options: [no-deps]
+
+  growth_bundle:
+    description: Run bundler in the growth app container
+    service: growth_app
+    command: bundle
+    compose:
+      run_options: [no-deps]
+
+  growth:
+    description: Run the ith CLI
+    service: growth_app
+    command: bin/growth
+    compose:
+      run_options: [no-deps]
+
+  growth_test:
+    description: Run growth tests
+    service: growth_app
+    command: bundle exec rake test
+    compose:
+      run_options: [no-deps]
+
 provision:
   - dip compose build
   - dip bundle install
+  - dip growth_bundle install

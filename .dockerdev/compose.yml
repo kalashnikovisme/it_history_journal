@@ -12,5 +12,20 @@ services:
       - ..:/app
       - bundle:/usr/local/bundle
 
+  growth_app:
+    build:
+      context: ..
+      dockerfile: .dockerdev/Dockerfile.growth.dev
+    working_dir: /app
+    env_file:
+      - ../.env.dev
+    volumes:
+      - ..:/app
+      - growth_bundle:/usr/local/bundle
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ITH_GROWTH_CONFIG: ${ITH_GROWTH_CONFIG:-config/config.yml}
+
 volumes:
   bundle:
+  growth_bundle:
