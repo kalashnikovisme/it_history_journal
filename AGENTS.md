@@ -9,6 +9,7 @@ When any discussion involves the `growth/` directory, the growth CLI, growth wor
 - **Adding an instruction.** When asked to add or remember a reusable rule, create `.agents/{instruction-name}.md` and add a summary bullet to both `AGENTS.md` and `CLAUDE.md`. See `.agents/create-instruction.md`.
 - **Update growth docs on every growth change.** Whenever you add or modify anything in `growth/` (CLI commands, workflows, clients, config fields), update `growth/docs/` to reflect it before finishing. See `.agents/update-growth-docs.md`.
 - **README.md must stay current.** Whenever you add a script to `bin/` or a command to `dip.yml`, add a row to the relevant table in README.md before finishing the task.
+- **Never use Wikipedia as a source.** Do not add Wikipedia URLs to the `sources:` list in any article. Use primary or authoritative references only. See `.agents/no-wikipedia-sources.md`.
 - **Tests must pass.** Run `bundle exec rspec` after every change. All examples must be green.
 - **Build must succeed.** Run `bundle exec rake build` after every task that involves code changes.
 

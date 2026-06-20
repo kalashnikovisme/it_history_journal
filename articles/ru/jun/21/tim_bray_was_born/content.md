@@ -6,8 +6,6 @@ excerpt: "Узнайте о вкладе Тима Брэй в создание X
 updated_at: "2026-06-20"
 en: "/en/jun/21/tim_bray_was_born"
 sources:
-  - title: "Тим Брэй — Wikipedia"
-    url: "https://en.wikipedia.org/wiki/Tim_Bray"
   - title: "Bye, Amazon"
     url: "https://www.tbray.org/ongoing/When/202x/2020/04/29/Leaving-Amazon"
 ---

@@ -11,6 +11,7 @@ When any discussion involves the `growth/` directory, the growth CLI, growth wor
 - **README.md must stay current.** Whenever you add a script to `bin/` or a command to `dip.yml`, document it in the README under the relevant table before finishing the task.
 - **Run tests after every change.** Use `bundle exec rspec`. All 44+ examples must pass before reporting a task as done.
 - **Run `bundle exec rake build` after every task that involves code changes** to confirm the site builds without errors.
+- **Never use Wikipedia as a source.** Do not add Wikipedia URLs to the `sources:` list in any article. Use primary or authoritative references only. See `.agents/no-wikipedia-sources.md`.
 - **Convert plain URLs to markdown links when preparing articles.** Any bare URL in the article body or links section must become `[Label](url)`. Use the site title or a short descriptive label — never leave a raw URL.
 - **Update `updated_at` on every article edit.** Whenever you modify a `content.md` file, set `updated_at` in its frontmatter to today's date (`YYYY-MM-DD`). Never leave `updated_at` stale after an edit.
 
