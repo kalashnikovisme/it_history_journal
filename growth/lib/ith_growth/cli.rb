@@ -15,6 +15,7 @@ require "ith_growth/workflows/conversion_workflow"
 require "ith_growth/workflows/daily_workflow"
 require "ith_growth/workflows/weekly_workflow"
 require "ith_growth/analytics/ga_client"
+require "ith_growth/analytics/search_console_client"
 
 module IthGrowth
   class CLI < Thor
@@ -45,11 +46,10 @@ module IthGrowth
         IthGrowth::CLI.context.workflow(:analysis).run(path).each { |file| say file }
       end
 
-      desc "promote PATH", "Generate analysis, distribution, SEO, and conversion drafts"
+      desc "promote PATH", "Generate analysis, SEO, and conversion drafts"
       def promote(path)
         ctx = IthGrowth::CLI.context
         ctx.workflow(:analysis).run(path)
-        ctx.workflow(:distribution).run(path)
         ctx.workflow(:seo).run(path)
         ctx.workflow(:conversion).run(path)
       end
@@ -104,6 +104,32 @@ module IthGrowth
         )
         pages = client.top_pages(days: options[:days], limit: options[:limit])
         say client.format_as_markdown(pages)
+      end
+    }
+
+    desc "search SUBCOMMAND", "Google Search Console commands"
+    subcommand "search", Class.new(Thor) {
+      desc "top", "Show top queries from Search Console (last N days)"
+      option :days, type: :numeric, default: 28
+      option :limit, type: :numeric, default: 20
+      option :pages, type: :boolean, default: false, desc: "Show top pages instead of queries"
+      def top
+        config = IthGrowth::CLI.context.config
+        unless config.gsc_site_url && config.gsc_credentials_path
+          say "Search Console not configured. Add search_console.site_url and search_console.credentials_path to config.yml"
+          return
+        end
+        client = IthGrowth::Analytics::SearchConsoleClient.new(
+          site_url: config.gsc_site_url,
+          credentials_path: config.gsc_credentials_path
+        )
+        if options[:pages]
+          rows = client.top_pages(days: options[:days], limit: options[:limit])
+          say client.format_as_markdown(rows, dimension_label: "Page")
+        else
+          rows = client.top_queries(days: options[:days], limit: options[:limit])
+          say client.format_as_markdown(rows, dimension_label: "Query")
+        end
       end
     }
 

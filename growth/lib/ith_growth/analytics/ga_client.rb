@@ -28,6 +28,26 @@ module IthGrowth
         parse_response(run_report(body))
       end
 
+      def page_stats(page_path:, days: 28)
+        body = {
+          dateRanges: [{ startDate: "#{days}daysAgo", endDate: "today" }],
+          dimensions: [{ name: "pagePath" }],
+          metrics: [
+            { name: "screenPageViews" },
+            { name: "bounceRate" },
+            { name: "averageSessionDuration" }
+          ],
+          dimensionFilter: {
+            filter: {
+              fieldName: "pagePath",
+              stringFilter: { matchType: "EXACT", value: page_path }
+            }
+          },
+          limit: 1
+        }
+        parse_response(run_report(body)).first
+      end
+
       def format_as_markdown(pages)
         return "_No data_" if pages.empty?
 

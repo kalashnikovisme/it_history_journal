@@ -34,6 +34,10 @@ module IthGrowth
       dig(:distribution, :output_dir) || "distribution"
     end
 
+    def seo_output_dir
+      dig(:seo, :output_dir) || "seo"
+    end
+
     def content_dir
       dig(:project, :content_dir)
     end
@@ -58,6 +62,15 @@ module IthGrowth
       raw = dig(:analytics, :credentials_path)
       return nil unless raw
       File.expand_path(raw, File.dirname(File.dirname(File.expand_path(path))))
+    end
+
+    def gsc_site_url
+      dig(:search_console, :site_url)
+    end
+
+    def gsc_credentials_path
+      raw = dig(:search_console, :credentials_path)
+      raw ? File.expand_path(raw, File.dirname(File.dirname(File.expand_path(path)))) : ga4_credentials_path
     end
 
     class Error < StandardError; end

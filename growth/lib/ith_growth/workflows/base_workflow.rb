@@ -52,6 +52,19 @@ module IthGrowth
         (Process.clock_gettime(Process::CLOCK_MONOTONIC) - started).round(3)
       end
 
+      def article_relative_dir(article_path)
+        content_dir = config.content_dir&.chomp("/") || "articles"
+        rel = article_path.delete_prefix("#{content_dir}/")
+        File.dirname(rel)
+      end
+
+      def article_page_path(article_path)
+        content_dir = config.content_dir&.chomp("/") || "articles"
+        rel = article_path.delete_prefix("#{content_dir}/")
+        lang, month, day, dir_name = rel.split("/")
+        "/#{lang}/#{month}/#{day}/#{dir_name.tr("_", "-")}"
+      end
+
       def common_variables(article)
         {
           project_name: config.dig(:project, :name),

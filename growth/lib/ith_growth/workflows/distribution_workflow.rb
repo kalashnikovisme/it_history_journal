@@ -25,13 +25,6 @@ module IthGrowth
         end
       end
 
-      private
-
-      def article_relative_dir(article_path)
-        content_dir = config.content_dir&.chomp("/") || "articles"
-        rel = article_path.delete_prefix("#{content_dir}/")
-        File.dirname(rel)
-      end
     end
   end
 end

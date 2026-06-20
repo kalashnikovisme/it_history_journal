@@ -74,17 +74,33 @@ bin/ith conversion path/to/article.md
 bin/ith workflow run daily
 bin/ith workflow run weekly
 bin/ith report weekly
+bin/ith analytics top               # top pages from GA4 (last 7 days)
+bin/ith analytics top --days 30     # extend date range
+bin/ith analytics top --limit 50    # fetch more rows
+bin/ith search top                  # top queries from Search Console (last 28 days)
+bin/ith search top --days 90        # extend date range
+bin/ith search top --pages          # top pages instead of queries
+bin/ith search top --limit 50       # fetch more rows
 ```
 
 ## Outputs
 
-Distribution drafts (per-platform Markdown files) are written to the project root:
+Distribution drafts (per-platform Markdown files):
 
 ```text
 distribution/articles/<lang>/<mon>/<dd>/<slug>/<platform>.md
 ```
 
-Other article outputs (analysis, SEO, conversion) are written under:
+SEO reports accumulate per article, one file per run date:
+
+```text
+seo/articles/<lang>/<mon>/<dd>/<slug>/seo-YYYY-MM-DD.md
+seo/articles/<lang>/<mon>/<dd>/<slug>/schema.json
+```
+
+Each `seo-YYYY-MM-DD.md` contains the analytics data (GSC + GA4) at the time of generation and the AI suggestions. On subsequent runs the full history is fed back to the AI so suggestions improve over time.
+
+Other article outputs (analysis, conversion) are written under:
 
 ```text
 growth/output/articles/<article-slug>/
