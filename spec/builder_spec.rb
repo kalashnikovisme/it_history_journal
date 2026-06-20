@@ -311,6 +311,32 @@ RSpec.describe Builder do
       expect(jsonld['wordCount']).to be > 0
     end
 
+    context 'when a seo/schema.json exists for the article' do
+      before do
+        schema_dir = File.join(tmp_dir, 'seo', 'articles', 'en', 'may', '19', 'james_gosling_was_born')
+        FileUtils.mkdir_p(schema_dir)
+        File.write(File.join(schema_dir, 'schema.json'), JSON.generate({
+          '@context' => 'https://schema.org',
+          '@type' => 'Article',
+          'headline' => 'SEO-optimized title for Gosling',
+          'description' => 'SEO-optimized description.'
+        }))
+        builder.build
+      end
+
+      it 'overrides headline and description in JSON-LD from seo/schema.json' do
+        jsonld = jsonld_for('en/may/19/james-gosling-was-born/index.html')
+        expect(jsonld['headline']).to eq('SEO-optimized title for Gosling')
+        expect(jsonld['description']).to eq('SEO-optimized description.')
+      end
+
+      it 'preserves other JSON-LD fields' do
+        jsonld = jsonld_for('en/may/19/james-gosling-was-born/index.html')
+        expect(jsonld['@type']).to eq('Article')
+        expect(jsonld['author']).to eq({ '@type' => 'Person', 'name' => 'Pasha Kalashnikov' })
+      end
+    end
+
     context 'when article has a cover image' do
       before do
         write_article('en', 'may', 17, 'minecraft', <<~MD, with_cover: true)

@@ -323,6 +323,9 @@ class Builder
         }
       }
     }
+    seo = seo_schema(article)
+    jsonld['headline']    = seo['headline']    if seo['headline']
+    jsonld['description'] = seo['description'] if seo['description']
     jsonld['author'] = { '@type' => 'Person', 'name' => article.author } if article.author
     jsonld['datePublished'] = article.event_date.iso8601 if article.event_date
     jsonld['dateModified']  = article.modified_date
@@ -595,6 +598,16 @@ class Builder
     Date.new(article.year, article.month, article.day).strftime('%a, %d %b %Y 00:00:00 +0000')
   rescue ArgumentError
     nil
+  end
+
+  def seo_schema(article)
+    articles_base = File.join(@site_root, 'articles')
+    rel_dir = File.dirname(article.file_path).delete_prefix(articles_base + '/')
+    path = File.join(@site_root, 'seo', 'articles', rel_dir, 'schema.json')
+    return {} unless File.exist?(path)
+    JSON.parse(File.read(path))
+  rescue JSON::ParserError
+    {}
   end
 
   def xml_escape(str)
