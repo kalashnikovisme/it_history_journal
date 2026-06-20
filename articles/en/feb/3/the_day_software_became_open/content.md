@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: 'Feb 3, 1998 — The Day Software Became "Open"'
+title: "How the Open Source Movement Began on February 3, 1998"
 date: "February 3, 1998"
-excerpt: "The term 'Open Source' was created to replace 'free software' and help businesses use collaborative code"
-updated_at: "2026-06-14"
+excerpt: "Discover how a 1998 meeting in Palo Alto launched the open source revolution, transforming technology and collaboration worldwide."
+updated_at: "2026-06-20"
 ---
-
 What is "Open Source" anyway?
 Imagine you go to a restaurant and fall in love with their secret sauce. In the "Closed Source" world (like Windows or Photoshop), the restaurant keeps the recipe locked in a vault. You can eat the sauce, but you’ll never know how to make it, and you certainly can’t fix it if it’s too salty.
 

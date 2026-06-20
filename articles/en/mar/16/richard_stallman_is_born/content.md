@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 16, 1953 — Richard Stallman Is Born"
+title: "Richard Stallman: The Father of Free Software and Open Source"
 date: "March 16, 1953"
-excerpt: "Launched GNU, founded Free Software Foundation, authored the GPL license"
-updated_at: "2026-06-14"
+excerpt: "Discover Richard Stallman’s life, his role in creating free software, and his lasting impact on digital freedoms and open-source development."
+updated_at: "2026-06-20"
 ---
-
 On March 16, 1953, Richard Matthew Stallman was born in New York City, United States. He would later become one of the most influential figures in the history of software and computing ethics.
 
 ## Early career

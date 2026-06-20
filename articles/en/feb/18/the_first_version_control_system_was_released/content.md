@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 18, 1977 — The First Version Control System Was Released"
+title: "February 18, 1977: The Birth of Version Control with SCCS"
 date: "February 18, 1977"
-excerpt: "SCCS introduced structured revision history stored as deltas shaping future version control systems"
-updated_at: "2026-06-14"
+excerpt: "Discover how SCCS, launched on Feb 18, 1977, revolutionized source code management and laid the foundation for modern version control systems."
+updated_at: "2026-06-20"
 ---
-
 On February 18, 1977, the first widely distributed version of SCCS (Source Code Control System) was published as part of Version 7 Unix at Bell Labs.
 
 This was one of the first practical tools that allowed developers to track changes in source code files.

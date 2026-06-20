@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 21 — The First Keyboard Was Presented"
+title: "Jan 21 — The Inception of the Computer Keyboard and Its Historical Significance"
 date: "January 21"
-excerpt: "The ENIAC connected a teletype to its memory for real-time input and output"
-updated_at: "2026-06-14"
+excerpt: "Discover the origins of the first computer keyboard, introduced with ENIAC in 1946, revolutionizing data input in computing history."
+updated_at: "2026-06-20"
 ---
-
 The first computer keyboard was created for the ENIAC computer. Quick reminder, that this was the 1940s - there were no home computers at the time. So “the ENIAC computer” does not refer to a series of machines, but to one specific device.
 
 ENIAC was put into operation in 1945 and presented to the general public in 1946. At the time of its launch, it did not have a keyboard: engineers flipped switches, connected and reconnected plugs, and data was entered using punch cards.

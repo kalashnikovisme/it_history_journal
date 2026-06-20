@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 20, 1970 — The First ARPANET RFC Series Begins to Take Shape"
+title: "Tracing the Origins of the Internet: The First RFC Series Begins (1970)"
 date: "March 20, 1970"
-excerpt: "Early RFCs captured the internet's invention as engineering conversations in real time"
-updated_at: "2026-06-14"
+excerpt: "Discover how RFC 36–39 from 1970 laid the groundwork for the Internet through open collaboration and early engineering discussions."
+updated_at: "2026-06-20"
 ---
-
 On March 20, 1970, a small set of documents appeared that would later become part of the foundation of the modern Internet: RFC 36, RFC 37, RFC 38, and RFC 39. These were part of the early Request for Comments (RFC) series — an experiment in open collaboration that changed how protocols are designed forever.
 
 At the time, ARPANET was still young. There was no "Internet standard" in the modern sense. Instead, there was a group of researchers trying to figure things out in real time.

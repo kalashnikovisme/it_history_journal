@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 15, 1985 — The First .com Domain Name"
+title: "The Dawn of the Commercial Internet: First .com Domain Registered in 1985"
 date: "March 15, 1985"
-excerpt: "symbolics.com became the first registered .com domain with no registrars or fees"
-updated_at: "2026-06-14"
+excerpt: "Discover the story of symbolics.com, the first .com domain registered in 1985, and how it paved the way for the modern internet."
+updated_at: "2026-06-20"
 ---
-
 On March 15, 1985, the first domain name in the .com zone was registered: symbolics.com.
 
 This moment marked the beginning of the modern commercial internet. At the time, the Domain Name System (DNS) had only recently been introduced, replacing the earlier system where computers on the network were identified using a manually maintained HOSTS.TXT file.

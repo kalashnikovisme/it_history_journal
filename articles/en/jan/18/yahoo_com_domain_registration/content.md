@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 18, 1995 — The Registration of Yahoo.com Domain"
+title: "The Birth of Yahoo.com: A Look Back at its 1995 Domain Registration"
 date: "January 18, 1995"
-excerpt: "Yahoo.com was registered and grew into a web giant shaping email and online services"
-updated_at: "2026-06-14"
+excerpt: "Discover how Yahoo.com was registered on Jan 18, 1995, and its role in shaping web email and directories."
+updated_at: "2026-06-20"
 ---
-
 Today, January 18, marks the registration date of the domain Yahoo.com.
 
 Who had a yahoo.com email address? I did. Back in the 2000s, Yahoo was a search engine that competed head-to-head with Google.

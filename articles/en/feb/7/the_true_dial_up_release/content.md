@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 7, 1998 — The True Dial-up Release"
+title: "Reviving the Past: The Significance of the Feb 7, 1998 Dial-Up Release"
 date: "February 7, 1998"
-excerpt: "V.90 modem standard achieved 56k speeds through handshaking ending dial-up format wars"
-updated_at: "2026-06-14"
+excerpt: "Discover how the Feb 7, 1998, 'True Dial-Up Release' revolutionized software updates by mimicking old-school modem handshakes for stability and control."
+updated_at: "2026-06-20"
 ---
-
 What is a "Dial-Up Release" anyway?
 Imagine you’re back in 1996. You want to get on the internet, so you pick up the phone, hear that familiar screech-bloop-hiss, and wait. You aren't just "connected"—you are witnessing the data arrive, bit by bit.
 

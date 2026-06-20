@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 22, 1984 — Macintosh Commercial on Super Bowl"
+title: "How Apple’s 1984 Super Bowl Commercial Changed Tech Advertising Forever"
 date: "January 22, 1984"
-excerpt: "Apple aired the iconic 1984 commercial during the Super Bowl, directed by Ridley Scott, only once"
-updated_at: "2026-06-14"
+excerpt: "Discover how Apple’s 1984 Super Bowl ad revolutionized tech marketing and turned the Macintosh into a symbol of innovation and rebellion."
+updated_at: "2026-06-20"
 ---
-
 On January 22, 1984, Super Bowl viewers saw what is arguably the most famous commercial in the history of technology.
 
 The Super Bowl is the championship game of American football. Advertising during the Super Bowl is the most expensive advertising in the world. Not “expensive for tech companies.” Not “expensive for marketers.” Just the most expensive minute of television on the planet. You don’t go there just to “show up.” You go there to make history.

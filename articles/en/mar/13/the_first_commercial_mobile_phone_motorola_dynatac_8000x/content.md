@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Mar 13, 1983 — The First Commercial Mobile Phone: Motorola DynaTAC 8000X"
+title: "The Motorola DynaTAC 8000X: Pioneering the First Commercial Mobile Phone (1983)"
 date: "March 13, 1983"
-excerpt: "The Motorola DynaTAC 8000X was the first commercially available handheld mobile phone with 30 minutes talk time and cost $3,995"
-updated_at: "2026-06-14"
+excerpt: "Discover the history of the Motorola DynaTAC 8000X, the first commercial mobile phone launched in 1983, revolutionizing personal communication."
+updated_at: "2026-06-20"
 ---
-
 On March 13, 1983, the Motorola DynaTAC 8000X became the first commercially available handheld mobile phone. It was approved by the U.S. Federal Communications Commission (FCC) and sold in the United States, marking the beginning of the modern mobile phone industry.
 
 The device was developed by Motorola, led by engineer Martin Cooper, who had already made the first public cellular phone call in history in 1973 using an earlier prototype of the same project.

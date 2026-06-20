@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 3, 1847 — Alexander Graham Bell Is Born"
+title: "Alexander Graham Bell’s Birth and His Impact on Modern Communication"
 date: "March 3, 1847"
-excerpt: "His work on the telephone created a network infrastructure influencing modems, packet switching, and Bell Labs"
-updated_at: "2026-06-14"
+excerpt: "Discover how Alexander Graham Bell's invention of the telephone revolutionized communication and laid the groundwork for modern information networks."
+updated_at: "2026-06-20"
 ---
-
 On March 3, 1847, in Edinburgh, Scotland, Alexander Graham Bell was born.
 
 He later became one of the key figures in the history of communication technology. His work on the telephone did not just change how people talked to each other — it helped create the technical foundation on which modern information networks were built.

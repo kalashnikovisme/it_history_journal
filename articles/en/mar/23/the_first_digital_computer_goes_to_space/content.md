@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 23, 1965 — The First Digital Computer Goes to Space"
+title: "How the First Digital Computer Powered NASA's 1965 Space Mission"
 date: "March 23, 1965"
-excerpt: "NASA launched the first American spaceflight with a digital computer calculating orbital positions faster than humans"
-updated_at: "2026-06-14"
+excerpt: "Discover how NASA's 1965 Gemini 3 mission used the first digital computer in space, paving the way for modern space exploration."
+updated_at: "2026-06-20"
 ---
-
 On March 23, 1965, NASA launched the Gemini 3 mission. It became the first American spaceflight to carry a digital computer onboard.
 
 The mission was commanded by Virgil "Gus" Grissom, with John Young as the pilot.

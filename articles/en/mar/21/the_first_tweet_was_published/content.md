@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 21, 2006 — The First Tweet Was Published"
+title: "The Birth of Twitter: How the First Tweet Changed Communication Forever"
 date: "March 21, 2006"
-excerpt: "The first tweet \"just setting up my twttr\" marked the start of microblogging that changed communication"
-updated_at: "2026-06-14"
+excerpt: "Discover how the first tweet on March 21, 2006, sparked a social media revolution and transformed online communication forever."
+updated_at: "2026-06-20"
 ---
-
 On March 21, 2006, a small message appeared online that would later change how people communicate across the world.
 
 *"just setting up my twttr"* — this was the very first tweet, posted by Jack Dorsey.

@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 17, 1997 — Jython (JPython) First Release"
+title: "Jython 1.0 Launches on January 17, 1997: The Python-Java Bridge"
 date: "January 17, 1997"
-excerpt: "Jython (formerly JPython) runs on the Java Virtual Machine enabling Python to call Java libraries"
-updated_at: "2026-06-14"
+excerpt: "Discover the first release of Jython on January 17, 1997, and its role in integrating Python with the Java Virtual Machine."
+updated_at: "2026-06-20"
 ---
-
 On January 17, the first version of Jython (JPython) was released.
 
 Jython (formerly JPython) is an implementation of the Python programming language that runs on the Java Virtual Machine (JVM).

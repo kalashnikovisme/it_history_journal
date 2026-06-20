@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: 'Feb 7, 1956 — The "Gestalt of Programming" Was Published'
+title: "Rethinking Programming: The 1956 Concept That Changed Human-Computer Interaction"
 date: "February 7, 1956"
-excerpt: "Published 'Gestalt Programming' proposing computers be programmed with intentions, not step-by-step instructions"
-updated_at: "2026-06-14"
+excerpt: "Explore Douglas Ross’s 1956 Gestalt Programming idea, shaping modern human-centered coding and interactive systems."
+updated_at: "2026-06-20"
 ---
-
 What Is the “Gestalt of Programming” Anyway?
 Imagine it’s 1956.
 

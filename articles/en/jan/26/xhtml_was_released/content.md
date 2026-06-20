@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 26, 2000 — XHTML Was Released"
+title: "The Birth of XHTML: How the Web Became More Structured in 2000"
 date: "January 26, 2000"
-excerpt: "XHTML aimed to bring XML's strict rules to HTML but was widely adopted incorrectly"
-updated_at: "2026-06-14"
+excerpt: "Discover how XHTML's 2000 release aimed to bring structure and predictability to web coding, influencing HTML5 and modern web standards."
+updated_at: "2026-06-20"
 ---
-
 If you open the source code of a website built in the mid-2000s, there is a 90% chance the very first line you will see is a long declaration:
 
 On January 26, 2000, this standard was officially released.

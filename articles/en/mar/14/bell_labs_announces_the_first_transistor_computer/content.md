@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 14, 1955 — Bell Labs Announces the First Transistor Computer"
+title: "The Birth of Transistor Computing: Bell Labs' TRADIC Revolution in 1955"
 date: "March 14, 1955"
-excerpt: "Bell Labs announced TRADIC, the first fully transistorized digital computer consuming less than 100 watts"
-updated_at: "2026-06-14"
+excerpt: "Discover how Bell Labs' 1955 TRADIC computer pioneered transistor technology, transforming the future of computing and electronics."
+updated_at: "2026-06-20"
 ---
-
 On March 14, 1955, Bell Telephone Laboratories announced TRADIC — the first fully transistorized digital computer. The name TRADIC stood for TRAnsistor DIgital Computer.
 
 At the time, most computers were built using vacuum tubes. These machines were large, consumed huge amounts of electricity, and failed often. TRADIC showed that computers could be built using transistors instead.

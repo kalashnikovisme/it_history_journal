@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 16, 1995 — The .ai Domain Is Released"
+title: "The Origin and Rise of the .ai Domain: From Anguilla to AI Powerhouse"
 date: "February 16, 1995"
-excerpt: "The .ai domain was delegated to Anguilla, becoming a highly sought-after extension decades later"
-updated_at: "2026-06-14"
+excerpt: "Discover how the .ai domain, originally for Anguilla, became a global symbol of artificial intelligence and a key revenue source for the island."
+updated_at: "2026-06-20"
 ---
-
 On February 16, 1995, the country code top-level domain .ai was officially delegated.
 
 At that moment, nobody thought it would become one of the most desirable domain zones in the world.

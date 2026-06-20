@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 2, 1952 — The Birthday of Ralph Merkle"
+title: "Feb 2, 1952: Celebrating Ralph Merkle’s Pioneering Contributions to Cryptography"
 date: "February 2, 1952"
-excerpt: "Ralph Merkle invented public-key cryptography and Merkle Trees crucial for internet security"
-updated_at: "2026-06-14"
+excerpt: "Discover Ralph Merkle’s groundbreaking work in cryptography, from public key invention to Merkle trees, shaping today's digital world."
+updated_at: "2026-06-20"
 ---
-
 Imagine you want to send a locked box to a friend, but you’ve never met them in person to give them the key. If you mail the key, a nosy mailman could just copy it. This was the "Key Distribution Problem," and for decades, even the smartest scientists thought it was impossible to solve.
 
 Then came Ralph Merkle.

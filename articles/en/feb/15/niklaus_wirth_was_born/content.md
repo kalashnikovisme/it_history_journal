@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 15, 1934 — Niklaus Wirth Was Born"
+title: "Niklaus Wirth: The Pioneer Behind Pascal and Modern Programming Languages"
 date: "February 15, 1934"
-excerpt: "Created Pascal, Modula-2, and Oberon to simplify and clarify programming languages"
-updated_at: "2026-06-14"
+excerpt: "Discover the life and legacy of Niklaus Wirth, creator of Pascal and influential programming pioneer, born on Feb 15, 1934."
+updated_at: "2026-06-20"
 ru: "/ru/feb/15/niklaus-wirth-was-born"
 ---
-
 On February 15, 1934, in Winterthur, Switzerland, Niklaus Wirth was born.
 
 He would later become one of the most important figures in the history of programming languages.

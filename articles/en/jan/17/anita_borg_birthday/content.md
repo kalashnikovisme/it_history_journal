@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 17, 1949 — Anita Borg Is Born"
+title: "Celebrating Anita Borg’s Legacy: Pioneering Women in Tech (1949–2003)"
 date: "January 17, 1949"
-excerpt: "Founded Systers, the first large-scale online community for women in computing"
-updated_at: "2026-06-14"
+excerpt: "Honoring Anita Borg’s legacy as a trailblazing computer scientist and community builder for women in tech. Discover her pioneering work today."
+updated_at: "2026-06-20"
 ---
-
 Today, January 17, is the birthday of Anita Borg (1949–2003).
 
 Anita Borg was an American computer scientist and a creator of pioneering communities for women in the tech industry.

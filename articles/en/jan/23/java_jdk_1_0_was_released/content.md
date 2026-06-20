@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 23, 1996 — Java (JDK 1.0) Was Released"
+title: "Celebrating Java's Launch Anniversary: How Java Changed the Tech World"
 date: "January 23, 1996"
-excerpt: "Java’s 'Write Once, Run Anywhere' allows bytecode to run on any JVM-powered machine"
-updated_at: "2026-06-14"
+excerpt: "Celebrating Java's 1996 launch, exploring how Java's 'Write Once, Run Anywhere' revolution transformed technology and daily life."
+updated_at: "2026-06-20"
 ---
-
 Today, January 23, marks the birthday of a technology that quite literally made the whole world speak the same language. In 1996, Sun Microsystems released Java Development Kit (JDK) 1.0.
 
 Before Java, a programmer’s life was like trying to build something out of LEGO where pieces from one set simply did not fit with pieces from another. If you wrote a program for Windows, there was no chance it would run on Macintosh or Unix without a complete rewrite.

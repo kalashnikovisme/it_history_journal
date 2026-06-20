@@ -1,0 +1,7 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "17 января 1997 — Первый релиз Jython: Python на JVM",
+  "url": "https://history.purple-magic.com/ru/jan/17/first-jython-jpython-release/",
+  "description": "Первый релиз Jython 17 января 1997 года — реализуйте Python на JVM и используйте Java-классы. Подробнее о его истории и возможностях."
+}

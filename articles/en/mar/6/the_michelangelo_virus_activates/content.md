@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 6, 1992 — The Michelangelo Virus Activates"
+title: "How the Michelangelo Virus of 1992 Changed Computer Security Forever"
 date: "March 6, 1992"
-excerpt: "The Michelangelo virus activated worldwide, marking the first major cybersecurity scare"
-updated_at: "2026-06-14"
+excerpt: "On March 6, 1992, the Michelangelo virus activated, sparking worldwide panic and shaping modern cybersecurity awareness. Discover its story here."
+updated_at: "2026-06-20"
 ---
-
 On March 6, 1992, one of the most famous computer viruses of the early PC era — the Michelangelo virus — was scheduled to activate on infected computers around the world. The event became one of the first global cybersecurity scares and marked an important moment in the public awareness of computer malware.
 
 ## Discovery of the virus

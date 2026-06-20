@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: 'Feb 22, 1978 — "The C Programming Language" Is Published'
+title: "The Birth of C: How the 1978 Publication of 'The C Programming Language' Changed Computing"
 date: "February 22, 1978"
-excerpt: "Published \"The C Programming Language,\" a 270-page book that defined the language's standard for over a decade"
-updated_at: "2026-06-14"
+excerpt: "Discover how the 1978 publication of 'The C Programming Language' by Kernighan and Ritchie revolutionized programming and computing history."
+updated_at: "2026-06-20"
 ---
-
 On February 22, 1978, the book "The C Programming Language" was officially published by Prentice Hall.
 
 The authors were *Brian Kernighan and* Dennis Ritch.

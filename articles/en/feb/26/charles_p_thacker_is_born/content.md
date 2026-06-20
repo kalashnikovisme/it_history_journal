@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 26, 1943 — Charles P. Thacker Is Born"
+title: "Charles Thacker and the Birth of Personal Computing and Ethernet"
 date: "February 26, 1943"
-excerpt: "Lead hardware engineer of the Xerox Alto and Ethernet hardware builder at Xerox PARC"
-updated_at: "2026-06-14"
+excerpt: "Discover how Charles Thacker's innovations with the Xerox Alto and Ethernet laid the foundation for modern personal and networked computing."
+updated_at: "2026-06-20"
 ---
-
 On February 26, 1943, in Pasadena, California, Charles P. Thacker was born.
 
 He became one of the key engineers behind some of the most important ideas in modern computing — especially the Xerox Alto and early Ethernet.

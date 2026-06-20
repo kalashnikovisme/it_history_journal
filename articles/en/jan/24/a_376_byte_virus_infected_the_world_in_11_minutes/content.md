@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 24, 2003 — A 376-Byte Virus Infected the World in 11 Minutes"
+title: "SQL Slammer: The Fastest-Worm in Internet History and Its Global Impact"
 date: "January 24, 2003"
-excerpt: "SQL Slammer infected 75,000 servers in 11 minutes, causing $750M–$1.2B in damage"
-updated_at: "2026-06-14"
+excerpt: "Discover how SQL Slammer infected 75,000 servers in 11 minutes, causing worldwide disruptions and highlighting cybersecurity vulnerabilities."
+updated_at: "2026-06-20"
 ---
-
 SQL Slammer virus erupted on January 24 and, in just a few hours, managed to disrupt large parts of the global internet. It was arguably the fastest-spreading worm in history.
 
 SQL Slammer did not destroy data and did not steal anything. Its only goal was to get into the RAM of vulnerable servers and endlessly resend itself over UDP. It exploited a buffer overflow vulnerability in Microsoft SQL Server 2000, which at the time was installed on thousands of servers worldwide.

@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 11, 1985 — Connecticut Launches ConnNet"
+title: "ConnNet: Connecticut’s Pioneering Public Computer Network of 1985"
 date: "March 11, 1985"
-excerpt: "Connecticut launched ConnNet, one of the earliest statewide public computer networks in the US"
-updated_at: "2026-06-14"
+excerpt: "Discover how Connecticut launched ConnNet in 1985, one of the earliest public computer networks providing online info access to residents and businesses."
+updated_at: "2026-06-20"
 ---
-
 On March 11, 1985, the state of Connecticut launched ConnNet, one of the earliest statewide public computer networks in the United States.
 
 Unlike research networks such as ARPANET, ConnNet was designed from the beginning as a public online service for businesses and home users. Anyone with a terminal or personal computer and a modem could dial into the system and access information services through the telephone network.

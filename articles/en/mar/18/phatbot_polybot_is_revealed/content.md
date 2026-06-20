@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 18, 2004 — Phatbot (Polybot) Is Revealed"
+title: "The Rise of Phatbot: A Modular Malware Revolution (2004)"
 date: "March 18, 2004"
-excerpt: "Phatbot was an advanced modular malware platform written in C++ for building botnets"
-updated_at: "2026-06-14"
+excerpt: "Discover how Phatbot revolutionized malware with modular, extensible design—shaping modern botnets and cybercrime tactics."
+updated_at: "2026-06-20"
 ---
-
 On March 18, 2004, security researchers reported a new and unusually advanced computer worm known as Phatbot (also called Polybot). It quickly drew attention because it was not just another piece of malware — it was a modular platform for building large-scale botnets.
 
 ## What Phatbot was

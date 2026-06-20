@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 17, 2008 — Information About the Mocmex Trojan Is Published"
+title: "Mocmex Trojan: The Early Supply Chain Malware Wake-Up Call (2008)"
 date: "February 17, 2008"
-excerpt: "Researchers published details about the Mocmex trojan preinstalled on digital photo frames at the factory"
-updated_at: "2026-06-14"
+excerpt: "Discover how the Mocmex Trojan in 2008 exposed hardware supply chain risks and shaped cybersecurity defenses."
+updated_at: "2026-06-20"
 ---
-
 On February 17, 2008, detailed information about a new and unusual piece of malware called Mocmex was publicly published in Seattle Post-Intelligencer.
 
 At first glance, it looked like just another trojan. But the story behind it turned out to be much more serious. Mocmex became one of the most well‑known examples of a supply chain malware infection — long before the term became popular.

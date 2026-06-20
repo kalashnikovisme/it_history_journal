@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Mar 28, 1999 — Melissa Virus Revealed"
+title: "The Melissa Virus of 1999: How a Single Email Caused Global Chaos"
 date: "March 28, 1999"
-excerpt: "Melissa virus spread to tens of millions of computers within days causing $80 million in damage"
-updated_at: "2026-06-14"
+excerpt: "Discover how the Melissa virus of 1999 spread via email, causing billions in damage and prompting major security changes worldwide."
+updated_at: "2026-06-20"
 ---
-
 ## March 1999 — the virus is created
 
 In early 1999 David L. Smith, a programmer from New Jersey, created a macro virus that targeted Microsoft Word documents. The virus later became known as Melissa.

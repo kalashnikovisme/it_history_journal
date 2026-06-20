@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 22, 1965 — PDP-8, One of the First Minicomputers, Is Released"
+title: "March 22, 1965: How the PDP-8 Revolutionized Computing as the First Minicomputer"
 date: "March 22, 1965"
-excerpt: "Digital Equipment Corporation released the PDP-8 for $18,000, making computers affordable for many new users"
-updated_at: "2026-06-14"
+excerpt: "Discover how the PDP-8 revolutionized computing on March 22, 1965, making minicomputers accessible and transforming the industry."
+updated_at: "2026-06-20"
 ---
-
 On March 22, 1965, Digital Equipment Corporation (DEC) released the PDP-8. Before that moment, computers were huge, expensive, and usually locked inside research centers or large corporations. They were called mainframes, and only a small group of specialists had access to them.
 
 The PDP-8 was different. It was smaller, cheaper, and much more practical. For the first time, a computer could realistically be bought and used by laboratories, universities, and even industrial companies.

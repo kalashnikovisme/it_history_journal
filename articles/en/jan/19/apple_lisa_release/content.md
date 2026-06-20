@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 19, 1983 — Apple Lisa Release"
+title: "The Apple Lisa: How a $10,000 Computer Changed Personal Computing Forever"
 date: "January 19, 1983"
-excerpt: "Apple released the Lisa, the first mass-produced personal computer with GUI and mouse, at $9,995"
-updated_at: "2026-06-14"
+excerpt: "Discover how the Apple Lisa revolutionized user interfaces despite its high cost and limited success, paving the way for today’s computers."
+updated_at: "2026-06-20"
 ru: "/ru/jan/19/apple-lisa-release"
 ---
-
 Apple Lisa is probably the most expensive “failed” project of Steve Jobs, and at the same time the one that completely changed how we interact with computers. It was named after Jobs’s daughter (although Apple tried for a long time to hide this fact, inventing awkward backronyms like Local Integrated Software Architecture).
 
 Why does this matter? Before Lisa, computers were mostly black screens filled with white lines of code. Lisa became the first mass-produced machine with the interface we are used to today: a mouse, icons, windows, and a trash bin. Essentially, almost everything you see on your screen right now first appeared for a wide audience there.

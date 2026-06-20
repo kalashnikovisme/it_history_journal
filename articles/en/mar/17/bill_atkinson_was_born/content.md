@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 17, 1951 — Bill Atkinson Was Born"
+title: "Bill Atkinson: Pioneering the Graphical User Interface Revolution"
 date: "March 17, 1951"
-excerpt: "Created QuickDraw, MacPaint, and HyperCard, shaping modern graphical user interfaces"
-updated_at: "2026-06-14"
+excerpt: "Discover how Bill Atkinson's innovations like QuickDraw, MacPaint, and HyperCard transformed personal computing and user interfaces."
+updated_at: "2026-06-20"
 ru: "/ru/mar/17/bill-atkinson-was-born"
 ---
-
 On March 17, 1951, Bill Atkinson was born in the United States. He would become one of the key engineers behind the first generation of graphical user interfaces (GUI) at Apple, helping define how modern computers look and feel today.
 
 ## Early path to Apple

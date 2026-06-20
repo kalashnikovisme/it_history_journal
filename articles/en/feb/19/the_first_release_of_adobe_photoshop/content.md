@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 19, 1990 — The First Release of Adobe Photoshop"
+title: "February 19, 1990: The Birth of Adobe Photoshop and Digital Image Editing"
 date: "February 19, 1990"
-excerpt: "Adobe Photoshop 1.0 was released for Macintosh, enabling high-quality image editing on a personal computer"
-updated_at: "2026-06-14"
+excerpt: "Discover how Adobe Photoshop's first release on Feb 19, 1990, revolutionized digital image editing and shaped visual culture."
+updated_at: "2026-06-20"
 ---
-
 On February 19, 1990, the very first version of Adobe Photoshop 1.0 was officially released.
 
 It ran only on the Macintosh. It worked with small images. It came on floppy disks.

@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 9, 2016 — AlphaGo Defeats a Human Go Champion"
+title: "How AlphaGo Changed AI Forever: The Landmark Match Against Lee Sedol"
 date: "March 9, 2016"
-excerpt: "AlphaGo defeated Lee Sedol, one of the strongest Go players in the world, marking a new era in AI"
-updated_at: "2026-06-14"
+excerpt: "Discover how AlphaGo's 2016 victory over Lee Sedol marked a milestone in artificial intelligence and strategic gaming."
+updated_at: "2026-06-20"
 ---
-
 On March 9, 2016, the artificial intelligence system AlphaGo, developed by DeepMind (a company later acquired by Google), defeated Lee Sedol, one of the strongest Go players in the world.
 
 The match took place in Seoul, South Korea, and became one of the most famous milestones in the history of artificial intelligence.

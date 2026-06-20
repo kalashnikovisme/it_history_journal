@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 12, 1989 — Tim Berners-Lee Proposes the World Wide Web"
+title: "Tim Berners-Lee's 1989 Web Proposal That Changed the World"
 date: "March 12, 1989"
-excerpt: "Tim Berners-Lee submitted the proposal that became the World Wide Web at CERN"
-updated_at: "2026-06-14"
+excerpt: "Discover how Tim Berners-Lee's 1989 proposal at CERN led to the creation of the World Wide Web and revolutionized global communication."
+updated_at: "2026-06-20"
 ---
-
 On March 12, 1989, Tim Berners-Lee, a British software engineer working at CERN (the European Organization for Nuclear Research), submitted a proposal titled "Information Management: A Proposal."
 
 This document is widely considered the birth of the World Wide Web.

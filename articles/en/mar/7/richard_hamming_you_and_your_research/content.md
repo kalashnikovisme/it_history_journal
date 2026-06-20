@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 7, 1986 — Richard Hamming: \"You and Your Research\""
+title: "Richard Hamming’s Secrets to Doing Great Research"
 date: "March 7, 1986"
-excerpt: "Richard Hamming delivered \"You and Your Research\" to scientists and engineers at Bell Communications Research"
-updated_at: "2026-06-14"
+excerpt: "Discover Richard Hamming’s insights on tackling important problems, cultivating courage, and achieving great research breakthroughs."
+updated_at: "2026-06-20"
 ru: "/ru/mar/7/richard-hamming-you-and-your-research"
 ---
-
 On March 7, 1986, mathematician and computer scientist Richard Hamming delivered a talk titled "You and Your Research." The lecture took place at Bell Communications Research (Bellcore) and was addressed to scientists and engineers early in their careers.
 
 Although it was originally a simple internal talk, the lecture later spread widely through transcripts and recordings. Over time it became one of the most famous reflections on how important research actually happens.

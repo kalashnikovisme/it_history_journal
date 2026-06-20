@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 31, 1952 — David P. Reed Was Born"
+title: "David P. Reed: The Architect Behind the Internet’s Speed and Flexibility"
 date: "January 31, 1952"
-excerpt: "co-designed TCP/IP, created UDP, and formulated the End-to-End principle for scalable networking"
-updated_at: "2026-06-14"
+excerpt: "Discover how David P. Reed revolutionized the internet with UDP, TCP/IP, and the End-to-End principle, enabling fast, flexible online communication."
+updated_at: "2026-06-20"
 ru: "/ru/jan/31/david-p-reed-was-born"
 ---
-
 David P. Reed is the author of the UDP protocol (the reason you can watch live streams, play online games, and talk over video calls), one of the contributors to TCP/IP (which practically the entire internet runs on), and a person who made a profound impact on how networks work in general.
 
 If you want to read about him, google David P. Reed, not just David Reed. That will help you cut through the sea of actors and musicians in the search results.

@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jan 30, 1925 — Douglas Engelbart Was Born"
+title: "Douglas Engelbart: The Pioneer Who Changed Computing Forever"
 date: "January 30, 1925"
-excerpt: "Demonstrated the computer mouse, hypertext, and video conferencing in 90 minutes in 1968"
-updated_at: "2026-06-14"
+excerpt: "Discover how Douglas Engelbart’s 1968 demo revolutionized computing with mouse, hypertext, and multi-window interfaces. A tech pioneer’s legacy."
+updated_at: "2026-06-20"
 ru: "/ru/jan/30/douglas-engelbart-was-born"
 ---
-
 If you think Steve Jobs or Bill Gates invented the modern computer, you’re mistaken. They packaged and sold ideas that Douglas Engelbart had already shown to the world back in the 1960s and 70s.
 
 Today, Engelbart would have turned 101. A perfect reason to remember why, without him, we might still be talking to machines through punch cards or command lines.

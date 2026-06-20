@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Feb 10, 1996 — Six Games Against Humanity"
+title: "February 10, 1996: Deep Blue's Historic Chess Victory"
 date: "February 10, 1996"
-excerpt: "Deep Blue won its first game against Kasparov in history for AI in chess"
-updated_at: "2026-06-14"
+excerpt: "Discover how Deep Blue's win over Kasparov in 1996 revolutionized AI and chess, marking a pivotal moment in technology history."
+updated_at: "2026-06-20"
 ---
-
 Disclaimer from the human
 I regularly use AI when writing my articles. I ask ChatGPT and Gemini to collect links on the topic I’ve chosen for the day and to write their own articles on it. I read the sources, read both articles from ChatGPT and Gemini, and then write the final piece myself. From the AI-written texts, I borrow good phrasing — and sometimes even entire sentences — when I really like them.
 

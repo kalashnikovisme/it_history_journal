@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 29, 1967 — The First Handheld Calculator Debuts"
+title: "March 29, 1967: The Birth of the Handheld Calculator Revolution"
 date: "March 29, 1967"
-excerpt: "Texas Instruments unveiled the first handheld calculator capable of basic arithmetic and printing on tape"
-updated_at: "2026-06-14"
+excerpt: "Discover how Texas Instruments' 1967 prototype of the first handheld calculator transformed portable computing and electronics innovation."
+updated_at: "2026-06-20"
 ---
-
 On this day, Texas Instruments unveiled the prototype of the first electronic handheld calculator known as Cal-Tech.
 
 ## Before handheld calculators

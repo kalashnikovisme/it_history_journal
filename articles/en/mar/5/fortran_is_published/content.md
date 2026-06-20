@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 5, 1957 — FORTRAN Is Published"
+title: "The Birth of FORTRAN: How IBM Changed Programming on March 5, 1957"
 date: "March 5, 1957"
-excerpt: "IBM published FORTRAN, the first widely adopted high-level language for efficient scientific coding"
-updated_at: "2026-06-14"
+excerpt: "Discover how IBM's FORTRAN, released on March 5, 1957, revolutionized programming by enabling scientists to write code closer to mathematics."
+updated_at: "2026-06-20"
 ---
-
 On March 5, 1957, IBM officially published the FORTRAN Automatic Coding System — the first widely adopted high-level programming language. The announcement appeared in the proceedings of the Western Joint Computer Conference and described a revolutionary idea: programmers could write instructions in a language closer to mathematics instead of raw machine code.
 
 ## The problem before FORTRAN

@@ -1,11 +1,10 @@
 ---
 author: "Pasha Kalashnikov"
-title: 'Feb 11, 2001 — The "Anna Kournikova" Worm and the Power of a Famous Name'
+title: "How the 'Anna Kournikova' Worm Changed Cybersecurity Forever"
 date: "February 11, 2001"
-excerpt: "The worm spread via a fake celebrity photo attachment exploiting curiosity and social engineering"
-updated_at: "2026-06-14"
+excerpt: "Discover how the 2001 Anna Kournikova worm exploited fame and curiosity to spread rapidly, highlighting the power of social engineering in cybersecurity."
+updated_at: "2026-06-20"
 ---
-
 On February 11, 2001, a computer worm began spreading across the internet through email.
 
 Its technical name was VBS.OnTheFly.
