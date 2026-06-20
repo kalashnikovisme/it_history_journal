@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "15 апреля 1993 — Директива о запуске проекта Clipper Chip"
+title: "15 апреля 1993 — Начало проекта Clipper Chip и его историческое значение"
 date: "15 апреля 1993"
-excerpt: "Объявлен проект Clipper Chip — аппаратный модуль с бэкдором для спецслужб, вызвавший сопротивление криптографов"
-updated_at: "2026-06-14"
+excerpt: "Обзор событий 15 апреля 1993 года — запуска проекта Clipper Chip, его проблемы и влияние на криптографию и безопасность."
+updated_at: "2026-06-20"
 en: "/en/apr/15/directive-to-launch-the-clipper-chip-project"
 ---
-
 Disclaimer: the author of this material is not a citizen of the United States and has no claims or questions for the U.S. government. The Clipper Chip project is criticized here ONLY for violating basic principles of information security:
 security must not depend on the secrecy of the algorithm
 there must be no single point of compromise

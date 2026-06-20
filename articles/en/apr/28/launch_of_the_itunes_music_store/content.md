@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 28, 2003 — Launch of the iTunes Music Store"
+title: "How the Launch of iTunes Music Store Revolutionized Digital Music (2003)"
 date: "April 28, 2003"
-excerpt: "iTunes Music Store sold one million tracks in its first week at $0.99 each"
-updated_at: "2026-06-14"
+excerpt: "Discover how Apple's iTunes Music Store launched in 2003, revolutionizing digital music sales and industry standards."
+updated_at: "2026-06-20"
 ru: "/ru/apr/28/launch-of-the-itunes-music-store"
 ---
-
 iTunes Music Store was Apple's digital marketplace for buying music, and it completely changed how people consumed music.
 
 Before iTunes Music Store, the only legal way to buy music was to purchase full albums on CDs or cassette tapes. Even if you needed just one track, you had to buy the entire album. It was expensive and inconvenient, especially as the iPod and similar devices were becoming more popular.

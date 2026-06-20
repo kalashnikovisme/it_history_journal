@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Apr 11, 1976 — Apple I Presented"
+title: "The Birth of Apple: The April 11, 1976, Apple I Presentation"
 date: "April 11, 1976"
-excerpt: "Steve Jobs and Wozniak presented the Apple I circuit board connected to a keyboard and TV"
-updated_at: "2026-06-14"
+excerpt: "Discover how Steve Jobs and Wozniak introduced the Apple I at the 1976 Homebrew Computer Club meeting, launching Apple's legendary journey."
+updated_at: "2026-06-20"
 ru: "/ru/apr/11/apple-i-presented"
 ---
-
 Apple presentations have been important events for almost 40 years. The company set the standard for large, carefully staged product launches and updates.
 
 But the very first presentation in Apple's history did not take place at the Moscone Center or the Bill Graham Civic Auditorium. It happened in a computer club.

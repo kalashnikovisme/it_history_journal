@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 19, 1931 — Frederick Brooks Was Born"
+title: "Frederick Brooks: Pioneering Software Engineering and Computing Innovation"
 date: "April 19, 1931"
-excerpt: "Authored The Mythical Man-Month, a vital book for software project managers and engineers"
-updated_at: "2026-06-14"
+excerpt: "Discover Frederick Brooks's impact on software engineering, OS/360, Brooks's Law, and early virtual reality innovations in this comprehensive article."
+updated_at: "2026-06-20"
 ru: "/ru/apr/19/frederick-brooks-was-born"
 ---
-
 Frederick Brooks is best known in the industry as the author of the legendary book "The Mythical Man-Month." Despite being published in 1975, the book is still considered essential reading for managers not only in IT but in many other engineering fields. In this book, Brooks explored the relationship between software architecture, team collaboration, and business goals.
 
 However, Frederick Brooks contributed far more to the industry. Many of his most important achievements were tied to the development of large-scale computing systems.

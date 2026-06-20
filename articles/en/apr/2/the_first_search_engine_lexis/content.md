@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 2, 1973 — The First Search Engine: Lexis"
+title: "April 2, 1973: The Birth of the First Search Engine — Lexis"
 date: "April 2, 1973"
-excerpt: "Lexis let lawyers search court decisions and statutes via terminal for several hundred dollars per hour"
-updated_at: "2026-06-14"
+excerpt: "Discover how Lexis revolutionized legal research as the first search engine launched in 1973, transforming legal information access."
+updated_at: "2026-06-20"
 ru: "/ru/apr/2/the-first-search-engine-lexis"
 ---
-
 Lexis (LexisNexis) — the first search engine for legal information and one of the first search systems in history. This system allowed users to search for information about laws, court decisions, and other related documents.
 
 Lexis was officially presented on April 2, 1973 in New York, USA.

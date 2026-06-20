@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Apr 18, 1983 — Announcement of the Osborne Executive and the Beginning of the Osborne Effect"
+title: "How the Osborne Effect Led to the Fall of Osborne Computer in 1983"
 date: "April 18, 1983"
-excerpt: "Preview of upcoming models caused dealers to stop orders and led to bankruptcy"
-updated_at: "2026-06-14"
+excerpt: "Learn how early product announcements caused the Osborne Effect, leading to Osborne Computer's collapse in 1983 and shaping tech marketing strategies."
+updated_at: "2026-06-20"
 ru: "/ru/apr/18/announcement-of-the-osborne-executive"
 ---
-
 The Osborne effect is a term used in marketing, economics, and the IT industry to describe a drop in sales caused by announcing a new version of a product too early.
 
 ## What happened?

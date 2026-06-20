@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 20, 1966 — David Filo Was Born"
+title: "April 20, 1966 — The Birth of David Filo, Yahoo Co-Founder and Tech Pioneer"
 date: "April 20, 1966"
-excerpt: "co-founded Yahoo and built one of the first large-scale internet search platforms"
-updated_at: "2026-06-14"
+excerpt: "Celebrating the life of David Filo, Yahoo co-founder born on April 20, 1966, and a pioneer in internet search and tech innovation."
+updated_at: "2026-06-20"
 ru: "/ru/apr/20/david-filo-was-born"
 ---
-
 One of the first billionaire tech entrepreneurs, co-founder of Yahoo, and co-creator of one of the first mass internet search platforms.
 
 David Filo studied at Stanford. It was there that he met Jerry Yang, with whom he would later create Yahoo. In the early 1990s, Stanford was one of the centers of Internet development, and many IT companies first appeared as student projects inside the university.

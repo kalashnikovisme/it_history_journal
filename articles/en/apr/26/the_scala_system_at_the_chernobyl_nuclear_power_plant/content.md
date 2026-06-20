@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Apr 26, 1986 — The SCALA System at the Chernobyl Nuclear Power Plant"
+title: "The Digital Control System Behind Chernobyl: Insights into SCALA"
 date: "April 26, 1986"
-excerpt: "The SCALA system was well-designed but could not block operator actions without human consent"
-updated_at: "2026-06-14"
+excerpt: "Discover how the SCALA system monitored Chernobyl, its role in the disaster, and vital lessons for nuclear safety and control systems."
+updated_at: "2026-06-20"
 ru: "/ru/apr/26/the-scala-system-at-the-chernobyl-nuclear-power-plant"
 ---
-
 On April 26, 1986, the worst man-made disaster in history took place — the explosion at the Chernobyl Nuclear Power Plant.
 
 This is a good moment to talk about the digital-analog system SCALA (System for Control and Analysis of Local Accidents), which was used at the plant. What could it do? What kind of monitoring systems did it include? And did it have any faults that contributed to the disaster?

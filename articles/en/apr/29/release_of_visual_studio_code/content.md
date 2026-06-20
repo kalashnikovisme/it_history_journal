@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 29, 2015 — Release of Visual Studio Code"
+title: "The Launch of Visual Studio Code: A Milestone in Developer Tools (2015)"
 date: "April 29, 2015"
-excerpt: "Visual Studio Code is the most used IDE today, ranking first in surveys worldwide"
-updated_at: "2026-06-14"
+excerpt: "Discover how Microsoft launched Visual Studio Code in 2015, revolutionizing IDEs with its open-source approach and widespread adoption among developers."
+updated_at: "2026-06-20"
 ru: "/ru/apr/29/release-of-visual-studio-code"
 ---
-
 Visual Studio Code is the dominant development environment (IDE) today. In most developer surveys about which IDE people use, VS Code ranks first by a wide margin.
 
 On April 29, 2015, Microsoft introduced Visual Studio Code at the Build conference, and a preview version was released the same day. The stable release of Visual Studio Code followed on November 18, 2015.

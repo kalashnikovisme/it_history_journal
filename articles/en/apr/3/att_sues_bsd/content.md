@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 3, 1991 — AT&T Sues BSD"
+title: "The Legal Battle That Changed OS History: AT&T Sues BSD in 1991"
 date: "April 3, 1991"
-excerpt: "AT&T sued BSD for using Unix System V code without permission, halting BSD development and aiding Linux's rise"
-updated_at: "2026-06-14"
+excerpt: "Explore how the 1991 AT&T lawsuit against BSD influenced the development of Linux and open source operating systems."
+updated_at: "2026-06-20"
 ru: "/ru/apr/3/att-sues-bsd"
 ---
-
 The development of technology is influenced not only by great achievements, discoveries, and economic events, but also by legal and court events. The dispute between AT&T and the University of Berkeley significantly changed the balance of power between operating systems and influenced the entire history of the IT industry.
 
 ## What happened?

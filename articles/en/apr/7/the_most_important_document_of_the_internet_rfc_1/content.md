@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Apr 7, 1969 — The Most Important Document of the Internet: RFC 1"
+title: "The Birth of the Internet: How RFC 1 Changed Everything"
 date: "April 7, 1969"
-excerpt: "RFC 1 invited discussion, laying the foundation for the internet's collaborative nature"
-updated_at: "2026-06-14"
+excerpt: "Discover how RFC 1 revolutionized the Internet by fostering open discussion and collaboration among developers and researchers."
+updated_at: "2026-06-20"
 ru: "/ru/apr/7/the-most-important-document-of-the-internet-rfc-1"
 ---
-
 The Internet is essentially a miracle because it did not emerge in laboratories and technology companies. Practically anyone had the opportunity to participate in its development.
 
 Just like today. Any Internet user has the tools to add something and possibly change the Internet forever. Thanks to open source, every developer can propose improvements to the most fundamental components of the Internet.

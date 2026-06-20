@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Apr 16, 1971 — The First File Transfer Protocol: FTP"
+title: "The Birth of File Transfer: Exploring FTP’s Role in Internet History"
 date: "April 16, 1971"
-excerpt: "RFC 114 described the first FTP protocol for file transfer between ARPANET computers"
-updated_at: "2026-06-14"
+excerpt: "Discover how FTP, launched in 1971, transformed data sharing and laid the foundation for modern internet protocols."
+updated_at: "2026-06-20"
 ru: "/ru/apr/16/the-first-file-transfer-protocol-ftp"
 ---
-
 On April 16, 1971, one of the earliest file exchange protocols appeared on the ARPANET network — FTP (File Transfer Protocol). Its description was published in RFC 114.
 
 In the early 1970s, ARPANET was still taking shape. Computers at universities and research centers could already connect to each other, but exchanging data between machines was still a difficult task. Each computer had its own operating system and its own file storage formats.

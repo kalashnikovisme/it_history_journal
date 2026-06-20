@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Apr 15, 1993 — Directive to Launch the Clipper Chip Project"
+title: "The 1993 U.S. Encryption Initiative: The Clipper Chip and Its Legacy"
 date: "April 15, 1993"
-excerpt: "The Clipper Chip used government-backed encryption with a built-in backdoor"
-updated_at: "2026-06-14"
+excerpt: "Explore the 1993 launch of the Clipper Chip, a controversial government encryption project that sparked the Crypto Wars and security debates."
+updated_at: "2026-06-20"
 ru: "/ru/apr/15/directive-to-launch-the-clipper-chip-project"
 ---
-
 *Disclaimer: the author of this material is not a citizen of the United States and has no claims or questions for the U.S. government. The Clipper Chip project is criticized here only for violating basic principles of information security:*
 
 - *security must not depend on the secrecy of the algorithm*

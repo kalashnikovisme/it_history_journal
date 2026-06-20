@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 21, 2011 — Zoom Was Founded"
+title: "The Birth of Zoom: How a Cisco VP Revolutionized Video Conferencing in 2011"
 date: "April 21, 2011"
-excerpt: "Eric Yuan, a Cisco VP, founded Zoom after being unhappy with WebEx's evolution"
-updated_at: "2026-06-14"
+excerpt: "Discover how Zoom was founded on April 21, 2011, transforming video conferencing and reshaping global communication during the COVID-19 pandemic."
+updated_at: "2026-06-20"
 ru: "/ru/apr/21/zoom-was-founded"
 ---
-
 Eric Yuan worked at Cisco. At that time, Cisco was a dominant force in the market for business audio and video communications. The company had its own video conferencing application, WebEx. Eric Yuan was a vice president at Cisco, and he was unhappy with how the WebEx product was evolving. He left the company to build a video conferencing product according to his own vision.
 
 On April 21, 2011, Zoom Video Communications was officially registered. In 2011, the team prepared the first prototype of the video conferencing application, and in 2013, the product was released publicly.

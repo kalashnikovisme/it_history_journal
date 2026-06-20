@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 5, 1993 — NVIDIA Was Founded"
+title: "The Birth of NVIDIA: A Look Back at its 1993 Founding"
 date: "April 5, 1993"
-excerpt: "NVIDIA was founded by three microprocessor developers to build a dedicated chip for 3D graphics"
-updated_at: "2026-06-14"
+excerpt: "Discover how NVIDIA was founded in 1993 and evolved into a leader in graphics, AI, and blockchain technologies."
+updated_at: "2026-06-20"
 ru: "/ru/apr/5/nvidia-was-founded"
 ---
-
 On this day, three microprocessor developers, Jensen Huang, Chris Malachowsky, and Curtis Priem, registered their company.
 
 All three came together to develop a new type of device: graphics processors. In the early 1990s, it became obvious that 3D was becoming popular and in demand in games and professional programs. Rendering is a complex computational process. According to the opinion of the three founders of the company, a separate device is needed for 3D rendering.

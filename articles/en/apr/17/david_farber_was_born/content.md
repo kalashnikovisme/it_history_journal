@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 17, 1934 — David Farber, the Grandfather of the Internet, Was Born"
+title: "David Farber: The Visionary Behind the Modern Internet"
 date: "April 17, 1934"
-excerpt: "Mentored key figures like Steve Crocker and Jon Postel"
-updated_at: "2026-06-14"
+excerpt: "Discover how David Farber, the 'Grandfather of the Internet,' helped pioneer computer networks and mentored key Internet innovators."
+updated_at: "2026-06-20"
 ru: "/ru/apr/17/david-farber-was-born"
 ---
-
 As I often say, this is someone who has influenced your life far more than Taylor Swift or Sydney Sweeney, yet very few people know his name.
 
 David J. Farber was not the leading expert or the sole inventor of any particular technology. To understand his contribution to the development of computers and the Internet, you have to look a little deeper.

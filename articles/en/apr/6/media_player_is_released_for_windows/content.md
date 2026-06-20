@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 6, 1992 — Media Player Is Released for Windows"
+title: "The Birth of Windows Media Player: A Look Back at Its 1992 Launch"
 date: "April 6, 1992"
-excerpt: "Windows Media Player introduced most users to digital audio and dominated the personal computing era"
-updated_at: "2026-06-14"
+excerpt: "Discover how Windows Media Player, launched in 1992, revolutionized digital audio and multimedia on Windows PCs."
+updated_at: "2026-06-20"
 ru: "/ru/apr/6/media-player-is-released-for-windows"
 ---
-
 Windows Media Player is one of the most legendary programs in history. The overwhelming majority of computer users listened to their first digital audio file through this program.
 
 In the late 1990s and early 2000s, Windows Media Player was the main music player for most users. But it was not the only one. Windows users had access to various programs, including more advanced ones for listening. Moreover, in different regions of the world, these programs were different. The main competitors of Windows Media Player were Winamp and AIMP.

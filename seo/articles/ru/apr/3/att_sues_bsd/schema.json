@@ -1,0 +1,7 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "1991: Как судебный иск AT&T изменил судьбу BSD и операционных систем",
+  "url": "https://history.purple-magic.com/ru/apr/3/att-sues-bsd/",
+  "description": "В статье рассказывается о судебном иске AT&T против BSD в 1991 году и его влиянии на развитие UNIX, BSD, Linux и ИТ-индустрии."
+}

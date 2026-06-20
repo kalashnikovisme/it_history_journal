@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 27, 1955 — Eric Schmidt Was Born"
+title: "Eric Schmidt (1955–) — The Man Behind Google's Rise to Power"
 date: "April 27, 1955"
-excerpt: "Guided Google through the dot-com crash, launched Gmail and Maps, acquired Android, shaping the internet giant"
-updated_at: "2026-06-14"
+excerpt: "Discover how Eric Schmidt’s engineering expertise and leadership helped Google survive the dot-com crash and revolutionize the internet."
+updated_at: "2026-06-20"
 ru: "/ru/apr/27/eric-schmidt-was-born"
 ---
-
 Eric Schmidt is one of the most influential managers in the history of IT.
 
 His main achievement is closely tied to Google becoming the most influential internet company worldwide.

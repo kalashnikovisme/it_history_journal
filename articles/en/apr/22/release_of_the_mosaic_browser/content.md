@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 22, 1993 — Release of the Mosaic Browser"
+title: "From Text to Images: The 1993 Launch of Mosaic, the Web’s First Graphical Browser"
 date: "April 22, 1993"
-excerpt: "Mosaic was the first browser with inline images and graphical features like Back and Forward buttons"
-updated_at: "2026-06-14"
+excerpt: "Discover how Mosaic’s release on April 22, 1993, revolutionized the web with graphics, user-friendly features, and cross-platform access."
+updated_at: "2026-06-20"
 ru: "/ru/apr/22/release-of-the-mosaic-browser"
 ---
-
 Mosaic was the browser that made the web mainstream. The World Wide Web, which appeared in 1991, initially contained only text and links. To use it, you had to install complex software available only on NeXT computers.
 
 Programmers Marc Andreessen and Eric Bina, working at the National Center for Supercomputing Applications (NCSA), created the Mosaic browser. Their goal was to make the web accessible to ordinary users, not just engineers and university researchers.

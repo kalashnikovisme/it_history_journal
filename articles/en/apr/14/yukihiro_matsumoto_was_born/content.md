@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "April 14, 1965 — Yukihiro Matsumoto Was Born"
+title: "Yukihiro Matsumoto: The Creator of Ruby and His Impact on Programming"
 date: "April 14, 1965"
-excerpt: "Created the Ruby programming language in 1993 and released it in December 1995 known as Matz"
-updated_at: "2026-06-14"
+excerpt: "Discover Yukihiro Matsumoto's story, the creator of Ruby, and his influence on modern programming and the global developer community."
+updated_at: "2026-06-20"
 ru: "/ru/apr/14/yukihiro-matsumoto-was-born"
 ---
-
 Yukihiro Matsumoto is a computer scientist and software developer, the creator of the Ruby programming language, and one of the most influential programmers in modern computing.
 
 Yukihiro Matsumoto was born in Osaka, Japan. He started programming while still in junior high school. Later, he studied computer science at the University of Tsukuba, one of Japan's leading universities in information technology at the time. During his studies, Matsumoto, who is a Christian, was involved in missionary work. This helped him become fluent in English and played an important role in building the international Ruby community and spreading the language beyond Japan.
