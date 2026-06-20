@@ -1,13 +1,12 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 18, 2012 — Facebook IPO"
+title: "Facebook IPO 2012: The Rise, Fall, and Revival of a Tech Giant"
 date: "May 18, 2012"
-excerpt: "Facebook listed shares on NASDAQ at $38 per share, valuing the company at about $104 billion"
+excerpt: "Explore Facebook’s 2012 IPO story—initial struggles, recovery, and its evolution into Meta’s tech powerhouse."
 popular: true
-updated_at: "2026-06-14"
+updated_at: "2026-06-20"
 ru: "/ru/may/18/facebook-ipo"
 ---
-
 On May 18, 2012, Facebook held one of the most talked-about IPOs in tech history. Mark Zuckerberg's company listed its shares on the NASDAQ exchange at $38 per share, valuing the company at about $104 billion.
 
 It was the largest technology IPO ever at the time. The hype was enormous — investors and media couldn't stop talking about it.

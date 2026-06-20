@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 4, 2000 — ILOVEYOU Is Discovered"
+title: "The ILOVEYOU Virus of 2000: How a Simple Email Caused Global Chaos"
 date: "May 4, 2000"
-excerpt: "ILOVEYOU infected tens of millions of computers, overwrote files, causing $5–10 billion in damage"
-updated_at: "2026-06-14"
+excerpt: "Discover how the ILOVEYOU virus of 2000 spread rapidly, causing billions in damages and transforming email security practices worldwide."
+updated_at: "2026-06-20"
 ru: "/ru/may/4/iloveyou-is-discovered"
 ---
-
 On May 4, 2000, email stopped being just a convenient tool. Within a few hours, a simple message with the subject "ILOVEYOU" turned into a global outbreak.
 
 ## Detection

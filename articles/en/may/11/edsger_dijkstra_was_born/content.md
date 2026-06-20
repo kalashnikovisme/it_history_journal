@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 11, 1930 — Edsger Dijkstra Was Born"
+title: "Edsger Dijkstra’s Birth and Legacy: The Father of Graph Algorithms"
 date: "May 11, 1930"
-excerpt: "Created Dijkstra's algorithm, argued programming is a mathematical discipline and shaped computer science"
-updated_at: "2026-06-14"
+excerpt: "Celebrate Edsger Dijkstra’s legacy on his birthday—discover his key contributions to algorithms, programming, and computer science."
+updated_at: "2026-06-20"
 ru: "/ru/may/11/edsger-dijkstra-was-born"
 ---
-
 Dijkstra's algorithm is one of the core algorithms taught in almost every computer science program. To be honest, when I first heard about it, I assumed Dijkstra was some mathematician from Euler's era. The algorithm is so elegant and memorable, yet incredibly practical for working with graphs. Later, I realized that Dijkstra was actually our contemporary.
 
 Edsger Dijkstra was born on May 11, 1930, in Rotterdam, Netherlands. Throughout his career, he pushed the idea that programming is intellectual work, not just a technical routine. Besides creating his famous algorithm, Dijkstra became known for a series of influential papers where he argued for clean, maintainable code and explored the complexity of software and concurrent execution.

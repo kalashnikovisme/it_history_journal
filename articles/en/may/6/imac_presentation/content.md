@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 6, 1998 — iMac Presentation"
+title: "The Launch of the iMac: A Turning Point in Tech History (May 6, 1998)"
 date: "May 6, 1998"
-excerpt: "Steve Jobs presented the all-in-one iMac with translucent plastic, no floppy drive, and one USB port becoming a symbol of Apple's revival"
-updated_at: "2026-06-14"
+excerpt: "Discover how the 1998 iMac presentation revolutionized personal computers with innovative design and internet focus, marking Steve Jobs’ triumphant return."
+updated_at: "2026-06-20"
 ru: "/ru/may/6/imac-presentation"
 ---
-
 In 1997, Steve Jobs returned to Apple — the story of the relationship between the founder and the company is one of the most fascinating in IT history. Jobs came back more than 10 years after being forced out and immediately started pushing bold, memorable products. The iMac became a symbol of his return and Apple's comeback as an innovative company — both in technology and design.
 
 By the mid-1990s, Apple was in serious trouble: the company was losing money, its product lineup was confusing, and competition from Windows PCs was getting stronger every year. A series of failed strategies and constant leadership changes left Apple's future uncertain. Still, both fans and the broader tech community welcomed Jobs's return, and about a year and a half later his team introduced a computer that actually felt new again.

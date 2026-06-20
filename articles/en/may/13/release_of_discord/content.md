@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 13, 2015 — Release of Discord"
+title: "The Birth of Discord: How a Gaming Chat App Changed Online Communities (2015)"
 date: "May 13, 2015"
-excerpt: "Discord launched as a community hub for gaming, open source, student chats, and more"
-updated_at: "2026-06-14"
+excerpt: "Explore how Discord's 2015 launch revolutionized online communities, shifting from gaming chats to a versatile platform for all groups."
+updated_at: "2026-06-20"
 ru: "/ru/may/13/release-of-discord"
 ---
-
 Discord officially launched on May 13, 2015.
 
 Today it’s hard to imagine the internet without Discord. For many people, it’s no longer just a messenger, but a place where communities actually live: gaming clans, open source projects, student chats, servers about music, programming, anime, or simply groups of friends.

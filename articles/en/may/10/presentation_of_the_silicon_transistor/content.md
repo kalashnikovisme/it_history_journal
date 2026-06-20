@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 10, 1954 — Presentation of the Silicon Transistor"
+title: "The Birth of Silicon Transistors: A Milestone in Semiconductor History"
 date: "May 10, 1954"
-excerpt: "Silicon transistors began replacing germanium and laid the foundation for modern processors"
-updated_at: "2026-06-14"
+excerpt: "Discover the history of the silicon transistor's debut in 1954 and its role in revolutionizing microelectronics and modern computing."
+updated_at: "2026-06-20"
 ru: "/ru/may/10/presentation-of-the-silicon-transistor"
 ---
-
 At the time of writing, the overwhelming majority of processors use silicon as the main material for transistors. But silicon was not the first material used to manufacture them. In 1947, Bell Labs introduced transistors made from germanium. Germanium was technically easier to work with, but its problems became obvious almost immediately:
 
 poor heat resistance

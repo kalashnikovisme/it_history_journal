@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 16, 1938 — Ivan Sutherland Was Born"
+title: "Ivan Sutherland: Pioneer of Computer Graphics and Virtual Reality"
 date: "May 16, 1938"
-excerpt: "created Sketchpad, a revolutionary interactive graphics program demonstrating windows and object manipulation"
-updated_at: "2026-06-14"
+excerpt: "Discover Ivan Sutherland’s impact on computer graphics and VR, from Sketchpad to modern visualization tools. A pioneer shaping digital innovation."
+updated_at: "2026-06-20"
 ru: "/ru/may/16/ivan-sutherland-was-born"
 ---
-
 Ivan Sutherland was born on May 16, 1938. He is often called one of the creators of modern computer graphics.
 
 In 1963, while studying at MIT, Sutherland created a program called Sketchpad. Today it looks like a normal graphics editor, but at the time it was revolutionary. Sketchpad allowed users to draw objects directly on the screen with a light pen, move them around, copy them, define relationships between elements, and work with them in ways that feel surprisingly similar to modern CAD systems or Figma.

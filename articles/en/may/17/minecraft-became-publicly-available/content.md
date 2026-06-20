@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 17, 2009 — Minecraft Became Publicly Available"
+title: "The Birth of Minecraft: How a Sandbox Revolution Began in 2009"
 date: "May 17, 2009"
-excerpt: "Minecraft's first public version featured a primitive world of cubes and simple terrain generation"
-updated_at: "2026-06-14"
+excerpt: "Discover how Minecraft's 2009 release revolutionized gaming with its sandbox approach and procedural worlds. A look back at its history and impact."
+updated_at: "2026-06-20"
 ru: "/ru/may/17/minecraft-became-publicly-available"
 ---
-
 On May 17, 2009, Markus Persson, better known as Notch, released the first public version of Minecraft.
 
 At the time, the game looked extremely primitive: a world made of cubes, a handful of block types, simple terrain generation, and the ability to build almost anything. But that simplicity was exactly the point.

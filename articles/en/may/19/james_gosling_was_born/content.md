@@ -1,13 +1,12 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 19, 1955 — James Gosling Was Born"
+title: "James Gosling: The Creator of Java and His Impact on Tech History"
 date: "May 19, 1955"
-excerpt: "Considered the main creator of Java with many other important achievements in his career"
+excerpt: "Discover the life and legacy of James Gosling, the creator of Java, and his contributions to software engineering and technology."
 popular: true
-updated_at: "2026-06-14"
+updated_at: "2026-06-20"
 ru: "/ru/may/19/james-gosling-was-born"
 ---
-
 James Gosling is considered the main creator of Java, but his career included many other important achievements. Still, Java is clearly his defining contribution.
 
 Before Java, he was working on completely different things. In the 1970s, Gosling studied at the University of Calgary and later at Carnegie Mellon University, where he wrote a version of Emacs and a multi-processor version of Unix.

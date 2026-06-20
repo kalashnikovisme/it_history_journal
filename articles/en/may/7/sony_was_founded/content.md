@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 7, 1946 — Sony Was Founded"
+title: "The Birth of Sony: How a Post-War Tokyo Startup Changed Technology Forever"
 date: "May 7, 1946"
-excerpt: "A small company with 20 employees and $2,000 in capital appeared in war-damaged Tokyo, later called Sony"
-updated_at: "2026-06-14"
+excerpt: "Discover how Sony was founded on May 7, 1946, in Tokyo, evolving from a small repair shop to a global leader in electronics and entertainment."
+updated_at: "2026-06-20"
 ru: "/ru/may/7/sony-was-founded"
 ---
-
 On May 7, 1946, a small company called Tokyo Tsushin Kogyo appeared in war-damaged Tokyo. The world would later know it by a different name — Sony.
 
 The company was founded by engineer Masaru Ibuka and Akio Morita. In the beginning, they had around twenty employees, a small workshop inside a partially destroyed building, and capital of about 190,000 yen (roughly $2,000 in today’s money).
