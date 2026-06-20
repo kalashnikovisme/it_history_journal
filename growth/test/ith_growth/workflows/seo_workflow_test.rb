@@ -85,4 +85,17 @@ class SeoWorkflowTest < Minitest::Test
     @workflow.run(@article_path)
     assert_empty Dir.glob(File.join(@dir, "growth/output/**/*.md"))
   end
+
+  def test_metrics_json_created_without_analytics
+    @workflow.run(@article_path)
+    # metrics.json is only written when analytics data is present;
+    # with no analytics configured it should not exist
+    metrics_path = File.join(@dir, "seo/articles/en/jun/20/some_event/metrics.json")
+    refute File.exist?(metrics_path)
+  end
+
+  def test_load_metrics_returns_empty_when_no_file
+    rel_dir = "en/jun/20/some_event"
+    assert_empty @workflow.load_metrics(rel_dir)
+  end
 end

@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 9, 1949 — The Mind of Mechanical Man"
+title: "June 9, 1949: Exploring the Limits of Machine Intelligence"
 date: "June 9, 1949"
-excerpt: "Neurosurgeon Geoffrey Jefferson said there's a vast gulf between computation and true thought"
-updated_at: "2026-06-14"
+excerpt: "Explore Geoffrey Jefferson's 1949 insights on machine intelligence and the enduring debate about whether machines can truly think or understand."
+updated_at: "2026-06-20"
 ru: "/ru/jun/9/jefferson-mind-of-mechanical-man"
 ---
-
 "Can machines think?" That question has been on everyone's mind over the last few years. The rise and widespread adoption of neural networks has sparked large-scale discussions about intelligence, the nature of consciousness, emotions, and many other related topics.
 
 As is often the case, professionals were debating these issues long before ChatGPT appeared. Geoffrey Jefferson's lecture The Mind of Mechanical Man was published almost 80 years ago, yet many of the arguments in it sound surprisingly familiar today.

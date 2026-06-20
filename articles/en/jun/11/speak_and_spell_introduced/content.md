@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 11, 1978 — Texas Instruments Introduces Speak & Spell"
+title: "June 11, 1978: The Birth of Speech Synthesis with Texas Instruments' Speak & Spell"
 date: "June 11, 1978"
-excerpt: "Texas Instruments introduced the first mass-market device with a dedicated speech-synthesis chip"
-updated_at: "2026-06-14"
+excerpt: "Discover how Texas Instruments' Speak & Spell, launched on June 11, 1978, pioneered speech synthesis and transformed educational electronics."
+updated_at: "2026-06-20"
 ru: "/ru/jun/11/speak-and-spell-introduced"
 ---
-
 On this day, Texas Instruments introduced Speak & Spell, an educational electronic toy that became many children's first experience with a "talking computer."
 
 At first glance, it was a simple device for learning spelling. A child would hear a word, type it letter by letter on the keyboard, and the device would tell them whether they had spelled it correctly. But the real breakthrough was not the educational aspect — it was the way Speak & Spell spoke.

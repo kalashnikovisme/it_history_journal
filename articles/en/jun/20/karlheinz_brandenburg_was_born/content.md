@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 20, 1954 — The Birth of MP3 Pioneer Karlheinz Brandenburg"
+title: "Karlheinz Brandenburg: The Innovator Who Gave Us MP3 Digital Audio"
 date: "June 20, 1954"
-excerpt: "Discover how Karlheinz Brandenburg, born on June 20, 1954, pioneered MP3 technology, transforming digital audio and music worldwide."
-updated_at: "2026-06-19"
+excerpt: "Learn how Karlheinz Brandenburg developed MP3 technology, revolutionizing digital music and audio sharing worldwide with efficient compression."
+updated_at: "2026-06-20"
 ru: "/ru/jun/20/karlheinz-brandenburg-was-born"
 sources:
   - title: "MP3 | Make Software, Change the World! | Computer History Museum"

@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 15, 1993 — The Public Debut of PDF"
+title: "The Birth of PDF: How Adobe Changed Document Sharing in 1993"
 date: "June 15, 1993"
-excerpt: "Adobe released Acrobat 1.0 and introduced PDF — a format that looks the same on any device and became the world standard for document exchange"
-updated_at: "2026-06-15"
+excerpt: "Discover how PDF was launched in 1993 by Adobe and transformed digital documentation, becoming the universal format for sharing and printing."
+updated_at: "2026-06-20"
 ru: "/ru/jun/15/adobe-acrobat-1-released"
 ---
-
 On June 15, 1993, Adobe released Acrobat 1.0 for Macintosh and MS-DOS. With it came the public debut of PDF (Portable Document Format), which would go on to become one of the most widely used document formats in the world.
 
 Today, PDF feels completely ordinary, but in the early 1990s the idea was quite unusual. Adobe was proposing a format that would look exactly the same on any computer and any printer, regardless of the operating system or installed software. This was a real problem at the time, since a document created in one application could appear completely different when opened in another. Adobe wanted to solve that problem.

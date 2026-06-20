@@ -18,6 +18,109 @@ require "ith_growth/analytics/ga_client"
 require "ith_growth/analytics/search_console_client"
 
 module IthGrowth
+  class ArticleCLI < Thor
+    desc "analyze PATH", "Analyze an article"
+    def analyze(path)
+      IthGrowth::CLI.context.workflow(:analysis).run(path).each { |file| say file }
+    end
+
+    desc "promote PATH", "Generate analysis, SEO, and conversion drafts"
+    def promote(path)
+      ctx = IthGrowth::CLI.context
+      ctx.workflow(:analysis).run(path)
+      ctx.workflow(:seo).run(path)
+      ctx.workflow(:conversion).run(path)
+    end
+
+    desc "seo PATH", "Show SEO progress and generate a new SEO report for an article"
+    def seo(path)
+      ctx = IthGrowth::CLI.context
+      workflow = ctx.workflow(:seo)
+      rel_dir = article_rel_dir(path, ctx.config)
+      print_seo_progress(rel_dir, workflow.load_metrics(rel_dir))
+      workflow.run(path)
+    end
+
+    no_commands do
+      def article_rel_dir(article_path, config)
+        content_dir = config.content_dir&.chomp("/") || "articles"
+        rel = article_path.delete_prefix("#{content_dir}/")
+        File.dirname(rel)
+      end
+
+      def print_seo_progress(article_rel_dir, metrics)
+        bar = "━" * 60
+        say bar.cyan
+        say "  SEO Progress: #{article_rel_dir}".cyan.bold
+        say bar.cyan
+
+        if metrics.empty?
+          say "  No history yet — this is the first run.\n".light_black
+          return
+        end
+
+        say ""
+        say format("  %-12s  %6s  %7s  %9s  %7s  %8s",
+          "Date", "Views", "Bounce", "Avg Time", "Clicks", "Avg Pos").bold
+
+        metrics.each_with_index do |entry, idx|
+          prev = idx > 0 ? metrics[idx - 1] : nil
+          ga4  = entry["ga4"]
+          gsc  = entry["gsc"] || []
+
+          total_clicks = gsc.sum { |r| r["clicks"].to_i }
+          avg_pos      = gsc.empty? ? nil : (gsc.sum { |r| r["position"].to_f } / gsc.size).round(1)
+          avg_duration = ga4 ? format_duration(ga4["avg_duration"].to_f) : "-"
+          bounce       = ga4 ? "#{(ga4["bounce_rate"].to_f * 100).round(1)}%" : "-"
+          views        = ga4 ? ga4["views"].to_i : "-"
+
+          say format("  %-12s  %6s  %7s  %9s  %7s  %8s  %s",
+            entry["date"], views, bounce, avg_duration,
+            total_clicks, avg_pos || "-", trend_indicator(entry, prev))
+        end
+
+        latest_gsc = metrics.last["gsc"] || []
+        unless latest_gsc.empty?
+          say ""
+          say "  Top queries (#{metrics.last["date"]}):".bold
+          latest_gsc.first(5).each do |r|
+            say format("    %-40s  %3d clicks   pos %s",
+              r["dimension"] || r["query"] || "-",
+              r["clicks"].to_i,
+              r["position"].to_f.round(1))
+          end
+        end
+
+        say ""
+        say bar.cyan
+        say ""
+      end
+
+      def trend_indicator(current, prev)
+        return "" unless prev
+        signals = []
+        if current["ga4"] && prev["ga4"]
+          signals << (current["ga4"]["views"].to_i >= prev["ga4"]["views"].to_i ? "↑views" : "↓views")
+        end
+        curr_pos = avg_gsc_position(current["gsc"])
+        prev_pos = avg_gsc_position(prev["gsc"])
+        signals << (curr_pos < prev_pos ? "↑rank" : "↓rank") if curr_pos && prev_pos
+        signals.join(" ").green
+      end
+
+      def avg_gsc_position(gsc)
+        return nil if gsc.nil? || gsc.empty?
+        (gsc.sum { |r| r["position"].to_f } / gsc.size).round(1)
+      end
+
+      def format_duration(seconds)
+        m = (seconds / 60).floor
+        s = (seconds % 60).round
+        "#{m}:#{s.to_s.rjust(2, "0")}"
+      end
+    end
+  end
+
   class CLI < Thor
     desc "init", "Create config/config.yml from config.example.yml"
     def init
@@ -40,20 +143,7 @@ module IthGrowth
     }
 
     desc "article SUBCOMMAND", "Run article workflows"
-    subcommand "article", Class.new(Thor) {
-      desc "analyze PATH", "Analyze an article"
-      def analyze(path)
-        IthGrowth::CLI.context.workflow(:analysis).run(path).each { |file| say file }
-      end
-
-      desc "promote PATH", "Generate analysis, SEO, and conversion drafts"
-      def promote(path)
-        ctx = IthGrowth::CLI.context
-        ctx.workflow(:analysis).run(path)
-        ctx.workflow(:seo).run(path)
-        ctx.workflow(:conversion).run(path)
-      end
-    }
+    subcommand "article", ArticleCLI
 
     desc "seo SUBCOMMAND", "SEO commands"
     subcommand "seo", Class.new(Thor) {

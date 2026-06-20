@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 7, 1999 — Google Raises Its First Major Investment Round"
+title: "How Google Secured Its First Major Investment in 1999"
 date: "June 7, 1999"
-excerpt: "Google raised a $25 million funding round from Sequoia Capital and Kleiner Perkins"
-updated_at: "2026-06-14"
+excerpt: "Discover how Google’s first major $25M investment in 1999 propelled it from a research project to a search industry leader."
+updated_at: "2026-06-20"
 ru: "/ru/jun/7/google-first-funding-round"
 ---
-
 In the summer of 1999, Google was nothing like the company we know today. There were no billions of dollars, no massive data centers, and no Android. There were just two Stanford graduate students — Larry Page and Sergey Brin — a search engine that produced remarkably good results, and a growing pile of hardware bills.
 
 On June 7, 1999, Google announced its first major funding round: $25 million. The investment came from the venture capital firms Sequoia Capital and Kleiner Perkins.

@@ -17,22 +17,24 @@ module IthGrowth
 
         with_logging(name: "seo", input_files: [path, website_repo].compact) do
           history = load_history(article_rel_dir)
-          analytics = fetch_analytics(article.path)
+          analytics_data = fetch_analytics_data(article.path)
+          analytics_markdown = format_analytics_markdown(analytics_data)
+
+          append_metrics(article_rel_dir, seo_writer, analytics_data, date)
 
           markdown = prompt_runner.run(
             template: "seo",
             variables: common_variables(article).merge(
               website_repo: website_repo,
               seo_history: history_block(history),
-              analytics_data: analytics || "_Not configured or no data yet._"
+              analytics_data: analytics_markdown || "_Not configured or no data yet._"
             ),
             model: config.ai_model
           )
 
           patch = extract_patch(markdown)
           suggestions = strip_patch_block(markdown)
-
-          report = build_report(date, analytics, suggestions)
+          report = build_report(date, analytics_markdown, suggestions)
 
           schema = {
             "@context": "https://schema.org",
@@ -53,6 +55,14 @@ module IthGrowth
         end
       end
 
+      def load_metrics(article_rel_dir)
+        path = File.join(config.seo_output_dir, "articles", article_rel_dir, "metrics.json")
+        return [] unless File.exist?(path)
+        JSON.parse(File.read(path))
+      rescue JSON::ParserError
+        []
+      end
+
       private
 
       def load_history(article_rel_dir)
@@ -66,8 +76,8 @@ module IthGrowth
         history.join("\n\n---\n\n")
       end
 
-      def fetch_analytics(article_path)
-        sections = []
+      def fetch_analytics_data(article_path)
+        data = {}
 
         if config.gsc_site_url && config.gsc_credentials_path
           page_url = "#{config.gsc_site_url}#{article_page_path(article_path)}"
@@ -76,7 +86,7 @@ module IthGrowth
             credentials_path: config.gsc_credentials_path
           )
           rows = gsc.page_queries(page_url: page_url)
-          sections << "### Google Search Console — last 28 days\n\n#{gsc.format_as_markdown(rows)}"
+          data[:gsc] = rows.map { |r| r.transform_keys(&:to_s) }
         end
 
         if config.ga4_property_id && config.ga4_credentials_path
@@ -85,20 +95,57 @@ module IthGrowth
             credentials_path: config.ga4_credentials_path
           )
           stats = ga.page_stats(page_path: article_page_path(article_path))
-          if stats
-            sections << "### Google Analytics — last 28 days\n\n" \
-              "Views: #{stats[:views]} | Bounce Rate: #{(stats[:bounce_rate] * 100).round(1)}% | Avg Duration: #{stats[:avg_duration].round}s"
-          end
+          data[:ga4] = stats if stats
+        end
+
+        data
+      rescue => e
+        { error: e.message }
+      end
+
+      def format_analytics_markdown(data)
+        return "_(Analytics fetch failed: #{data[:error]})_" if data[:error]
+
+        sections = []
+
+        if data[:gsc]
+          gsc = Analytics::SearchConsoleClient.new(site_url: "", credentials_path: "")
+          rows = data[:gsc].map { |r| r.transform_keys(&:to_sym) }
+          sections << "### Google Search Console — last 28 days\n\n#{gsc.format_as_markdown(rows)}"
+        end
+
+        if data[:ga4]
+          s = data[:ga4]
+          sections << "### Google Analytics — last 28 days\n\n" \
+            "Views: #{s[:views]} | Bounce Rate: #{(s[:bounce_rate] * 100).round(1)}% | Avg Duration: #{s[:avg_duration].round}s"
         end
 
         sections.empty? ? nil : sections.join("\n\n")
-      rescue => e
-        "_(Analytics fetch failed: #{e.message})_"
       end
 
-      def build_report(date, analytics, suggestions)
+      def append_metrics(article_rel_dir, seo_writer, data, date)
+        return if data.empty? || data[:error]
+
+        metrics_path = File.join(config.seo_output_dir, "articles", article_rel_dir, "metrics.json")
+        existing = File.exist?(metrics_path) ? JSON.parse(File.read(metrics_path)) : []
+
+        entry = { "date" => date }
+        entry["ga4"] = {
+          "views" => data[:ga4][:views],
+          "bounce_rate" => data[:ga4][:bounce_rate],
+          "avg_duration" => data[:ga4][:avg_duration]
+        } if data[:ga4]
+        entry["gsc"] = data[:gsc].map { |r| r.transform_keys(&:to_s) } if data[:gsc]
+
+        existing.reject! { |e| e["date"] == date }
+        existing << entry
+
+        seo_writer.write_json("articles/#{article_rel_dir}/metrics.json", existing)
+      end
+
+      def build_report(date, analytics_markdown, suggestions)
         parts = ["# SEO Report — #{date}"]
-        parts << "## Analytics\n\n#{analytics}" if analytics
+        parts << "## Analytics\n\n#{analytics_markdown}" if analytics_markdown
         parts << "## Suggestions\n\n#{suggestions}"
         parts.join("\n\n")
       end

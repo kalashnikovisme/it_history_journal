@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 16, 1911 — Computing-Tabulating-Recording Company Founded, the Future IBM"
+title: "The Birth of IBM: How the Computing-Tabulating-Recording Company Laid Its Foundations in 1911"
 date: "June 16, 1911"
-excerpt: "Financier Charles Flint merged three companies into CTR, and Thomas Watson turned it into IBM — one of the greatest corporate giants in the history of IT"
-updated_at: "2026-06-15"
+excerpt: "Discover how IBM was founded in 1911 as CTR, shaping the future of computing technology and industry."
+updated_at: "2026-06-20"
 ru: "/ru/jun/16/computing-tabulating-recording-was-founded"
 ---
-
 IBM is, without exaggeration, one of the greatest companies in the history of information technology. Although ordinary users have rarely interacted directly with its products — which is fitting given the name International Business Machines — its influence on the development of the entire industry is hard to overstate.
 
 The company's original name, Computing-Tabulating-Recording Company (CTR), already sounded somewhat dated even at the time it was founded. It was effectively created by financier Charles Flint. He noticed that several companies were serving the same customers while selling different kinds of equipment. Tabulating Machine Company produced punched-card tabulators, International Time Recording manufactured employee timekeeping systems, and Computing Scale Company made commercial scales.

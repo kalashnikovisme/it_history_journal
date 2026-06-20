@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 18, 2008 — The First Creative Commons Technology Summit"
+title: "How the 2008 Creative Commons Summit Shaped Open Content and AI Datasets"
 date: "June 18, 2008"
-excerpt: "Creative Commons held its first Technology Summit, addressing how machines could interpret open licenses"
-updated_at: "2026-06-18"
+excerpt: "Discover how the 2008 Creative Commons Summit advanced open licenses, enabling smarter search, sharing, and AI training datasets."
+updated_at: "2026-06-20"
 ru: "/ru/jun/18/creative-commons-technology-summit"
 ---
-
 Creative Commons is a nonprofit organization that created a set of open licenses allowing creators to define in advance how their works may be used. These licenses make it possible to legally share content—from photographs and music to scientific papers and educational materials—without requiring users to request separate permission from the copyright holder each time.
 
 On June 18, 2008, Creative Commons held its first Technology Summit in Mountain View.

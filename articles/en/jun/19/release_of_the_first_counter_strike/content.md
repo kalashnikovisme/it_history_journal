@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Jun 19, 1999 — The Release of the Very First Counter-Strike"
+title: "The Birth of Counter-Strike: How a Mod Changed Gaming Forever (1999)"
 date: "June 19, 1999"
-excerpt: "A Half-Life mod by two fans became one of the most influential multiplayer shooters in gaming history"
-updated_at: "2026-06-19"
+excerpt: "Discover how Counter-Strike's first beta in 1999 revolutionized multiplayer gaming and became a legendary franchise."
+updated_at: "2026-06-20"
 ru: "/ru/jun/19/release-of-the-first-counter-strike"
 ---
-
 June 19, 1999 is generally considered the release date of the first public beta of Counter-Strike — a Half-Life mod that would soon become one of the most influential multiplayer shooters in gaming history.
 
 ## How Counter-Strike Began

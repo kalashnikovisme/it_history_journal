@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 10, 1924 — Friedrich Ludwig Bauer Was Born"
+title: "Friedrich Bauer: Architect of Software Engineering and Compiler Innovation"
 date: "June 10, 1924"
-excerpt: "coined \"software engineering\" term and invented stack-based expression evaluation methods"
-updated_at: "2026-06-14"
+excerpt: "Explore Friedrich Bauer’s groundbreaking work in software engineering, ALGOL development, and cryptography, shaping modern computing and compiler design."
+updated_at: "2026-06-20"
 ru: "/ru/jun/10/friedrich-ludwig-bauer-was-born"
 ---
-
 Friedrich Ludwig Bauer was a German mathematician and one of the most influential European computer scientists of the postwar era. His name is far less well known than those of Turing or Dijkstra, yet many ideas that are now considered fundamental to programming are closely associated with his work.
 
 # One of the Founders of Computer Science in Germany

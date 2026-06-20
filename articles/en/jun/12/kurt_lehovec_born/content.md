@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 12, 1918 — Kurt Lehovec Is Born"
+title: "Kurt Lehovec and the Birth of Semiconductor Isolation Techniques (1918–Present)"
 date: "June 12, 1918"
-excerpt: "Kurt Lehovec's p-n junction isolation technique helped make integrated circuits practical"
-updated_at: "2026-06-14"
+excerpt: "Discover how Kurt Lehovec's pioneering use of p-n junctions advanced integrated circuit technology and shaped modern microelectronics."
+updated_at: "2026-06-20"
 ru: "/ru/jun/12/kurt-lehovec-born"
 ---
-
 Kurt Lehovec was an American physicist and engineer whose name is far less well known than those of fellow integrated circuit pioneers Jack Kilby and Robert Noyce. Yet his work played a crucial role in making integrated circuits practical.
 
 By the late 1950s, engineers already knew how to build individual transistors on a single silicon chip, but a major problem remained: how to isolate them from one another. When several transistors were placed side by side, electrical current could flow between them in unwanted ways. Chip designers explored various approaches to isolation, including mechanical isolation techniques.

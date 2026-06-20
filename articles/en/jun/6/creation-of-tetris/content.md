@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 6, 1984 — Tetris Is Created"
+title: "The Birth of Tetris: How a Soviet Programmer Changed Gaming Forever"
 date: "June 6, 1984"
-excerpt: "Alexey Pajitnov completed the first working version of Tetris on an Elektronika-60 computer"
-updated_at: "2026-06-14"
+excerpt: "Discover how Alexey Pajitnov created Tetris in 1984 and its journey to becoming a worldwide gaming icon."
+updated_at: "2026-06-20"
 ru: "/ru/jun/6/creation-of-tetris"
 ---
-
 On June 6, 1984, programmer Alexey Pajitnov completed the first working version of Tetris on an Elektronika-60 computer at the Computing Center of the USSR Academy of Sciences.
 
 The game grew out of Pajitnov's fascination with puzzles. He was inspired by the board game Pentomino, where players arrange shapes made from multiple squares. The Soviet computer he was using had limited capabilities, so the pieces were simplified to four blocks. That led to the creation of the now-famous tetrominoes, while the name Tetris came from the Greek prefix "tetra" ("four") and tennis, Pajitnov's favorite sport.
