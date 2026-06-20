@@ -8,7 +8,6 @@ Boosty: {{boosty_url}}
 Analyze this IT history article for growth work.
 
 Article title: {{article_title}}
-Article slug: {{article_slug}}
 
 Return these sections:
 

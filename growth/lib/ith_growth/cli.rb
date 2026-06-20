@@ -35,6 +35,7 @@ module IthGrowth
     desc "seo PATH", "Show SEO progress and generate a new SEO report for an article"
     def seo(path)
       ctx = IthGrowth::CLI.context
+      ctx.workflow(:analysis).run(path)
       workflow = ctx.workflow(:seo)
       rel_dir = article_rel_dir(path, ctx.config)
       print_seo_progress(rel_dir, workflow.load_metrics(rel_dir))
@@ -150,7 +151,9 @@ module IthGrowth
       desc "suggest PATH", "Generate SEO suggestions"
       option :website_repo, type: :string
       def suggest(path)
-        IthGrowth::CLI.context.workflow(:seo).run(path, website_repo: options[:website_repo]).each { |file| say file }
+        ctx = IthGrowth::CLI.context
+        ctx.workflow(:analysis).run(path)
+        ctx.workflow(:seo).run(path, website_repo: options[:website_repo]).each { |file| say file }
       end
     }
 

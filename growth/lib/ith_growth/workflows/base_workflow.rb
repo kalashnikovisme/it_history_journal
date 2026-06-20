@@ -73,7 +73,6 @@ module IthGrowth
           boosty_url: config.dig(:growth, :boosty_url),
           article_title: article.title,
           article_body: article.body,
-          article_slug: article.slug,
           article_url: "{{ARTICLE_URL}}"
         }
       end

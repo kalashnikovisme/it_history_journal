@@ -68,7 +68,8 @@ bin/ith init
 bin/ith articles list
 bin/ith article analyze path/to/article.md
 bin/ith article promote path/to/article.md
-bin/ith seo suggest path/to/article.md
+bin/ith article seo path/to/article.md    # runs analysis first, then SEO
+bin/ith seo suggest path/to/article.md    # runs analysis first, then SEO
 bin/ith distribution generate path/to/article.md
 bin/ith conversion path/to/article.md
 bin/ith workflow run daily
