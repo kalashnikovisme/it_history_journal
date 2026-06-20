@@ -1,12 +1,11 @@
 ---
 author: "Pasha Kalashnikov"
-title: "May 1, 2019 — FTX Was Founded"
+title: "The Rise and Fall of FTX: A Complete History from 2019 to Bankruptcy"
 date: "May 1, 2019"
-excerpt: "FTX filed for bankruptcy 3.5 years after founding; founder Sam Bankman-Fried was sentenced to 25 years"
-updated_at: "2026-06-14"
+excerpt: "Explore FTX’s rapid growth, innovative crypto tools, and its shocking collapse in 2022, leading to criminal charges against its leadership."
+updated_at: "2026-06-20"
 ru: "/ru/may/1/ftx-was-founded"
 ---
-
 FTX was one of the most unusual IT companies in history. It stood out for its incredibly fast rise: its founder, Sam Bankman-Fried, became a billionaire in less than two years after the company was founded. It stood out for its advanced and versatile crypto trading tools, some of which appeared there for the first time. It stood out for the people who ran it — a group of young, ambitious professionals living together in a luxury penthouse in the Bahamas. And it also stood out for its sudden and massive collapse, which unfolded over just a few days, wiping out billions of dollars belonging to investors and users and leading to criminal charges against the company's leadership.
 
 FTX was registered in May 2019 and filed for bankruptcy on November 11, 2022. Just three and a half years later.

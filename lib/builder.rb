@@ -32,6 +32,11 @@ class Builder
       no_articles_this_year: 'No articles for this year yet.',
       key_facts:             'Key facts',
       sources:               'Sources',
+      support_heading:       'Enjoyed this story?',
+      support_body:          'IT History Journal is an independent, ad-free publication maintained by one person. If these stories matter to you, your support — however small — helps keep them coming.',
+      support_patreon:       'Patreon',
+      support_boosty:        'Boosty',
+      support_paypal:        'PayPal',
       months:                %w[January February March April May June
                                  July August September October November December]
     },
@@ -54,6 +59,11 @@ class Builder
       no_articles_this_year: 'Статей за этот год пока нет.',
       key_facts:             'Ключевые факты',
       sources:               'Источники',
+      support_heading:       'Понравилась статья?',
+      support_body:          'IT History Journal — независимый журнал без рекламы, который ведёт один человек. Если эти истории важны для вас, любая поддержка помогает продолжать работу.',
+      support_patreon:       'Patreon',
+      support_boosty:        'Boosty',
+      support_paypal:        'PayPal',
       months:                %w[Январь Февраль Март Апрель Май Июнь
                                  Июль Август Сентябрь Октябрь Ноябрь Декабрь]
     }
