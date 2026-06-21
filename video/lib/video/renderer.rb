@@ -9,7 +9,8 @@ module Video
       @paths = output_paths
     end
 
-    def render(scenes, audio_duration, port: nil)
+    def render(scenes, audio_duration, port: nil, output_path: @paths.browser_recording_webm,
+               config_path: @paths.render_config_json)
       @paths.ensure_dir!
       ensure_node!
 
@@ -17,7 +18,7 @@ module Video
       install_renderer_deps
 
       config = build_render_config(scenes, audio_duration, port)
-      File.write(@paths.render_config_json, JSON.pretty_generate(config))
+      File.write(config_path, JSON.pretty_generate(config))
 
       cover_path = @info[:cover_path]
 
@@ -28,8 +29,8 @@ module Video
 
       cmd_parts = [
         "node", record_js,
-        "--config",  File.expand_path(@paths.render_config_json),
-        "--output",  File.expand_path(@paths.browser_recording_webm),
+        "--config",  File.expand_path(config_path),
+        "--output",  File.expand_path(output_path),
         "--cover",   cover_path ? File.expand_path(cover_path) : ""
       ]
 

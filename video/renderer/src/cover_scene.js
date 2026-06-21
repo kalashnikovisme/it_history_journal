@@ -51,15 +51,15 @@ class CoverScene {
 
     const imgSrc = this.config.cover_url || '';
     el.innerHTML = `
+      <div class="cover-top">
+        <div class="date-label">${this._escapeHtml(this.config.date_display || '')}</div>
+        <div class="title-text">${this._escapeHtml(this.config.title || '')}</div>
+      </div>
       <div class="cover-image-container">
         ${imgSrc
           ? `<img src="${this._escapeHtml(imgSrc)}" alt="cover" id="cover-img" />`
           : `<div style="width:100%;height:100%;background:#282626;"></div>`
         }
-      </div>
-      <div class="cover-meta">
-        <div class="date-label">${this._escapeHtml(this.config.date_display || '')}</div>
-        <div class="title-text">${this._escapeHtml(this.config.title || '')}</div>
       </div>
     `;
     container.appendChild(el);

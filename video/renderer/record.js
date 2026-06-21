@@ -85,9 +85,26 @@ const contentTypes = {
 // Static server + cover mapping
 // ---------------------------------------------------------------------------
 
-const serveStatic = (rootDir, coverPath) => {
+const serveStatic = (rootDir, coverPath, assetsDir) => {
   const server = http.createServer((req, res) => {
     const requestPath = decodeURIComponent(req.url.split('?')[0]);
+
+    if (requestPath.startsWith('/assets/')) {
+      const assetPath = path.join(assetsDir, path.basename(requestPath));
+      if (fs.existsSync(assetPath)) {
+        fs.readFile(assetPath, (err, data) => {
+          if (err) {
+            res.statusCode = 500;
+            res.end('Error reading asset');
+            return;
+          }
+          const ext = path.extname(assetPath).toLowerCase();
+          res.setHeader('Content-Type', contentTypes[ext] || 'application/octet-stream');
+          res.end(data);
+        });
+        return;
+      }
+    }
 
     // Serve cover image at /cover/<filename>
     if (coverPath && requestPath.startsWith('/cover/')) {
@@ -203,11 +220,12 @@ const main = async () => {
   const outputPath = path.resolve(args.output);
   const coverPath  = args.cover ? path.resolve(args.cover) : null;
   const rootDir    = path.resolve(__dirname);
+  const assetsDir  = path.resolve(__dirname, '../assets');
 
   // Create tmpVideoDir inside rootDir so the static server can serve files from it
   const tmpVideoDir = fs.mkdtempSync(path.join(rootDir, 'tmp-video-'));
 
-  const { server, port } = await serveStatic(rootDir, coverPath);
+  const { server, port } = await serveStatic(rootDir, coverPath, assetsDir);
   console.log(`Static server running on port ${port}`);
 
   // Parse config and inject cover_url before serving it

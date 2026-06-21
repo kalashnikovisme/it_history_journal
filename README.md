@@ -114,6 +114,7 @@ Builds the Docker image and installs gems.
 | `dip bundle <args>` | Run bundler commands |
 | `dip video <article_folder>` | Generate branded short video from an article (full pipeline) |
 | `dip video text <article_folder>` | Generate narration text only (no audio/render) |
+| `dip video part calendar <article_folder>` | Render only the calendar video segment without audio |
 | `dip audio <article_folder>` | Generate audio narration (TTS) from an article |
 | `dip video_shell` | Open a shell in the video container |
 

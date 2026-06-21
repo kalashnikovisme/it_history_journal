@@ -16,6 +16,7 @@ class CalendarScene {
     const monthName = this._getMonthName();
 
     el.innerHTML = `
+      <img class="calendar-logo" src="/assets/logo.png" alt="" />
       <div class="calendar-month">${monthName}</div>
       <div class="calendar-grid" id="cal-grid"></div>
     `;
@@ -83,17 +84,6 @@ class CalendarScene {
 
   _buildGrid() {
     const grid = this.el.querySelector('#cal-grid');
-    const lang = this.config.language || 'en';
-    const headers = lang === 'ru'
-      ? ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
-      : ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
-
-    headers.forEach(h => {
-      const d = document.createElement('div');
-      d.className = 'calendar-day-header';
-      d.textContent = h;
-      grid.appendChild(d);
-    });
 
     const firstDay  = this._firstDayOfMonth();
     const totalDays = this._daysInMonth();

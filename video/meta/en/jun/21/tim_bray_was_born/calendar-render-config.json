@@ -1,0 +1,20 @@
+{
+  "language": "en",
+  "title": "Tim Bray: Pioneering XML and JSON Standards That Shaped the Web",
+  "date_display": "June 21, 1955",
+  "day": "21",
+  "month_name": "June",
+  "year": "1955",
+  "slug": "tim-bray-was-born",
+  "cover_filename": "cover.webp",
+  "site_url": "history.purple-magic.com",
+  "cta_language": "en",
+  "total_duration": 4.0,
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    }
+  ]
+}

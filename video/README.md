@@ -37,6 +37,9 @@ dip video articles/ru/jun/21/tim_bray_was_born
 # Text only (no audio, no render)
 dip video text articles/ru/jun/21/tim_bray_was_born
 
+# Render only the calendar segment (no narration, audio, composition, or upload)
+dip video part calendar articles/ru/jun/21/tim_bray_was_born
+
 # Audio only (narration text + TTS)
 dip audio articles/ru/jun/21/tim_bray_was_born
 
@@ -64,7 +67,9 @@ Output is written to `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `scenes.json` | Scene timing plan |
 | `metadata.json` | Article metadata + scene data |
 | `render-config.json` | Config for JS renderer |
+| `calendar-render-config.json` | Renderer config for the standalone calendar segment |
 | `browser-recording.webm` | Trimmed browser recording |
+| `calendar.webm` | Standalone calendar segment rendered by `dip video part calendar` |
 | `final.mp4` | Final composed video |
 
 ## Editing the narration

@@ -6,9 +6,11 @@ require "colorize"
 
 def usage
   puts "Usage: video [scenario] <article_folder>"
+  puts "       video part <name> <article_folder>"
   puts
   puts "  video articles/ru/jun/21/tim_bray_was_born          # full pipeline"
   puts "  video scenario articles/ru/jun/21/tim_bray_was_born # narration + scenes.json only"
+  puts "  video part calendar articles/ru/jun/21/tim_bray_was_born # calendar only, no audio"
   puts
   puts "Options:"
   puts "  --force-text    Regenerate narration.txt even if it exists"
@@ -26,9 +28,14 @@ no_upload    = argv.delete("--no-upload")
 usage if argv.empty?
 
 scenario_only = false
+part_name = nil
 if argv[0] == "scenario"
   scenario_only = true
   argv.shift
+elsif argv[0] == "part"
+  argv.shift
+  part_name = argv.shift
+  usage unless Video::PartRenderer::PARTS.key?(part_name)
 end
 
 article_folder = argv.shift
@@ -45,6 +52,14 @@ begin
   puts "[video] #{info[:title]}".cyan
 
   paths  = Video::OutputPaths.new(info)
+
+  if part_name
+    puts "[video] Rendering #{part_name} without audio...".cyan
+    output = Video::PartRenderer.new(info, paths).render(part_name)
+    puts "[video] Done! → #{output}".green
+    exit 0
+  end
+
   client = Video::OpenAIClient.new
 
   # Narration — reuse if exists

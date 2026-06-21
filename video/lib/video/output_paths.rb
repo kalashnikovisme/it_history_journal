@@ -28,10 +28,12 @@ module Video
     def metadata_json      = File.join(@meta_dir, "metadata.json")
     def tts_request_json   = File.join(@meta_dir, "tts-request.json")
     def render_config_json = File.join(@meta_dir, "render-config.json")
+    def part_render_config_json(name) = File.join(@meta_dir, "#{name}-render-config.json")
 
     # Audio / video files → video/output/
     def narration_mp3          = File.join(@media_dir, "narration.mp3")
     def browser_recording_webm = File.join(@media_dir, "browser-recording.webm")
+    def part_webm(name)         = File.join(@media_dir, "#{name}.webm")
     def final_mp4              = File.join(@media_dir, "final.mp4")
   end
 end
