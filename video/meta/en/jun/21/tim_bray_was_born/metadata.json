@@ -89,5 +89,26 @@
     }
   ],
   "total_duration": 56.304,
-  "scene_count": 13
+  "scene_count": 13,
+  "youtube": {
+    "title": "Tim Bray: The Visionary Behind XML & JSON Data That Powers the Web",
+    "description": "Discover how Tim Bray shaped the digital world by co-authoring the XML standard and helping formalize JSON, the data formats at the heart of web and app communication. From the backbone of RSS feeds to modern cloud services, Bray’s work connects billions every day. Learn more tech history—follow IT History Journal. #Shorts #WebHistory #TimBray",
+    "tags": [
+      "Tim Bray",
+      "XML",
+      "JSON",
+      "web standards",
+      "internet history",
+      "data formats",
+      "technology pioneers",
+      "W3C",
+      "Sun Microsystems",
+      "Google",
+      "Amazon Web Services",
+      "RSS",
+      "SVG",
+      "SOAP",
+      "IT History Journal"
+    ]
+  }
 }

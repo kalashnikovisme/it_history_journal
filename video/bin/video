@@ -16,6 +16,7 @@ def usage
   puts "  --force-text    Regenerate narration.txt even if it exists"
   puts "  --force-audio   Regenerate narration.mp3 even if it exists"
   puts "  --force-scenes  Regenerate scenes.json even if it exists"
+  puts "  --force-youtube Regenerate YouTube title, description, and tags"
   exit 1
 end
 
@@ -23,6 +24,7 @@ argv = ARGV.dup
 force_text   = argv.delete("--force-text")
 force_audio  = argv.delete("--force-audio")
 force_scenes = argv.delete("--force-scenes")
+force_youtube = argv.delete("--force-youtube")
 no_upload    = argv.delete("--no-upload")
 
 usage if argv.empty?
@@ -82,6 +84,10 @@ begin
     else
       puts "[video] Scenario saved to #{paths.scenes_json}".green
     end
+    youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
+    youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
+    puts youtube_reused ? "[video] Reusing YouTube metadata.".yellow : "[video] YouTube metadata saved.".green
+    puts "[video] YouTube title: #{youtube.fetch('title')}".cyan
     puts "[video] Scenario mode — done.".green
     exit 0
   end
@@ -104,6 +110,11 @@ begin
   else
     puts "[video] #{scenes.size} scenes planned.".green
   end
+
+  youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
+  youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
+  puts youtube_reused ? "[video] Reusing YouTube metadata.".yellow : "[video] YouTube metadata saved.".green
+  puts "[video] YouTube title: #{youtube.fetch('title')}".cyan
 
   puts "[video] Rendering browser frames...".cyan
   renderer = Video::Renderer.new(info, paths)

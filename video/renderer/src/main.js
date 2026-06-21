@@ -40,13 +40,11 @@
   const calendarScene  = new CalendarScene(config);
   const titleScene     = new TitleCardScene(config);
   const coverScene     = new CoverScene(config);
-  const factsScene     = new FactsScene(config);
   const ctaScene       = new CTAScene(config);
 
   calendarScene.mount(app);
   titleScene.mount(app);
   coverScene.mount(app);
-  factsScene.mount(app);
   ctaScene.mount(app);
 
   // ---------------------------------------------------------------------------
@@ -69,12 +67,10 @@
   let calShown      = false;
   let titleShown    = false;
   let coverShown    = false;
-  let factsShown    = false;
   let ctaShown      = false;
   let calHidden     = false;
   let titleHidden   = false;
   let coverHidden   = false;
-  let factsHidden   = false;
 
   const totalDuration = config.total_duration || 55;
   let completed = false;
@@ -107,36 +103,19 @@
       titleScene.hide();
     }
 
-    // Cover (stays visible while facts play)
+    // Cover stays visible until the CTA starts
     if (coverScCfg && elapsed >= coverScCfg.start && !coverShown) {
       coverShown = true;
       coverScene.show();
     }
 
-    // Facts overlay
-    const firstFact = (config.scenes || []).find(s => s.id === 'fact');
-    const lastFact  = (config.scenes || []).filter(s => s.id === 'fact').slice(-1)[0];
-
-    if (firstFact && elapsed >= firstFact.start && !factsShown) {
-      factsShown = true;
-      factsScene.show();
-    }
-
-    if (factsShown && !factsHidden) {
-      factsScene.tick(elapsed);
-    }
-
-    // Hide cover and facts when CTA starts
+    // Hide cover when CTA starts
     if (ctaScCfg && elapsed >= ctaScCfg.start) {
       if (!ctaShown) {
         ctaShown = true;
         if (!coverHidden) {
           coverHidden = true;
           coverScene.hide();
-        }
-        if (!factsHidden) {
-          factsHidden = true;
-          factsScene.hide();
         }
         ctaScene.show();
       }

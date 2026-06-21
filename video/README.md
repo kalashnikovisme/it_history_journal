@@ -9,6 +9,7 @@ Article content.md
   → ScriptGenerator (OpenAI GPT-4.1) → narration.txt
   → AudioGenerator  (OpenAI TTS tts-1-hd, voice: onyx) → narration.mp3
   → ScenePlanner → scenes.json
+  → YoutubeMetadataGenerator → metadata.json
   → Renderer (Playwright + record.js) → browser-recording.webm
   → FfmpegComposer → final.mp4
 ```
@@ -52,6 +53,8 @@ dip video_shell
 ```
 --force-text    Regenerate narration.txt even if it already exists
 --force-audio   Regenerate narration.mp3 even if it already exists
+--force-scenes  Regenerate scenes.json even if it already exists
+--force-youtube Regenerate YouTube title, description, and tags
 ```
 
 ## Output files
@@ -65,7 +68,7 @@ Output is written to `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `tts-request.json` | TTS API request parameters |
 | `narration.mp3` | Audio narration (TTS) |
 | `scenes.json` | Scene timing plan |
-| `metadata.json` | Article metadata + scene data |
+| `metadata.json` | Article/scene data plus optimized YouTube Shorts title, description, and tags |
 | `render-config.json` | Config for JS renderer |
 | `calendar-render-config.json` | Renderer config for the standalone calendar segment |
 | `browser-recording.webm` | Trimmed browser recording |
@@ -101,6 +104,7 @@ video/
       output_paths.rb      # Output file paths
       openai_client.rb     # OpenAI wrapper (chat + TTS)
       script_generator.rb  # Narration text via GPT-4.1
+      youtube_metadata_generator.rb # YouTube Shorts metadata via GPT-4.1
       audio_generator.rb   # TTS via tts-1-hd
       scene_planner.rb     # Scene timing calculation
       renderer.rb          # Calls record.js via Node
@@ -114,7 +118,7 @@ video/
       webgl_background.js  # Particle field (WebGL)
       calendar.js        # Calendar scene
       cover_scene.js     # Cover + title card scenes
-      facts_scene.js     # Fact text overlay
+      facts_scene.js     # Legacy narration text overlay (not loaded)
       cta_scene.js       # Final CTA screen
       main.js            # Animation orchestrator
   output/

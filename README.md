@@ -161,7 +161,7 @@ OPENAI_API_KEY=sk-...
 ### Commands
 
 ```bash
-# Full pipeline: narration → TTS audio → browser render → final.mp4
+# Full pipeline: narration → TTS audio → YouTube metadata → browser render → final.mp4
 dip video articles/ru/jun/21/tim_bray_was_born
 
 # Text only: generate narration.txt without audio or render
@@ -180,6 +180,8 @@ dip video_shell
 |---|---|
 | `--force-text` | Regenerate narration.txt even if it already exists |
 | `--force-audio` | Regenerate narration.mp3 even if it already exists |
+| `--force-scenes` | Regenerate scenes.json even if it already exists |
+| `--force-youtube` | Regenerate the YouTube Shorts title, description, and tags |
 
 ### Output files
 
@@ -192,7 +194,7 @@ All output lands in `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `tts-request.json` | TTS request parameters |
 | `narration.mp3` | Generated audio (TTS, voice: onyx) |
 | `scenes.json` | Scene timing plan |
-| `metadata.json` | Article metadata + scene info |
+| `metadata.json` | Article/scene data plus optimized YouTube Shorts title, description, and tags |
 | `render-config.json` | Config fed to the JS renderer |
 | `browser-recording.webm` | Raw browser recording |
 | `final.mp4` | Final composed video |
