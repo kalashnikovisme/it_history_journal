@@ -3,7 +3,7 @@ require "fileutils"
 
 module Video
   class AudioGenerator
-    TTS_MODEL = "tts-1-hd"
+    TTS_MODEL = "tts-1"
     TTS_VOICE = "onyx"
 
     def initialize(output_paths, openai_client)
@@ -37,8 +37,6 @@ module Video
       probe_duration(@paths.narration_mp3)
     end
 
-    private
-
     def probe_duration(mp3_path)
       ensure_ffprobe!
       output = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "#{mp3_path}" 2>&1`.strip
@@ -46,6 +44,8 @@ module Video
       raise "ffprobe returned invalid duration for #{mp3_path}: #{output.inspect}" if duration <= 0
       duration
     end
+
+    private
 
     def ensure_ffprobe!
       result = system("ffprobe -version > /dev/null 2>&1")

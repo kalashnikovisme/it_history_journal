@@ -20,9 +20,7 @@ force_text  = argv.delete("--force-text")
 force_audio = argv.delete("--force-audio")
 
 article_folder = argv.shift
-if article_folder.nil? || article_folder.empty?
-  usage
-end
+usage if article_folder.nil? || article_folder.empty?
 
 unless File.directory?(article_folder)
   $stderr.puts "[audio] ERROR: Article folder not found: #{article_folder}".red
@@ -37,15 +35,28 @@ begin
   paths  = Video::OutputPaths.new(info)
   client = Video::OpenAIClient.new
 
-  puts "[audio] Generating narration text...".cyan
+  # Narration — reuse if exists
   generator = Video::ScriptGenerator.new(info, paths, client)
-  narration = generator.generate(force: force_text)
-  puts "[audio] Narration saved to #{paths.narration_txt}".green
+  if File.exist?(paths.narration_txt) && !force_text
+    puts "[audio] Reusing #{paths.narration_txt}".yellow
+    narration = File.read(paths.narration_txt)
+  else
+    puts "[audio] Generating narration...".cyan
+    narration = generator.generate(force: true)
+    puts "[audio] Narration saved to #{paths.narration_txt}".green
+  end
 
-  puts "[audio] Generating audio (TTS)...".cyan
+  # Audio — reuse if exists
   audio_gen = Video::AudioGenerator.new(paths, client)
-  duration  = audio_gen.generate(narration, force: force_audio)
-  puts "[audio] Done! #{duration.round(1)}s → #{paths.narration_mp3}".green
+  if File.exist?(paths.narration_mp3) && !force_audio
+    puts "[audio] Reusing #{paths.narration_mp3}".yellow
+    duration = audio_gen.probe_duration(paths.narration_mp3)
+    puts "[audio] Duration: #{duration.round(1)}s".yellow
+  else
+    puts "[audio] Generating audio (TTS)...".cyan
+    duration = audio_gen.generate(narration, force: true)
+    puts "[audio] Done! #{duration.round(1)}s → #{paths.narration_mp3}".green
+  end
 
 rescue => e
   $stderr.puts "[audio] ERROR: #{e.message}".red

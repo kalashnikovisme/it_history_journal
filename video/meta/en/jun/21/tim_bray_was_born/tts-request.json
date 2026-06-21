@@ -1,0 +1,6 @@
+{
+  "model": "tts-1-hd",
+  "input": "Every time you open a mobile app or load a web page, you’re using the work of Tim Bray. On June 21, 1955, Bray was born in Canada—a future architect of the modern digital world. In 1998, he co-authored the XML standard with the W3C, creating a universal language for structured data across the internet. XML became the backbone for countless technologies, from RSS feeds to SVG graphics and SOAP web services. In the 2010s, Bray helped formalize the JSON data format, now the invisible bridge connecting billions of devices and applications each day. His influence also reached industry giants like Sun Microsystems, Google, and Amazon Web Services. In 2020, he resigned from Amazon, protesting the firing of warehouse workers who spoke out about pandemic safety. The web’s connective tissue bears Tim Bray’s fingerprints. Follow IT History Journal.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

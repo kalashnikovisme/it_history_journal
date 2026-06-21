@@ -17,8 +17,15 @@ module Video
     # Returns scenes array.
     ESTIMATED_DURATION = 55.0
 
-    def plan(narration_text, audio_duration)
+    # Returns [scenes, reused].
+    # Reuses existing scenes.json unless force: true.
+    def plan(narration_text, audio_duration, force: false)
       @paths.ensure_dir!
+
+      if File.exist?(@paths.scenes_json) && !force
+        scenes = JSON.parse(File.read(@paths.scenes_json))
+        return [scenes, true]
+      end
 
       duration  = audio_duration || ESTIMATED_DURATION
       sentences = split_sentences(narration_text)
@@ -29,7 +36,7 @@ module Video
       metadata = build_metadata(scenes, audio_duration)
       File.write(@paths.metadata_json, JSON.pretty_generate(metadata))
 
-      scenes
+      [scenes, false]
     end
 
     private

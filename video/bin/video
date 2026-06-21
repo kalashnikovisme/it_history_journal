@@ -13,16 +13,16 @@ def usage
   puts "Options:"
   puts "  --force-text    Regenerate narration.txt even if it exists"
   puts "  --force-audio   Regenerate narration.mp3 even if it exists"
+  puts "  --force-scenes  Regenerate scenes.json even if it exists"
   exit 1
 end
 
 argv = ARGV.dup
-force_text  = argv.delete("--force-text")
-force_audio = argv.delete("--force-audio")
+force_text   = argv.delete("--force-text")
+force_audio  = argv.delete("--force-audio")
+force_scenes = argv.delete("--force-scenes")
 
-if argv.empty?
-  usage
-end
+usage if argv.empty?
 
 scenario_only = false
 if argv[0] == "scenario"
@@ -31,9 +31,7 @@ if argv[0] == "scenario"
 end
 
 article_folder = argv.shift
-if article_folder.nil? || article_folder.empty?
-  usage
-end
+usage if article_folder.nil? || article_folder.empty?
 
 unless File.directory?(article_folder)
   $stderr.puts "[video] ERROR: Article folder not found: #{article_folder}".red
@@ -48,28 +46,48 @@ begin
   paths  = Video::OutputPaths.new(info)
   client = Video::OpenAIClient.new
 
-  puts "[video] Generating narration text...".cyan
-  generator  = Video::ScriptGenerator.new(info, paths, client)
-  narration  = generator.generate(force: force_text)
-  puts "[video] Narration saved to #{paths.narration_txt}".green
+  # Narration — reuse if exists
+  generator = Video::ScriptGenerator.new(info, paths, client)
+  if File.exist?(paths.narration_txt) && !force_text
+    puts "[video] Reusing #{paths.narration_txt}".yellow
+    narration = File.read(paths.narration_txt)
+  else
+    puts "[video] Generating narration...".cyan
+    narration = generator.generate(force: true)
+    puts "[video] Narration saved to #{paths.narration_txt}".green
+  end
 
-  puts "[video] Planning scenes...".cyan
   planner = Video::ScenePlanner.new(info, paths)
 
   if scenario_only
-    planner.plan(narration, nil)
-    puts "[video] Scenario saved to #{paths.scenes_json}".green
+    scenes, reused = planner.plan(narration, nil, force: force_scenes)
+    if reused
+      puts "[video] Reusing #{paths.scenes_json}".yellow
+    else
+      puts "[video] Scenario saved to #{paths.scenes_json}".green
+    end
     puts "[video] Scenario mode — done.".green
     exit 0
   end
 
-  puts "[video] Generating audio (TTS)...".cyan
+  # Audio — reuse if exists
   audio_gen = Video::AudioGenerator.new(paths, client)
-  duration  = audio_gen.generate(narration, force: force_audio)
-  puts "[video] Audio: #{duration.round(1)}s → #{paths.narration_mp3}".green
+  if File.exist?(paths.narration_mp3) && !force_audio
+    puts "[video] Reusing #{paths.narration_mp3}".yellow
+    duration = audio_gen.probe_duration(paths.narration_mp3)
+  else
+    puts "[video] Generating audio (TTS)...".cyan
+    duration = audio_gen.generate(narration, force: true)
+    puts "[video] Audio: #{duration.round(1)}s → #{paths.narration_mp3}".green
+  end
 
-  scenes = planner.plan(narration, duration)
-  puts "[video] #{scenes.size} scenes planned.".green
+  # Scenes — reuse if exists
+  scenes, reused = planner.plan(narration, duration, force: force_scenes)
+  if reused
+    puts "[video] Reusing #{paths.scenes_json}".yellow
+  else
+    puts "[video] #{scenes.size} scenes planned.".green
+  end
 
   puts "[video] Rendering browser frames...".cyan
   renderer = Video::Renderer.new(info, paths)
