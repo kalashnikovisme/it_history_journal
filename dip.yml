@@ -77,21 +77,21 @@ interaction:
     compose:
       run_options: [no-deps]
 
-  growth_bundle:
+  grow_bundle:
     description: Run bundler in the growth app container
     service: growth_app
     command: bundle
     compose:
       run_options: [no-deps]
 
-  growth:
+  grow:
     description: Run the growth CLI
     service: growth_app
     command: bundle exec ruby -I growth/lib growth/bin/growth
     compose:
       run_options: [no-deps]
 
-  growth_test:
+  grow_test:
     description: Run growth tests
     service: growth_app
     command: sh -c "cd /app/growth && bundle exec rake test"
