@@ -7,3 +7,4 @@ Gemfile.lock
 .env.dev
 growth/config/ga4_credentials.json
 growth/output/
+terminal-writer/
