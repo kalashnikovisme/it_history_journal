@@ -1,0 +1,93 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 21,
+  "year": "1955",
+  "slug": "tim-bray-was-born",
+  "slug_dir": "tim_bray_was_born",
+  "title": "Tim Bray: Pioneering XML and JSON Standards That Shaped the Web",
+  "date_display": "June 21, 1955",
+  "content_md": "This is truly one of those people whose work is used by almost everyone today.\n\nTim Bray was born in Canada and studied at the University of Guelph in Ontario. During the 1990s, he worked with a number of internet companies and became deeply involved in web standards through the W3C.\n\nIn 1998, he and the W3C published XML, a format designed to become the standard for structured data on the internet. That is exactly what happened. For nearly 30 years, XML has been used across thousands of software products and systems to represent complex structured information. Entire data ecosystems were built on top of it, and many other widely used technologies emerged from the XML family, including RSS, SOAP, XHTML, and SVG.\n\nIn the 2010s, Tim Bray became involved in the standardization of JSON. He was not its creator, but he authored and edited several RFCs that defined and formalized the format. Today, JSON is the dominant format for data exchange between browsers and servers, mobile applications and servers, and countless other systems. Billions of people rely on JSON every day without even knowing it.\n\nTim Bray spent many years at Sun Microsystems, then joined Google, and later moved to Amazon Web Services, where he worked as a VP and Distinguished Engineer.\n\nIn 2020, he resigned from Amazon, saying he could no longer remain silent while the company fired warehouse workers who had been raising safety concerns during the COVID-19 pandemic. Several whistleblowers and organizers were dismissed. Bray concluded that staying would make him complicit, and left despite significant financial cost.\n",
+  "cover_path": "articles/en/jun/21/tim_bray_was_born/cover.webp",
+  "folder": "articles/en/jun/21/tim_bray_was_born",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 43.804
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 4.867,
+      "text": "Every time you open a mobile app or load a web page, you’re using the work of Tim Bray."
+    },
+    {
+      "id": "fact",
+      "start": 12.367,
+      "duration": 4.867,
+      "text": "On June 21, 1955, Bray was born in Canada—a future architect of the modern digital world."
+    },
+    {
+      "id": "fact",
+      "start": 17.234,
+      "duration": 4.867,
+      "text": "In 1998, he co-authored the XML standard with the W3C, creating a universal language for structured data across the internet."
+    },
+    {
+      "id": "fact",
+      "start": 22.101,
+      "duration": 4.867,
+      "text": "XML became the backbone for countless technologies, from RSS feeds to SVG graphics and SOAP web services."
+    },
+    {
+      "id": "fact",
+      "start": 26.968,
+      "duration": 4.867,
+      "text": "In the 2010s, Bray helped formalize the JSON data format, now the invisible bridge connecting billions of devices and applications each day."
+    },
+    {
+      "id": "fact",
+      "start": 31.836,
+      "duration": 4.867,
+      "text": "His influence also reached industry giants like Sun Microsystems, Google, and Amazon Web Services."
+    },
+    {
+      "id": "fact",
+      "start": 36.703,
+      "duration": 4.867,
+      "text": "In 2020, he resigned from Amazon, protesting the firing of warehouse workers who spoke out about pandemic safety."
+    },
+    {
+      "id": "fact",
+      "start": 41.57,
+      "duration": 4.867,
+      "text": "The web’s connective tissue bears Tim Bray’s fingerprints."
+    },
+    {
+      "id": "fact",
+      "start": 46.437,
+      "duration": 4.867,
+      "text": "Follow IT History Journal."
+    },
+    {
+      "id": "cta",
+      "start": 51.304,
+      "duration": 5.0
+    }
+  ],
+  "total_duration": 56.304,
+  "scene_count": 13
+}

@@ -2,7 +2,7 @@ require "json"
 
 module Video
   class Renderer
-    RENDERER_DIR = File.expand_path("../../../renderer", __dir__)
+    RENDERER_DIR = File.expand_path("../../renderer", __dir__)
 
     def initialize(article_info, output_paths)
       @info  = article_info
@@ -57,10 +57,10 @@ module Video
     end
 
     def install_renderer_deps
-      node_modules = File.join(RENDERER_DIR, "node_modules")
-      return if File.exist?(node_modules)
+      playwright_dir = File.join(RENDERER_DIR, "node_modules", "playwright")
+      return if File.exist?(playwright_dir)
 
-      success = system("npm install --prefix #{RENDERER_DIR} 2>&1")
+      success = system("npm install --prefix #{RENDERER_DIR}")
       raise "npm install failed in #{RENDERER_DIR}" unless success
     end
 

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 43.804
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 4.867,
+    "text": "Every time you open a mobile app or load a web page, you’re using the work of Tim Bray."
+  },
+  {
+    "id": "fact",
+    "start": 12.367,
+    "duration": 4.867,
+    "text": "On June 21, 1955, Bray was born in Canada—a future architect of the modern digital world."
+  },
+  {
+    "id": "fact",
+    "start": 17.234,
+    "duration": 4.867,
+    "text": "In 1998, he co-authored the XML standard with the W3C, creating a universal language for structured data across the internet."
+  },
+  {
+    "id": "fact",
+    "start": 22.101,
+    "duration": 4.867,
+    "text": "XML became the backbone for countless technologies, from RSS feeds to SVG graphics and SOAP web services."
+  },
+  {
+    "id": "fact",
+    "start": 26.968,
+    "duration": 4.867,
+    "text": "In the 2010s, Bray helped formalize the JSON data format, now the invisible bridge connecting billions of devices and applications each day."
+  },
+  {
+    "id": "fact",
+    "start": 31.836,
+    "duration": 4.867,
+    "text": "His influence also reached industry giants like Sun Microsystems, Google, and Amazon Web Services."
+  },
+  {
+    "id": "fact",
+    "start": 36.703,
+    "duration": 4.867,
+    "text": "In 2020, he resigned from Amazon, protesting the firing of warehouse workers who spoke out about pandemic safety."
+  },
+  {
+    "id": "fact",
+    "start": 41.57,
+    "duration": 4.867,
+    "text": "The web’s connective tissue bears Tim Bray’s fingerprints."
+  },
+  {
+    "id": "fact",
+    "start": 46.437,
+    "duration": 4.867,
+    "text": "Follow IT History Journal."
+  },
+  {
+    "id": "cta",
+    "start": 51.304,
+    "duration": 5.0
+  }
+]
