@@ -18,6 +18,7 @@ end
 argv = ARGV.dup
 force_text  = argv.delete("--force-text")
 force_audio = argv.delete("--force-audio")
+no_upload   = argv.delete("--no-upload")
 
 article_folder = argv.shift
 usage if article_folder.nil? || article_folder.empty?
@@ -56,6 +57,17 @@ begin
     puts "[audio] Generating audio (TTS)...".cyan
     duration = audio_gen.generate(narration, force: true)
     puts "[audio] Done! #{duration.round(1)}s → #{paths.narration_mp3}".green
+  end
+
+  if no_upload
+    puts "[audio] Upload skipped (--no-upload).".yellow
+  elsif Video::DriveUploader.configured?
+    puts "[audio] Uploading to Google Drive...".cyan
+    uploader = Video::DriveUploader.new
+    links    = uploader.upload(info, paths)
+    puts "[audio] MP3 → #{links[:mp3]}".green if links[:mp3]
+  else
+    puts "[audio] Google Drive not configured — skipping upload.".yellow
   end
 
 rescue => e

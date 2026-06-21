@@ -21,6 +21,7 @@ argv = ARGV.dup
 force_text   = argv.delete("--force-text")
 force_audio  = argv.delete("--force-audio")
 force_scenes = argv.delete("--force-scenes")
+no_upload    = argv.delete("--no-upload")
 
 usage if argv.empty?
 
@@ -98,6 +99,18 @@ begin
   composer = Video::FfmpegComposer.new(paths)
   final    = composer.compose
   puts "[video] Done! → #{final}".green
+
+  if no_upload
+    puts "[video] Upload skipped (--no-upload).".yellow
+  elsif Video::DriveUploader.configured?
+    puts "[video] Uploading to Google Drive...".cyan
+    uploader = Video::DriveUploader.new
+    links    = uploader.upload(info, paths)
+    puts "[video] MP3 → #{links[:mp3]}".green if links[:mp3]
+    puts "[video] MP4 → #{links[:mp4]}".green if links[:mp4]
+  else
+    puts "[video] Google Drive not configured — skipping upload.".yellow
+  end
 
 rescue => e
   $stderr.puts "[video] ERROR: #{e.message}".red

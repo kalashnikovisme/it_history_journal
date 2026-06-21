@@ -112,6 +112,13 @@ interaction:
     compose:
       run_options: [no-deps]
 
+  video_bundle:
+    description: Run bundler commands for the video Gemfile
+    service: video_app
+    command: bundle
+    compose:
+      run_options: [no-deps]
+
   video_shell:
     description: Open a shell in the video app container
     service: video_app
@@ -122,3 +129,4 @@ interaction:
 provision:
   - dip compose build
   - dip bundle install
+  - dip video_bundle install
