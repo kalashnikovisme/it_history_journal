@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "video"
+require "colorize"
+
+def usage
+  puts "Usage: audio <article_folder>"
+  puts
+  puts "  audio articles/ru/jun/21/tim_bray_was_born"
+  puts
+  puts "Options:"
+  puts "  --force-text    Regenerate narration.txt even if it exists"
+  puts "  --force-audio   Regenerate narration.mp3 even if it exists"
+  exit 1
+end
+
+argv = ARGV.dup
+force_text  = argv.delete("--force-text")
+force_audio = argv.delete("--force-audio")
+
+article_folder = argv.shift
+if article_folder.nil? || article_folder.empty?
+  usage
+end
+
+unless File.directory?(article_folder)
+  $stderr.puts "[audio] ERROR: Article folder not found: #{article_folder}".red
+  exit 1
+end
+
+begin
+  puts "[audio] Loading article...".cyan
+  info = Video::ArticleLoader.load(article_folder)
+  puts "[audio] #{info[:title]}".cyan
+
+  paths  = Video::OutputPaths.new(info)
+  client = Video::OpenAIClient.new
+
+  puts "[audio] Generating narration text...".cyan
+  generator = Video::ScriptGenerator.new(info, paths, client)
+  narration = generator.generate(force: force_text)
+  puts "[audio] Narration saved to #{paths.narration_txt}".green
+
+  puts "[audio] Generating audio (TTS)...".cyan
+  audio_gen = Video::AudioGenerator.new(paths, client)
+  duration  = audio_gen.generate(narration, force: force_audio)
+  puts "[audio] Done! #{duration.round(1)}s → #{paths.narration_mp3}".green
+
+rescue => e
+  $stderr.puts "[audio] ERROR: #{e.message}".red
+  $stderr.puts e.backtrace.first(5).join("\n").red if ENV["DEBUG"]
+  exit 1
+end

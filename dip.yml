@@ -98,6 +98,27 @@ interaction:
     compose:
       run_options: [no-deps]
 
+  video:
+    description: Generate video from article folder (pass scenario as first arg for narration+scenes only)
+    service: video_app
+    command: bundle exec ruby -I video/lib video/bin/video
+    compose:
+      run_options: [no-deps]
+
+  audio:
+    description: Generate audio narration from article folder
+    service: video_app
+    command: bundle exec ruby -I video/lib video/bin/audio
+    compose:
+      run_options: [no-deps]
+
+  video_shell:
+    description: Open a shell in the video app container
+    service: video_app
+    command: bash
+    compose:
+      run_options: [no-deps]
+
 provision:
   - dip compose build
   - dip bundle install

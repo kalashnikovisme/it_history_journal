@@ -112,6 +112,10 @@ Builds the Docker image and installs gems.
 | `dip rewrite_excerpts [jun-10]` | Rewrite article excerpts via OpenAI API (reads `OPENAI_API_KEY` from `.env.dev`). Pass a date like `jun-10` to limit to that day; omit to rewrite all articles. |
 | `dip shell` | Open a shell in the container |
 | `dip bundle <args>` | Run bundler commands |
+| `dip video <article_folder>` | Generate branded short video from an article (full pipeline) |
+| `dip video text <article_folder>` | Generate narration text only (no audio/render) |
+| `dip audio <article_folder>` | Generate audio narration (TTS) from an article |
+| `dip video_shell` | Open a shell in the video container |
 
 ### Watch mode
 
@@ -139,6 +143,69 @@ Builds the Docker image and installs gems.
 | `-t`, `--thumb-only WxH` | — | Write a W×H centered crop to `thumb.webp` only — use `N` for a square or `WxH` for a rectangle (skips main output) |
 | `-n`, `--thumb-name NAME` | `thumb.webp` | Override the output filename for `--thumb-only` |
 | `--no-strip` | — | Keep EXIF metadata |
+
+## Video generation
+
+The `video/` module generates branded short vertical videos (1080×1920) from articles.
+
+### Setup
+
+The video pipeline runs in its own Docker container (`video_app`) with ffmpeg, Node.js, and Playwright pre-installed.
+
+Required environment variable in `.env.dev`:
+```
+OPENAI_API_KEY=sk-...
+```
+
+### Commands
+
+```bash
+# Full pipeline: narration → TTS audio → browser render → final.mp4
+dip video articles/ru/jun/21/tim_bray_was_born
+
+# Text only: generate narration.txt without audio or render
+dip video text articles/ru/jun/21/tim_bray_was_born
+
+# Audio only: generate narration.txt + narration.mp3
+dip audio articles/ru/jun/21/tim_bray_was_born
+
+# Shell in the video container (for debugging)
+dip video_shell
+```
+
+### Flags
+
+| Flag | Description |
+|---|---|
+| `--force-text` | Regenerate narration.txt even if it already exists |
+| `--force-audio` | Regenerate narration.mp3 even if it already exists |
+
+### Output files
+
+All output lands in `video/output/{lang}/{mon}/{dd}/{slug}/`:
+
+| File | Description |
+|---|---|
+| `prompt.txt` | Full prompt sent to OpenAI |
+| `narration.txt` | Generated narration text (edit this to re-run audio) |
+| `tts-request.json` | TTS request parameters |
+| `narration.mp3` | Generated audio (TTS, voice: onyx) |
+| `scenes.json` | Scene timing plan |
+| `metadata.json` | Article metadata + scene info |
+| `render-config.json` | Config fed to the JS renderer |
+| `browser-recording.webm` | Raw browser recording |
+| `final.mp4` | Final composed video |
+
+### Editing the narration
+
+To tweak the narration before generating audio:
+
+```bash
+dip video text articles/ru/jun/21/tim_bray_was_born
+# edit video/output/ru/jun/21/tim_bray_was_born/narration.txt
+dip audio articles/ru/jun/21/tim_bray_was_born   # picks up edited narration.txt
+dip video articles/ru/jun/21/tim_bray_was_born   # re-runs render + compose
+```
 
 ## RSS feeds
 

@@ -1,0 +1,10 @@
+{
+  "name": "ith-video-renderer",
+  "version": "0.1.0",
+  "scripts": {
+    "record": "node record.js"
+  },
+  "devDependencies": {
+    "playwright": "latest"
+  }
+}

@@ -1,0 +1,8 @@
+require "video/article_loader"
+require "video/output_paths"
+require "video/openai_client"
+require "video/script_generator"
+require "video/audio_generator"
+require "video/scene_planner"
+require "video/renderer"
+require "video/ffmpeg_composer"

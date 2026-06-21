@@ -1,0 +1,310 @@
+/* IT History Journal — Video Renderer Styles */
+
+:root {
+  --color-page: #000000;
+  --color-card: #000000;
+  --color-raised: #282626;
+  --color-accent: #e9def3;
+  --color-accent-muted: #c0b4ce;
+  --color-accent-dim: #55515a;
+  --color-white-10: rgba(255,255,255,0.10);
+  --color-white-20: rgba(255,255,255,0.20);
+  --color-white-30: rgba(255,255,255,0.30);
+  --color-white-60: rgba(255,255,255,0.60);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-accent);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#webgl-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 1920px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#app {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Base scene class */
+.scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 1920px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene.active {
+  opacity: 1;
+}
+
+.scene.fade-out {
+  opacity: 0;
+}
+
+/* Calendar scene */
+.calendar-scene {
+  z-index: 10;
+  background: transparent;
+  padding: 80px 60px;
+}
+
+.calendar-month {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.calendar-day-header {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-accent-muted);
+  padding: 8px 0;
+  letter-spacing: 0.05em;
+}
+
+.calendar-day {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 400;
+  color: var(--color-white-60);
+  padding: 14px 8px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.calendar-day.empty {
+  opacity: 0;
+}
+
+.calendar-day.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.calendar-day.target {
+  color: var(--color-accent);
+  background: rgba(233, 222, 243, 0.15);
+  font-weight: 700;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 20px rgba(233, 222, 243, 0.4), 0 0 40px rgba(233, 222, 243, 0.15);
+}
+
+.calendar-day.target.zoom {
+  transform: scale(1.25);
+  box-shadow: 0 0 40px rgba(233, 222, 243, 0.6), 0 0 80px rgba(233, 222, 243, 0.25);
+}
+
+/* Title card scene */
+.title-scene {
+  z-index: 9;
+  background: transparent;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.title-scene .date-label {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-accent-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.title-scene .title-text {
+  font-size: 68px;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+}
+
+.title-scene.active .date-label,
+.title-scene.active .title-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cover scene */
+.cover-scene {
+  z-index: 8;
+  background: var(--color-page);
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.cover-image-container {
+  width: 1080px;
+  height: 607px; /* 16:9 */
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.cover-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+  transition: transform 20s linear;
+}
+
+.cover-meta {
+  padding: 48px 60px 24px;
+  width: 100%;
+}
+
+.cover-meta .date-label {
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--color-accent-muted);
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cover-meta .title-text {
+  font-size: 58px;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.25;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.cover-scene.active .cover-meta .date-label,
+.cover-scene.active .cover-meta .title-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Facts overlay on top of cover */
+.facts-scene {
+  z-index: 15;
+  background: transparent;
+  padding: 660px 60px 60px; /* below the cover image */
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.fact-text {
+  font-size: 54px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.45;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  max-width: 960px;
+}
+
+.fact-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CTA scene */
+.cta-scene {
+  z-index: 20;
+  background: var(--color-page);
+  text-align: center;
+  gap: 0;
+}
+
+.cta-logo {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.cta-tagline {
+  font-size: 44px;
+  font-weight: 400;
+  color: var(--color-accent-muted);
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+.cta-url {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--color-accent-dim);
+  letter-spacing: 0.03em;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+.cta-divider {
+  width: 120px;
+  height: 2px;
+  background: var(--color-accent-dim);
+  margin: 48px auto;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.1s;
+}
+
+.cta-scene.active .cta-logo,
+.cta-scene.active .cta-tagline,
+.cta-scene.active .cta-url {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-scene.active .cta-divider {
+  opacity: 1;
+}

@@ -1,0 +1,38 @@
+Write the narration in Russian.
+
+Article title: Тим Брэй: соавтор XML и ключевой разработчик JSON
+Date: 21 июня 1955
+
+Article content:
+Это действительно человек, плодами трудов которого сегодня пользуется каждый.
+
+Тим Брэй родился в Канаде, учился в университете Гуэлфа, Онтарио. В 1990-х годах активно работал с интернет компаниями, работал над стандартами веба в W3C.
+
+В 1998 году он вместе с W3C опубликовал XML, который был призван стать стандартом для управления структурированными данными в интернете. Он таким и стал. Уже почти 30 лет XML массово используется в тысячах программных продуктов и решений для структурирования сложных данных. На основе построены огромные потоки данных и наследованы другие популярные технологии: RSS, SOAP, XHTML, SVG.
+
+В 2010-х годах Тим Брэй начал работу над стандартом JSON. Он не был его создателем, но стал автором нескольких RFC, которые сформулировали и формализовали JSON. Сегодня JSON — самый распространённый формат обмена данными между браузером и сервером, между мобильным приложением и сервером и т.д. JSONом фактически пользуются ежедневно миллиарды людей.
+
+Тим Брэй долго работал в Sun, затем перешёл в Google, а позже — в Amazon Web Services, где занимал должность вице-президента.
+
+В 2020 году он уволился из Amazon, заявив, что не может молчать, пока компания увольняет складских работников, поднимавших вопросы безопасности труда во время пандемии COVID-19. Несколько таких сотрудников были уволены. Тим Брэй решил, что оставаться в компании означало бы стать соучастником этих решений, и ушёл, несмотря на значительные финансовые потери.
+
+
+---
+
+Write a short historical documentary narration (100–130 words) for a vertical short video.
+
+Structure:
+1. Hook — grab attention immediately with the most compelling fact or image
+2. Date + Event — state what happened and when
+3. What happened — the key event in a sentence or two
+4. Why it mattered — the significance
+5. What came after — brief legacy
+6. Soft CTA — end with exactly this line: "Подписывайтесь на IT History Journal."
+
+Requirements:
+- 100–130 words total
+- Calm, documentary tone
+- No H1/H2 headings, no bullet points, no markdown
+- No stage directions or speaker labels
+- Start immediately with the hook sentence
+- End with: Подписывайтесь на IT History Journal.

@@ -27,5 +27,20 @@ services:
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       ITH_GROWTH_CONFIG: ${ITH_GROWTH_CONFIG:-growth/config/config.yml}
 
+  video_app:
+    build:
+      context: ..
+      dockerfile: .dockerdev/Dockerfile.video.dev
+    working_dir: /app
+    env_file:
+      - ../.env.dev
+    volumes:
+      - ..:/app
+      - bundle:/usr/local/bundle
+      - video_node_modules:/app/video/renderer/node_modules
+    environment:
+      BUNDLE_GEMFILE: /app/video/Gemfile
+
 volumes:
   bundle:
+  video_node_modules:

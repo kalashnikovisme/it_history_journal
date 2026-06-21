@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "video"
+require "colorize"
+
+def usage
+  puts "Usage: video [scenario] <article_folder>"
+  puts
+  puts "  video articles/ru/jun/21/tim_bray_was_born          # full pipeline"
+  puts "  video scenario articles/ru/jun/21/tim_bray_was_born # narration + scenes.json only"
+  puts
+  puts "Options:"
+  puts "  --force-text    Regenerate narration.txt even if it exists"
+  puts "  --force-audio   Regenerate narration.mp3 even if it exists"
+  exit 1
+end
+
+argv = ARGV.dup
+force_text  = argv.delete("--force-text")
+force_audio = argv.delete("--force-audio")
+
+if argv.empty?
+  usage
+end
+
+scenario_only = false
+if argv[0] == "scenario"
+  scenario_only = true
+  argv.shift
+end
+
+article_folder = argv.shift
+if article_folder.nil? || article_folder.empty?
+  usage
+end
+
+unless File.directory?(article_folder)
+  $stderr.puts "[video] ERROR: Article folder not found: #{article_folder}".red
+  exit 1
+end
+
+begin
+  puts "[video] Loading article...".cyan
+  info = Video::ArticleLoader.load(article_folder)
+  puts "[video] #{info[:title]}".cyan
+
+  paths  = Video::OutputPaths.new(info)
+  client = Video::OpenAIClient.new
+
+  puts "[video] Generating narration text...".cyan
+  generator  = Video::ScriptGenerator.new(info, paths, client)
+  narration  = generator.generate(force: force_text)
+  puts "[video] Narration saved to #{paths.narration_txt}".green
+
+  puts "[video] Planning scenes...".cyan
+  planner = Video::ScenePlanner.new(info, paths)
+
+  if scenario_only
+    planner.plan(narration, nil)
+    puts "[video] Scenario saved to #{paths.scenes_json}".green
+    puts "[video] Scenario mode — done.".green
+    exit 0
+  end
+
+  puts "[video] Generating audio (TTS)...".cyan
+  audio_gen = Video::AudioGenerator.new(paths, client)
+  duration  = audio_gen.generate(narration, force: force_audio)
+  puts "[video] Audio: #{duration.round(1)}s → #{paths.narration_mp3}".green
+
+  scenes = planner.plan(narration, duration)
+  puts "[video] #{scenes.size} scenes planned.".green
+
+  puts "[video] Rendering browser frames...".cyan
+  renderer = Video::Renderer.new(info, paths)
+  renderer.render(scenes, duration)
+  puts "[video] Browser recording saved to #{paths.browser_recording_webm}".green
+
+  puts "[video] Composing final video...".cyan
+  composer = Video::FfmpegComposer.new(paths)
+  final    = composer.compose
+  puts "[video] Done! → #{final}".green
+
+rescue => e
+  $stderr.puts "[video] ERROR: #{e.message}".red
+  $stderr.puts e.backtrace.first(5).join("\n").red if ENV["DEBUG"]
+  exit 1
+end
