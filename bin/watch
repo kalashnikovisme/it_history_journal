@@ -9,7 +9,7 @@ require 'builder'
 
 SITE_ROOT = File.expand_path('..', __dir__)
 SITE_DIR  = File.join(SITE_ROOT, '_site')
-PORT      = 4000
+PORT      = 4711
 
 def log(msg, color = :cyan)
   codes = { cyan: 36, green: 32, yellow: 33, red: 31 }

@@ -36,7 +36,7 @@ interaction:
       run_options: [no-deps]
 
   serve:
-    description: Serve the site locally on port 4000
+    description: Serve the site locally on port 4711
     service: app
     command: bundle exec rake serve
     compose:

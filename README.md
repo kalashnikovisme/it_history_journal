@@ -105,8 +105,8 @@ Builds the Docker image and installs gems.
 |---|---|
 | `dip rspec` | Run RSpec tests |
 | `dip build` | Build the static site into `_site/` |
-| `dip serve` | Build and serve at http://localhost:4000 |
-| `dip watch` | Full build + file watcher + dev server at http://localhost:4000 |
+| `dip serve` | Build and serve at http://localhost:4711 |
+| `dip watch` | Full build + file watcher + dev server at http://localhost:4711 |
 | `dip convert_to_webp <file> [files...]` | Convert images to WebP format |
 | `dip convert_covers` | Convert non-WebP covers to `cover.webp`, then generate `thumb.webp` (192×192) from each `cover.webp` |
 | `dip rewrite_excerpts [jun-10]` | Rewrite article excerpts via OpenAI API (reads `OPENAI_API_KEY` from `.env.dev`). Pass a date like `jun-10` to limit to that day; omit to rewrite all articles. |
@@ -124,7 +124,7 @@ Builds the Docker image and installs gems.
 
 ### Watch mode
 
-`dip watch` does a full initial build (CSS + HTML), starts a server at http://localhost:4000, then listens for file changes:
+`dip watch` does a full initial build (CSS + HTML), starts a server at http://localhost:4711, then listens for file changes:
 
 - **`.md` changed** — rebuilds the affected article page + all index/calendar pages (~0.1s)
 - **`.haml` changed** — rebuilds all HTML pages (~0.15s)

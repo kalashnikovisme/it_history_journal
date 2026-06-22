@@ -7,7 +7,7 @@ services:
     environment:
       - TZ=${TZ:-Europe/Moscow}
     ports:
-      - '4000:4000'
+      - '4711:4711'
     volumes:
       - ..:/app
       - bundle:/usr/local/bundle
