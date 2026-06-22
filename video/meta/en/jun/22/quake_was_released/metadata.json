@@ -1,0 +1,114 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 22,
+  "year": "1996",
+  "slug": "quake-was-released",
+  "slug_dir": "quake_was_released",
+  "title": "June 22, 1996: The Launch of Quake and Its Impact on Gaming",
+  "date_display": "June 22, 1996",
+  "content_md": "On June 22, 1996, id Software released Quake, one of the games that reshaped not only the video game industry but also the broader world of computing.\n\nThe story of Quake began long before its release. During the Doom years, John Romero and John Carmack often discussed a game inspired by their Dungeons & Dragons campaigns. The original concept was a dark fantasy RPG featuring character progression, quests, magic, and a non-linear storyline. The protagonist was supposed to be a warrior named Quake. According to Carmack, that was the name of his own D&D character.\n\n## Development\n\nOnce development started, the project quickly moved in a different direction. Many of the original ideas proved too ambitious, different members of the team had conflicting visions, and Quake gradually evolved into a fast-paced 3D shooter. Only fragments of the original fantasy concept survived in the final game.\n\nTo build Quake, id Software created an entirely new engine. Unlike Doom, which relied on a two-dimensional engine to simulate a 3D world, Quake used true three-dimensional geometry and polygonal character models. Building such technology from scratch required enormous effort.\n\nFor the engine work, id Software recruited Michael Abrash, one of the world's leading experts in 3D graphics. At the time he was working at Microsoft, but John Carmack personally convinced him to join id Software. Abrash focused on rendering optimization and helped develop techniques that allowed Quake to run on the average PCs of the mid-1990s.\n\nAnother developer worth mentioning is Tim Willits. Before joining id Software, he was known for creating custom Doom maps. The company noticed his work and brought him onto the team. He would later become one of the studio's most influential level designers.\n\nQuake's atmosphere also deserves special attention. Instead of traditional science fiction, the game is filled with strange castles, ancient creatures, and otherworldly dimensions heavily inspired by the works of H. P. Lovecraft. Even the final boss is named Shub-Niggurath, a creature from the Lovecraft mythos.\n\n## Multiplayer Gaming and Speedrunning\n\nMultiplayer was not an afterthought in Quake — it was one of the project's core features. Soon after release, clans, tournaments, and some of the first professional players began to appear around the game.\n\nOne of the most important milestones was the release of QuakeWorld. It introduced technologies that made online play practical even over high-latency internet connections. Techniques such as client-side prediction became fundamental parts of online gaming and were pioneered in QuakeWorld.\n\nQuake also helped popularize speedrunning. Recording gameplay footage in the mid-1990s was difficult. Capturing video often produced poor image quality and could slow down the game itself. Quake approached the problem differently. The engine could record gameplay demos directly. Finish a level, save the demo, and share it with others. This dramatically lowered the technical barrier to speedrunning and attracted a large new community.\n\nA huge modding scene quickly grew around the game. The engine was relatively accessible, making it an ideal platform for modders. One of the most famous projects was Team Fortress, originally released as a Quake mod. It later became its own series and eventually led to Team Fortress 2.\n\nIn December 1999, id Software released the Quake source code. That decision allowed enthusiasts to create new ports, improve the engine, and preserve the game for future generations. Nearly thirty years later, Quake is still alive thanks to that choice. Its source code remains publicly available on [GitHub](https://github.com/id-software/quake).\n",
+  "cover_path": "articles/en/jun/22/quake_was_released/cover.webp",
+  "folder": "articles/en/jun/22/quake_was_released",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 42.34
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 4.704,
+      "text": "In 1996, a game emerged from the shadows, filled with strange castles, ancient horrors, and otherworldly dimensions."
+    },
+    {
+      "id": "fact",
+      "start": 12.204,
+      "duration": 4.704,
+      "text": "On June 22, id Software released Quake, a title that marked the arrival of true 3D graphics and real-time online multiplayer in gaming."
+    },
+    {
+      "id": "fact",
+      "start": 16.909,
+      "duration": 4.704,
+      "text": "Quake wasn’t just a shooter—it was a technological leap."
+    },
+    {
+      "id": "fact",
+      "start": 21.613,
+      "duration": 4.704,
+      "text": "Building the engine from scratch, the team brought in experts like Michael Abrash to make 3D worlds run on everyday PCs."
+    },
+    {
+      "id": "fact",
+      "start": 26.318,
+      "duration": 4.704,
+      "text": "Multiplayer wasn’t an afterthought; it became a proving ground for competitive gaming and the birthplace of online clans and tournaments."
+    },
+    {
+      "id": "fact",
+      "start": 31.022,
+      "duration": 4.704,
+      "text": "Speedrunning found a new home as Quake’s demo system allowed players to race and share their fastest runs with ease."
+    },
+    {
+      "id": "fact",
+      "start": 35.727,
+      "duration": 4.704,
+      "text": "The game’s open engine inspired mods like Team Fortress and, later, the open release of its source code."
+    },
+    {
+      "id": "fact",
+      "start": 40.431,
+      "duration": 4.704,
+      "text": "Quake’s influence still echoes today."
+    },
+    {
+      "id": "fact",
+      "start": 45.136,
+      "duration": 4.704,
+      "text": "Follow IT History Journal."
+    },
+    {
+      "id": "cta",
+      "start": 49.84,
+      "duration": 5.0
+    }
+  ],
+  "total_duration": 54.84,
+  "scene_count": 13,
+  "youtube": {
+    "title": "How Quake Changed Gaming Forever: 3D Graphics, Online Play & Modding (1996)",
+    "description": "On June 22, 1996, Quake launched and revolutionized gaming with true 3D graphics, real-time online multiplayer, and a thriving modding scene. Discover how id Software's technical leap set the stage for eSports, speedrunning, and open-source game development. Explore the legacy of Quake and why its impact still echoes today. For more insights into tech history, follow IT History Journal. #Quake #GamingHistory #Shorts",
+    "tags": [
+      "Quake",
+      "id Software",
+      "video game history",
+      "3D graphics",
+      "online multiplayer",
+      "Michael Abrash",
+      "John Carmack",
+      "speedrunning",
+      "Team Fortress",
+      "game development",
+      "modding",
+      "eSports",
+      "QuakeWorld",
+      "open source games",
+      "IT History Journal"
+    ]
+  }
+}

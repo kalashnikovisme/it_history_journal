@@ -13,7 +13,12 @@ RSpec.describe Video::YoutubeMetadataGenerator do
   let(:response) do
     JSON.generate(
       title: "How XML Became a Web Standard",
-      description: "The story behind XML and the web. Follow IT History Journal. #XML #WebHistory #Shorts",
+      description: <<~DESCRIPTION.strip,
+        The story behind XML and the web. Follow IT History Journal. #XML #WebHistory #Shorts
+        https://history.purple-magic.com
+        https://patreon.com/cw/kalashnikovisme
+        https://paypal.me/kalashnikovisme
+      DESCRIPTION
       tags: ["XML", "web history", "W3C", "internet history", "data formats"]
     )
   end
@@ -30,6 +35,9 @@ RSpec.describe Video::YoutubeMetadataGenerator do
 
       expect(reused).to be false
       expect(youtube.fetch("title")).to eq("How XML Became a Web Standard")
+      expect(client).to have_received(:chat).with(hash_including(
+        messages: include(hash_including(content: include(*described_class::DESCRIPTION_LINKS)))
+      ))
       expect(metadata.fetch("scene_count")).to eq(4)
       expect(metadata.fetch("youtube")).to eq(youtube)
     end
@@ -53,7 +61,7 @@ RSpec.describe Video::YoutubeMetadataGenerator do
   it "rejects metadata outside YouTube constraints" do
     Dir.mktmpdir do |dir|
       paths = paths_for(File.join(dir, "metadata.json"))
-      invalid = JSON.generate(title: "x" * 101, description: "Description", tags: %w[one two three four five])
+      invalid = JSON.generate(title: "x" * 101, description: response_description, tags: %w[one two three four five])
       client = instance_double("OpenAIClient", chat: invalid)
 
       expect {
@@ -62,11 +70,42 @@ RSpec.describe Video::YoutubeMetadataGenerator do
     end
   end
 
+  it "appends required links missing from a generated description" do
+    Dir.mktmpdir do |dir|
+      paths = paths_for(File.join(dir, "metadata.json"))
+      response_without_links = JSON.generate(
+        title: "Title",
+        description: "Description",
+        tags: %w[one two three four five]
+      )
+      client = instance_double("OpenAIClient", chat: response_without_links)
+
+      youtube, = described_class.new(info, paths, client).generate("Narration")
+
+      expect(youtube.fetch("description")).to include(*described_class::DESCRIPTION_LINKS)
+    end
+  end
+
+  it "adds required links to reused metadata and persists the update" do
+    Dir.mktmpdir do |dir|
+      metadata_path = File.join(dir, "metadata.json")
+      existing = JSON.parse(response).merge("description" => "Old description")
+      File.write(metadata_path, JSON.generate("youtube" => existing))
+      client = instance_double("OpenAIClient")
+
+      youtube, reused = described_class.new(info, paths_for(metadata_path), client).generate("Narration")
+
+      expect(reused).to be true
+      expect(youtube.fetch("description")).to include(*described_class::DESCRIPTION_LINKS)
+      expect(JSON.parse(File.read(metadata_path)).dig("youtube", "description")).to eq(youtube.fetch("description"))
+    end
+  end
+
   it "enforces YouTube's combined tag length calculation" do
     Dir.mktmpdir do |dir|
       paths = paths_for(File.join(dir, "metadata.json"))
       tags = ["two words" * 12, "b" * 100, "c" * 100, "d" * 100, "e" * 100]
-      invalid = JSON.generate(title: "Title", description: "Description", tags: tags)
+      invalid = JSON.generate(title: "Title", description: response_description, tags: tags)
       client = instance_double("OpenAIClient", chat: invalid)
 
       expect {
@@ -77,5 +116,9 @@ RSpec.describe Video::YoutubeMetadataGenerator do
 
   def paths_for(metadata_path)
     instance_double("OutputPaths", metadata_json: metadata_path, ensure_dir!: nil)
+  end
+
+  def response_description
+    JSON.parse(response).fetch("description")
   end
 end

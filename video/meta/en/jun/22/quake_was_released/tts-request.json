@@ -1,0 +1,6 @@
+{
+  "model": "tts-1",
+  "input": "In 1996, a game emerged from the shadows, filled with strange castles, ancient horrors, and otherworldly dimensions. On June 22, id Software released Quake, a title that marked the arrival of true 3D graphics and real-time online multiplayer in gaming. Quake wasn’t just a shooter—it was a technological leap. Building the engine from scratch, the team brought in experts like Michael Abrash to make 3D worlds run on everyday PCs. Multiplayer wasn’t an afterthought; it became a proving ground for competitive gaming and the birthplace of online clans and tournaments. Speedrunning found a new home as Quake’s demo system allowed players to race and share their fastest runs with ease. The game’s open engine inspired mods like Team Fortress and, later, the open release of its source code. Quake’s influence still echoes today. Follow IT History Journal.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

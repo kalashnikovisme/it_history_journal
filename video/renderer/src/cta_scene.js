@@ -22,7 +22,7 @@ class CTAScene {
     const el = document.createElement('div');
     el.className = 'scene cta-scene';
     el.innerHTML = `
-      <div class="cta-logo">${this._escapeHtml(logoText)}</div>
+      <img class="cta-logo" src="/assets/logo.png" alt="${this._escapeHtml(logoText)}" />
       <div class="cta-divider"></div>
       <div class="cta-tagline">${this._escapeHtml(tagline)}</div>
       <div class="cta-url">${this._escapeHtml(siteUrl)}</div>

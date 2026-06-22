@@ -6,6 +6,11 @@ module Video
     DESCRIPTION_MAX_BYTES = 5_000
     TAGS_MAX_LENGTH = 500
     TAG_COUNT_RANGE = (5..15)
+    DESCRIPTION_LINKS = [
+      "https://history.purple-magic.com",
+      "https://patreon.com/cw/kalashnikovisme",
+      "https://paypal.me/kalashnikovisme"
+    ].freeze
 
     def initialize(article_info, output_paths, openai_client)
       @info = article_info
@@ -16,7 +21,11 @@ module Video
     def generate(narration, force: false)
       @paths.ensure_dir!
       metadata = load_metadata
-      return [metadata.fetch("youtube"), true] if metadata["youtube"] && !force
+      if metadata["youtube"] && !force
+        youtube = validate(metadata.fetch("youtube"))
+        File.write(@paths.metadata_json, JSON.pretty_generate(metadata.merge("youtube" => youtube)))
+        return [youtube, true]
+      end
 
       response = @client.chat(
         messages: [
@@ -67,7 +76,8 @@ module Video
 
         Requirements:
         - title: specific, natural, curiosity-driven, factually accurate, at most #{TITLE_MAX_LENGTH} characters
-        - description: at most #{DESCRIPTION_MAX_BYTES} bytes; concise summary with useful search context, a soft IT History Journal CTA, and up to 3 relevant hashtags including #Shorts
+        - description: at most #{DESCRIPTION_MAX_BYTES} bytes; concise summary with useful search context, a soft IT History Journal CTA, up to 3 relevant hashtags including #Shorts, and all of these exact links (each on its own line):
+          #{DESCRIPTION_LINKS.join("\n  ")}
         - tags: JSON array of #{TAG_COUNT_RANGE.begin}-#{TAG_COUNT_RANGE.end} distinct search tags without # prefixes; keep the combined YouTube tag length under #{TAGS_MAX_LENGTH} characters
         - avoid sensational claims, keyword stuffing, and facts not supported by the source
         - output JSON only
@@ -81,6 +91,8 @@ module Video
     def validate(value)
       title = value["title"].to_s.strip
       description = value["description"].to_s.strip
+      missing_links = DESCRIPTION_LINKS.reject { |link| description.include?(link) }
+      description = ([description] + missing_links).join("\n")
       tags = Array(value["tags"]).map { |tag| tag.to_s.delete_prefix("#").strip }.reject(&:empty?).uniq
 
       raise "YouTube title is empty" if title.empty?

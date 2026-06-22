@@ -4,6 +4,22 @@
 require "video"
 require "colorize"
 
+def print_youtube_summary(youtube)
+  bar = "─" * 60
+  puts bar.cyan
+  puts "  YouTube Metadata".cyan.bold
+  puts bar.cyan
+  puts "  Title:".bold
+  puts "    #{youtube.fetch('title')}"
+  puts ""
+  puts "  Description:".bold
+  youtube.fetch("description").each_line { |l| puts "    #{l.chomp}" }
+  puts ""
+  puts "  Tags:".bold
+  puts "    #{youtube.fetch('tags').join(', ')}"
+  puts bar.cyan
+end
+
 def usage
   puts "Usage: video [scenario] <article_folder>"
   puts "       video part <name> <article_folder>"
@@ -87,7 +103,7 @@ begin
     youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
     youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
     puts youtube_reused ? "[video] Reusing YouTube metadata.".yellow : "[video] YouTube metadata saved.".green
-    puts "[video] YouTube title: #{youtube.fetch('title')}".cyan
+    print_youtube_summary(youtube)
     puts "[video] Scenario mode — done.".green
     exit 0
   end
@@ -114,7 +130,6 @@ begin
   youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
   youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
   puts youtube_reused ? "[video] Reusing YouTube metadata.".yellow : "[video] YouTube metadata saved.".green
-  puts "[video] YouTube title: #{youtube.fetch('title')}".cyan
 
   puts "[video] Rendering browser frames...".cyan
   renderer = Video::Renderer.new(info, paths)
@@ -136,6 +151,16 @@ begin
     puts "[video] MP4 → #{links[:mp4]}".green if links[:mp4]
   else
     puts "[video] Google Drive not configured — skipping upload.".yellow
+  end
+
+  print_youtube_summary(youtube)
+
+  if Video::TelegramNotifier.configured?
+    puts "[video] Sending video and YouTube metadata to Telegram...".cyan
+    Video::TelegramNotifier.new.deliver(final, youtube)
+    puts "[video] Telegram delivery complete (4 messages).".green
+  else
+    puts "[video] TELEGRAM_BOT_TOKEN is not set — skipping Telegram delivery.".yellow
   end
 
 rescue => e

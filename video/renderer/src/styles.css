@@ -182,10 +182,10 @@ body {
 
 .cover-top {
   position: absolute;
-  top: 0;
+  top: 200px;
   left: 0;
   right: 0;
-  padding: 80px 60px 0;
+  padding: 0 60px 80px;
   text-align: center;
   z-index: 1;
 }
@@ -266,10 +266,9 @@ body {
 }
 
 .cta-logo {
-  font-size: 52px;
-  font-weight: 800;
-  color: var(--color-accent);
-  letter-spacing: -0.02em;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
   margin-bottom: 32px;
   opacity: 0;
   transform: translateY(24px);

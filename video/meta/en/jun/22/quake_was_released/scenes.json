@@ -1,0 +1,76 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 42.34
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 4.704,
+    "text": "In 1996, a game emerged from the shadows, filled with strange castles, ancient horrors, and otherworldly dimensions."
+  },
+  {
+    "id": "fact",
+    "start": 12.204,
+    "duration": 4.704,
+    "text": "On June 22, id Software released Quake, a title that marked the arrival of true 3D graphics and real-time online multiplayer in gaming."
+  },
+  {
+    "id": "fact",
+    "start": 16.909,
+    "duration": 4.704,
+    "text": "Quake wasn’t just a shooter—it was a technological leap."
+  },
+  {
+    "id": "fact",
+    "start": 21.613,
+    "duration": 4.704,
+    "text": "Building the engine from scratch, the team brought in experts like Michael Abrash to make 3D worlds run on everyday PCs."
+  },
+  {
+    "id": "fact",
+    "start": 26.318,
+    "duration": 4.704,
+    "text": "Multiplayer wasn’t an afterthought; it became a proving ground for competitive gaming and the birthplace of online clans and tournaments."
+  },
+  {
+    "id": "fact",
+    "start": 31.022,
+    "duration": 4.704,
+    "text": "Speedrunning found a new home as Quake’s demo system allowed players to race and share their fastest runs with ease."
+  },
+  {
+    "id": "fact",
+    "start": 35.727,
+    "duration": 4.704,
+    "text": "The game’s open engine inspired mods like Team Fortress and, later, the open release of its source code."
+  },
+  {
+    "id": "fact",
+    "start": 40.431,
+    "duration": 4.704,
+    "text": "Quake’s influence still echoes today."
+  },
+  {
+    "id": "fact",
+    "start": 45.136,
+    "duration": 4.704,
+    "text": "Follow IT History Journal."
+  },
+  {
+    "id": "cta",
+    "start": 49.84,
+    "duration": 5.0
+  }
+]

@@ -28,6 +28,8 @@ All dependencies are bundled in the `video_app` Docker container:
 | Variable | Required | Description |
 |---|---|---|
 | `OPENAI_API_KEY` | Yes | OpenAI API key (set in `.env.dev`) |
+| `TELEGRAM_BOT_TOKEN` | No | Telegram bot token; enables sending the completed video and YouTube metadata |
+| `TELEGRAM_CHAT_ID` | No | Telegram recipient; defaults to `@kalashnikovisme` (use the numeric private chat ID when needed) |
 
 ## Commands
 
@@ -68,12 +70,14 @@ Output is written to `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `tts-request.json` | TTS API request parameters |
 | `narration.mp3` | Audio narration (TTS) |
 | `scenes.json` | Scene timing plan |
-| `metadata.json` | Article/scene data plus optimized YouTube Shorts title, description, and tags |
+| `metadata.json` | Article/scene data plus optimized YouTube Shorts title, tags, and a description linking to the journal, Patreon, and PayPal |
 | `render-config.json` | Config for JS renderer |
 | `calendar-render-config.json` | Renderer config for the standalone calendar segment |
 | `browser-recording.webm` | Trimmed browser recording |
 | `calendar.webm` | Standalone calendar segment rendered by `dip video part calendar` |
 | `final.mp4` | Final composed video |
+
+After printing the YouTube metadata, the full pipeline sends four separate Telegram messages when `TELEGRAM_BOT_TOKEN` is set: `final.mp4`, title, description, and tags.
 
 ## Editing the narration
 

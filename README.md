@@ -117,6 +117,9 @@ Builds the Docker image and installs gems.
 | `dip video part calendar <article_folder>` | Render only the calendar video segment without audio |
 | `dip audio <article_folder>` | Generate audio narration (TTS) from an article |
 | `dip video_shell` | Open a shell in the video container |
+| `dip grow <subcommand>` | Run the growth CLI (SEO, distribution, analytics) |
+| `dip growth_shell` | Open a shell in the growth app container |
+| `dip grow_test` | Run growth tests |
 
 ### Watch mode
 
@@ -194,10 +197,12 @@ All output lands in `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `tts-request.json` | TTS request parameters |
 | `narration.mp3` | Generated audio (TTS, voice: onyx) |
 | `scenes.json` | Scene timing plan |
-| `metadata.json` | Article/scene data plus optimized YouTube Shorts title, description, and tags |
+| `metadata.json` | Article/scene data plus optimized YouTube Shorts title, tags, and a description linking to the journal, Patreon, and PayPal |
 | `render-config.json` | Config fed to the JS renderer |
 | `browser-recording.webm` | Raw browser recording |
 | `final.mp4` | Final composed video |
+
+When `TELEGRAM_BOT_TOKEN` is configured, the full pipeline sends `final.mp4`, the YouTube title, description, and tags to `TELEGRAM_CHAT_ID` as four separate Telegram messages. The chat defaults to `@kalashnikovisme`.
 
 ### Editing the narration
 
@@ -209,6 +214,45 @@ dip video text articles/ru/jun/21/tim_bray_was_born
 dip audio articles/ru/jun/21/tim_bray_was_born   # picks up edited narration.txt
 dip video articles/ru/jun/21/tim_bray_was_born   # re-runs render + compose
 ```
+
+## Growth / SEO
+
+The `growth/` module provides a CLI for SEO analysis, distribution drafts, and analytics.
+
+### Commands
+
+`seo` is a subcommand namespace — it requires a sub-subcommand before the path:
+
+```bash
+# Generate SEO suggestions for an article
+dip grow seo suggest articles/en/jun/22/quake_was_released/content.md
+
+# Show SEO progress history + generate a new SEO report
+dip grow article seo articles/en/jun/22/quake_was_released/content.md
+
+# Analyze article quality
+dip grow article analyze articles/en/jun/22/quake_was_released/content.md
+
+# Run analysis + SEO + conversion drafts in one go
+dip grow article promote articles/en/jun/22/quake_was_released/content.md
+
+# Generate social distribution drafts
+dip grow distribution generate articles/en/jun/22/quake_was_released/content.md
+
+# Generate Patreon/Boosty conversion suggestions
+dip grow conversion articles/en/jun/22/quake_was_released/content.md
+
+# Analytics
+dip grow analytics top               # top 20 pages, last 7 days
+dip grow analytics top --days 30     # extend the date range
+dip grow analytics top --limit 50    # fetch more rows
+
+# Search Console
+dip grow search top                  # top queries, last 28 days
+dip grow search top --pages          # top pages instead of queries
+```
+
+A common mistake is running `dip grow seo <path>` — Thor interprets the path as the missing sub-subcommand. Use `dip grow seo suggest <path>` or `dip grow article seo <path>` instead.
 
 ## RSS feeds
 

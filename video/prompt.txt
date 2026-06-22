@@ -1,20 +1,36 @@
 Write the narration in English.
 
-Article title: Tim Bray: Pioneering XML and JSON Standards That Shaped the Web
-Date: June 21, 1955
+Article title: June 22, 1996: The Launch of Quake and Its Impact on Gaming
+Date: June 22, 1996
 
 Article content:
-This is truly one of those people whose work is used by almost everyone today.
+On June 22, 1996, id Software released Quake, one of the games that reshaped not only the video game industry but also the broader world of computing.
 
-Tim Bray was born in Canada and studied at the University of Guelph in Ontario. During the 1990s, he worked with a number of internet companies and became deeply involved in web standards through the W3C.
+The story of Quake began long before its release. During the Doom years, John Romero and John Carmack often discussed a game inspired by their Dungeons & Dragons campaigns. The original concept was a dark fantasy RPG featuring character progression, quests, magic, and a non-linear storyline. The protagonist was supposed to be a warrior named Quake. According to Carmack, that was the name of his own D&D character.
 
-In 1998, he and the W3C published XML, a format designed to become the standard for structured data on the internet. That is exactly what happened. For nearly 30 years, XML has been used across thousands of software products and systems to represent complex structured information. Entire data ecosystems were built on top of it, and many other widely used technologies emerged from the XML family, including RSS, SOAP, XHTML, and SVG.
+## Development
 
-In the 2010s, Tim Bray became involved in the standardization of JSON. He was not its creator, but he authored and edited several RFCs that defined and formalized the format. Today, JSON is the dominant format for data exchange between browsers and servers, mobile applications and servers, and countless other systems. Billions of people rely on JSON every day without even knowing it.
+Once development started, the project quickly moved in a different direction. Many of the original ideas proved too ambitious, different members of the team had conflicting visions, and Quake gradually evolved into a fast-paced 3D shooter. Only fragments of the original fantasy concept survived in the final game.
 
-Tim Bray spent many years at Sun Microsystems, then joined Google, and later moved to Amazon Web Services, where he worked as a VP and Distinguished Engineer.
+To build Quake, id Software created an entirely new engine. Unlike Doom, which relied on a two-dimensional engine to simulate a 3D world, Quake used true three-dimensional geometry and polygonal character models. Building such technology from scratch required enormous effort.
 
-In 2020, he resigned from Amazon, saying he could no longer remain silent while the company fired warehouse workers who had been raising safety concerns during the COVID-19 pandemic. Several whistleblowers and organizers were dismissed. Bray concluded that staying would make him complicit, and left despite significant financial cost.
+For the engine work, id Software recruited Michael Abrash, one of the world's leading experts in 3D graphics. At the time he was working at Microsoft, but John Carmack personally convinced him to join id Software. Abrash focused on rendering optimization and helped develop techniques that allowed Quake to run on the average PCs of the mid-1990s.
+
+Another developer worth mentioning is Tim Willits. Before joining id Software, he was known for creating custom Doom maps. The company noticed his work and brought him onto the team. He would later become one of the studio's most influential level designers.
+
+Quake's atmosphere also deserves special attention. Instead of traditional science fiction, the game is filled with strange castles, ancient creatures, and otherworldly dimensions heavily inspired by the works of H. P. Lovecraft. Even the final boss is named Shub-Niggurath, a creature from the Lovecraft mythos.
+
+## Multiplayer Gaming and Speedrunning
+
+Multiplayer was not an afterthought in Quake — it was one of the project's core features. Soon after release, clans, tournaments, and some of the first professional players began to appear around the game.
+
+One of the most important milestones was the release of QuakeWorld. It introduced technologies that made online play practical even over high-latency internet connections. Techniques such as client-side prediction became fundamental parts of online gaming and were pioneered in QuakeWorld.
+
+Quake also helped popularize speedrunning. Recording gameplay footage in the mid-1990s was difficult. Capturing video often produced poor image quality and could slow down the game itself. Quake approached the problem differently. The engine could record gameplay demos directly. Finish a level, save the demo, and share it with others. This dramatically lowered the technical barrier to speedrunning and attracted a large new community.
+
+A huge modding scene quickly grew around the game. The engine was relatively accessible, making it an ideal platform for modders. One of the most famous projects was Team Fortress, originally released as a Quake mod. It later became its own series and eventually led to Team Fortress 2.
+
+In December 1999, id Software released the Quake source code. That decision allowed enthusiasts to create new ports, improve the engine, and preserve the game for future generations. Nearly thirty years later, Quake is still alive thanks to that choice. Its source code remains publicly available on [GitHub](https://github.com/id-software/quake).
 
 
 ---
