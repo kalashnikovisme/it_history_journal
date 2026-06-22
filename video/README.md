@@ -29,7 +29,7 @@ All dependencies are bundled in the `video_app` Docker container:
 |---|---|---|
 | `OPENAI_API_KEY` | Yes | OpenAI API key (set in `.env.dev`) |
 | `TELEGRAM_BOT_TOKEN` | No | Telegram bot token; enables sending the completed video and YouTube metadata |
-| `TELEGRAM_CHAT_ID` | No | Telegram recipient; defaults to `@kalashnikovisme` (use the numeric private chat ID when needed) |
+| `TELEGRAM_CHAT_ID` | No | Telegram recipient; defaults to `122018070` |
 
 ## Commands
 
@@ -48,6 +48,9 @@ dip audio articles/ru/jun/21/tim_bray_was_born
 
 # Shell in the video container
 dip video_shell
+
+# Send the completed video and YouTube metadata to Telegram
+dip video send articles/ru/jun/21/tim_bray_was_born
 ```
 
 ## Flags
@@ -77,7 +80,7 @@ Output is written to `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `calendar.webm` | Standalone calendar segment rendered by `dip video part calendar` |
 | `final.mp4` | Final composed video |
 
-After printing the YouTube metadata, the full pipeline sends four separate Telegram messages when `TELEGRAM_BOT_TOKEN` is set: `final.mp4`, title, description, and tags.
+`dip video send <article_folder>` sends five separate Telegram messages: `final.mp4`, title, full description, the description with all links removed, and tags. It only uses existing output and does not run the generation pipeline.
 
 ## Editing the narration
 

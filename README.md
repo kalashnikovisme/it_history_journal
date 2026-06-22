@@ -113,6 +113,7 @@ Builds the Docker image and installs gems.
 | `dip shell` | Open a shell in the container |
 | `dip bundle <args>` | Run bundler commands |
 | `dip video <article_folder>` | Generate branded short video from an article (full pipeline) |
+| `dip video send <article_folder>` | Send `final.mp4` and YouTube metadata as five separate Telegram messages |
 | `dip video text <article_folder>` | Generate narration text only (no audio/render) |
 | `dip video part calendar <article_folder>` | Render only the calendar video segment without audio |
 | `dip audio <article_folder>` | Generate audio narration (TTS) from an article |
@@ -202,7 +203,7 @@ All output lands in `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `browser-recording.webm` | Raw browser recording |
 | `final.mp4` | Final composed video |
 
-When `TELEGRAM_BOT_TOKEN` is configured, the full pipeline sends `final.mp4`, the YouTube title, description, and tags to `TELEGRAM_CHAT_ID` as four separate Telegram messages. The chat defaults to `@kalashnikovisme`.
+Run `dip video send <article_folder>` to send `final.mp4`, the YouTube title, full description, link-free description, and tags to `TELEGRAM_CHAT_ID` as five separate Telegram messages. The chat defaults to `122018070`.
 
 ### Editing the narration
 
