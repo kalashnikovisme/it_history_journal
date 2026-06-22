@@ -10,3 +10,4 @@ growth/output/
 terminal-writer/
 *.mp4
 *.mp3
+video/renderer/tmp*
