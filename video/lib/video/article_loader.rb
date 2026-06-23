@@ -3,8 +3,6 @@ require "date"
 
 module Video
   class ArticleLoader
-    COVER_EXTENSIONS = %w[webp png jpg jpeg].freeze
-
     MONTH_ABBR_MAP = {
       "jan" => 1, "feb" => 2, "mar" => 3, "apr" => 4,
       "may" => 5, "jun" => 6, "jul" => 7, "aug" => 8,
@@ -61,9 +59,10 @@ module Video
                   raise("Unknown month abbreviation: #{mon_abbr}")
       day = day_str.to_i
 
-      cover_path = COVER_EXTENSIONS
-        .map { |ext| File.join(@folder, "cover.#{ext}") }
-        .find { |p| File.exist?(p) }
+      video_cover_path = File.join(@folder, "video-cover.png")
+      unless File.exist?(video_cover_path)
+        raise "video-cover.png not found in #{@folder}"
+      end
 
       raw_date    = front_matter["date"]
       event_date  = front_matter["event_date"]
@@ -87,9 +86,9 @@ module Video
         title:           front_matter["title"] || slug.gsub("-", " ").capitalize,
         date_display:    date_display,
         date_month_day:  date_month_day,
-        content_md:      parsed.content,
-        cover_path:      cover_path,
-        folder:          @folder
+        content_md:        parsed.content,
+        video_cover_path:  video_cover_path,
+        folder:            @folder
       }
     end
 

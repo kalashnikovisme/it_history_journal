@@ -1,0 +1,6 @@
+{
+  "model": "tts-1",
+  "input": "June 23 in the History of Computer Science marks the birth of Alan Turing, born June 23, 1912. Turing’s pioneering work laid the foundations of modern computing and artificial intelligence, and during World War II, his codebreaking efforts at Bletchley Park helped turn the tide. Though his life ended in tragedy, his legacy endures in every computer and algorithm today. Follow IT History Journal.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

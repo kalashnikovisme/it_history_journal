@@ -55,7 +55,7 @@ module Video
       date_month_day = @info[:date_month_day]
       content_md     = @info[:content_md]
 
-      word_target = lang == "ru" ? "100–130 words" : "120–150 words"
+      word_target = lang == "ru" ? "55–65 words" : "60–70 words"
       cta = lang == "ru" ? "Подписывайтесь на IT History Journal." : "Follow IT History Journal."
 
       lang_instruction = if lang == "ru"

@@ -1,54 +1,118 @@
 Write the narration in English.
 
-Article title: June 22, 1996: The Launch of Quake and Its Impact on Gaming
-Date: June 22, 1996
+Article title: June 23, 1912: Alan Turing Was Born
+Date: June 23, 1912
 
 Article content:
-On June 22, 1996, id Software released Quake, one of the games that reshaped not only the video game industry but also the broader world of computing.
+Alan Mathison Turing was born in London. A mathematician, cryptanalyst, and one of the people often described as a father of modern computing.
 
-The story of Quake began long before its release. During the Doom years, John Romero and John Carmack often discussed a game inspired by their Dungeons & Dragons campaigns. The original concept was a dark fantasy RPG featuring character progression, quests, magic, and a non-linear storyline. The protagonist was supposed to be a warrior named Quake. According to Carmack, that was the name of his own D&D character.
+Today he is most commonly remembered for helping break the German Enigma cipher during World War II. But Turing's contributions went far beyond that. He laid the foundations of computation theory, worked on some of the earliest computers, explored the possibility of artificial intelligence, and even made important contributions to mathematical biology. Despite his scientific achievements, his influence on the emerging computer industry, and his role in the Allied war effort, he was ultimately failed by the society and government he served. To understand who Alan Turing was, it is important to look not only at his scientific work but also at the defining events of his personal life.
 
-## Development
+## Christopher Morcom
 
-Once development started, the project quickly moved in a different direction. Many of the original ideas proved too ambitious, different members of the team had conflicting visions, and Quake gradually evolved into a fast-paced 3D shooter. Only fragments of the original fantasy concept survived in the final game.
+At Sherborne School, Turing met Christopher Morcom. They shared a deep interest in mathematics and science. Morcom became one of the most important people in Turing's life and had a profound influence on his thinking.
 
-To build Quake, id Software created an entirely new engine. Unlike Doom, which relied on a two-dimensional engine to simulate a 3D world, Quake used true three-dimensional geometry and polygonal character models. Building such technology from scratch required enormous effort.
+On February 13, 1930, Christopher Morcom died unexpectedly from complications related to tuberculosis. Turing was devastated by the loss. He later reflected that Morcom's death pushed him to think more seriously about mathematics, consciousness, and the nature of reality. He became increasingly interested in whether life and thought could ultimately be explained as physical processes. While such ideas were already present among many scientists of the era, the tragedy motivated Turing to pursue them with unusual determination and rigor.
 
-For the engine work, id Software recruited Michael Abrash, one of the world's leading experts in 3D graphics. At the time he was working at Microsoft, but John Carmack personally convinced him to join id Software. Abrash focused on rendering optimization and helped develop techniques that allowed Quake to run on the average PCs of the mid-1990s.
+## The Universal Machine
 
-Another developer worth mentioning is Tim Willits. Before joining id Software, he was known for creating custom Doom maps. The company noticed his work and brought him onto the team. He would later become one of the studio's most influential level designers.
+In 1931, Turing entered the University of Cambridge and later became a fellow of King's College.
 
-Quake's atmosphere also deserves special attention. Instead of traditional science fiction, the game is filled with strange castles, ancient creatures, and otherworldly dimensions heavily inspired by the works of H. P. Lovecraft. Even the final boss is named Shub-Niggurath, a creature from the Lovecraft mythos.
+In 1936, he published the paper *On Computable Numbers*. In it he introduced the concept now known as the Turing machine — an abstract computational device capable of executing formal instructions step by step.
 
-## Multiplayer Gaming and Speedrunning
+The paper addressed one of the most famous mathematical problems of the time, David Hilbert's *Entscheidungsproblem* ("decision problem"). Turing demonstrated that there are problems that no algorithm can solve, regardless of how powerful a computing machine may be.
 
-Multiplayer was not an afterthought in Quake — it was one of the project's core features. Soon after release, clans, tournaments, and some of the first professional players began to appear around the game.
+Today, the Turing machine remains one of the fundamental models of computer science.
 
-One of the most important milestones was the release of QuakeWorld. It introduced technologies that made online play practical even over high-latency internet connections. Techniques such as client-side prediction became fundamental parts of online gaming and were pioneered in QuakeWorld.
+## Princeton and von Neumann
 
-Quake also helped popularize speedrunning. Recording gameplay footage in the mid-1990s was difficult. Capturing video often produced poor image quality and could slow down the game itself. Quake approached the problem differently. The engine could record gameplay demos directly. Finish a level, save the demo, and share it with others. This dramatically lowered the technical barrier to speedrunning and attracted a large new community.
+After publishing his groundbreaking paper, Turing moved to Princeton University, where he earned his PhD under the supervision of Alonzo Church.
 
-A huge modding scene quickly grew around the game. The engine was relatively accessible, making it an ideal platform for modders. One of the most famous projects was Team Fortress, originally released as a Quake mod. It later became its own series and eventually led to Team Fortress 2.
+While at Princeton, his talent attracted the attention of John von Neumann. After completing his doctorate, von Neumann offered Turing a position in the United States. Turing declined the offer and chose to return to Britain.
 
-In December 1999, id Software released the Quake source code. That decision allowed enthusiasts to create new ports, improve the engine, and preserve the game for future generations. Nearly thirty years later, Quake is still alive thanks to that choice. Its source code remains publicly available on [GitHub](https://github.com/id-software/quake).
+## War and Enigma
+
+When World War II began, Turing joined the Government Code and Cypher School at Bletchley Park. One of the team's most important tasks was breaking messages encrypted by the German Enigma machine.
+
+By that time, Polish cryptographers led by Marian Rejewski had already made major advances in understanding Enigma and had shared their findings with the Allies. British cryptanalysts built upon that work.
+
+Turing became one of the key figures in the project. He helped develop the electromechanical Bombe machine, which dramatically accelerated the search for Enigma settings.
+
+The breaking of Enigma traffic became one of the greatest achievements of Allied cryptanalysis during the war. Many military historians and intelligence researchers have argued that the success of Bletchley Park shortened the war by as much as two to three years and saved millions of lives.
+
+## ACE and the First Computers
+
+After the war, Turing joined Britain's National Physical Laboratory.
+
+In 1946, he produced the design for the Automatic Computing Engine (ACE), one of the most ambitious stored-program computer projects of its era.
+
+Although the original ACE design was never fully implemented exactly as Turing envisioned it, many of its ideas had a significant influence on British computer development.
+
+In 1948, Turing moved to the University of Manchester, where he worked on software for the Manchester Mark I, one of the world's earliest stored-program computers. In 1949, he became Deputy Director of the university's computing laboratory.
+
+## Can Machines Think?
+
+In 1950, Turing published *Computing Machinery and Intelligence*.
+
+The paper opened with a simple question:
+
+*"Can machines think?"*
+
+Rather than arguing philosophically, Turing proposed a practical experiment that later became known as the Turing Test. If a human judge cannot reliably distinguish a machine's responses from those of another human, then the machine can be considered intelligent in a practical sense.
+
+More than seventy years later, the paper remains one of the most cited works in the history of artificial intelligence research.
+
+## Morphogenesis
+
+A less familiar part of Turing's work involved biology.
+
+In 1952, he published *The Chemical Basis of Morphogenesis*. In the paper, he proposed a mathematical explanation for how biological patterns can emerge through interactions between chemical substances.
+
+These reaction-diffusion models are still used today to study animal skin patterns, tissue growth, and other biological processes.
+
+## Trial and Death
+
+In 1952, Turing was convicted for homosexual relationships. At the time, such relationships were criminal offenses in the United Kingdom.
+
+The court offered him a choice between imprisonment and hormone treatment. Turing chose the treatment.
+
+After the trial, he lost access to classified government work.
+
+On June 7, 1954, Alan Turing died from cyanide poisoning. The official investigation ruled the death a suicide, but later researchers suggested it may have been an accident. Turing regularly worked with cyanide in his experiments and personal projects. Historians still debate what actually happened.
+
+## Late Recognition
+
+In 1966, the ACM established the Turing Award for outstanding achievements in computer science. It is still awarded today and is often regarded as the field's highest honor.
+
+In 2009, the British government formally apologized for Turing's treatment.
+
+In 2013, Queen Elizabeth II granted him a posthumous royal pardon.
+
+In 2017, the so-called "Turing Law" came into effect, extending similar pardons to thousands of others convicted under comparable laws.
+
+On June 23, 2021, the Bank of England issued a new £50 banknote featuring Alan Turing.
+
+Today, his name can be found on scientific awards, research centers, university buildings, and computer laboratories around the world.
 
 
 ---
 
-Write a short historical documentary narration (120–150 words) for a vertical short video.
+Write a short historical documentary narration (60–70 words) for a vertical short video.
+
+The narration is part of the "June 23 in the History of Computer Science" series.
+Open with or work in the phrase "June 23 in the History of Computer Science" naturally — it frames what day we are remembering.
 
 Structure:
-1. Hook — grab attention immediately with the most compelling fact or image
-2. Date + Event — state what happened and when
+1. Hook — open with "June 23 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
+2. Date + Event — state what happened and when (include the year)
 3. What happened — the key event in a sentence or two
 4. Why it mattered — the significance
 5. What came after — brief legacy
 6. Soft CTA — end with exactly this line: "Follow IT History Journal."
 
 Requirements:
-- 120–150 words total
+- 60–70 words total
 - Calm, documentary tone
 - No H1/H2 headings, no bullet points, no markdown
 - No stage directions or speaker labels
-- Start immediately with the hook sentence
 - End with: Follow IT History Journal.

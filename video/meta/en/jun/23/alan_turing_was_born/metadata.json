@@ -1,0 +1,85 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 23,
+  "year": "1912",
+  "slug": "alan-turing-was-born",
+  "slug_dir": "alan_turing_was_born",
+  "title": "June 23, 1912: Alan Turing Was Born",
+  "date_display": "June 23, 1912",
+  "date_month_day": "June 23",
+  "content_md": "Alan Mathison Turing was born in London. A mathematician, cryptanalyst, and one of the people often described as a father of modern computing.\n\nToday he is most commonly remembered for helping break the German Enigma cipher during World War II. But Turing's contributions went far beyond that. He laid the foundations of computation theory, worked on some of the earliest computers, explored the possibility of artificial intelligence, and even made important contributions to mathematical biology. Despite his scientific achievements, his influence on the emerging computer industry, and his role in the Allied war effort, he was ultimately failed by the society and government he served. To understand who Alan Turing was, it is important to look not only at his scientific work but also at the defining events of his personal life.\n\n## Christopher Morcom\n\nAt Sherborne School, Turing met Christopher Morcom. They shared a deep interest in mathematics and science. Morcom became one of the most important people in Turing's life and had a profound influence on his thinking.\n\nOn February 13, 1930, Christopher Morcom died unexpectedly from complications related to tuberculosis. Turing was devastated by the loss. He later reflected that Morcom's death pushed him to think more seriously about mathematics, consciousness, and the nature of reality. He became increasingly interested in whether life and thought could ultimately be explained as physical processes. While such ideas were already present among many scientists of the era, the tragedy motivated Turing to pursue them with unusual determination and rigor.\n\n## The Universal Machine\n\nIn 1931, Turing entered the University of Cambridge and later became a fellow of King's College.\n\nIn 1936, he published the paper *On Computable Numbers*. In it he introduced the concept now known as the Turing machine — an abstract computational device capable of executing formal instructions step by step.\n\nThe paper addressed one of the most famous mathematical problems of the time, David Hilbert's *Entscheidungsproblem* (\"decision problem\"). Turing demonstrated that there are problems that no algorithm can solve, regardless of how powerful a computing machine may be.\n\nToday, the Turing machine remains one of the fundamental models of computer science.\n\n## Princeton and von Neumann\n\nAfter publishing his groundbreaking paper, Turing moved to Princeton University, where he earned his PhD under the supervision of Alonzo Church.\n\nWhile at Princeton, his talent attracted the attention of John von Neumann. After completing his doctorate, von Neumann offered Turing a position in the United States. Turing declined the offer and chose to return to Britain.\n\n## War and Enigma\n\nWhen World War II began, Turing joined the Government Code and Cypher School at Bletchley Park. One of the team's most important tasks was breaking messages encrypted by the German Enigma machine.\n\nBy that time, Polish cryptographers led by Marian Rejewski had already made major advances in understanding Enigma and had shared their findings with the Allies. British cryptanalysts built upon that work.\n\nTuring became one of the key figures in the project. He helped develop the electromechanical Bombe machine, which dramatically accelerated the search for Enigma settings.\n\nThe breaking of Enigma traffic became one of the greatest achievements of Allied cryptanalysis during the war. Many military historians and intelligence researchers have argued that the success of Bletchley Park shortened the war by as much as two to three years and saved millions of lives.\n\n## ACE and the First Computers\n\nAfter the war, Turing joined Britain's National Physical Laboratory.\n\nIn 1946, he produced the design for the Automatic Computing Engine (ACE), one of the most ambitious stored-program computer projects of its era.\n\nAlthough the original ACE design was never fully implemented exactly as Turing envisioned it, many of its ideas had a significant influence on British computer development.\n\nIn 1948, Turing moved to the University of Manchester, where he worked on software for the Manchester Mark I, one of the world's earliest stored-program computers. In 1949, he became Deputy Director of the university's computing laboratory.\n\n## Can Machines Think?\n\nIn 1950, Turing published *Computing Machinery and Intelligence*.\n\nThe paper opened with a simple question:\n\n*\"Can machines think?\"*\n\nRather than arguing philosophically, Turing proposed a practical experiment that later became known as the Turing Test. If a human judge cannot reliably distinguish a machine's responses from those of another human, then the machine can be considered intelligent in a practical sense.\n\nMore than seventy years later, the paper remains one of the most cited works in the history of artificial intelligence research.\n\n## Morphogenesis\n\nA less familiar part of Turing's work involved biology.\n\nIn 1952, he published *The Chemical Basis of Morphogenesis*. In the paper, he proposed a mathematical explanation for how biological patterns can emerge through interactions between chemical substances.\n\nThese reaction-diffusion models are still used today to study animal skin patterns, tissue growth, and other biological processes.\n\n## Trial and Death\n\nIn 1952, Turing was convicted for homosexual relationships. At the time, such relationships were criminal offenses in the United Kingdom.\n\nThe court offered him a choice between imprisonment and hormone treatment. Turing chose the treatment.\n\nAfter the trial, he lost access to classified government work.\n\nOn June 7, 1954, Alan Turing died from cyanide poisoning. The official investigation ruled the death a suicide, but later researchers suggested it may have been an accident. Turing regularly worked with cyanide in his experiments and personal projects. Historians still debate what actually happened.\n\n## Late Recognition\n\nIn 1966, the ACM established the Turing Award for outstanding achievements in computer science. It is still awarded today and is often regarded as the field's highest honor.\n\nIn 2009, the British government formally apologized for Turing's treatment.\n\nIn 2013, Queen Elizabeth II granted him a posthumous royal pardon.\n\nIn 2017, the so-called \"Turing Law\" came into effect, extending similar pardons to thousands of others convicted under comparable laws.\n\nOn June 23, 2021, the Bank of England issued a new £50 banknote featuring Alan Turing.\n\nToday, his name can be found on scientific awards, research centers, university buildings, and computer laboratories around the world.\n",
+  "video_cover_path": "articles/en/jun/23/alan_turing_was_born/video-cover.png",
+  "folder": "articles/en/jun/23/alan_turing_was_born",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 13.876000000000001
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 3.469,
+      "text": "June 23 in the History of Computer Science marks the birth of Alan Turing, born June 23, 1912."
+    },
+    {
+      "id": "fact",
+      "start": 10.969,
+      "duration": 3.469,
+      "text": "Turing’s pioneering work laid the foundations of modern computing and artificial intelligence, and during World War II, his codebreaking efforts at Bletchley Park helped turn the tide."
+    },
+    {
+      "id": "fact",
+      "start": 14.438,
+      "duration": 3.469,
+      "text": "Though his life ended in tragedy, his legacy endures in every computer and algorithm today."
+    },
+    {
+      "id": "fact",
+      "start": 17.907,
+      "duration": 3.469,
+      "text": "Follow IT History Journal."
+    },
+    {
+      "id": "cta",
+      "start": 21.376,
+      "duration": 5.0
+    }
+  ],
+  "total_duration": 26.376,
+  "scene_count": 8,
+  "youtube": {
+    "title": "Alan Turing: The Birth of Modern Computing (June 23, 1912)",
+    "description": "On June 23, 1912, Alan Turing was born—a pioneer whose ideas shaped computing, codebreaking, and artificial intelligence. From the Turing machine to breaking Enigma and exploring the origins of AI, Turing's legacy endures despite the challenges he faced. Discover how his vision changed technology and why his story matters today. For more insights into IT history, follow IT History Journal. #Shorts #AlanTuring #ComputerHistory\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme",
+    "tags": [
+      "Alan Turing",
+      "computer history",
+      "Enigma codebreaker",
+      "Turing machine",
+      "artificial intelligence",
+      "Bletchley Park",
+      "computing pioneers",
+      "World War II",
+      "Turing Test",
+      "morphogenesis",
+      "Manchester Mark I",
+      "Universal Machine",
+      "IT History",
+      "LGBT history",
+      "cryptanalysis"
+    ]
+  }
+}

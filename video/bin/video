@@ -138,6 +138,15 @@ begin
     puts "[video] Audio: #{duration.round(1)}s → #{paths.narration_mp3}".green
   end
 
+  MAX_DURATION = 25.0
+  HARD_LIMIT   = 35.0
+  if duration > HARD_LIMIT
+    raise "Audio is #{duration.round(1)}s — exceeds #{HARD_LIMIT}s hard limit. " \
+          "Regenerate a shorter narration with --force-text."
+  elsif duration > MAX_DURATION
+    puts "[video] Warning: audio is #{duration.round(1)}s (target ≤#{MAX_DURATION}s).".yellow
+  end
+
   # Scenes — reuse if exists
   scenes, reused = planner.plan(narration, duration, force: force_scenes)
   if reused

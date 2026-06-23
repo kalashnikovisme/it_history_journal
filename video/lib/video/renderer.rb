@@ -20,8 +20,6 @@ module Video
       config = build_render_config(scenes, audio_duration, port)
       File.write(config_path, JSON.pretty_generate(config))
 
-      cover_path = @info[:cover_path]
-
       record_js = File.join(RENDERER_DIR, "record.js")
       unless File.exist?(record_js)
         raise "record.js not found at #{record_js}"
@@ -31,7 +29,7 @@ module Video
         "node", record_js,
         "--config",  File.expand_path(config_path),
         "--output",  File.expand_path(output_path),
-        "--cover",   cover_path ? File.expand_path(cover_path) : ""
+        "--cover",   File.expand_path(@info[:video_cover_path])
       ]
 
       success = system(*cmd_parts)
@@ -49,7 +47,7 @@ module Video
         "month_name"     => @info[:month_name],
         "year"           => @info[:year].to_s,
         "slug"           => @info[:slug],
-        "cover_filename" => @info[:cover_path] ? File.basename(@info[:cover_path]) : nil,
+        "cover_filename" => File.basename(@info[:video_cover_path]),
         "site_url"       => "history.purple-magic.com",
         "cta_language"   => @info[:lang],
         "total_duration" => audio_duration.round(3),

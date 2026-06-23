@@ -12,3 +12,4 @@ terminal-writer/
 *.mp3
 video/renderer/tmp*
 */**/video-cover.png
+video/output/*

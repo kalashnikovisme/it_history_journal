@@ -217,17 +217,18 @@ body {
 }
 
 .cover-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 1080px;
-  height: 607px; /* 16:9 */
+  height: 1920px;
   overflow: hidden;
-  position: relative;
-  flex-shrink: 0;
 }
 
 .cover-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transform-origin: center center;
   transition: transform 20s linear;
 }
