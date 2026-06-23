@@ -1,8 +1,8 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 23, 1912: Alan Turing Was Born"
+title: "Alan Turing: The Father of Modern Computing and His Legacy"
 date: "June 23, 1912"
-excerpt: "On June 23, 1912, Alan Turing was born in London — the mathematician who laid the foundations of computing, helped break the Enigma cipher, and first asked whether machines could think."
+excerpt: "Discover Alan Turing’s life, groundbreaking work in computing, cryptography, AI, and his lasting legacy in technology today."
 updated_at: "2026-06-23"
 ru: "/ru/jun/23/alan-turing-was-born"
 sources:
