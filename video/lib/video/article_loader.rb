@@ -73,21 +73,23 @@ module Video
 
       month_name = month_name_for(lang, month_num)
       date_display = date_display_for(lang, day, month_num, year)
+      date_month_day = date_month_day_for(lang, day, month_num)
 
       {
-        lang:          lang,
-        month_abbr:    mon_abbr.downcase,
-        month_num:     month_num,
-        month_name:    month_name,
-        day:           day,
-        year:          year.to_s,
-        slug:          slug,
-        slug_dir:      slug_dir,
-        title:         front_matter["title"] || slug.gsub("-", " ").capitalize,
-        date_display:  date_display,
-        content_md:    parsed.content,
-        cover_path:    cover_path,
-        folder:        @folder
+        lang:            lang,
+        month_abbr:      mon_abbr.downcase,
+        month_num:       month_num,
+        month_name:      month_name,
+        day:             day,
+        year:            year.to_s,
+        slug:            slug,
+        slug_dir:        slug_dir,
+        title:           front_matter["title"] || slug.gsub("-", " ").capitalize,
+        date_display:    date_display,
+        date_month_day:  date_month_day,
+        content_md:      parsed.content,
+        cover_path:      cover_path,
+        folder:          @folder
       }
     end
 
@@ -106,6 +108,14 @@ module Video
         "#{day} #{MONTH_DISPLAY_RU[month_num]} #{year}"
       else
         "#{MONTH_NAMES_EN[month_num]} #{day}, #{year}"
+      end
+    end
+
+    def date_month_day_for(lang, day, month_num)
+      if lang == "ru"
+        "#{day} #{MONTH_DISPLAY_RU[month_num]}"
+      else
+        "#{MONTH_NAMES_EN[month_num]} #{day}"
       end
     end
 
