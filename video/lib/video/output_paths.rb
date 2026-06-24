@@ -33,7 +33,7 @@ module Video
     # Audio / video files → video/output/
     def narration_mp3          = File.join(@media_dir, "narration.mp3")
     def browser_recording_webm = File.join(@media_dir, "browser-recording.webm")
-    def part_webm(name)         = File.join(@media_dir, "#{name}.webm")
-    def final_mp4              = File.join(@media_dir, "final.mp4")
+    def part_webm(name)        = File.join(@media_dir, "#{name}.webm")
+    def platform_mp4(platform) = File.join(@media_dir, "#{platform}.mp4")
   end
 end

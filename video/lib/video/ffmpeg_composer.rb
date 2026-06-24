@@ -1,51 +1,85 @@
 module Video
   class FfmpegComposer
-    BACKGROUND_MUSIC = File.join("video", "background.mp3")
+    BACKGROUND_MUSIC  = File.join("video", "audio", "background.mp3")
     BACKGROUND_VOLUME = 0.15
+    SAMPLES_DIR       = File.join("video", "audio", "samples")
+
+    # Maps output filename → sample filename (without extension).
+    PLATFORMS = {
+      "instagram" => "instagram",
+      "shorts"    => "youtube",
+      "tiktok"    => "tiktok"
+    }.freeze
 
     def initialize(output_paths)
       @paths = output_paths
     end
 
-    # Combines browser-recording.webm + narration.mp3 + background.mp3 → final.mp4
-    def compose
+    # Composes one MP4 per platform by:
+    #   - freeze-framing the last video frame for the sample duration
+    #   - concatenating narration.mp3 + platform sample audio
+    #   - mixing with background music
+    # Returns a hash { "instagram" => path, "shorts" => path, "tiktok" => path }.
+    def compose_all
       ensure_ffmpeg!
       webm = @paths.browser_recording_webm
       mp3  = @paths.narration_mp3
-      mp4  = @paths.final_mp4
 
-      raise "Browser recording not found: #{webm}"   unless File.exist?(webm)
-      raise "Narration audio not found: #{mp3}"      unless File.exist?(mp3)
+      raise "Browser recording not found: #{webm}"            unless File.exist?(webm)
+      raise "Narration audio not found: #{mp3}"               unless File.exist?(mp3)
       raise "Background music not found: #{BACKGROUND_MUSIC}" unless File.exist?(BACKGROUND_MUSIC)
 
-      args = [
-        "ffmpeg", "-y",
-        "-i", webm,
-        "-i", mp3,
-        "-stream_loop", "-1", "-i", BACKGROUND_MUSIC,
-        "-filter_complex",
-          "[1:a]volume=1.0[narr];[2:a]volume=#{BACKGROUND_VOLUME}[bg];[narr][bg]amix=inputs=2:duration=first[aout]",
-        "-map", "0:v",
-        "-map", "[aout]",
-        "-c:v", "libx264",
-        "-pix_fmt", "yuv420p",
-        "-c:a", "aac",
-        "-shortest",
-        "-movflags", "+faststart",
-        mp4
-      ]
+      results = {}
+      PLATFORMS.each do |platform, sample_name|
+        sample_mp3 = File.join(SAMPLES_DIR, "#{sample_name}.mp3")
+        raise "Sample not found: #{sample_mp3}" unless File.exist?(sample_mp3)
 
-      success = system(*args)
-      raise "ffmpeg failed to compose final.mp4 (exit #{$?.exitstatus})" unless success
+        output         = @paths.platform_mp4(platform)
+        narr_duration  = probe_duration(mp3)
+        sample_dur     = probe_duration(sample_mp3)
+        total_duration = narr_duration + sample_dur
 
-      mp4
+        args = [
+          "ffmpeg", "-y",
+          "-i", webm,
+          "-i", mp3,
+          "-i", sample_mp3,
+          "-stream_loop", "-1", "-i", BACKGROUND_MUSIC,
+          "-filter_complex",
+            "[0:v]tpad=stop_mode=clone:stop=-1[vext];" \
+            "[1:a][2:a]concat=n=2:v=0:a=1[narr_full];" \
+            "[3:a]volume=#{BACKGROUND_VOLUME}[bg];" \
+            "[narr_full][bg]amix=inputs=2:duration=first[aout]",
+          "-map", "[vext]",
+          "-map", "[aout]",
+          "-t", total_duration.to_s,
+          "-c:v", "libx264",
+          "-pix_fmt", "yuv420p",
+          "-c:a", "aac",
+          "-movflags", "+faststart",
+          output
+        ]
+
+        success = system(*args)
+        raise "ffmpeg failed to compose #{platform}.mp4 (exit #{$?.exitstatus})" unless success
+
+        results[platform] = output
+      end
+
+      results
     end
 
     private
 
+    def probe_duration(path)
+      output = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "#{path}" 2>&1`.strip
+      duration = output.to_f
+      raise "ffprobe returned invalid duration for #{path}: #{output.inspect}" if duration <= 0
+      duration
+    end
+
     def ensure_ffmpeg!
-      result = system("ffmpeg -version > /dev/null 2>&1")
-      raise "ffmpeg not found. Install it in the Docker image (apt-get install ffmpeg)." unless result
+      raise "ffmpeg not found." unless system("ffmpeg -version > /dev/null 2>&1")
     end
   end
 end

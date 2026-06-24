@@ -79,14 +79,19 @@ begin
   paths  = Video::OutputPaths.new(info)
 
   if send_only
-    raise "Completed video not found: #{paths.final_mp4}" unless File.exist?(paths.final_mp4)
     raise "Video metadata not found: #{paths.metadata_json}" unless File.exist?(paths.metadata_json)
+
+    video_paths = Video::FfmpegComposer::PLATFORMS.keys.each_with_object({}) do |platform, h|
+      path = paths.platform_mp4(platform)
+      raise "Platform video not found: #{path}" unless File.exist?(path)
+      h[platform] = path
+    end
 
     metadata = JSON.parse(File.read(paths.metadata_json))
     youtube = metadata.fetch("youtube") { raise "YouTube metadata not found in #{paths.metadata_json}" }
-    puts "[video] Sending video and YouTube metadata to Telegram...".cyan
-    Video::TelegramNotifier.new.deliver(paths.final_mp4, youtube)
-    puts "[video] Telegram delivery complete (5 messages).".green
+    puts "[video] Sending #{video_paths.size} videos and YouTube metadata to Telegram...".cyan
+    Video::TelegramNotifier.new.deliver(video_paths, youtube)
+    puts "[video] Telegram delivery complete.".green
     exit 0
   end
 
@@ -164,10 +169,10 @@ begin
   renderer.render(scenes, duration)
   puts "[video] Browser recording saved to #{paths.browser_recording_webm}".green
 
-  puts "[video] Composing final video...".cyan
+  puts "[video] Composing platform videos...".cyan
   composer = Video::FfmpegComposer.new(paths)
-  final    = composer.compose
-  puts "[video] Done! → #{final}".green
+  results  = composer.compose_all
+  results.each { |platform, path| puts "[video] #{platform} → #{path}".green }
 
   if no_upload
     puts "[video] Upload skipped (--no-upload).".yellow
@@ -176,7 +181,9 @@ begin
     uploader = Video::DriveUploader.new
     links    = uploader.upload(info, paths)
     puts "[video] MP3 → #{links[:mp3]}".green if links[:mp3]
-    puts "[video] MP4 → #{links[:mp4]}".green if links[:mp4]
+    results.each_key do |platform|
+      puts "[video] #{platform} → #{links[platform.to_sym]}".green if links[platform.to_sym]
+    end
   else
     puts "[video] Google Drive not configured — skipping upload.".yellow
   end

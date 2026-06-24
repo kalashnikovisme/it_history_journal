@@ -1,0 +1,46 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 12.844000000000001
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 3.211,
+    "text": "June 24 in the History of Computer Science marks the birth of Gio Wiederhold in 1931, a pioneer in data integration and semantic technologies."
+  },
+  {
+    "id": "fact",
+    "start": 10.711,
+    "duration": 3.211,
+    "text": "Wiederhold’s work connected isolated databases and laid the groundwork for computers to understand not just data, but its meaning."
+  },
+  {
+    "id": "fact",
+    "start": 13.922,
+    "duration": 3.211,
+    "text": "His ideas shaped modern search engines, enterprise data platforms, and knowledge graphs."
+  },
+  {
+    "id": "fact",
+    "start": 17.133,
+    "duration": 3.211,
+    "text": "Follow IT History Journal."
+  },
+  {
+    "id": "cta",
+    "start": 20.344,
+    "duration": 5.0
+  }
+]

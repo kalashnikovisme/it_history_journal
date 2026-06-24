@@ -19,9 +19,19 @@ module Video
       @chat_id = chat_id
     end
 
-    def deliver(video_path, youtube)
-      File.open(video_path, "rb") do |video|
-        post("sendVideo", chat_id: @chat_id, video: video)
+    PLATFORM_LABELS = {
+      "instagram" => "Instagram",
+      "shorts"    => "YouTube Shorts",
+      "tiktok"    => "TikTok"
+    }.freeze
+
+    # video_paths: { "instagram" => path, "shorts" => path, "tiktok" => path }
+    def deliver(video_paths, youtube)
+      video_paths.each do |platform, path|
+        label = PLATFORM_LABELS.fetch(platform, platform)
+        File.open(path, "rb") do |video|
+          post("sendVideo", chat_id: @chat_id, video: video, caption: label)
+        end
       end
       post("sendMessage", chat_id: @chat_id, text: youtube.fetch("title"))
       post("sendMessage", chat_id: @chat_id, text: youtube.fetch("description"))

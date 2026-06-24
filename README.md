@@ -117,6 +117,7 @@ Builds the Docker image and installs gems.
 | `dip video text <article_folder>` | Generate narration text only (no audio/render) |
 | `dip video part calendar <article_folder>` | Render only the calendar video segment without audio |
 | `dip audio <article_folder>` | Generate audio narration (TTS) from an article |
+| `dip audio generate FILE.txt OUTPUT.mp3` | Synthesize text from FILE.txt to MP3 using the same TTS model and voice as the article pipeline |
 | `dip video_shell` | Open a shell in the video container |
 | `dip grow <subcommand>` | Run the growth CLI (SEO, distribution, analytics) |
 | `dip growth_shell` | Open a shell in the growth app container |

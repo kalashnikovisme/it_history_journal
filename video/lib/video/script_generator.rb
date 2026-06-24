@@ -56,7 +56,6 @@ module Video
       content_md     = @info[:content_md]
 
       word_target = lang == "ru" ? "55–65 words" : "60–70 words"
-      cta = lang == "ru" ? "Подписывайтесь на IT History Journal." : "Follow IT History Journal."
 
       lang_instruction = if lang == "ru"
         "Write the narration in Russian."
@@ -92,14 +91,12 @@ module Video
         3. What happened — the key event in a sentence or two
         4. Why it mattered — the significance
         5. What came after — brief legacy
-        6. Soft CTA — end with exactly this line: "#{cta}"
 
         Requirements:
         - #{word_target} total
         - Calm, documentary tone
         - No H1/H2 headings, no bullet points, no markdown
         - No stage directions or speaker labels
-        - End with: #{cta}
       PROMPT
     end
   end

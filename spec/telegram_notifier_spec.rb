@@ -2,11 +2,8 @@ require "tempfile"
 require_relative "../video/lib/video/telegram_notifier"
 
 RSpec.describe Video::TelegramNotifier do
-  it "sends the video, title, full description, link-free description, and tags separately" do
-    notifier = described_class.new(token: "token", chat_id: "122018070")
-    requests = []
-    allow(notifier).to receive(:post) { |method, fields| requests << [method, fields] }
-    youtube = {
+  let(:youtube) do
+    {
       "title" => "Title",
       "description" => <<~DESCRIPTION.strip,
         Description with details.
@@ -16,20 +13,37 @@ RSpec.describe Video::TelegramNotifier do
       DESCRIPTION
       "tags" => ["tag one", "tag two"]
     }
+  end
 
-    Tempfile.create(["final", ".mp4"]) do |video|
-      notifier.deliver(video.path, youtube)
+  it "sends each platform video with a caption, then title, full description, link-free description, and tags" do
+    notifier = described_class.new(token: "token", chat_id: "122018070")
+    requests = []
+    allow(notifier).to receive(:post) { |method, fields| requests << [method, fields] }
+
+    video_paths = {}
+    tempfiles   = []
+    %w[instagram shorts tiktok].each do |platform|
+      tf = Tempfile.new(["#{platform}", ".mp4"])
+      tempfiles << tf
+      video_paths[platform] = tf.path
     end
 
-    expect(requests.map(&:first)).to eq(%w[sendVideo sendMessage sendMessage sendMessage sendMessage])
-    expect(requests[0][1]).to include(chat_id: "122018070", video: an_instance_of(File))
-    expect(requests[1][1]).to eq(chat_id: "122018070", text: "Title")
-    expect(requests[2][1]).to eq(chat_id: "122018070", text: youtube.fetch("description"))
-    expect(requests[3][1]).to eq(
+    notifier.deliver(video_paths, youtube)
+    tempfiles.each(&:close!)
+
+    methods = requests.map(&:first)
+    expect(methods).to eq(%w[sendVideo sendVideo sendVideo sendMessage sendMessage sendMessage sendMessage])
+
+    expect(requests[0][1]).to include(chat_id: "122018070", video: an_instance_of(File), caption: "Instagram")
+    expect(requests[1][1]).to include(chat_id: "122018070", video: an_instance_of(File), caption: "YouTube Shorts")
+    expect(requests[2][1]).to include(chat_id: "122018070", video: an_instance_of(File), caption: "TikTok")
+    expect(requests[3][1]).to eq(chat_id: "122018070", text: "Title")
+    expect(requests[4][1]).to eq(chat_id: "122018070", text: youtube.fetch("description"))
+    expect(requests[5][1]).to eq(
       chat_id: "122018070",
       text: "Description with details.\nWebsite:\nSupport:"
     )
-    expect(requests[4][1]).to eq(chat_id: "122018070", text: "tag one, tag two")
+    expect(requests[6][1]).to eq(chat_id: "122018070", text: "tag one, tag two")
   end
 
   it "uses string field names for multipart encoding" do

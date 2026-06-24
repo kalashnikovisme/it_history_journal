@@ -4,10 +4,44 @@
 require "video"
 require "colorize"
 
+# audio generate FILE.txt OUTPUT.mp3
+# Reads text from FILE.txt and synthesizes it with the same TTS model/voice
+# used by the article pipeline, writing the result to OUTPUT.mp3.
+if ARGV[0] == "generate"
+  file_path   = ARGV[1]
+  output_path = ARGV[2]
+
+  if file_path.nil? || output_path.nil?
+    $stderr.puts "Usage: audio generate FILE.txt OUTPUT.mp3".red
+    exit 1
+  end
+
+  unless File.exist?(file_path)
+    $stderr.puts "[audio] ERROR: File not found: #{file_path}".red
+    exit 1
+  end
+
+  text   = File.read(file_path).strip
+  client = Video::OpenAIClient.new
+
+  puts "[audio] Generating audio from #{file_path}...".cyan
+  FileUtils.mkdir_p(File.dirname(File.expand_path(output_path)))
+  client.tts(
+    text:        text,
+    voice:       Video::AudioGenerator::TTS_VOICE,
+    model:       Video::AudioGenerator::TTS_MODEL,
+    output_path: output_path
+  )
+  puts "[audio] Done → #{output_path}".green
+  exit 0
+end
+
 def usage
   puts "Usage: audio <article_folder>"
+  puts "       audio generate FILE.txt OUTPUT.mp3"
   puts
   puts "  audio articles/ru/jun/21/tim_bray_was_born"
+  puts "  audio generate narration.txt output.mp3"
   puts
   puts "Options:"
   puts "  --force-text    Regenerate narration.txt even if it exists"

@@ -19,14 +19,17 @@ module Video
       @service = build_service
     end
 
-    # Upload narration.mp3 and final.mp4 for the given article.
-    # Returns hash { mp3: web_link, mp4: web_link }.
+    # Upload narration.mp3 and all platform MP4s for the given article.
+    # Returns hash { mp3: web_link, instagram: web_link, shorts: web_link, tiktok: web_link }.
     def upload(article_info, paths)
       folder_id = ensure_folder_path(article_info)
 
       results = {}
       results[:mp3] = upload_file(paths.narration_mp3, folder_id, "audio/mpeg") if File.exist?(paths.narration_mp3)
-      results[:mp4] = upload_file(paths.final_mp4,     folder_id, "video/mp4")  if File.exist?(paths.final_mp4)
+      Video::FfmpegComposer::PLATFORMS.each_key do |platform|
+        path = paths.platform_mp4(platform)
+        results[platform.to_sym] = upload_file(path, folder_id, "video/mp4") if File.exist?(path)
+      end
       results
     end
 

@@ -1,118 +1,72 @@
 Write the narration in English.
 
-Article title: June 23, 1912: Alan Turing Was Born
-Date: June 23, 1912
+Article title: Gio Wiederhold and the Evolution of Data Integration and Semantic Technologies
+Date: June 24, 1931
 
 Article content:
-Alan Mathison Turing was born in London. A mathematician, cryptanalyst, and one of the people often described as a father of modern computing.
+On June 24, 1931, Gio Wiederhold was born. He was one of those researchers whose name is rarely mentioned outside academia, yet whose ideas had a lasting impact on databases, information integration, and information retrieval. Wiederhold spent much of his career as a professor at Stanford University, led research programs at DARPA, and worked on problems that remain highly relevant today: how to combine data from different systems, how to make computers understand the meaning of that data, and how artificial intelligence can help manage information.
 
-Today he is most commonly remembered for helping break the German Enigma cipher during World War II. But Turing's contributions went far beyond that. He laid the foundations of computation theory, worked on some of the earliest computers, explored the possibility of artificial intelligence, and even made important contributions to mathematical biology. Despite his scientific achievements, his influence on the emerging computer industry, and his role in the Allied war effort, he was ultimately failed by the society and government he served. To understand who Alan Turing was, it is important to look not only at his scientific work but also at the defining events of his personal life.
+## DARPA I3
 
-## Christopher Morcom
+From 1991 to 1994, Wiederhold served as a program manager at DARPA. During that time, he launched the Intelligent Integration of Information (I3) program, an effort to solve one of the hardest problems in information systems: finding and combining data from many independent sources.
 
-At Sherborne School, Turing met Christopher Morcom. They shared a deep interest in mathematics and science. Morcom became one of the most important people in Turing's life and had a profound influence on his thinking.
+By the early 1990s, organizations had accumulated vast amounts of information in databases, file systems, and specialized applications. The problem was that every system existed in isolation, using its own formats, structures, and terminology. Finding information often required people to manually search multiple systems, while computers had almost no way to do this automatically.
 
-On February 13, 1930, Christopher Morcom died unexpectedly from complications related to tuberculosis. Turing was devastated by the loss. He later reflected that Morcom's death pushed him to think more seriously about mathematics, consciousness, and the nature of reality. He became increasingly interested in whether life and thought could ultimately be explained as physical processes. While such ideas were already present among many scientists of the era, the tragedy motivated Turing to pursue them with unusual determination and rigor.
+The I3 program aimed to change that. Rather than building one massive centralized database, researchers explored ways for software to automatically locate relevant sources, retrieve information, and combine it into a unified view. One of the program's key ideas was the use of mediators — software components that acted as translators between different information systems.
 
-## The Universal Machine
+The ideas behind I3 proved highly influential. Related research programs advanced digital libraries, information retrieval systems, and techniques for managing large document collections. Many of the concepts explored during this period later became part of the foundation of modern web search.
 
-In 1931, Turing entered the University of Cambridge and later became a fellow of King's College.
+## Semantic Interoperability
 
-In 1936, he published the paper *On Computable Numbers*. In it he introduced the concept now known as the Turing machine — an abstract computational device capable of executing formal instructions step by step.
+While working on data integration, Wiederhold concluded that simply connecting two systems was not enough. They also needed to understand the meaning of the information being exchanged in the same way.
 
-The paper addressed one of the most famous mathematical problems of the time, David Hilbert's *Entscheidungsproblem* ("decision problem"). Turing demonstrated that there are problems that no algorithm can solve, regardless of how powerful a computing machine may be.
+Imagine two companies. In one database, the field "Customer" refers to an end user who buys products. In another system, a similar field might refer to a business partner rather than a buyer. To a computer, both are just text fields. But if the systems interpret them differently, the results of integration can be incorrect.
 
-Today, the Turing machine remains one of the fundamental models of computer science.
+Wiederhold described this challenge as the problem of semantic interoperability. Systems must not only understand the structure of data, but also the meaning of the concepts represented by that data.
 
-## Princeton and von Neumann
+To address this issue, he became a strong advocate of mediators and ontologies. An ontology describes the meaning of objects and the relationships between them. If two systems use different names and structures but are mapped to the same ontology, their data can be translated correctly between them.
 
-After publishing his groundbreaking paper, Turing moved to Princeton University, where he earned his PhD under the supervision of Alonzo Church.
+Today these ideas underpin integration platforms, enterprise data exchange systems, semantic technologies, and many modern APIs. Whenever an online store exchanges information with a warehouse system, a payment processor, and a delivery service, it faces many of the same challenges that Wiederhold described in the 1990s.
 
-While at Princeton, his talent attracted the attention of John von Neumann. After completing his doctorate, von Neumann offered Turing a position in the United States. Turing declined the offer and chose to return to Britain.
+## KBMS
 
-## War and Enigma
+Earlier in his career, Wiederhold focused on databases themselves. During the 1970s, he helped develop the concept of Knowledge Base Management Systems (KBMS).
 
-When World War II began, Turing joined the Government Code and Cypher School at Bletchley Park. One of the team's most important tasks was breaking messages encrypted by the German Enigma machine.
+Traditional databases were good at storing information, but they had little understanding of the meaning behind that information. Wiederhold proposed combining database technology with techniques from artificial intelligence.
 
-By that time, Polish cryptographers led by Marian Rejewski had already made major advances in understanding Enigma and had shared their findings with the Allies. British cryptanalysts built upon that work.
+In a KBMS, the system would not simply store facts. It would also use knowledge about a domain to support searching, analysis, and information processing. This involved inference rules, knowledge models, and other techniques that at the time belonged to the field of AI.
 
-Turing became one of the key figures in the project. He helped develop the electromechanical Bombe machine, which dramatically accelerated the search for Enigma settings.
+In many ways, KBMS was an attempt to bring together two rapidly developing disciplines: databases and artificial intelligence. The idea looks remarkably modern today. Knowledge graphs, semantic databases, enterprise knowledge systems, and many AI-powered information systems address problems that are very similar to those Wiederhold envisioned decades ago.
 
-The breaking of Enigma traffic became one of the greatest achievements of Allied cryptanalysis during the war. Many military historians and intelligence researchers have argued that the success of Bletchley Park shortened the war by as much as two to three years and saved millions of lives.
+Although the technology of the time was limited by computing power and available data, the underlying concept was well ahead of its era.
 
-## ACE and the First Computers
+## Database Textbooks
 
-After the war, Turing joined Britain's National Physical Laboratory.
+Beyond his research, Wiederhold made a significant contribution to database education.
 
-In 1946, he produced the design for the Automatic Computing Engine (ACE), one of the most ambitious stored-program computer projects of its era.
+In 1977, he published *Database Design*. At a time when database design was only beginning to emerge as a formal discipline, the book became one of the first major textbooks on the subject.
 
-Although the original ACE design was never fully implemented exactly as Turing envisioned it, many of its ideas had a significant influence on British computer development.
+He later published *File Organization for Database Design*, a book focused on data storage structures and file organization. These works were widely used in university courses and helped shape the way engineers approached database design.
 
-In 1948, Turing moved to the University of Manchester, where he worked on software for the Manchester Mark I, one of the world's earliest stored-program computers. In 1949, he became Deputy Director of the university's computing laboratory.
-
-## Can Machines Think?
-
-In 1950, Turing published *Computing Machinery and Intelligence*.
-
-The paper opened with a simple question:
-
-*"Can machines think?"*
-
-Rather than arguing philosophically, Turing proposed a practical experiment that later became known as the Turing Test. If a human judge cannot reliably distinguish a machine's responses from those of another human, then the machine can be considered intelligent in a practical sense.
-
-More than seventy years later, the paper remains one of the most cited works in the history of artificial intelligence research.
-
-## Morphogenesis
-
-A less familiar part of Turing's work involved biology.
-
-In 1952, he published *The Chemical Basis of Morphogenesis*. In the paper, he proposed a mathematical explanation for how biological patterns can emerge through interactions between chemical substances.
-
-These reaction-diffusion models are still used today to study animal skin patterns, tissue growth, and other biological processes.
-
-## Trial and Death
-
-In 1952, Turing was convicted for homosexual relationships. At the time, such relationships were criminal offenses in the United Kingdom.
-
-The court offered him a choice between imprisonment and hormone treatment. Turing chose the treatment.
-
-After the trial, he lost access to classified government work.
-
-On June 7, 1954, Alan Turing died from cyanide poisoning. The official investigation ruled the death a suicide, but later researchers suggested it may have been an accident. Turing regularly worked with cyanide in his experiments and personal projects. Historians still debate what actually happened.
-
-## Late Recognition
-
-In 1966, the ACM established the Turing Award for outstanding achievements in computer science. It is still awarded today and is often regarded as the field's highest honor.
-
-In 2009, the British government formally apologized for Turing's treatment.
-
-In 2013, Queen Elizabeth II granted him a posthumous royal pardon.
-
-In 2017, the so-called "Turing Law" came into effect, extending similar pardons to thousands of others convicted under comparable laws.
-
-On June 23, 2021, the Bank of England issued a new £50 banknote featuring Alan Turing.
-
-Today, his name can be found on scientific awards, research centers, university buildings, and computer laboratories around the world.
+Many concepts that are now considered fundamental to information system design were actively discussed and organized in Wiederhold's publications. Through his books, he influenced not only researchers but also generations of engineers who built database systems and enterprise information platforms.
 
 
 ---
 
 Write a short historical documentary narration (60–70 words) for a vertical short video.
 
-The narration is part of the "June 23 in the History of Computer Science" series.
-Open with or work in the phrase "June 23 in the History of Computer Science" naturally — it frames what day we are remembering.
+The narration is part of the "June 24 in the History of Computer Science" series.
+Open with or work in the phrase "June 24 in the History of Computer Science" naturally — it frames what day we are remembering.
 
 Structure:
-1. Hook — open with "June 23 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
+1. Hook — open with "June 24 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
 2. Date + Event — state what happened and when (include the year)
 3. What happened — the key event in a sentence or two
 4. Why it mattered — the significance
 5. What came after — brief legacy
-6. Soft CTA — end with exactly this line: "Follow IT History Journal."
 
 Requirements:
 - 60–70 words total
 - Calm, documentary tone
 - No H1/H2 headings, no bullet points, no markdown
 - No stage directions or speaker labels
-- End with: Follow IT History Journal.
