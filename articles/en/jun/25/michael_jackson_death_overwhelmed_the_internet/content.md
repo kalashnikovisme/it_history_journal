@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 25, 2009: Michael Jackson's Death Overwhelmed the Internet"
+title: "How Michael Jackson's Death Tested the Internet's Limits in 2009"
 date: "June 25, 2009"
-excerpt: "On June 25, 2009, news of Michael Jackson's death triggered one of the largest internet traffic surges ever seen, exposing the limits of late-2000s web infrastructure."
-updated_at: "2026-06-25"
+excerpt: "Explore how Michael Jackson's death overwhelmed the internet in 2009, revealing infrastructure challenges and accelerating technological advancements."
+updated_at: "2026-06-24"
 ru: "/ru/jun/25/michael-jackson-death-overwhelmed-the-internet"
 sources:
   - title: "Michael Jackson: Millions Grieve Online — The Guardian"
