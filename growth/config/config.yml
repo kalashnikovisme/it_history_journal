@@ -21,6 +21,10 @@ analytics:
   ga4_property_id: "540478723"
   credentials_path: "config/ga4_credentials.json"
 
+search_console:
+  site_url: "https://history.purple-magic.com"
+  # credentials_path defaults to analytics.credentials_path (same service account)
+
 distribution:
   platforms:
     - twitter

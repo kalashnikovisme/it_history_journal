@@ -91,6 +91,13 @@ interaction:
     compose:
       run_options: [no-deps]
 
+  seo:
+    description: Run SEO workflow on articles updated exactly 7 days ago
+    service: growth_app
+    command: bundle exec ruby -I growth/lib growth/bin/growth seo recent
+    compose:
+      run_options: [no-deps]
+
   grow_test:
     description: Run growth tests
     service: growth_app

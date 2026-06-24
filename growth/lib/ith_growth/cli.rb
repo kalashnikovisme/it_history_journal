@@ -7,6 +7,7 @@ require "ith_growth/ai/openai_client"
 require "ith_growth/ai/anthropic_client"
 require "ith_growth/ai/prompt_runner"
 require "ith_growth/article/parser"
+require "ith_growth/article/recent_finder"
 require "ith_growth/outputs/writer"
 require "ith_growth/workflows/article_analysis_workflow"
 require "ith_growth/workflows/distribution_workflow"
@@ -18,7 +19,92 @@ require "ith_growth/analytics/ga_client"
 require "ith_growth/analytics/search_console_client"
 
 module IthGrowth
+  module SeoDisplay
+    def print_seo_progress(article_rel_dir, metrics, report_dates: [])
+      bar = "━" * 60
+      say bar.cyan
+      say "  SEO Progress: #{article_rel_dir}".cyan.bold
+      say bar.cyan
+
+      if metrics.empty?
+        if report_dates.any?
+          say "  #{report_dates.size} previous run(s): #{report_dates.join(", ")} — no analytics data yet.\n".light_black
+        else
+          say "  No history yet — this is the first run.\n".light_black
+        end
+        return
+      end
+
+      say ""
+      say format("  %-12s  %6s  %7s  %9s  %7s  %8s",
+        "Date", "Views", "Bounce", "Avg Time", "Clicks", "Avg Pos").bold
+
+      metrics.each_with_index do |entry, idx|
+        prev = idx > 0 ? metrics[idx - 1] : nil
+        ga4  = entry["ga4"]
+        gsc  = entry["gsc"] || []
+
+        total_clicks = gsc.sum { |r| r["clicks"].to_i }
+        avg_pos      = gsc.empty? ? nil : (gsc.sum { |r| r["position"].to_f } / gsc.size).round(1)
+        avg_duration = ga4 ? format_duration(ga4["avg_duration"].to_f) : "-"
+        bounce       = ga4 ? "#{(ga4["bounce_rate"].to_f * 100).round(1)}%" : "-"
+        views        = ga4 ? ga4["views"].to_i : "-"
+
+        say format("  %-12s  %6s  %7s  %9s  %7s  %8s  %s",
+          entry["date"], views, bounce, avg_duration,
+          total_clicks, avg_pos || "-", trend_indicator(entry, prev))
+      end
+
+      latest_gsc = metrics.last["gsc"] || []
+      unless latest_gsc.empty?
+        say ""
+        say "  Top queries (#{metrics.last["date"]}):".bold
+        latest_gsc.first(5).each do |r|
+          say format("    %-40s  %3d clicks   pos %s",
+            r["dimension"] || r["query"] || "-",
+            r["clicks"].to_i,
+            r["position"].to_f.round(1))
+        end
+      end
+
+      say ""
+      say bar.cyan
+      say ""
+    end
+
+    def trend_indicator(current, prev)
+      return "" unless prev
+      signals = []
+      if current["ga4"] && prev["ga4"]
+        signals << (current["ga4"]["views"].to_i >= prev["ga4"]["views"].to_i ? "↑views" : "↓views")
+      end
+      curr_pos = avg_gsc_position(current["gsc"])
+      prev_pos = avg_gsc_position(prev["gsc"])
+      signals << (curr_pos < prev_pos ? "↑rank" : "↓rank") if curr_pos && prev_pos
+      signals.join(" ").green
+    end
+
+    def avg_gsc_position(gsc)
+      return nil if gsc.nil? || gsc.empty?
+      (gsc.sum { |r| r["position"].to_f } / gsc.size).round(1)
+    end
+
+    def format_duration(seconds)
+      m = (seconds / 60).floor
+      s = (seconds % 60).round
+      "#{m}:#{s.to_s.rjust(2, "0")}"
+    end
+
+    def article_rel_dir(article_path, config)
+      content_dir = config.content_dir&.chomp("/") || "articles"
+      rel = article_path.delete_prefix("#{content_dir}/")
+      File.dirname(rel)
+    end
+  end
+
   class ArticleCLI < Thor
+    include SeoDisplay
+
     desc "analyze PATH", "Analyze an article"
     def analyze(path)
       IthGrowth::CLI.context.workflow(:analysis).run(path).each { |file| say file }
@@ -38,86 +124,54 @@ module IthGrowth
       ctx.workflow(:analysis).run(path)
       workflow = ctx.workflow(:seo)
       rel_dir = article_rel_dir(path, ctx.config)
-      print_seo_progress(rel_dir, workflow.load_metrics(rel_dir))
+      print_seo_progress(rel_dir, workflow.load_metrics(rel_dir), report_dates: workflow.load_report_dates(rel_dir))
       workflow.run(path)
     end
+  end
 
-    no_commands do
-      def article_rel_dir(article_path, config)
-        content_dir = config.content_dir&.chomp("/") || "articles"
-        rel = article_path.delete_prefix("#{content_dir}/")
-        File.dirname(rel)
+  class SeoCommands < Thor
+    include SeoDisplay
+
+    desc "suggest PATH", "Generate SEO suggestions for an article"
+    option :website_repo, type: :string
+    def suggest(path)
+      ctx = IthGrowth::CLI.context
+      ctx.workflow(:analysis).run(path)
+      ctx.workflow(:seo).run(path, website_repo: options[:website_repo]).each { |file| say file }
+    end
+
+    desc "recent", "Run SEO workflow on all articles updated exactly N days ago"
+    option :days, type: :numeric, default: 7
+    def recent
+      ctx = IthGrowth::CLI.context
+      config = ctx.config
+      content_dir = config.content_dir
+
+      unless content_dir && Dir.exist?(content_dir)
+        say "Content directory not found: #{content_dir.inspect}"
+        return
       end
 
-      def print_seo_progress(article_rel_dir, metrics)
-        bar = "━" * 60
-        say bar.cyan
-        say "  SEO Progress: #{article_rel_dir}".cyan.bold
-        say bar.cyan
+      articles = Article::RecentFinder.new(content_dir: content_dir).find(days: options[:days])
 
-        if metrics.empty?
-          say "  No history yet — this is the first run.\n".light_black
-          return
-        end
+      if articles.empty?
+        say "No articles found for #{target} (#{options[:days]} days ago)."
+        return
+      end
 
+      target = Date.today - options[:days]
+      say "#{articles.size} article(s) updated on #{target} (#{options[:days]} days ago):".bold
+      articles.each { |a| say "  #{a[:path]}" }
+      say ""
+
+      articles.each do |info|
+        path = info[:path]
+        ctx.workflow(:analysis).run(path)
+        workflow = ctx.workflow(:seo)
+        rel_dir = article_rel_dir(path, config)
+        print_seo_progress(rel_dir, workflow.load_metrics(rel_dir), report_dates: workflow.load_report_dates(rel_dir))
+        workflow.run(path)
         say ""
-        say format("  %-12s  %6s  %7s  %9s  %7s  %8s",
-          "Date", "Views", "Bounce", "Avg Time", "Clicks", "Avg Pos").bold
-
-        metrics.each_with_index do |entry, idx|
-          prev = idx > 0 ? metrics[idx - 1] : nil
-          ga4  = entry["ga4"]
-          gsc  = entry["gsc"] || []
-
-          total_clicks = gsc.sum { |r| r["clicks"].to_i }
-          avg_pos      = gsc.empty? ? nil : (gsc.sum { |r| r["position"].to_f } / gsc.size).round(1)
-          avg_duration = ga4 ? format_duration(ga4["avg_duration"].to_f) : "-"
-          bounce       = ga4 ? "#{(ga4["bounce_rate"].to_f * 100).round(1)}%" : "-"
-          views        = ga4 ? ga4["views"].to_i : "-"
-
-          say format("  %-12s  %6s  %7s  %9s  %7s  %8s  %s",
-            entry["date"], views, bounce, avg_duration,
-            total_clicks, avg_pos || "-", trend_indicator(entry, prev))
-        end
-
-        latest_gsc = metrics.last["gsc"] || []
-        unless latest_gsc.empty?
-          say ""
-          say "  Top queries (#{metrics.last["date"]}):".bold
-          latest_gsc.first(5).each do |r|
-            say format("    %-40s  %3d clicks   pos %s",
-              r["dimension"] || r["query"] || "-",
-              r["clicks"].to_i,
-              r["position"].to_f.round(1))
-          end
-        end
-
-        say ""
-        say bar.cyan
-        say ""
-      end
-
-      def trend_indicator(current, prev)
-        return "" unless prev
-        signals = []
-        if current["ga4"] && prev["ga4"]
-          signals << (current["ga4"]["views"].to_i >= prev["ga4"]["views"].to_i ? "↑views" : "↓views")
-        end
-        curr_pos = avg_gsc_position(current["gsc"])
-        prev_pos = avg_gsc_position(prev["gsc"])
-        signals << (curr_pos < prev_pos ? "↑rank" : "↓rank") if curr_pos && prev_pos
-        signals.join(" ").green
-      end
-
-      def avg_gsc_position(gsc)
-        return nil if gsc.nil? || gsc.empty?
-        (gsc.sum { |r| r["position"].to_f } / gsc.size).round(1)
-      end
-
-      def format_duration(seconds)
-        m = (seconds / 60).floor
-        s = (seconds % 60).round
-        "#{m}:#{s.to_s.rjust(2, "0")}"
       end
     end
   end
@@ -147,15 +201,7 @@ module IthGrowth
     subcommand "article", ArticleCLI
 
     desc "seo SUBCOMMAND", "SEO commands"
-    subcommand "seo", Class.new(Thor) {
-      desc "suggest PATH", "Generate SEO suggestions"
-      option :website_repo, type: :string
-      def suggest(path)
-        ctx = IthGrowth::CLI.context
-        ctx.workflow(:analysis).run(path)
-        ctx.workflow(:seo).run(path, website_repo: options[:website_repo]).each { |file| say file }
-      end
-    }
+    subcommand "seo", SeoCommands
 
     desc "distribution SUBCOMMAND", "Distribution commands"
     subcommand "distribution", Class.new(Thor) {

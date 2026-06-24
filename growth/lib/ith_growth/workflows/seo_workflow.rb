@@ -19,6 +19,7 @@ module IthGrowth
           history = load_history(article_rel_dir)
           analytics_data = fetch_analytics_data(article.path)
           analytics_markdown = format_analytics_markdown(analytics_data)
+          print_analytics(analytics_markdown)
 
           append_metrics(article_rel_dir, seo_writer, analytics_data, date)
 
@@ -35,6 +36,8 @@ module IthGrowth
           patch = extract_patch(markdown)
           suggestions = strip_patch_block(markdown)
           report = build_report(date, analytics_markdown, suggestions)
+
+          print_patch_diff(article, patch)
 
           schema = {
             "@context": "https://schema.org",
@@ -63,7 +66,41 @@ module IthGrowth
         []
       end
 
+      def load_report_dates(article_rel_dir)
+        seo_dir = File.join(config.seo_output_dir, "articles", article_rel_dir)
+        return [] unless Dir.exist?(seo_dir)
+        Dir.glob(File.join(seo_dir, "seo-*.md")).sort.map do |f|
+          File.basename(f, ".md").sub("seo-", "")
+        end
+      end
+
       private
+
+      def print_suggestions(suggestions)
+        return if suggestions.nil? || suggestions.strip.empty?
+        $stdout.puts ""
+        suggestions.strip.each_line { |line| $stdout.puts "  #{line.chomp}" }
+        $stdout.puts ""
+      end
+
+      def print_patch_diff(article, patch)
+        return if patch.empty?
+        $stdout.puts "  ✎ Applied changes:".bold rescue $stdout.puts "  ✎ Applied changes:"
+        patch.each do |key, new_val|
+          old_val = article.frontmatter[key] || article.frontmatter[key.to_s]
+          $stdout.puts "    #{key}:"
+          $stdout.puts "      before: #{old_val.inspect}"
+          $stdout.puts "      after:  #{new_val.inspect}"
+        end
+        $stdout.puts ""
+      end
+
+      def print_analytics(analytics_markdown)
+        return unless analytics_markdown
+        $stdout.puts ""
+        analytics_markdown.each_line { |line| $stdout.puts "  #{line.chomp}" }
+        $stdout.puts ""
+      end
 
       def load_history(article_rel_dir)
         seo_dir = File.join(config.seo_output_dir, "articles", article_rel_dir)
@@ -94,8 +131,9 @@ module IthGrowth
             property_id: config.ga4_property_id,
             credentials_path: config.ga4_credentials_path
           )
-          stats = ga.page_stats(page_path: article_page_path(article_path))
-          data[:ga4] = stats if stats
+          page_path = article_page_path(article_path)
+          data[:ga4] = ga.page_stats(page_path: "#{page_path}/") ||
+                       ga.page_stats(page_path: page_path)
         end
 
         data
@@ -114,10 +152,10 @@ module IthGrowth
           sections << "### Google Search Console — last 28 days\n\n#{gsc.format_as_markdown(rows)}"
         end
 
-        if data[:ga4]
+        if data.key?(:ga4)
           s = data[:ga4]
-          sections << "### Google Analytics — last 28 days\n\n" \
-            "Views: #{s[:views]} | Bounce Rate: #{(s[:bounce_rate] * 100).round(1)}% | Avg Duration: #{s[:avg_duration].round}s"
+          body = s ? "Views: #{s[:views]} | Bounce Rate: #{(s[:bounce_rate] * 100).round(1)}% | Avg Duration: #{s[:avg_duration].round}s" : "_No data_"
+          sections << "### Google Analytics — last 28 days\n\n#{body}"
         end
 
         sections.empty? ? nil : sections.join("\n\n")
