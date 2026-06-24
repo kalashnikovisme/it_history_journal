@@ -1,8 +1,8 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Gio Wiederhold: Databases, AI, and the Vision of Semantic Integration"
+title: "Gio Wiederhold and the Evolution of Data Integration and Semantic Technologies"
 date: "June 24, 1931"
-excerpt: "Gio Wiederhold pioneered knowledge base management systems, semantic interoperability, and data integration long before those ideas became mainstream."
+excerpt: "Discover Gio Wiederhold’s pioneering work on databases, semantic integration, and AI, shaping modern information systems and data interoperability."
 updated_at: "2026-06-24"
 ru: "/ru/jun/24/gio-wiederhold-was-born"
 sources:
@@ -17,7 +17,6 @@ sources:
   - title: "Invited Talk at FGCS 1994 — AIRC AIST"
     url: "https://www.airc.aist.go.jp/aitec-icot/ICOT/Museum/FGCS/FGCS94en-work3/94eINVT3.pdf"
 ---
-
 On June 24, 1931, Gio Wiederhold was born. He was one of those researchers whose name is rarely mentioned outside academia, yet whose ideas had a lasting impact on databases, information integration, and information retrieval. Wiederhold spent much of his career as a professor at Stanford University, led research programs at DARPA, and worked on problems that remain highly relevant today: how to combine data from different systems, how to make computers understand the meaning of that data, and how artificial intelligence can help manage information.
 
 ## DARPA I3
