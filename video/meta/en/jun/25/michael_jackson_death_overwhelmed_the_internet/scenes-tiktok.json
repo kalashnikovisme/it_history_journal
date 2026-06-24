@@ -1,0 +1,42 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/en/jun/25/michael_jackson_death_overwhelmed_the_internet/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 20.172
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 6.724,
+    "text": "June 25 in the History of Computer Science: on this day in 2009, the death of Michael Jackson pushed the internet to its breaking point."
+  },
+  {
+    "id": "fact",
+    "start": 14.224,
+    "duration": 6.724,
+    "text": "News of his passing triggered one of the largest traffic surges ever seen, overwhelming Google, Twitter, and Wikipedia."
+  },
+  {
+    "id": "fact",
+    "start": 20.948,
+    "duration": 6.724,
+    "text": "The event revealed just how fragile online infrastructure was, spurring rapid investment in cloud computing, load balancing, and the resilient platforms we rely on today."
+  },
+  {
+    "id": "cta",
+    "start": 27.672,
+    "duration": 6.504,
+    "audio": "video/audio/samples/tiktok.mp3"
+  }
+]

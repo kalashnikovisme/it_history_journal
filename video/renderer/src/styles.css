@@ -218,7 +218,7 @@ body {
 
 .cover-image-container {
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 1080px;
   height: 1920px;

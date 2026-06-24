@@ -1,0 +1,6 @@
+{
+  "model": "tts-1",
+  "input": "June 25 in the History of Computer Science: on this day in 2009, the death of Michael Jackson pushed the internet to its breaking point. News of his passing triggered one of the largest traffic surges ever seen, overwhelming Google, Twitter, and Wikipedia. The event revealed just how fragile online infrastructure was, spurring rapid investment in cloud computing, load balancing, and the resilient platforms we rely on today.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

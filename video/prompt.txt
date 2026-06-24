@@ -1,65 +1,57 @@
 Write the narration in English.
 
-Article title: Gio Wiederhold and the Evolution of Data Integration and Semantic Technologies
-Date: June 24, 1931
+Article title: How Michael Jackson's Death Tested the Internet's Limits in 2009
+Date: June 25, 2009
 
 Article content:
-On June 24, 1931, Gio Wiederhold was born. He was one of those researchers whose name is rarely mentioned outside academia, yet whose ideas had a lasting impact on databases, information integration, and information retrieval. Wiederhold spent much of his career as a professor at Stanford University, led research programs at DARPA, and worked on problems that remain highly relevant today: how to combine data from different systems, how to make computers understand the meaning of that data, and how artificial intelligence can help manage information.
+June 25, 2009, became one of the most extraordinary days in the history of the internet. After news broke that Michael Jackson had died, millions of people simultaneously searched for information, rushed to news websites, refreshed Twitter and Wikipedia, watched videos, and followed the first eyewitness reports. Within minutes, the internet was hit by one of the largest traffic surges it had ever experienced.
 
-## DARPA I3
+It was one of the first times a global event so clearly exposed the limits of the internet infrastructure of the late 2000s.
 
-From 1991 to 1994, Wiederhold served as a program manager at DARPA. During that time, he launched the Intelligent Integration of Information (I3) program, an effort to solve one of the hardest problems in information systems: finding and combining data from many independent sources.
+## The Internet in 2009
 
-By the early 1990s, organizations had accumulated vast amounts of information in databases, file systems, and specialized applications. The problem was that every system existed in isolation, using its own formats, structures, and terminology. Finding information often required people to manually search multiple systems, while computers had almost no way to do this automatically.
+Today, traffic spikes like this are considered routine. Large cloud platforms scale automatically, and CDNs spread traffic across thousands of servers.
 
-The I3 program aimed to change that. Rather than building one massive centralized database, researchers explored ways for software to automatically locate relevant sources, retrieve information, and combine it into a unified view. One of the program's key ideas was the use of mediators — software components that acted as translators between different information systems.
+In 2009, things looked very different. Twitter was only three years old and regularly struggled under loads far smaller than what it faced that day. Many major websites still relied on their own data centers rather than modern cloud infrastructure, and automatic scaling technologies were only beginning to emerge.
 
-The ideas behind I3 proved highly influential. Related research programs advanced digital libraries, information retrieval systems, and techniques for managing large document collections. Many of the concepts explored during this period later became part of the foundation of modern web search.
+As a result, a single breaking news story became a serious stress test for the entire internet.
 
-## Semantic Interoperability
+## What Happened to Online Services That Day
 
-While working on data integration, Wiederhold concluded that simply connecting two systems was not enough. They also needed to understand the meaning of the information being exchanged in the same way.
+The first reports that Michael Jackson had been taken to the hospital were published by TMZ. Almost immediately afterward, major news organizations around the world began issuing updates, while users flooded search engines and social media platforms. Traffic increased so rapidly that many online services started experiencing outages and slowdowns.
 
-Imagine two companies. In one database, the field "Customer" refers to an end user who buys products. In another system, a similar field might refer to a business partner rather than a buyer. To a computer, both are just text fields. But if the systems interpret them differently, the results of integration can be incorrect.
+Google saw such an enormous spike in searches for "Michael Jackson" that its automated protection systems initially interpreted the activity as a possible DDoS attack. Some users trying to search for his name were presented with a verification page asking them to prove they were human.
 
-Wiederhold described this challenge as the problem of semantic interoperability. Systems must not only understand the structure of data, but also the meaning of the concepts represented by that data.
+Twitter was pushed to its limits. The company reported that traffic reached roughly 5,000 tweets per minute — a record for the platform at the time. Users encountered widespread errors, including the service's now-famous Fail Whale page.
 
-To address this issue, he became a strong advocate of mediators and ontologies. An ontology describes the meaning of objects and the relationships between them. If two systems use different names and structures but are mapped to the same ontology, their data can be translated correctly between them.
+Several major websites struggled throughout the day. Some users were unable to access Michael Jackson's Wikipedia article as the site experienced noticeable performance and loading issues. News websites including TMZ, the Los Angeles Times, and others periodically became unavailable because of the overwhelming number of visitors. AOL Instant Messenger reported significant delays in message delivery.
 
-Today these ideas underpin integration platforms, enterprise data exchange systems, semantic technologies, and many modern APIs. Whenever an online store exchanges information with a warehouse system, a payment processor, and a delivery service, it faces many of the same challenges that Wiederhold described in the 1990s.
+According to various analytics firms, overall internet traffic increased by tens of percent over normal levels within just a few hours.
 
-## KBMS
+## Why It Matters in the History of the Internet
 
-Earlier in his career, Wiederhold focused on databases themselves. During the 1970s, he helped develop the concept of Knowledge Base Management Systems (KBMS).
+Individual websites going offline no longer surprises anyone today. But in the summer of 2009, this event became an important lesson for the entire industry.
 
-Traditional databases were good at storing information, but they had little understanding of the meaning behind that information. Wiederhold proposed combining database technology with techniques from artificial intelligence.
+Technology companies realized that a single global news story could attract hundreds of millions of users within minutes. In response, many services began investing heavily in distributed infrastructure, load balancing, CDNs, and cloud computing.
 
-In a KBMS, the system would not simply store facts. It would also use knowledge about a domain to support searching, analysis, and information processing. This involved inference rules, knowledge models, and other techniques that at the time belonged to the field of AI.
+The day also became one of the earliest demonstrations of how social media was beginning to outpace traditional news organizations. For millions of people, Twitter became the primary source of information during the first minutes after the news broke.
 
-In many ways, KBMS was an attempt to bring together two rapidly developing disciplines: databases and artificial intelligence. The idea looks remarkably modern today. Knowledge graphs, semantic databases, enterprise knowledge systems, and many AI-powered information systems address problems that are very similar to those Wiederhold envisioned decades ago.
+Today's internet is far better prepared for events like this. Over the past decade, there have been virtually no cases where a surge of legitimate users has brought down a major social network. Large news websites are also much better equipped to handle massive traffic spikes — in fact, they welcome them, since more visitors translate into greater advertising revenue.
 
-Although the technology of the time was limited by computing power and available data, the underlying concept was well ahead of its era.
+Twitter dramatically expanded its infrastructure and eventually retired the famous Fail Whale. Google improved its systems for distinguishing genuine traffic surges from DDoS attacks. More and more companies migrated their services to cloud platforms capable of automatically adding computing resources during peak demand.
 
-## Database Textbooks
-
-Beyond his research, Wiederhold made a significant contribution to database education.
-
-In 1977, he published *Database Design*. At a time when database design was only beginning to emerge as a formal discipline, the book became one of the first major textbooks on the subject.
-
-He later published *File Organization for Database Design*, a book focused on data storage structures and file organization. These works were widely used in university courses and helped shape the way engineers approached database design.
-
-Many concepts that are now considered fundamental to information system design were actively discussed and organized in Wiederhold's publications. Through his books, he influenced not only researchers but also generations of engineers who built database systems and enterprise information platforms.
+Michael Jackson's death was not only the biggest news story of 2009, but also an unexpected stress test for the internet itself. It demonstrated that real-world events could generate traffic comparable to large-scale cyberattacks and accelerated the adoption of technologies that now allow the world's largest online services to support audiences of hundreds of millions of users.
 
 
 ---
 
 Write a short historical documentary narration (60–70 words) for a vertical short video.
 
-The narration is part of the "June 24 in the History of Computer Science" series.
-Open with or work in the phrase "June 24 in the History of Computer Science" naturally — it frames what day we are remembering.
+The narration is part of the "June 25 in the History of Computer Science" series.
+Open with or work in the phrase "June 25 in the History of Computer Science" naturally — it frames what day we are remembering.
 
 Structure:
-1. Hook — open with "June 24 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
+1. Hook — open with "June 25 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
 2. Date + Event — state what happened and when (include the year)
 3. What happened — the key event in a sentence or two
 4. Why it mattered — the significance

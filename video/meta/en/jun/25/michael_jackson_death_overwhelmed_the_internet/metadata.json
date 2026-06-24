@@ -1,0 +1,79 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 25,
+  "year": "2009",
+  "slug": "michael-jackson-death-overwhelmed-the-internet",
+  "slug_dir": "michael_jackson_death_overwhelmed_the_internet",
+  "title": "How Michael Jackson's Death Tested the Internet's Limits in 2009",
+  "date_display": "June 25, 2009",
+  "date_month_day": "June 25",
+  "content_md": "June 25, 2009, became one of the most extraordinary days in the history of the internet. After news broke that Michael Jackson had died, millions of people simultaneously searched for information, rushed to news websites, refreshed Twitter and Wikipedia, watched videos, and followed the first eyewitness reports. Within minutes, the internet was hit by one of the largest traffic surges it had ever experienced.\n\nIt was one of the first times a global event so clearly exposed the limits of the internet infrastructure of the late 2000s.\n\n## The Internet in 2009\n\nToday, traffic spikes like this are considered routine. Large cloud platforms scale automatically, and CDNs spread traffic across thousands of servers.\n\nIn 2009, things looked very different. Twitter was only three years old and regularly struggled under loads far smaller than what it faced that day. Many major websites still relied on their own data centers rather than modern cloud infrastructure, and automatic scaling technologies were only beginning to emerge.\n\nAs a result, a single breaking news story became a serious stress test for the entire internet.\n\n## What Happened to Online Services That Day\n\nThe first reports that Michael Jackson had been taken to the hospital were published by TMZ. Almost immediately afterward, major news organizations around the world began issuing updates, while users flooded search engines and social media platforms. Traffic increased so rapidly that many online services started experiencing outages and slowdowns.\n\nGoogle saw such an enormous spike in searches for \"Michael Jackson\" that its automated protection systems initially interpreted the activity as a possible DDoS attack. Some users trying to search for his name were presented with a verification page asking them to prove they were human.\n\nTwitter was pushed to its limits. The company reported that traffic reached roughly 5,000 tweets per minute — a record for the platform at the time. Users encountered widespread errors, including the service's now-famous Fail Whale page.\n\nSeveral major websites struggled throughout the day. Some users were unable to access Michael Jackson's Wikipedia article as the site experienced noticeable performance and loading issues. News websites including TMZ, the Los Angeles Times, and others periodically became unavailable because of the overwhelming number of visitors. AOL Instant Messenger reported significant delays in message delivery.\n\nAccording to various analytics firms, overall internet traffic increased by tens of percent over normal levels within just a few hours.\n\n## Why It Matters in the History of the Internet\n\nIndividual websites going offline no longer surprises anyone today. But in the summer of 2009, this event became an important lesson for the entire industry.\n\nTechnology companies realized that a single global news story could attract hundreds of millions of users within minutes. In response, many services began investing heavily in distributed infrastructure, load balancing, CDNs, and cloud computing.\n\nThe day also became one of the earliest demonstrations of how social media was beginning to outpace traditional news organizations. For millions of people, Twitter became the primary source of information during the first minutes after the news broke.\n\nToday's internet is far better prepared for events like this. Over the past decade, there have been virtually no cases where a surge of legitimate users has brought down a major social network. Large news websites are also much better equipped to handle massive traffic spikes — in fact, they welcome them, since more visitors translate into greater advertising revenue.\n\nTwitter dramatically expanded its infrastructure and eventually retired the famous Fail Whale. Google improved its systems for distinguishing genuine traffic surges from DDoS attacks. More and more companies migrated their services to cloud platforms capable of automatically adding computing resources during peak demand.\n\nMichael Jackson's death was not only the biggest news story of 2009, but also an unexpected stress test for the internet itself. It demonstrated that real-world events could generate traffic comparable to large-scale cyberattacks and accelerated the adoption of technologies that now allow the world's largest online services to support audiences of hundreds of millions of users.\n",
+  "video_cover_path": "articles/en/jun/25/michael_jackson_death_overwhelmed_the_internet/video-cover.png",
+  "folder": "articles/en/jun/25/michael_jackson_death_overwhelmed_the_internet",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 20.172
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 6.724,
+      "text": "June 25 in the History of Computer Science: on this day in 2009, the death of Michael Jackson pushed the internet to its breaking point."
+    },
+    {
+      "id": "fact",
+      "start": 14.224,
+      "duration": 6.724,
+      "text": "News of his passing triggered one of the largest traffic surges ever seen, overwhelming Google, Twitter, and Wikipedia."
+    },
+    {
+      "id": "fact",
+      "start": 20.948,
+      "duration": 6.724,
+      "text": "The event revealed just how fragile online infrastructure was, spurring rapid investment in cloud computing, load balancing, and the resilient platforms we rely on today."
+    },
+    {
+      "id": "cta",
+      "start": 27.672,
+      "duration": 7.296
+    }
+  ],
+  "total_duration": 34.968,
+  "scene_count": 7,
+  "youtube": {
+    "title": "How Michael Jackson's Death Overloaded the Internet in 2009",
+    "description": "On June 25, 2009, news of Michael Jackson's death caused an unprecedented surge in internet traffic, overwhelming Google, Twitter, and Wikipedia. This event exposed the fragility of online infrastructure at the time and accelerated the shift to cloud computing and better load balancing. Learn how a single global event changed the way we build the internet. Discover more IT history with IT History Journal. #Shorts #InternetHistory #MichaelJackson\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme",
+    "tags": [
+      "Michael Jackson",
+      "internet history",
+      "2009",
+      "Google outage",
+      "Twitter fail whale",
+      "Wikipedia crash",
+      "cloud computing",
+      "load balancing",
+      "social media history",
+      "breaking news",
+      "IT infrastructure",
+      "internet traffic",
+      "technology history",
+      "distributed systems",
+      "IT History Journal"
+    ]
+  }
+}
