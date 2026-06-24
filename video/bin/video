@@ -34,17 +34,19 @@ def usage
   puts "Options:"
   puts "  --force-text    Regenerate narration.txt even if it exists"
   puts "  --force-audio   Regenerate narration.mp3 even if it exists"
-  puts "  --force-scenes  Regenerate scenes.json even if it exists"
+  puts "  --force-scenes  Regenerate platform scene files even if they exist"
   puts "  --force-youtube Regenerate YouTube title, description, and tags"
+  puts "  --verbose       Show ffmpeg output during video composition"
   exit 1
 end
 
 argv = ARGV.dup
-force_text   = argv.delete("--force-text")
-force_audio  = argv.delete("--force-audio")
-force_scenes = argv.delete("--force-scenes")
+force_text    = argv.delete("--force-text")
+force_audio   = argv.delete("--force-audio")
+force_scenes  = argv.delete("--force-scenes")
 force_youtube = argv.delete("--force-youtube")
-no_upload    = argv.delete("--no-upload")
+no_upload     = argv.delete("--no-upload")
+verbose       = argv.delete("--verbose")
 
 usage if argv.empty?
 
@@ -104,6 +106,10 @@ begin
 
   client = Video::OpenAIClient.new
 
+  # Probe sample durations up front — needed for CTA timing in both scenario and full pipeline
+  sample_durations    = Video::FfmpegComposer.probe_sample_durations
+  max_sample_duration = sample_durations.values.max
+
   # Narration — reuse if exists
   generator = Video::ScriptGenerator.new(info, paths, client)
   if File.exist?(paths.narration_txt) && !force_text
@@ -118,11 +124,11 @@ begin
   planner = Video::ScenePlanner.new(info, paths)
 
   if scenario_only
-    scenes, reused = planner.plan(narration, nil, force: force_scenes)
+    scenes, reused = planner.plan(narration, nil, sample_durations: sample_durations, force: force_scenes)
     if reused
-      puts "[video] Reusing #{paths.scenes_json}".yellow
+      puts "[video] Reusing platform scene files.".yellow
     else
-      puts "[video] Scenario saved to #{paths.scenes_json}".green
+      puts "[video] Platform scene files written.".green
     end
     youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
     youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
@@ -152,27 +158,29 @@ begin
     puts "[video] Warning: audio is #{duration.round(1)}s (target ≤#{MAX_DURATION}s).".yellow
   end
 
-  # Scenes — reuse if exists
-  scenes, reused = planner.plan(narration, duration, force: force_scenes)
+  # Scenes — write/reuse platform scene files
+  scenes, reused = planner.plan(narration, duration, sample_durations: sample_durations, force: force_scenes)
   if reused
-    puts "[video] Reusing #{paths.scenes_json}".yellow
+    puts "[video] Reusing platform scene files.".yellow
   else
-    puts "[video] #{scenes.size} scenes planned.".green
+    puts "[video] Platform scene files written (CTA at #{duration.round(1)}s).".green
   end
 
   youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
   youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
   puts youtube_reused ? "[video] Reusing YouTube metadata.".yellow : "[video] YouTube metadata saved.".green
 
-  puts "[video] Rendering browser frames...".cyan
-  renderer = Video::Renderer.new(info, paths)
-  renderer.render(scenes, duration)
+  # Render: narration + CTA in one pass; total length covers the longest sample
+  total_recording_duration = duration + max_sample_duration
+  puts "[video] Rendering browser frames (#{total_recording_duration.round(1)}s total)...".cyan
+  renderer = Video::Renderer.new(info, paths, verbose: verbose)
+  renderer.render(scenes, total_recording_duration)
   puts "[video] Browser recording saved to #{paths.browser_recording_webm}".green
 
   puts "[video] Composing platform videos...".cyan
-  composer = Video::FfmpegComposer.new(paths)
+  composer = Video::FfmpegComposer.new(paths, verbose: verbose)
   results  = composer.compose_all
-  results.each { |platform, path| puts "[video] #{platform} → #{path}".green }
+  results.each { |platform, path| puts "[video] Done → #{path}".green }
 
   if no_upload
     puts "[video] Upload skipped (--no-upload).".yellow

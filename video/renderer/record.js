@@ -18,6 +18,7 @@ const DEFAULT_TIMEOUT_MS = 180000;
 const parseArgs = (argv) => {
   const args = {
     headful: false,
+    quiet: false,
     timeout: DEFAULT_TIMEOUT_MS,
     output: 'browser-recording.webm',
     cover: null,
@@ -40,6 +41,8 @@ const parseArgs = (argv) => {
       i += 1;
     } else if (arg === '--headful') {
       args.headful = true;
+    } else if (arg === '--quiet') {
+      args.quiet = true;
     } else if (arg === '--help') {
       args.help = true;
     }
@@ -178,17 +181,18 @@ const ensureFfmpeg = () => {
   }
 };
 
-const trimFirstFrame = (inputPath, outputPath) => {
+const trimFirstFrame = (inputPath, outputPath, quiet = false) => {
   ensureFfmpeg();
   const args = [
     '-y',
+    ...(quiet ? ['-loglevel', 'quiet'] : []),
     '-i', inputPath,
     '-vf', 'trim=start_frame=1,setpts=PTS-STARTPTS',
     '-c:v', 'libvpx-vp9',
     '-an',
     outputPath,
   ];
-  const result = spawnSync('ffmpeg', args, { stdio: 'inherit' });
+  const result = spawnSync('ffmpeg', args, { stdio: quiet ? 'pipe' : 'inherit' });
   if (result.status !== 0) {
     throw new Error('ffmpeg failed to trim the first frame.');
   }
@@ -226,7 +230,7 @@ const main = async () => {
   const tmpVideoDir = fs.mkdtempSync(path.join(rootDir, 'tmp-video-'));
 
   const { server, port } = await serveStatic(rootDir, coverPath, assetsDir);
-  console.log(`Static server running on port ${port}`);
+  if (!args.quiet) console.log(`Static server running on port ${port}`);
 
   // Parse config and inject cover_url before serving it
   let config;
@@ -259,14 +263,16 @@ const main = async () => {
     });
     const page = await context.newPage();
 
-    page.on('console', (msg) => {
-      console.log(`[browser] ${msg.type()}: ${msg.text()}`);
-    });
+    if (!args.quiet) {
+      page.on('console', (msg) => {
+        console.log(`[browser] ${msg.type()}: ${msg.text()}`);
+      });
+    }
     page.on('pageerror', (err) => {
       console.error(`[browser] Page error: ${err.message}`);
     });
 
-    console.log(`Loading: ${pageUrl}`);
+    if (!args.quiet) console.log(`Loading: ${pageUrl}`);
     await page.goto(pageUrl, { waitUntil: 'load' });
 
     // Wait for the animation to signal completion
@@ -287,11 +293,11 @@ const main = async () => {
     await context.close();
 
     const rawWebm = await video.path();
-    console.log(`Raw recording: ${rawWebm}`);
+    if (!args.quiet) console.log(`Raw recording: ${rawWebm}`);
 
     // Trim first frame
     const trimmedWebm = outputPath.replace(/\.webm$/, '.trimmed.webm');
-    trimFirstFrame(rawWebm, trimmedWebm);
+    trimFirstFrame(rawWebm, trimmedWebm, args.quiet);
 
     // Move trimmed to final output path
     fs.renameSync(trimmedWebm, outputPath);
@@ -301,7 +307,7 @@ const main = async () => {
     fs.rmSync(tmpVideoDir, { recursive: true, force: true });
     fs.rmSync(patchedConfigPath, { force: true });
 
-    console.log(`Browser recording saved to ${outputPath}`);
+    if (!args.quiet) console.log(`Browser recording saved to ${outputPath}`);
   } finally {
     if (browser) {
       await browser.close();

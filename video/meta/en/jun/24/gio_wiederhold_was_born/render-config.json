@@ -9,12 +9,13 @@
   "cover_filename": "video-cover.png",
   "site_url": "history.purple-magic.com",
   "cta_language": "en",
-  "total_duration": 29.28,
+  "total_duration": 36.576,
   "scenes": [
     {
       "id": "calendar",
       "start": 0.0,
-      "duration": 4.0
+      "duration": 4.0,
+      "audio": "video/output/en/jun/24/gio_wiederhold_was_born/narration.mp3"
     },
     {
       "id": "title_card",
@@ -24,36 +25,37 @@
     {
       "id": "cover",
       "start": 7.5,
-      "duration": 12.844000000000001
+      "duration": 21.78
     },
     {
       "id": "fact",
       "start": 7.5,
-      "duration": 3.211,
-      "text": "June 24 in the History of Computer Science marks the birth of Gio Wiederhold in 1931, a pioneer in data integration and semantic technologies."
+      "duration": 5.445,
+      "text": "June 24 in the History of Computer Science marks the birth of Gio Wiederhold, born in 1931."
     },
     {
       "id": "fact",
-      "start": 10.711,
-      "duration": 3.211,
-      "text": "Wiederhold’s work connected isolated databases and laid the groundwork for computers to understand not just data, but its meaning."
+      "start": 12.945,
+      "duration": 5.445,
+      "text": "A pioneer at Stanford and DARPA, Wiederhold tackled the challenge of connecting and understanding data across different systems."
     },
     {
       "id": "fact",
-      "start": 13.922,
-      "duration": 3.211,
-      "text": "His ideas shaped modern search engines, enterprise data platforms, and knowledge graphs."
+      "start": 18.39,
+      "duration": 5.445,
+      "text": "His work on semantic interoperability and mediators helped shape the way modern databases, web search, and enterprise platforms exchange information."
     },
     {
       "id": "fact",
-      "start": 17.133,
-      "duration": 3.211,
-      "text": "Follow IT History Journal."
+      "start": 23.835,
+      "duration": 5.445,
+      "text": "Today, his ideas remain central to data integration and semantic technologies."
     },
     {
       "id": "cta",
-      "start": 20.344,
-      "duration": 5.0
+      "start": 29.28,
+      "duration": 6.504,
+      "audio": "video/audio/samples/instagram.mp3"
     }
   ]
 }

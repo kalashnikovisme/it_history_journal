@@ -4,33 +4,31 @@ module Video
   class Renderer
     RENDERER_DIR = File.expand_path("../../renderer", __dir__)
 
-    def initialize(article_info, output_paths)
-      @info  = article_info
-      @paths = output_paths
+    def initialize(article_info, output_paths, verbose: false)
+      @info    = article_info
+      @paths   = output_paths
+      @verbose = verbose
     end
 
     def render(scenes, audio_duration, port: nil, output_path: @paths.browser_recording_webm,
                config_path: @paths.render_config_json)
       @paths.ensure_dir!
       ensure_node!
-
-      # Install renderer dependencies if needed
       install_renderer_deps
 
       config = build_render_config(scenes, audio_duration, port)
       File.write(config_path, JSON.pretty_generate(config))
 
       record_js = File.join(RENDERER_DIR, "record.js")
-      unless File.exist?(record_js)
-        raise "record.js not found at #{record_js}"
-      end
+      raise "record.js not found at #{record_js}" unless File.exist?(record_js)
 
       cmd_parts = [
         "node", record_js,
-        "--config",  File.expand_path(config_path),
-        "--output",  File.expand_path(output_path),
-        "--cover",   File.expand_path(@info[:video_cover_path])
+        "--config", File.expand_path(config_path),
+        "--output", File.expand_path(output_path),
+        "--cover",  File.expand_path(@info[:video_cover_path])
       ]
+      cmd_parts << "--quiet" unless @verbose
 
       success = system(*cmd_parts)
       raise "record.js failed (exit #{$?.exitstatus})" unless success

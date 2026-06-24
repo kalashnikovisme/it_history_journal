@@ -27,58 +27,58 @@
     {
       "id": "cover",
       "start": 7.5,
-      "duration": 12.844000000000001
+      "duration": 21.78
     },
     {
       "id": "fact",
       "start": 7.5,
-      "duration": 3.211,
-      "text": "June 24 in the History of Computer Science marks the birth of Gio Wiederhold in 1931, a pioneer in data integration and semantic technologies."
+      "duration": 5.445,
+      "text": "June 24 in the History of Computer Science marks the birth of Gio Wiederhold, born in 1931."
     },
     {
       "id": "fact",
-      "start": 10.711,
-      "duration": 3.211,
-      "text": "Wiederhold’s work connected isolated databases and laid the groundwork for computers to understand not just data, but its meaning."
+      "start": 12.945,
+      "duration": 5.445,
+      "text": "A pioneer at Stanford and DARPA, Wiederhold tackled the challenge of connecting and understanding data across different systems."
     },
     {
       "id": "fact",
-      "start": 13.922,
-      "duration": 3.211,
-      "text": "His ideas shaped modern search engines, enterprise data platforms, and knowledge graphs."
+      "start": 18.39,
+      "duration": 5.445,
+      "text": "His work on semantic interoperability and mediators helped shape the way modern databases, web search, and enterprise platforms exchange information."
     },
     {
       "id": "fact",
-      "start": 17.133,
-      "duration": 3.211,
-      "text": "Follow IT History Journal."
+      "start": 23.835,
+      "duration": 5.445,
+      "text": "Today, his ideas remain central to data integration and semantic technologies."
     },
     {
       "id": "cta",
-      "start": 20.344,
-      "duration": 5.0
+      "start": 29.28,
+      "duration": 7.296
     }
   ],
-  "total_duration": 25.344,
+  "total_duration": 36.576,
   "scene_count": 8,
   "youtube": {
-    "title": "How Gio Wiederhold Shaped Modern Data Integration and Semantic Tech",
-    "description": "June 24 marks the birthday of Gio Wiederhold, a key figure in the evolution of data integration and semantic technologies. Wiederhold pioneered concepts like mediators and ontologies, laying the foundation for modern search engines, data platforms, and knowledge graphs. Discover how his work at Stanford, DARPA, and beyond continues to influence the way computers understand and connect information. Learn more with IT History Journal. #Shorts #ComputerHistory #Database\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme",
+    "title": "How Gio Wiederhold Revolutionized Data Integration and Semantic Technologies",
+    "description": "June 24 marks the birth of Gio Wiederhold, a key figure in computer science whose work at Stanford and DARPA shaped how modern databases and systems connect and understand data. Wiederhold pioneered concepts like semantic interoperability, mediators, and knowledge base management systems—technologies that still power today's web search and enterprise platforms. Discover his lasting influence on data integration and information retrieval. For more IT history, visit IT History Journal. #Shorts #ComputerScience #DatabaseHistory\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme",
     "tags": [
       "Gio Wiederhold",
       "data integration",
       "semantic technologies",
-      "database history",
-      "knowledge graphs",
-      "ontologies",
-      "mediators",
-      "DARPA I3",
-      "enterprise data",
       "computer science history",
+      "DARPA",
       "Stanford University",
-      "information retrieval",
+      "mediators",
+      "semantic interoperability",
+      "knowledge base management",
+      "database design",
       "AI in databases",
-      "knowledge base",
+      "information retrieval",
+      "ontology",
+      "enterprise data",
       "IT History Journal"
     ]
   }

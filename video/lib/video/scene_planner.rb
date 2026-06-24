@@ -6,43 +6,59 @@ module Video
     CALENDAR_DURATION = 4.0
     TITLE_DURATION    = 3.5
     COVER_START       = 7.5   # calendar + title
-    COVER_DURATION    = 4.0   # initial cover
-    CTA_DURATION      = 5.0
+    COVER_DURATION    = 4.0
+    CTA_DURATION      = 5.0   # fallback for scenario-only mode
+
+    ESTIMATED_DURATION = 55.0
 
     def initialize(article_info, output_paths)
       @info  = article_info
       @paths = output_paths
     end
 
-    # Returns scenes array.
-    ESTIMATED_DURATION = 55.0
-
     # Returns [scenes, reused].
-    # Reuses existing scenes.json unless force: true.
-    def plan(narration_text, audio_duration, force: false)
+    # scenes are the base rendering scenes (CTA duration = max sample duration).
+    #
+    # sample_durations: { "instagram" => float, "shorts" => float, "tiktok" => float }
+    #   When nil (scenario-only mode), CTA_DURATION is used as fallback.
+    #
+    # Writes scenes-instagram.json, scenes-shorts.json, scenes-tiktok.json into meta_dir.
+    # Each platform file carries `audio` on the first scene (narration.mp3) and on the
+    # CTA scene (the platform sample); CTA duration equals the sample's length.
+    def plan(narration_text, audio_duration, sample_durations: nil, force: false)
       @paths.ensure_dir!
 
-      if File.exist?(@paths.scenes_json) && !force
-        scenes = JSON.parse(File.read(@paths.scenes_json))
-        return [scenes, true]
+      platform_files_exist = FfmpegComposer::PLATFORMS.keys.all? do |p|
+        File.exist?(@paths.platform_scenes_json(p))
       end
 
-      duration  = audio_duration || ESTIMATED_DURATION
-      sentences = split_sentences(narration_text)
-      scenes    = build_scenes(sentences, duration)
+      if platform_files_exist && !force
+        base = JSON.parse(File.read(@paths.platform_scenes_json("instagram")))
+        return [base, true]
+      end
 
-      File.write(@paths.scenes_json, JSON.pretty_generate(scenes))
+      narration_duration  = audio_duration || ESTIMATED_DURATION
+      sample_durations  ||= FfmpegComposer::PLATFORMS.keys.each_with_object({}) { |p, h| h[p] = CTA_DURATION }
+      max_sample_duration = sample_durations.values.max
+      sentences           = split_sentences(narration_text)
 
-      metadata = build_metadata(scenes, audio_duration)
-      File.write(@paths.metadata_json, JSON.pretty_generate(metadata))
+      FfmpegComposer::PLATFORMS.each do |platform, sample_name|
+        sample_duration = sample_durations.fetch(platform)
+        scenes = build_scenes(sentences, narration_duration, sample_duration)
+        annotate_audio!(scenes, @paths.narration_mp3,
+                        File.join(FfmpegComposer::SAMPLES_DIR, "#{sample_name}.mp3"))
+        File.write(@paths.platform_scenes_json(platform), JSON.pretty_generate(scenes))
+      end
 
-      [scenes, false]
+      base_scenes = build_scenes(sentences, narration_duration, max_sample_duration)
+      File.write(@paths.metadata_json, JSON.pretty_generate(build_metadata(base_scenes, audio_duration, max_sample_duration)))
+
+      [base_scenes, false]
     end
 
     private
 
     def split_sentences(text)
-      # Split on sentence-ending punctuation followed by whitespace or end-of-string
       text
         .gsub(/([.!?…])\s+/, "\\1\n")
         .split("\n")
@@ -50,43 +66,35 @@ module Video
         .reject(&:empty?)
     end
 
-    def build_scenes(sentences, audio_duration)
+    def build_scenes(sentences, narration_duration, cta_duration)
       scenes = []
 
-      # Scene 0: calendar
       scenes << {
         "id"       => "calendar",
         "start"    => CALENDAR_START,
         "duration" => CALENDAR_DURATION
       }
 
-      # Scene 1: title card
       scenes << {
         "id"       => "title_card",
         "start"    => CALENDAR_START + CALENDAR_DURATION,
         "duration" => TITLE_DURATION
       }
 
-      # Scene 2: cover (stays as background while facts play)
       scenes << {
         "id"       => "cover",
         "start"    => COVER_START,
-        "duration" => [audio_duration - COVER_START - CTA_DURATION, COVER_DURATION].max
+        "duration" => [narration_duration - COVER_START, COVER_DURATION].max
       }
 
-      # Fact scenes
-      cta_start     = [audio_duration - CTA_DURATION, COVER_START + 2.0].max
-      facts_start   = COVER_START
-      facts_end     = cta_start
-      facts_window  = facts_end - facts_start
+      # Facts fill the full narration window
+      facts_start  = COVER_START
+      facts_window = narration_duration - facts_start
 
-      fact_sentences = sentences.select { |s| s.length > 5 }
-      fact_sentences = fact_sentences[0, 10]  # cap at 10
+      fact_sentences = sentences.select { |s| s.length > 5 }.first(10)
       fact_sentences = ["..."] if fact_sentences.empty?
 
-      n = fact_sentences.size
-      per_fact = facts_window / n.to_f
-
+      per_fact = facts_window / fact_sentences.size.to_f
       fact_sentences.each_with_index do |sentence, i|
         scenes << {
           "id"       => "fact",
@@ -96,20 +104,27 @@ module Video
         }
       end
 
-      # CTA scene
+      # CTA starts exactly when narration ends
       scenes << {
         "id"       => "cta",
-        "start"    => cta_start.round(3),
-        "duration" => CTA_DURATION
+        "start"    => narration_duration.round(3),
+        "duration" => cta_duration.round(3)
       }
 
       scenes
     end
 
-    def build_metadata(scenes, audio_duration)
+    # Adds `audio` to the first scene (narration) and the CTA scene (sample).
+    def annotate_audio!(scenes, narration_path, sample_path)
+      scenes.first["audio"] = narration_path
+      scenes.find { |s| s["id"] == "cta" }["audio"] = sample_path
+    end
+
+    def build_metadata(scenes, narration_duration, cta_duration)
+      total = narration_duration ? (narration_duration + cta_duration).round(3) : nil
       @info.merge(
         "scenes"         => scenes,
-        "total_duration" => audio_duration&.round(3),
+        "total_duration" => total,
         "scene_count"    => scenes.size
       )
     end

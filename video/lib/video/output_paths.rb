@@ -23,9 +23,9 @@ module Video
     def prompt_txt = File.join("video", "prompt.txt")
 
     # Text / metadata files → video/meta/
-    def narration_txt      = File.join(@meta_dir, "narration.txt")
-    def scenes_json        = File.join(@meta_dir, "scenes.json")
-    def metadata_json      = File.join(@meta_dir, "metadata.json")
+    def narration_txt           = File.join(@meta_dir, "narration.txt")
+    def platform_scenes_json(p) = File.join(@meta_dir, "scenes-#{p}.json")
+    def metadata_json           = File.join(@meta_dir, "metadata.json")
     def tts_request_json   = File.join(@meta_dir, "tts-request.json")
     def render_config_json = File.join(@meta_dir, "render-config.json")
     def part_render_config_json(name) = File.join(@meta_dir, "#{name}-render-config.json")
