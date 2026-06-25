@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "William Shockley Filed the Patent Application for the Junction Transistor"
+title: "The Birth of the Transistor: William Shockley's Groundbreaking Patent of 1948"
 date: "June 26, 1948"
-excerpt: "On June 26, 1948, Bell Labs physicist William Shockley filed the patent for the junction transistor — the device that replaced vacuum tubes and made modern microelectronics possible."
-updated_at: "2026-06-26"
+excerpt: "Discover how William Shockley's 1948 patent for the junction transistor transformed electronics, paving the way for modern microprocessors and devices."
+updated_at: "2026-06-25"
 ru: "/ru/jun/26/william-shockley-filed-transistor-patent"
 sources:
   - title: "The Transistor: A Revolutionary Invention — Bell Labs"
