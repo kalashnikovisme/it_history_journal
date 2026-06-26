@@ -1,57 +1,27 @@
 Write the narration in English.
 
-Article title: How Michael Jackson's Death Tested the Internet's Limits in 2009
-Date: June 25, 2009
+Article title: The Birth of the Transistor: William Shockley's Groundbreaking Patent of 1948
+Date: June 26, 1948
 
 Article content:
-June 25, 2009, became one of the most extraordinary days in the history of the internet. After news broke that Michael Jackson had died, millions of people simultaneously searched for information, rushed to news websites, refreshed Twitter and Wikipedia, watched videos, and followed the first eyewitness reports. Within minutes, the internet was hit by one of the largest traffic surges it had ever experienced.
+On June 26, 1948, Bell Labs physicist William Shockley filed a patent application for a new type of semiconductor device: the **junction transistor**. This concept later became the foundation of the first practical bipolar transistor and the earliest generation of microelectronics. Shockley proposed a different design based on p-n junctions within a germanium crystal. It proved much easier to manufacture on a large scale and became the basis for most of the transistors that followed.
 
-It was one of the first times a global event so clearly exposed the limits of the internet infrastructure of the late 2000s.
+A transistor is a tiny electronic switch and signal amplifier. Imagine an electrical circuit as a network of water pipes: a transistor works like a valve, where a small control signal opens or closes the flow of a much larger electric current. This allows transistors to perform logic operations and store bits of information (very roughly speaking, a closed transistor represents a 0, while an open transistor represents a 1).
 
-## The Internet in 2009
+Before transistors, computers relied on vacuum tubes. Machines like ENIAC contained tens of thousands of them, filled entire rooms, consumed enormous amounts of electricity, and failed regularly. Replacing vacuum tubes with transistors made computers dramatically smaller, faster, cheaper, and more reliable. By the late 1950s, the first fully transistorized computers had appeared, and just a few years later engineers learned how to place dozens, then hundreds, and eventually millions of transistors onto a single piece of semiconductor material. This led to the invention of integrated circuits and, ultimately, microprocessors.
 
-Today, traffic spikes like this are considered routine. Large cloud platforms scale automatically, and CDNs spread traffic across thousands of servers.
-
-In 2009, things looked very different. Twitter was only three years old and regularly struggled under loads far smaller than what it faced that day. Many major websites still relied on their own data centers rather than modern cloud infrastructure, and automatic scaling technologies were only beginning to emerge.
-
-As a result, a single breaking news story became a serious stress test for the entire internet.
-
-## What Happened to Online Services That Day
-
-The first reports that Michael Jackson had been taken to the hospital were published by TMZ. Almost immediately afterward, major news organizations around the world began issuing updates, while users flooded search engines and social media platforms. Traffic increased so rapidly that many online services started experiencing outages and slowdowns.
-
-Google saw such an enormous spike in searches for "Michael Jackson" that its automated protection systems initially interpreted the activity as a possible DDoS attack. Some users trying to search for his name were presented with a verification page asking them to prove they were human.
-
-Twitter was pushed to its limits. The company reported that traffic reached roughly 5,000 tweets per minute — a record for the platform at the time. Users encountered widespread errors, including the service's now-famous Fail Whale page.
-
-Several major websites struggled throughout the day. Some users were unable to access Michael Jackson's Wikipedia article as the site experienced noticeable performance and loading issues. News websites including TMZ, the Los Angeles Times, and others periodically became unavailable because of the overwhelming number of visitors. AOL Instant Messenger reported significant delays in message delivery.
-
-According to various analytics firms, overall internet traffic increased by tens of percent over normal levels within just a few hours.
-
-## Why It Matters in the History of the Internet
-
-Individual websites going offline no longer surprises anyone today. But in the summer of 2009, this event became an important lesson for the entire industry.
-
-Technology companies realized that a single global news story could attract hundreds of millions of users within minutes. In response, many services began investing heavily in distributed infrastructure, load balancing, CDNs, and cloud computing.
-
-The day also became one of the earliest demonstrations of how social media was beginning to outpace traditional news organizations. For millions of people, Twitter became the primary source of information during the first minutes after the news broke.
-
-Today's internet is far better prepared for events like this. Over the past decade, there have been virtually no cases where a surge of legitimate users has brought down a major social network. Large news websites are also much better equipped to handle massive traffic spikes — in fact, they welcome them, since more visitors translate into greater advertising revenue.
-
-Twitter dramatically expanded its infrastructure and eventually retired the famous Fail Whale. Google improved its systems for distinguishing genuine traffic surges from DDoS attacks. More and more companies migrated their services to cloud platforms capable of automatically adding computing resources during peak demand.
-
-Michael Jackson's death was not only the biggest news story of 2009, but also an unexpected stress test for the internet itself. It demonstrated that real-world events could generate traffic comparable to large-scale cyberattacks and accelerated the adoption of technologies that now allow the world's largest online services to support audiences of hundreds of millions of users.
+Today, nearly every electronic device — a smartphone, laptop, server, router, SSD, or graphics card — contains chips with billions of transistors. Although modern transistors are built differently and measure only a few nanometers across, their operating principle can be traced directly back to the idea that William Shockley patented on June 26, 1948.
 
 
 ---
 
 Write a short historical documentary narration (60–70 words) for a vertical short video.
 
-The narration is part of the "June 25 in the History of Computer Science" series.
-Open with or work in the phrase "June 25 in the History of Computer Science" naturally — it frames what day we are remembering.
+The narration is part of the "June 26 in the History of Computer Science" series.
+Open with or work in the phrase "June 26 in the History of Computer Science" naturally — it frames what day we are remembering.
 
 Structure:
-1. Hook — open with "June 25 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
+1. Hook — open with "June 26 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
 2. Date + Event — state what happened and when (include the year)
 3. What happened — the key event in a sentence or two
 4. Why it mattered — the significance

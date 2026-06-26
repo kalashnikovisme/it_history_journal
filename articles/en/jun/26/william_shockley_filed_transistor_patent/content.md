@@ -6,8 +6,6 @@ excerpt: "Discover how William Shockley's 1948 patent for the junction transisto
 updated_at: "2026-06-25"
 ru: "/ru/jun/26/william-shockley-filed-transistor-patent"
 sources:
-  - title: "The Transistor: A Revolutionary Invention — Bell Labs"
-    url: "https://www.bell-labs.com/about/history/transistor/"
   - title: "Conception of the Junction Transistor — Computer History Museum"
     url: "https://www.computerhistory.org/siliconengine/conception-of-the-junction-transistor/"
   - title: "First Grown-Junction Transistors Fabricated — Computer History Museum"

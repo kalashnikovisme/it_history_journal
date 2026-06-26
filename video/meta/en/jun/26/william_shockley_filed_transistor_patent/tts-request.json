@@ -1,0 +1,6 @@
+{
+  "model": "tts-1",
+  "input": "June 26 in the History of Computer Science marks the birth of the modern transistor. On this day in 1948, William Shockley filed a patent for the junction transistor—a design that paved the way for practical, mass-produced semiconductors. This innovation replaced bulky vacuum tubes, making computers smaller and more reliable. Shockley’s invention set the stage for integrated circuits and the microchips that now power our world.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

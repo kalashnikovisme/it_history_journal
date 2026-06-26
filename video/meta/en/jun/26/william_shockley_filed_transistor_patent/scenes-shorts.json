@@ -1,0 +1,48 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/en/jun/26/william_shockley_filed_transistor_patent/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 20.244
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.061,
+    "text": "June 26 in the History of Computer Science marks the birth of the modern transistor."
+  },
+  {
+    "id": "fact",
+    "start": 12.561,
+    "duration": 5.061,
+    "text": "On this day in 1948, William Shockley filed a patent for the junction transistor—a design that paved the way for practical, mass-produced semiconductors."
+  },
+  {
+    "id": "fact",
+    "start": 17.622,
+    "duration": 5.061,
+    "text": "This innovation replaced bulky vacuum tubes, making computers smaller and more reliable."
+  },
+  {
+    "id": "fact",
+    "start": 22.683,
+    "duration": 5.061,
+    "text": "Shockley’s invention set the stage for integrated circuits and the microchips that now power our world."
+  },
+  {
+    "id": "cta",
+    "start": 27.744,
+    "duration": 7.296,
+    "audio": "video/audio/samples/youtube.mp3"
+  }
+]

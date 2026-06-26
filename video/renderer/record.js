@@ -187,7 +187,7 @@ const trimFirstFrame = (inputPath, outputPath, quiet = false) => {
     '-y',
     ...(quiet ? ['-loglevel', 'quiet'] : []),
     '-i', inputPath,
-    '-vf', 'trim=start=0.2,setpts=PTS-STARTPTS',
+    '-vf', 'trim=start=0.5,setpts=PTS-STARTPTS',
     '-c:v', 'libvpx-vp9',
     '-an',
     outputPath,
