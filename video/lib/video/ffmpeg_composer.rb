@@ -62,8 +62,12 @@ module Video
         raise "No audio segments defined in #{scenes_path}" if audio_segments.empty?
         audio_segments.each { |f| raise "Audio file not found: #{f}" unless File.exist?(f) }
 
-        total_duration = scenes.map { |s| s["start"].to_f + s["duration"].to_f }.max
-        output         = @paths.platform_mp4(platform)
+        total_duration = if @lang == "ru"
+          probe_duration(@paths.narration_mp3)
+        else
+          scenes.map { |s| s["start"].to_f + s["duration"].to_f }.max
+        end
+        output = @paths.platform_mp4(platform)
         n              = audio_segments.size
 
         args = ["ffmpeg", "-y"]
@@ -72,12 +76,20 @@ module Video
         audio_segments.each { |seg| args += ["-i", seg] }
         args += ["-stream_loop", "-1", "-i", BACKGROUND_MUSIC]
 
-        audio_concat  = (1..n).map { |i| "[#{i}:a]" }.join
-        bg_idx        = n + 1
-        narr_volume   = @lang == "ru" ? NARRATION_VOLUME_RU : 1.0
-        final_volume  = @lang == "ru" ? FINAL_VOLUME_RU : 1.0
-        filter = "#{audio_concat}concat=n=#{n}:v=0:a=1[narr_raw];" \
-                 "[narr_raw]volume=#{narr_volume}[narr_full];" \
+        bg_idx       = n + 1
+        narr_volume  = @lang == "ru" ? NARRATION_VOLUME_RU : 1.0
+        final_volume = @lang == "ru" ? FINAL_VOLUME_RU : 1.0
+
+        # concat requires n≥2; with a single segment skip it and label directly
+        if n == 1
+          narr_filter = "[1:a]volume=#{narr_volume}[narr_full]"
+        else
+          audio_concat = (1..n).map { |i| "[#{i}:a]" }.join
+          narr_filter  = "#{audio_concat}concat=n=#{n}:v=0:a=1[narr_raw];" \
+                         "[narr_raw]volume=#{narr_volume}[narr_full]"
+        end
+
+        filter = "#{narr_filter};" \
                  "[#{bg_idx}:a]volume=#{BACKGROUND_VOLUME}[bg];" \
                  "[narr_full][bg]amix=inputs=2:duration=first[mix];" \
                  "[mix]volume=#{final_volume}[aout]"
@@ -105,6 +117,13 @@ module Video
     end
 
     private
+
+    def probe_duration(path)
+      out = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "#{path}" 2>&1`.strip
+      dur = out.to_f
+      raise "ffprobe returned invalid duration for #{path}: #{out.inspect}" if dur <= 0
+      dur
+    end
 
     def ensure_ffmpeg!
       raise "ffmpeg not found." unless system("ffmpeg -version > /dev/null 2>&1")
