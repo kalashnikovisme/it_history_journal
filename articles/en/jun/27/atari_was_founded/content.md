@@ -1,8 +1,8 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Atari Is Founded: The Story of Bushnell, Dabney, and the Birth of Video Games"
+title: "The Birth of Video Games: How Atari Changed Gaming Forever"
 date: "June 27, 1972"
-excerpt: "On June 27, 1972, Nolan Bushnell and Ted Dabney officially founded Atari, Inc. What started with a $100 investment became the company that brought video games into millions of homes."
+excerpt: "Discover how Atari was founded by Bushnell and Dabney, revolutionizing gaming with Pong and the Atari 2600. A key chapter in video game history."
 updated_at: "2026-06-26"
 ru: "/ru/jun/27/atari-was-founded"
 sources:
