@@ -37,16 +37,18 @@ module Video
         return [base, true]
       end
 
+      ru = @info[:lang] == "ru"
+
       narration_duration  = audio_duration || ESTIMATED_DURATION
       sample_durations  ||= FfmpegComposer::PLATFORMS.keys.each_with_object({}) { |p, h| h[p] = CTA_DURATION }
-      max_sample_duration = sample_durations.values.max
+      max_sample_duration = ru ? 0.0 : sample_durations.values.max
       sentences           = split_sentences(narration_text)
 
       FfmpegComposer::PLATFORMS.each do |platform, sample_name|
-        sample_duration = sample_durations.fetch(platform)
+        sample_duration = ru ? 0.0 : sample_durations.fetch(platform)
+        sample_path     = ru ? nil : File.join(FfmpegComposer::SAMPLES_DIR, "#{sample_name}.mp3")
         scenes = build_scenes(sentences, narration_duration, sample_duration)
-        annotate_audio!(scenes, @paths.narration_mp3,
-                        File.join(FfmpegComposer::SAMPLES_DIR, "#{sample_name}.mp3"))
+        annotate_audio!(scenes, @paths.narration_mp3, sample_path)
         File.write(@paths.platform_scenes_json(platform), JSON.pretty_generate(scenes))
       end
 
@@ -104,20 +106,22 @@ module Video
         }
       end
 
-      # CTA starts exactly when narration ends
-      scenes << {
-        "id"       => "cta",
-        "start"    => narration_duration.round(3),
-        "duration" => cta_duration.round(3)
-      }
+      # CTA starts exactly when narration ends (skipped for Russian)
+      if cta_duration > 0
+        scenes << {
+          "id"       => "cta",
+          "start"    => narration_duration.round(3),
+          "duration" => cta_duration.round(3)
+        }
+      end
 
       scenes
     end
 
-    # Adds `audio` to the first scene (narration) and the CTA scene (sample).
+    # Adds `audio` to the first scene (narration) and the CTA scene (sample, if given).
     def annotate_audio!(scenes, narration_path, sample_path)
       scenes.first["audio"] = narration_path
-      scenes.find { |s| s["id"] == "cta" }["audio"] = sample_path
+      scenes.find { |s| s["id"] == "cta" }&.tap { |s| s["audio"] = sample_path } if sample_path
     end
 
     def build_metadata(scenes, narration_duration, cta_duration)

@@ -64,7 +64,7 @@ module Video
       end
 
       date_in_history = if lang == "ru"
-        "#{date_month_day} в истории Computer Science"
+        "#{date_month_day} в истории IT"
       else
         "#{date_month_day} in the History of Computer Science"
       end
@@ -83,10 +83,10 @@ module Video
         Write a short historical documentary narration (#{word_target}) for a vertical short video.
 
         The narration is part of the "#{date_in_history}" series.
-        Open with or work in the phrase "#{date_in_history}" naturally — it frames what day we are remembering.
+        The narration MUST start with exactly the phrase "#{date_in_history}" — this is the first words spoken.
 
         Structure:
-        1. Hook — open with "#{date_in_history}" as the framing line, then immediately deliver the most compelling fact
+        1. Hook — the very first words must be "#{date_in_history}", then immediately deliver the most compelling fact
         2. Date + Event — state what happened and when (include the year)
         3. What happened — the key event in a sentence or two
         4. Why it mattered — the significance

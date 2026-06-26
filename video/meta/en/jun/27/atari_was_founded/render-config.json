@@ -1,0 +1,59 @@
+{
+  "language": "en",
+  "title": "The Birth of Video Games: How Atari Changed Gaming Forever",
+  "date_display": "June 27, 1972",
+  "day": "27",
+  "month_name": "June",
+  "year": "1972",
+  "slug": "atari-was-founded",
+  "cover_filename": "video-cover.png",
+  "site_url": "history.purple-magic.com",
+  "cta_language": "en",
+  "total_duration": 35.04,
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 20.244
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.061,
+      "text": "June 27 in the History of Computer Science: The name Atari was officially registered in 1972."
+    },
+    {
+      "id": "fact",
+      "start": 12.561,
+      "duration": 5.061,
+      "text": "On this day, Nolan Bushnell and Ted Dabney took a leap from their modest beginnings to found one of gaming’s first giants."
+    },
+    {
+      "id": "fact",
+      "start": 17.622,
+      "duration": 5.061,
+      "text": "Their company’s first major hit, Pong, quickly filled arcades with eager players."
+    },
+    {
+      "id": "fact",
+      "start": 22.683,
+      "duration": 5.061,
+      "text": "Atari’s innovations not only shaped arcade culture but also brought video games into millions of homes, leaving a lasting legacy."
+    },
+    {
+      "id": "cta",
+      "start": 27.744,
+      "duration": 7.296
+    }
+  ]
+}

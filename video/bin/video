@@ -138,11 +138,26 @@ begin
     exit 0
   end
 
-  # Audio — reuse if exists
+  # Audio — reuse if exists; Russian requires manual recording (no TTS)
   audio_gen = Video::AudioGenerator.new(paths, client)
   if File.exist?(paths.narration_mp3) && !force_audio
     puts "[video] Reusing #{paths.narration_mp3}".yellow
     duration = audio_gen.probe_duration(paths.narration_mp3)
+  elsif info[:lang] == "ru"
+    puts ""
+    puts "┌─────────────────────────────────────────────────────────────┐".yellow
+    puts "│  Russian narration — record audio yourself                  │".yellow
+    puts "└─────────────────────────────────────────────────────────────┘".yellow
+    puts ""
+    puts "Narration text:".bold
+    puts ""
+    narration.each_line { |l| puts "  #{l.chomp}" }
+    puts ""
+    puts "Record command:".bold
+    puts "  arecord -D plughw:2,0 -f cd -t wav - | ffmpeg -y -i - -q:a 2 #{paths.narration_mp3}".cyan
+    puts ""
+    puts "Then re-run the same command to continue.".yellow
+    exit 0
   else
     puts "[video] Generating audio (TTS)...".cyan
     duration = audio_gen.generate(narration, force: true)
@@ -151,7 +166,7 @@ begin
 
   MAX_DURATION = 25.0
   HARD_LIMIT   = 35.0
-  if duration > HARD_LIMIT
+  if info[:lang] != "ru" && duration > HARD_LIMIT
     raise "Audio is #{duration.round(1)}s — exceeds #{HARD_LIMIT}s hard limit. " \
           "Regenerate a shorter narration with --force-text."
   elsif duration > MAX_DURATION
@@ -170,15 +185,15 @@ begin
   youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
   puts youtube_reused ? "[video] Reusing YouTube metadata.".yellow : "[video] YouTube metadata saved.".green
 
-  # Render: narration + CTA in one pass; total length covers the longest sample
-  total_recording_duration = duration + max_sample_duration
+  # Render: narration + CTA in one pass; Russian has no CTA sample so video ends with narration
+  total_recording_duration = info[:lang] == "ru" ? duration : duration + max_sample_duration
   puts "[video] Rendering browser frames (#{total_recording_duration.round(1)}s total)...".cyan
   renderer = Video::Renderer.new(info, paths, verbose: verbose)
   renderer.render(scenes, total_recording_duration)
   puts "[video] Browser recording saved to #{paths.browser_recording_webm}".green
 
   puts "[video] Composing platform videos...".cyan
-  composer = Video::FfmpegComposer.new(paths, verbose: verbose)
+  composer = Video::FfmpegComposer.new(paths, lang: info[:lang], verbose: verbose)
   results  = composer.compose_all
   results.each { |platform, path| puts "[video] Done → #{path}".green }
 

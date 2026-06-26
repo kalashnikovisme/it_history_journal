@@ -1,0 +1,85 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 27,
+  "year": "1972",
+  "slug": "atari-was-founded",
+  "slug_dir": "atari_was_founded",
+  "title": "The Birth of Video Games: How Atari Changed Gaming Forever",
+  "date_display": "June 27, 1972",
+  "date_month_day": "June 27",
+  "content_md": "Atari was one of the pioneering companies of the video game industry. It was founded by Nolan Bushnell and Ted Dabney.\n\nThe story of Atari began before the company officially existed. Bushnell and Dabney met while working at Ampex and quickly discovered they shared the same passion for electronics and video games. After creating the arcade game *Computer Space*, they decided they were ready to start a company of their own.\n\nAt first, they planned to call it **Syzygy**. When they tried to register the name, they discovered it was already taken. Bushnell then suggested **Atari**, a term from the Japanese board game Go that describes a stone or group of stones being one move away from capture. It's roughly equivalent to \"check\" in chess.\n\nThe company's beginnings were remarkably modest. In an interview with the Smithsonian Institution, Ted Dabney recalled that Bushnell suggested they each put in $100 to get started. Dabney admitted he didn't even have that much money. Even so, they kept working on the idea. Later, when the company was formally established, they were able to invest their own money and officially register Atari.\n\nSoon after the company was founded, Bushnell hired engineer Allan Alcorn, a former colleague from Ampex. Alcorn had never designed a video game before, so Bushnell gave him what he described as a practice assignment: build a simple electronic table tennis game.\n\nThat project became **Pong**.\n\nThe first Pong machine was installed at **Andy Capp's Tavern** in Sunnyvale. A few days later, the bar owner called to report that it had stopped working. When Alcorn arrived, he discovered nothing was actually broken. The homemade coin container had simply filled up with quarters, preventing the machine from accepting any more coins. That was the moment they realized they had a hit on their hands.\n\nPong's success shaped the future of the company. Within just a few years, Atari became the leading manufacturer of arcade games before bringing video games into millions of homes with the Atari VCS, later known as the Atari 2600. The company had a lasting influence on the video game industry, and many of the ideas it introduced are still part of game design today.\n\n## Interesting links\n\n- [Smithsonian — Ted Dabney interview](https://mads.si.edu/mads/id/NMAH-AC1498_Transcript_TedDabney)\n- [Computer History Museum — The History of Atari](https://www.computerhistory.org/revolution/computer-games/16/185)\n- [Official Atari History](https://atari.com/pages/history)\n",
+  "video_cover_path": "articles/en/jun/27/atari_was_founded/video-cover.png",
+  "folder": "articles/en/jun/27/atari_was_founded",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 20.244
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.061,
+      "text": "June 27 in the History of Computer Science: The name Atari was officially registered in 1972."
+    },
+    {
+      "id": "fact",
+      "start": 12.561,
+      "duration": 5.061,
+      "text": "On this day, Nolan Bushnell and Ted Dabney took a leap from their modest beginnings to found one of gaming’s first giants."
+    },
+    {
+      "id": "fact",
+      "start": 17.622,
+      "duration": 5.061,
+      "text": "Their company’s first major hit, Pong, quickly filled arcades with eager players."
+    },
+    {
+      "id": "fact",
+      "start": 22.683,
+      "duration": 5.061,
+      "text": "Atari’s innovations not only shaped arcade culture but also brought video games into millions of homes, leaving a lasting legacy."
+    },
+    {
+      "id": "cta",
+      "start": 27.744,
+      "duration": 7.296
+    }
+  ],
+  "total_duration": 35.04,
+  "scene_count": 8,
+  "youtube": {
+    "title": "How Atari and Pong Sparked the Video Game Revolution in 1972",
+    "description": "On June 27, 1972, Atari was officially registered—marking the birth of a gaming giant. Founders Nolan Bushnell and Ted Dabney launched Atari with humble beginnings, leading to the creation of Pong and a legacy that shaped both arcades and home gaming forever. Discover the origins of Atari, the story behind its name, and how a simple coin jam signaled the start of a new era in entertainment. Learn more about the tech milestones that changed the world with IT History Journal.\n#Shorts #VideoGameHistory #Atari\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme",
+    "tags": [
+      "Atari",
+      "Pong",
+      "video game history",
+      "Nolan Bushnell",
+      "Ted Dabney",
+      "arcade games",
+      "1970s technology",
+      "gaming history",
+      "Atari 2600",
+      "Computer Space",
+      "retro gaming",
+      "Allan Alcorn",
+      "tech history",
+      "arcade culture",
+      "IT History Journal"
+    ]
+  }
+}

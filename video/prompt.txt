@@ -1,34 +1,48 @@
-Write the narration in English.
+Write the narration in Russian.
 
-Article title: The Birth of the Transistor: William Shockley's Groundbreaking Patent of 1948
-Date: June 26, 1948
+Article title: История основания Atari: от первых игр до легенды индустрии
+Date: 27 июня 1972
 
 Article content:
-On June 26, 1948, Bell Labs physicist William Shockley filed a patent application for a new type of semiconductor device: the **junction transistor**. This concept later became the foundation of the first practical bipolar transistor and the earliest generation of microelectronics. Shockley proposed a different design based on p-n junctions within a germanium crystal. It proved much easier to manufacture on a large scale and became the basis for most of the transistors that followed.
+Atari — компания-пионер игровой индустрии. Её основали Нолан Бушнелл и Тед Дабни.
 
-A transistor is a tiny electronic switch and signal amplifier. Imagine an electrical circuit as a network of water pipes: a transistor works like a valve, where a small control signal opens or closes the flow of a much larger electric current. This allows transistors to perform logic operations and store bits of information (very roughly speaking, a closed transistor represents a 0, while an open transistor represents a 1).
+История Atari началась ещё до её официального основания. Бушнелл и Дабни познакомились во время работы в компании Ampex и быстро нашли общий интерес — оба были увлечены электроникой и видеоиграми. После создания аркадной игры *Computer Space* они решили, что смогут открыть собственную компанию.
 
-Before transistors, computers relied on vacuum tubes. Machines like ENIAC contained tens of thousands of them, filled entire rooms, consumed enormous amounts of electricity, and failed regularly. Replacing vacuum tubes with transistors made computers dramatically smaller, faster, cheaper, and more reliable. By the late 1950s, the first fully transistorized computers had appeared, and just a few years later engineers learned how to place dozens, then hundreds, and eventually millions of transistors onto a single piece of semiconductor material. This led to the invention of integrated circuits and, ultimately, microprocessors.
+Первоначально партнёры хотели назвать её **Syzygy**. Однако при регистрации выяснилось, что такое название уже занято. Тогда Бушнелл предложил слово **Atari** — термин из японской настольной игры го, означающий ситуацию, когда камень находится под непосредственной угрозой захвата. По смыслу это близко к шахматному «шах».
 
-Today, nearly every electronic device — a smartphone, laptop, server, router, SSD, or graphics card — contains chips with billions of transistors. Although modern transistors are built differently and measure only a few nanometers across, their operating principle can be traced directly back to the idea that William Shockley patented on June 26, 1948.
+Первые шаги компании были очень скромными. В интервью Смитсоновскому институту Тед Дабни вспоминал, что Бушнелл предложил каждому вложить по 100 долларов, чтобы начать дело. Дабни ответил, что у него даже не было такой суммы. Несмотря на это, они всё равно продолжили работать над своей идеей. Позже, когда компания уже создавалась официально, партнёры смогли вложить собственные средства и зарегистрировать Atari.
+
+Практически сразу после основания Бушнелл пригласил в компанию инженера Аллана Олкорна, с которым раньше работал в Ampex. Олкорн никогда не разрабатывал игры, поэтому получил необычное первое задание. Бушнелл предложил ему сделать простую игру в настольный теннис якобы в качестве тренировочного проекта.
+
+Так появился **Pong**.
+
+Первый автомат установили в баре **Andy Capp's Tavern** в Саннивейле. Через несколько дней владелец бара позвонил и сообщил, что автомат перестал работать. Олкорн приехал на место и обнаружил, что причина была совсем не в поломке. Самодельный контейнер для монет оказался полностью заполнен четвертаками, из-за чего механизм больше не мог принимать деньги. Именно тогда стало понятно, что игра пользуется огромным спросом.
+
+Успех Pong определил дальнейшую судьбу компании. Уже через несколько лет Atari стала крупнейшим производителем аркадных автоматов, а затем вывела видеоигры в дома миллионов людей благодаря консоли Atari VCS (позже известной как Atari 2600). Компания оказала огромное влияние на развитие игровой индустрии, а многие её идеи используются в играх до сих пор.
+
+## Интересные ссылки
+
+- [Smithsonian — интервью с Тедом Дабни](https://mads.si.edu/mads/id/NMAH-AC1498_Transcript_TedDabney)
+- [Computer History Museum — история Atari](https://www.computerhistory.org/revolution/computer-games/16/185)
+- [Официальная история Atari](https://atari.com/pages/history)
 
 
 ---
 
-Write a short historical documentary narration (60–70 words) for a vertical short video.
+Write a short historical documentary narration (55–65 words) for a vertical short video.
 
-The narration is part of the "June 26 in the History of Computer Science" series.
-Open with or work in the phrase "June 26 in the History of Computer Science" naturally — it frames what day we are remembering.
+The narration is part of the "27 июня в истории IT" series.
+The narration MUST start with exactly the phrase "27 июня в истории IT" — this is the first words spoken.
 
 Structure:
-1. Hook — open with "June 26 in the History of Computer Science" as the framing line, then immediately deliver the most compelling fact
+1. Hook — the very first words must be "27 июня в истории IT", then immediately deliver the most compelling fact
 2. Date + Event — state what happened and when (include the year)
 3. What happened — the key event in a sentence or two
 4. Why it mattered — the significance
 5. What came after — brief legacy
 
 Requirements:
-- 60–70 words total
+- 55–65 words total
 - Calm, documentary tone
 - No H1/H2 headings, no bullet points, no markdown
 - No stage directions or speaker labels

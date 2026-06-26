@@ -76,7 +76,7 @@ module Video
 
         Requirements:
         - title: specific, natural, curiosity-driven, factually accurate, at most #{TITLE_MAX_LENGTH} characters
-        - description: at most #{DESCRIPTION_MAX_BYTES} bytes; concise summary with useful search context, a soft IT History Journal CTA, up to 3 relevant hashtags including #Shorts, and all of these exact links (each on its own line):
+        - description: at most #{DESCRIPTION_MAX_BYTES} bytes; concise summary with useful search context, a soft IT History Journal CTA, up to 3 relevant hashtags (do not include #Shorts), and all of these exact links (each on its own line):
           #{DESCRIPTION_LINKS.join("\n  ")}
         - tags: JSON array of #{TAG_COUNT_RANGE.begin}-#{TAG_COUNT_RANGE.end} distinct search tags without # prefixes; keep the combined YouTube tag length under #{TAGS_MAX_LENGTH} characters
         - avoid sensational claims, keyword stuffing, and facts not supported by the source

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/ru/jun/27/atari_was_founded/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 28.418367000000003
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 7.105,
+    "text": "27 июня в истории IT: в 1972 году официально основана компания Atari."
+  },
+  {
+    "id": "fact",
+    "start": 14.605,
+    "duration": 7.105,
+    "text": "Нолан Бушнелл и Тед Дабни создали её после успеха первой аркадной игры Pong."
+  },
+  {
+    "id": "fact",
+    "start": 21.709,
+    "duration": 7.105,
+    "text": "Это событие положило начало коммерческой эре видеоигр."
+  },
+  {
+    "id": "fact",
+    "start": 28.814,
+    "duration": 7.105,
+    "text": "Atari быстро стала лидером рынка и принесла видеоигры в миллионы домов, оставив неизгладимый след в истории индустрии."
+  },
+  {
+    "id": "cta",
+    "start": 35.918,
+    "duration": 7.296,
+    "audio": "video/audio/samples/youtube.mp3"
+  }
+]

@@ -3,7 +3,9 @@ require "json"
 module Video
   class FfmpegComposer
     BACKGROUND_MUSIC  = File.join("video", "audio", "background.mp3")
-    BACKGROUND_VOLUME = 0.15
+    BACKGROUND_VOLUME    = 0.08
+    NARRATION_VOLUME_RU  = 1.4
+    FINAL_VOLUME_RU      = 5.0
     SAMPLES_DIR       = File.join("video", "audio", "samples")
 
     # Maps output filename → sample filename (without extension).
@@ -27,8 +29,9 @@ module Video
       end
     end
 
-    def initialize(output_paths, verbose: false)
+    def initialize(output_paths, lang: nil, verbose: false)
       @paths   = output_paths
+      @lang    = lang
       @verbose = verbose
     end
 
@@ -69,11 +72,15 @@ module Video
         audio_segments.each { |seg| args += ["-i", seg] }
         args += ["-stream_loop", "-1", "-i", BACKGROUND_MUSIC]
 
-        audio_concat = (1..n).map { |i| "[#{i}:a]" }.join
-        bg_idx       = n + 1
-        filter = "#{audio_concat}concat=n=#{n}:v=0:a=1[narr_full];" \
+        audio_concat  = (1..n).map { |i| "[#{i}:a]" }.join
+        bg_idx        = n + 1
+        narr_volume   = @lang == "ru" ? NARRATION_VOLUME_RU : 1.0
+        final_volume  = @lang == "ru" ? FINAL_VOLUME_RU : 1.0
+        filter = "#{audio_concat}concat=n=#{n}:v=0:a=1[narr_raw];" \
+                 "[narr_raw]volume=#{narr_volume}[narr_full];" \
                  "[#{bg_idx}:a]volume=#{BACKGROUND_VOLUME}[bg];" \
-                 "[narr_full][bg]amix=inputs=2:duration=first[aout]"
+                 "[narr_full][bg]amix=inputs=2:duration=first[mix];" \
+                 "[mix]volume=#{final_volume}[aout]"
 
         args += [
           "-filter_complex", filter,
