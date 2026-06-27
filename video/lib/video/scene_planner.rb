@@ -41,18 +41,26 @@ module Video
 
       narration_duration  = audio_duration || ESTIMATED_DURATION
       sample_durations  ||= FfmpegComposer::PLATFORMS.keys.each_with_object({}) { |p, h| h[p] = CTA_DURATION }
-      max_sample_duration = ru ? 0.0 : sample_durations.values.max
+      max_sample_duration = ru ? CTA_DURATION : sample_durations.values.max
       sentences           = split_sentences(narration_text)
 
       FfmpegComposer::PLATFORMS.each do |platform, sample_name|
-        sample_duration = ru ? 0.0 : sample_durations.fetch(platform)
-        sample_path     = ru ? nil : File.join(FfmpegComposer::SAMPLES_DIR, "#{sample_name}.mp3")
-        scenes = build_scenes(sentences, narration_duration, sample_duration)
+        if ru
+          cta_dur     = CTA_DURATION
+          cta_start   = narration_duration - cta_dur
+          sample_path = nil
+        else
+          cta_dur     = sample_durations.fetch(platform)
+          cta_start   = narration_duration
+          sample_path = File.join(FfmpegComposer::SAMPLES_DIR, "#{sample_name}.mp3")
+        end
+        scenes = build_scenes(sentences, narration_duration, cta_dur, cta_start)
         annotate_audio!(scenes, @paths.narration_mp3, sample_path)
         File.write(@paths.platform_scenes_json(platform), JSON.pretty_generate(scenes))
       end
 
-      base_scenes = build_scenes(sentences, narration_duration, max_sample_duration)
+      base_cta_start  = ru ? narration_duration - max_sample_duration : narration_duration
+      base_scenes = build_scenes(sentences, narration_duration, max_sample_duration, base_cta_start)
       File.write(@paths.metadata_json, JSON.pretty_generate(build_metadata(base_scenes, audio_duration, max_sample_duration)))
 
       [base_scenes, false]
@@ -68,7 +76,7 @@ module Video
         .reject(&:empty?)
     end
 
-    def build_scenes(sentences, narration_duration, cta_duration)
+    def build_scenes(sentences, narration_duration, cta_duration, cta_start = narration_duration)
       scenes = []
 
       scenes << {
@@ -106,14 +114,11 @@ module Video
         }
       end
 
-      # CTA starts exactly when narration ends (skipped for Russian)
-      if cta_duration > 0
-        scenes << {
-          "id"       => "cta",
-          "start"    => narration_duration.round(3),
-          "duration" => cta_duration.round(3)
-        }
-      end
+      scenes << {
+        "id"       => "cta",
+        "start"    => cta_start.round(3),
+        "duration" => cta_duration.round(3)
+      }
 
       scenes
     end
