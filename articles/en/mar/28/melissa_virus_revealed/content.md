@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "The Melissa Virus of 1999: How a Single Email Caused Global Chaos"
+title: "The 1999 Melissa Virus: How a Single Email Changed Cybersecurity Forever"
 date: "March 28, 1999"
-excerpt: "Discover how the Melissa virus of 1999 spread via email, causing billions in damage and prompting major security changes worldwide."
-updated_at: "2026-06-20"
+excerpt: "Learn how the 1999 Melissa virus spread via email, causing billions in damages and prompting major cybersecurity reforms worldwide."
+updated_at: "2026-06-28"
 ---
 ## March 1999 — the virus is created
 

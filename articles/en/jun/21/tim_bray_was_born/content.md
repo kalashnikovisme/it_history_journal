@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Tim Bray: Pioneering XML and JSON Standards That Shaped the Web"
+title: "Tim Bray’s Role in Shaping Web Data Standards: XML, JSON, and Ethical Leadership"
 date: "June 21, 1955"
-excerpt: "Discover Tim Bray’s role in creating XML and shaping JSON, key standards that revolutionized data exchange on the internet."
-updated_at: "2026-06-20"
+excerpt: "Discover how Tim Bray helped shape XML and JSON standards, revolutionizing data exchange on the web, and learn about his ethical leadership in tech."
+updated_at: "2026-06-28"
 ru: "/ru/jun/21/tim_bray_was_born"
 sources:
   - title: "Bye, Amazon"

@@ -10,12 +10,15 @@ module IthGrowth
       end
 
       def find(days: 7)
-        target = Date.today - days
-        month = target.strftime("%b").downcase
-        day   = target.day.to_s
+        find_by_date(Date.today - days)
+      end
+
+      def find_by_date(date)
+        month = date.strftime("%b").downcase
+        day   = date.day.to_s
         Dir.glob(File.join(@content_dir, "*", month, day, "*", "content.md")).sort.map do |path|
           article = @parser.parse(path)
-          { path: path, date: target, article: article }
+          { path: path, date: date, article: article }
         end
       end
     end

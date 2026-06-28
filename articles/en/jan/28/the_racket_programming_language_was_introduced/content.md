@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "The Birth of Racket: How a 1995 Language Changed Programming Language Design"
+title: "Racket (1995): The Lisp Dialect That Revolutionized Language Design"
 date: "January 28, 1995"
-excerpt: "Discover the origins of Racket, the flexible language introduced in 1995 that revolutionized language design and metaprogramming."
-updated_at: "2026-06-20"
+excerpt: "Explore how Racket, introduced in 1995, evolved from Scheme into a powerful platform for language creation, macros, and metaprogramming innovation."
+updated_at: "2026-06-28"
 ---
 Lisp has always felt like a kind of Holy Grail — powerful, but for many people, too academic. Not every programmer has read SICP (Structure and Interpretation of Computer Programs).
 

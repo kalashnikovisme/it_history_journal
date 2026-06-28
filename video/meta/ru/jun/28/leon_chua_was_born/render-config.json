@@ -1,0 +1,54 @@
+{
+  "language": "ru",
+  "title": "Леон Чуа и мемристор: как один элемент изменил подход к памяти и вычислениям",
+  "date_display": "28 июня 1936",
+  "day": "28",
+  "month_name": "Июнь",
+  "year": "1936",
+  "slug": "leon-chua-was-born",
+  "cover_filename": "video-cover.png",
+  "site_url": "history.purple-magic.com",
+  "cta_language": "ru",
+  "total_duration": 51.043,
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0,
+      "audio": "video/output/ru/jun/28/leon_chua_was_born/narration.mp3"
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 44.535918
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 14.845,
+      "text": "28 июня в истории IT: родился Леон Чуа, создатель теории мемристора."
+    },
+    {
+      "id": "fact",
+      "start": 22.345,
+      "duration": 14.845,
+      "text": "В 1936 году появился инженер, который позже предложил фундаментально новый элемент электрических цепей — мемристор, основа энергонезависимой памяти с «памятью состояния»."
+    },
+    {
+      "id": "fact",
+      "start": 37.191,
+      "duration": 14.845,
+      "text": "Его открытия легли в основу современных исследований в области ИИ, аналоговых вычислений и новых архитектур памяти, формируя будущее вычислительной техники."
+    },
+    {
+      "id": "cta",
+      "start": 47.036,
+      "duration": 5.0
+    }
+  ]
+}

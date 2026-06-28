@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "How Google Secured Its First Major Investment in 1999"
+title: "The 1999 Investment That Launched Google’s Search Dominance"
 date: "June 7, 1999"
-excerpt: "Discover how Google’s first major $25M investment in 1999 propelled it from a research project to a search industry leader."
-updated_at: "2026-06-20"
+excerpt: "Discover how Google’s $25 million investment in 1999 transformed it from a research project into a search industry leader."
+updated_at: "2026-06-28"
 ru: "/ru/jun/7/google-first-funding-round"
 ---
 In the summer of 1999, Google was nothing like the company we know today. There were no billions of dollars, no massive data centers, and no Android. There were just two Stanford graduate students — Larry Page and Sergey Brin — a search engine that produced remarkably good results, and a growing pile of hardware bills.

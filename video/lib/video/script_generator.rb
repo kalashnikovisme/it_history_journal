@@ -27,6 +27,7 @@ module Video
 
       narration = @client.chat(messages: messages, model: "gpt-4.1", temperature: 0.75)
       narration = narration.strip
+      narration = append_cta(narration)
 
       File.write(@paths.narration_txt, narration)
       narration
@@ -46,6 +47,11 @@ module Video
         Start straight from the hook — no preamble.
         Output ONLY the narration text. No stage directions, no speaker labels, no markdown.
       PROMPT
+    end
+
+    def append_cta(narration)
+      return narration unless @info[:lang] == "ru"
+      "#{narration}\n\nПодписывайтесь на IT History Journal — ссылка в описании."
     end
 
     def build_prompt

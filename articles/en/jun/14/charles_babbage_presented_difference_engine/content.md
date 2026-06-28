@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Charles Babbage's Difference Engine: The Birth of Mechanical Computing (1822)"
+title: "Charles Babbage’s 1822 Difference Engine: The Foundation of Modern Computing"
 date: "June 14, 1822"
-excerpt: "Discover how Charles Babbage's 1822 Difference Engine laid the groundwork for modern computing and automation."
-updated_at: "2026-06-20"
+excerpt: "Discover how Babbage's 1822 Difference Engine pioneered mechanical computation and influenced modern computer technology."
+updated_at: "2026-06-28"
 ru: "/ru/jun/14/charles-babbage-presented-difference-engine"
 ---
 When does the history of computer science begin? With the unveiling of the first computer? With the first message sent over ARPANET, the network that later evolved into the Internet? Or perhaps with Aristotle?

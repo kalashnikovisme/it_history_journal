@@ -92,7 +92,7 @@ interaction:
       run_options: [no-deps]
 
   seo:
-    description: Run SEO workflow on articles updated exactly 7 days ago
+    description: Run SEO workflow on articles published 1w, 2w, 3w, 1m, 2m, 3m… ago
     service: growth_app
     command: bundle exec ruby -I growth/lib growth/bin/growth seo recent
     compose:

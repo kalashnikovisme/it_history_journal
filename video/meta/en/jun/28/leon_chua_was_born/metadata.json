@@ -1,0 +1,85 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 28,
+  "year": "1936",
+  "slug": "leon-chua-was-born",
+  "slug_dir": "leon_chua_was_born",
+  "title": "Leon Chua and the Memristor: How One Missing Circuit Element Reshaped Memory and Computing",
+  "date_display": "June 28, 1936",
+  "date_month_day": "June 28",
+  "content_md": "Leon Chua, born on June 28, 1936, is an American electrical engineer and professor at the University of California, Berkeley. He is one of the most influential researchers in circuit theory. His name is rarely mentioned outside academia, yet many modern developments in artificial intelligence, non-volatile memory, and analog computing trace their roots back to ideas he proposed decades ago.\n\nChua was born in the Philippines, studied electrical engineering, and later moved to the United States, where he spent most of his career teaching at the University of California, Berkeley. His primary research area was nonlinear electrical circuits—systems whose behavior cannot be described using simple linear equations. Today, such circuits are found throughout modern electronics, from radio equipment to specialized processors.\n\nChua's best-known work appeared in 1971. In his paper *\"Memristor — The Missing Circuit Element,\"* he argued that one fundamental passive circuit element was still missing from electrical circuit theory. He named it the **memristor**, combining the words *memory* and *resistor*.\n\nThe defining property of a memristor is that its resistance depends not only on its current state but also on the entire history of the electrical charge that has passed through it. Even after power is removed, the device retains its state. At the time, this was purely a theoretical concept—no one knew how to build such a device.\n\nNearly forty years later, in 2008, researchers at HP announced a device that matched Chua's model. Since then, memristors have become one of the most actively researched technologies in non-volatile memory. They are considered promising candidates for next-generation memory, analog AI accelerators, and **in-memory computing**, where calculations are performed directly inside memory instead of constantly moving data between memory and the processor.\n\nThe memristor, however, is far from Chua's only contribution.\n\nIn the early 1980s, he introduced **Chua's Circuit**, a simple electronic circuit that became one of the first physical systems capable of reliably demonstrating chaotic behavior. Until then, chaos theory had been studied primarily through mathematics. Chua's Circuit allowed researchers to observe chaos in a real electronic device. Today it is widely used in research on nonlinear dynamics, cryptography, random number generation, and university laboratories around the world.\n\nAnother major contribution came in the late 1980s, when Chua and Lin Yang developed **Cellular Neural Networks**. Despite the similar name, these are very different from today's deep neural networks. They are a specialized analog computing architecture designed for extremely fast image and video processing in dedicated hardware. Their ideas later found applications in computer vision, robotics, and real-time embedded systems.\n\nChua also made fundamental contributions to the general theory of nonlinear electrical circuits. Many of the analytical methods engineers use today when designing complex analog electronics grew out of his research. Over the course of his career, he published hundreds of scientific papers and mentored a large number of researchers who continue to advance the field.\n\nLeon Chua's work rarely appears in popular books or movies because it focuses on fundamental science rather than commercial products. Yet this kind of research often lays the groundwork for technologies that emerge decades later. Memristors, analog computing, and specialized AI accelerators are all examples of how ideas published back in 1971 continue to shape the future of computing.\n\n## Interesting Links\n\n- [Leon Chua's homepage at the University of California, Berkeley](https://people.eecs.berkeley.edu/~chua/)\n- [*Memristor — The Missing Circuit Element* (IEEE, 1971)](https://ieeexplore.ieee.org/document/1083337)\n- [Chua's Circuit reference collection](https://people.eecs.berkeley.edu/~chua/circuitrefs.html)\n- [Scholarpedia: *Chua's Circuit*](http://www.scholarpedia.org/article/Chua_circuit)\n- [*Cellular Neural Networks: Theory*](https://nonlinear.eecs.berkeley.edu/raptor/CNNs/CellularNeuralNetworks-Theory.pdf)\n- [Leon Chua's Google Scholar profile](https://scholar.google.com/citations?user=NkGL8bgAAAAJ)\n",
+  "video_cover_path": "articles/en/jun/28/leon_chua_was_born/video-cover.png",
+  "folder": "articles/en/jun/28/leon_chua_was_born",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 20.436
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.109,
+      "text": "June 28 in the History of Computer Science: Leon Chua, the mind behind the memristor, was born in 1936."
+    },
+    {
+      "id": "fact",
+      "start": 12.609,
+      "duration": 5.109,
+      "text": "On this day, the future UC Berkeley professor entered the world, later proposing the memristor—a missing link in circuit theory."
+    },
+    {
+      "id": "fact",
+      "start": 17.718,
+      "duration": 5.109,
+      "text": "Chua’s concepts paved the way for breakthroughs in non-volatile memory and analog computing."
+    },
+    {
+      "id": "fact",
+      "start": 22.827,
+      "duration": 5.109,
+      "text": "Decades later, his theories inspired innovations now powering AI, advanced memory, and in-memory computing."
+    },
+    {
+      "id": "cta",
+      "start": 27.936,
+      "duration": 7.296
+    }
+  ],
+  "total_duration": 35.232,
+  "scene_count": 8,
+  "youtube": {
+    "title": "Leon Chua & the Memristor: The Missing Link in Modern Computing",
+    "description": "On June 28, 1936, Leon Chua—pioneer of the memristor—was born. Chua’s groundbreaking theories introduced the memristor, a circuit element that remembers its history, paving the way for innovations in non-volatile memory, analog computing, and AI hardware. Decades after his 1971 paper, his ideas are shaping the future of technology. Discover Chua’s impact on circuits, chaos theory, and neural networks in this snapshot from IT History Journal. #AI #Memory #Computing\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme",
+    "tags": [
+      "Leon Chua",
+      "memristor",
+      "computer history",
+      "circuit theory",
+      "nonvolatile memory",
+      "analog computing",
+      "in-memory computing",
+      "artificial intelligence",
+      "Chua's circuit",
+      "chaos theory",
+      "cellular neural networks",
+      "electrical engineering",
+      "UC Berkeley",
+      "semiconductors",
+      "memory technology"
+    ]
+  }
+}

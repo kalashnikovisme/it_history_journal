@@ -140,8 +140,7 @@ module IthGrowth
       ctx.workflow(:seo).run(path, website_repo: options[:website_repo]).each { |file| say file }
     end
 
-    desc "recent", "Run SEO workflow on all articles updated exactly N days ago"
-    option :days, type: :numeric, default: 7
+    desc "recent", "Run SEO workflow on articles published 1w, 2w, 3w, 1m, 2m, 3m… ago"
     def recent
       ctx = IthGrowth::CLI.context
       config = ctx.config
@@ -152,20 +151,26 @@ module IthGrowth
         return
       end
 
-      articles = Article::RecentFinder.new(content_dir: content_dir).find(days: options[:days])
+      finder = Article::RecentFinder.new(content_dir: content_dir)
 
-      if articles.empty?
-        say "No articles found for #{target} (#{options[:days]} days ago)."
+      queue = milestone_dates.flat_map do |label, date|
+        finder.find_by_date(date).map { |info| info.merge(label: label) }
+      end.uniq { |info| info[:path] }
+
+      if queue.empty?
+        say "No articles found for any milestone date."
         return
       end
 
-      target = Date.today - options[:days]
-      say "#{articles.size} article(s) updated on #{target} (#{options[:days]} days ago):".bold
-      articles.each { |a| say "  #{a[:path]}" }
+      say "#{queue.size} article(s) to process:".bold
+      queue.each_with_index do |info, i|
+        say "  #{i + 1}. [#{info[:label]}] #{info[:path]}"
+      end
       say ""
 
-      articles.each do |info|
+      queue.each_with_index do |info, i|
         path = info[:path]
+        say "(#{i + 1}/#{queue.size}) #{info[:label]} — #{path}".bold
         ctx.workflow(:analysis).run(path)
         workflow = ctx.workflow(:seo)
         rel_dir = article_rel_dir(path, config)
@@ -173,6 +178,15 @@ module IthGrowth
         workflow.run(path)
         say ""
       end
+    end
+
+    private
+
+    def milestone_dates
+      today = Date.today
+      weeks = (1..3).map { |n| ["#{n} week#{"s" if n > 1} ago", today - (n * 7)] }
+      months = (1..36).map { |n| ["#{n} month#{"s" if n > 1} ago", today << n] }
+      weeks + months
     end
   end
 

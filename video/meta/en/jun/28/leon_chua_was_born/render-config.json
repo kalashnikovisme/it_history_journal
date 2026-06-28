@@ -1,0 +1,59 @@
+{
+  "language": "en",
+  "title": "Leon Chua and the Memristor: How One Missing Circuit Element Reshaped Memory and Computing",
+  "date_display": "June 28, 1936",
+  "day": "28",
+  "month_name": "June",
+  "year": "1936",
+  "slug": "leon-chua-was-born",
+  "cover_filename": "video-cover.png",
+  "site_url": "history.purple-magic.com",
+  "cta_language": "en",
+  "total_duration": 35.232,
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 20.436
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.109,
+      "text": "June 28 in the History of Computer Science: Leon Chua, the mind behind the memristor, was born in 1936."
+    },
+    {
+      "id": "fact",
+      "start": 12.609,
+      "duration": 5.109,
+      "text": "On this day, the future UC Berkeley professor entered the world, later proposing the memristor—a missing link in circuit theory."
+    },
+    {
+      "id": "fact",
+      "start": 17.718,
+      "duration": 5.109,
+      "text": "Chua’s concepts paved the way for breakthroughs in non-volatile memory and analog computing."
+    },
+    {
+      "id": "fact",
+      "start": 22.827,
+      "duration": 5.109,
+      "text": "Decades later, his theories inspired innovations now powering AI, advanced memory, and in-memory computing."
+    },
+    {
+      "id": "cta",
+      "start": 27.936,
+      "duration": 7.296
+    }
+  ]
+}

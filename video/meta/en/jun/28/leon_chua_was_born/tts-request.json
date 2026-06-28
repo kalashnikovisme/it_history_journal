@@ -1,0 +1,6 @@
+{
+  "model": "tts-1",
+  "input": "June 28 in the History of Computer Science: Leon Chua, the mind behind the memristor, was born in 1936. On this day, the future UC Berkeley professor entered the world, later proposing the memristor—a missing link in circuit theory. Chua’s concepts paved the way for breakthroughs in non-volatile memory and analog computing. Decades later, his theories inspired innovations now powering AI, advanced memory, and in-memory computing.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

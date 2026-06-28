@@ -78,4 +78,28 @@ class RecentFinderTest < Minitest::Test
   def test_returns_empty_when_no_articles_exist
     assert_empty finder.find(days: 7)
   end
+
+  def test_find_by_date_returns_articles_for_given_date
+    d = Date.today - 14
+    path = write_article("en/#{d.strftime("%b").downcase}/#{d.day}/some_event/content.md")
+    results = finder.find_by_date(d)
+    assert_equal 1, results.size
+    assert_equal path, results.first[:path]
+    assert_equal d, results.first[:date]
+  end
+
+  def test_find_by_date_returns_empty_for_unmatched_date
+    d = Date.today - 14
+    write_article("en/#{d.strftime("%b").downcase}/#{d.day}/some_event/content.md")
+    assert_empty finder.find_by_date(d - 1)
+  end
+
+  def test_find_delegates_to_find_by_date
+    d = Date.today - 5
+    path = write_article("en/#{d.strftime("%b").downcase}/#{d.day}/some_event/content.md")
+    results = finder.find(days: 5)
+    assert_equal 1, results.size
+    assert_equal path, results.first[:path]
+    assert_equal d, results.first[:date]
+  end
 end

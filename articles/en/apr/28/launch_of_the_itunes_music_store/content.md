@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "How the Launch of iTunes Music Store Revolutionized Digital Music (2003)"
+title: "How the 2003 Launch of iTunes Music Store Reshaped Digital Music Forever"
 date: "April 28, 2003"
-excerpt: "Discover how Apple's iTunes Music Store launched in 2003, revolutionizing digital music sales and industry standards."
-updated_at: "2026-06-20"
+excerpt: "Discover how the 2003 launch of iTunes Music Store revolutionized digital music sales, making music more accessible and changing the industry landscape."
+updated_at: "2026-06-28"
 ru: "/ru/apr/28/launch-of-the-itunes-music-store"
 ---
 iTunes Music Store was Apple's digital marketplace for buying music, and it completely changed how people consumed music.

@@ -1,8 +1,8 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Leon Chua and the Memristor: How One Missing Circuit Element Reshaped Memory and Computing"
+title: "Leon Chua and the Memristor: The Circuit Element That Changed Computing Forever"
 date: "June 28, 1936"
-excerpt: "Leon Chua, born June 28, 1936, predicted the memristor in 1971 — a theoretical circuit element that HP physically realized 37 years later, now driving non-volatile memory and analog AI research."
+excerpt: "Discover how Leon Chua's memristor revolutionized memory, AI, and computing—driving innovations decades after its discovery."
 updated_at: "2026-06-28"
 ru: "/ru/jun/28/leon-chua-was-born"
 sources:
