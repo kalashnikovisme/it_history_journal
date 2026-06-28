@@ -33,7 +33,7 @@
           %span.hidden.md:inline-block.bg-accent-dim.text-accent.text-sm.font-medium.rounded-lg.px-3.py-1.whitespace-nowrap
             = fallback.date_label
 
-- cal_locals = {lang: lang, t: t, days_with_articles: days_with_articles, current_month: current_month, current_year: current_year}
+- cal_locals ={lang: lang, t: t, days_with_articles: days_with_articles, current_month: current_month, current_year: current_year}
 
 .grid.grid-cols-1.lg:grid-cols-3.gap-8
   .lg:col-span-2
@@ -44,19 +44,24 @@
         %a.text-xs.text-accent-muted.hover:text-accent.transition-colors{href: "/#{lang}/articles/"}
           = "#{t[:all_articles]} →"
       .flex.flex-col.gap-3
-        - recent.each do |art|
+        - recent.each_with_index do |art, i|
           - candidate_key = [today_article, tomorrow_article].compact.find { |c| c == art }&.then { |a| "#{a.month}-#{a.day}" }
           - if candidate_key
             %div{'data-recent-key': candidate_key}
               != partial('article_card', article: art, t: t, featured: true)
           - else
             != partial('article_card', article: art, t: t, featured: true)
+          - if i == 2
+            .lg:hidden
+              != partial('support', lang: lang, t: t, context: 'sidebar')
       %a.block.w-full.text-center.mt-4.py-3.rounded-xl.text-sm.font-medium.text-accent-muted.border.border-white-10.hover:border-white-20.hover:text-white.transition-colors{href: "/#{lang}/articles/"}
         = t[:more]
 
   .lg:col-span-1
     .sticky.top-20.flex.flex-col.gap-6
       != partial('calendar_widget', cal_locals)
+      .hidden.lg:block
+        != partial('support', lang: lang, t: t, context: 'sidebar')
       != partial('social_widget', {lang: lang, t: t})
 
       - unless years_with_counts.empty?

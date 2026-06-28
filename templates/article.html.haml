@@ -47,6 +47,8 @@
 
   .lg:col-span-1
     .sticky.top-20.flex.flex-col.gap-6
+      .hidden.lg:block
+        != partial('support', lang: lang, t: t, article_slug: article.slug, context: 'sidebar')
       != partial('social_widget', {lang: lang, t: t})
 
       - unless related.empty?
