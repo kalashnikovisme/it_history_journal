@@ -157,7 +157,10 @@ begin
     narration.each_line { |l| puts "  #{l.chomp}" }
     puts ""
     puts "Record command:".bold
-    puts "  arecord -D plughw:2,0 -f cd -t wav - | ffmpeg -y -i - -q:a 2 #{paths.narration_mp3}".cyan
+    record_cmd = "echo '3...' && sleep 1 && echo '2...' && sleep 1 && echo '1...' && sleep 1 && " \
+                 "echo '◉  Recording — speak now!' && " \
+                 "arecord -D plughw:MICROPHONE,0 -f cd -t wav - | ffmpeg -y -i - -q:a 2 #{paths.narration_mp3}"
+    puts "  #{record_cmd}".cyan
     puts ""
     puts "Then re-run the same command to continue.".yellow
     exit 0
