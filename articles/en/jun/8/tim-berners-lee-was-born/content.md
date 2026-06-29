@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 8, 1955: The Birth of Tim Berners-Lee and the Web Revolution"
+title: "June 8, 1955: Celebrating the Birth of the Web’s Inventor, Tim Berners-Lee"
 date: "June 8, 1955"
-excerpt: "Discover how Tim Berners-Lee, born on June 8, 1955, at CERN, invented the World Wide Web, transforming global communication and information sharing."
-updated_at: "2026-06-20"
+excerpt: "Learn how Tim Berners-Lee, born on June 8, 1955, at CERN, invented the World Wide Web, revolutionizing global communication and information sharing."
+updated_at: "2026-06-29"
 ru: "/ru/jun/8/tim-berners-lee-was-born"
 ---
 Computer networks had existed in one form or another since the 1960s, but the Internet did not gain a truly global user base until the 1990s. This was driven both by advances in networking technology and by the emergence of the web. It was the web that made the Internet accessible and understandable to ordinary users. The creator of the first version of the World Wide Web was Tim Berners-Lee.

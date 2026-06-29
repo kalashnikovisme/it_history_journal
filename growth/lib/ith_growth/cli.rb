@@ -100,6 +100,42 @@ module IthGrowth
       rel = article_path.delete_prefix("#{content_dir}/")
       File.dirname(rel)
     end
+
+    def print_summary_table(processed, workflow)
+      return if processed.empty?
+
+      bar = "━" * 82
+      say ""
+      say bar.cyan
+      say "  Summary — #{processed.size} article#{"s" if processed.size != 1} processed".cyan.bold
+      say bar.cyan
+      say ""
+      say format("  %-44s  %6s  %7s  %9s  %7s  %7s",
+        "Article", "Views", "Bounce", "Avg Time", "Clicks", "Avg Pos").bold
+      say "  " + ("─" * 80)
+
+      processed.each do |item|
+        rel_dir = item[:rel_dir]
+        latest  = workflow.load_metrics(rel_dir).last
+
+        ga4 = latest&.dig("ga4")
+        gsc = latest&.fetch("gsc", []) || []
+
+        views        = ga4 ? ga4["views"].to_i.to_s : "-"
+        bounce       = ga4 ? "#{(ga4["bounce_rate"].to_f * 100).round(1)}%" : "-"
+        avg_time     = ga4 ? format_duration(ga4["avg_duration"].to_f) : "-"
+        total_clicks = gsc.empty? ? "-" : gsc.sum { |r| r["clicks"].to_i }.to_s
+        avg_pos      = gsc.empty? ? "-" : (gsc.sum { |r| r["position"].to_f } / gsc.size).round(1).to_s
+
+        short = rel_dir.length > 44 ? "...#{rel_dir[-41..]}" : rel_dir
+        say format("  %-44s  %6s  %7s  %9s  %7s  %7s",
+          short, views, bounce, avg_time, total_clicks, avg_pos)
+      end
+
+      say ""
+      say bar.cyan
+      say ""
+    end
   end
 
   class ArticleCLI < Thor

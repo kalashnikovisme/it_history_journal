@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "The Launch of Visual Studio Code: A Milestone in Developer Tools (2015)"
+title: "Visual Studio Code 2015 Release: Redefining Developer Workflows"
 date: "April 29, 2015"
-excerpt: "Discover how Microsoft launched Visual Studio Code in 2015, revolutionizing IDEs with its open-source approach and widespread adoption among developers."
-updated_at: "2026-06-20"
+excerpt: "Discover how Microsoft’s 2015 release of Visual Studio Code revolutionized coding with open-source IDEs and widespread developer adoption."
+updated_at: "2026-06-29"
 ru: "/ru/apr/29/release-of-visual-studio-code"
 ---
 Visual Studio Code is the dominant development environment (IDE) today. In most developer surveys about which IDE people use, VS Code ranks first by a wide margin.

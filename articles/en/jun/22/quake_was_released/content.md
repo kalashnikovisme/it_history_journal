@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 22, 1996: The Launch of Quake and Its Impact on Gaming"
+title: "How Quake's 1996 Release Transformed FPS Gaming Forever"
 date: "June 22, 1996"
-excerpt: "Discover how Quake's 1996 release revolutionized 3D gaming, multiplayer, and modding, shaping the future of video games."
-updated_at: "2026-06-21"
+excerpt: "Explore how Quake's 1996 launch revolutionized 3D graphics, multiplayer gaming, and modding, leaving a lasting legacy in the gaming world."
+updated_at: "2026-06-29"
 ru: "/ru/jun/22/quake-was-released"
 sources:
   - title: "Celebrating 25 Years of Quake"

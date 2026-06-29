@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 29, 1967: The Birth of the Handheld Calculator Revolution"
+title: "March 29, 1967: How the Handheld Calculator Changed Computing Forever"
 date: "March 29, 1967"
-excerpt: "Discover how Texas Instruments' 1967 prototype of the first handheld calculator transformed portable computing and electronics innovation."
-updated_at: "2026-06-20"
+excerpt: "Discover how Texas Instruments' 1967 prototype of the first handheld calculator revolutionized portable computing technology."
+updated_at: "2026-06-29"
 ---
 On this day, Texas Instruments unveiled the prototype of the first electronic handheld calculator known as Cal-Tech.
 

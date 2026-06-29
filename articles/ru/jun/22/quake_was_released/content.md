@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "22 июня 1996 — вышла Quake"
+title: "22 июня 1996: Как вышел легендарный шутер Quake и изменил индустрию"
 date: "22 июня 1996"
-excerpt: "22 июня 1996 года id Software выпустила Quake — одна из тех игр, что поменяли индустрию игр и ИТ в целом."
-updated_at: "2026-06-22"
+excerpt: "История выхода Quake 22 июня 1996 года — революционного 3D-шутера, изменившего индустрию игр и ИТ, с подробным рассказом о разработке и влиянии."
+updated_at: "2026-06-29"
 en: "/en/jun/22/quake-was-released"
 sources:
   - title: "Celebrating 25 Years of Quake"
