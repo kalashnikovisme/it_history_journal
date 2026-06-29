@@ -412,6 +412,7 @@ SEO commands:
 
 ```bash
 ith seo recent                  # SEO workflow on articles published 1w, 2w, 3w, 1m, 2m … 36m ago
+                                # prints a GA4 + GSC summary table at the end (views, bounce, avg time, clicks, avg pos)
 ```
 
 Analytics commands:

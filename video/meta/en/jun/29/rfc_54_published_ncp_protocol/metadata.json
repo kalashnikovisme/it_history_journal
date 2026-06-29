@@ -1,0 +1,79 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 29,
+  "year": "1970",
+  "slug": "rfc-54-published-ncp-protocol",
+  "slug_dir": "rfc_54_published_ncp_protocol",
+  "title": "RFC 54 and the Origins of Open Standards in Networking",
+  "date_display": "June 29, 1970",
+  "date_month_day": "June 29",
+  "content_md": "On June 29, 1970, RFC 54 was published. It contained the first complete draft of the **Network Control Protocol (NCP)**, the first host-to-host protocol used on the ARPANET and the predecessor to TCP/IP. The document was prepared by Steve Crocker, Jon Postel, John Newkirk, and Mike Kraley.\n\nWhat made RFC 54 remarkable wasn't just the protocol itself, but the way it was developed. The document did not declare a new standard. Instead, its authors explicitly described it as a proposal, asked their colleagues to review it, send comments, and attend meetings to discuss possible improvements. Only after that process would the specification be finalized.\n\nThat approach proved to be just as important as NCP itself. Rather than developing standards behind closed doors, the ARPANET community created an open review process in which engineers worked together to refine the future of networking. This is also where the RFC series got its name: **Request for Comments**.\n\nThat tradition continues today. New Internet protocols, as well as extensions to HTTP, DNS, TLS, IPv6, and many other technologies, are first published as Internet-Drafts and RFCs. They are discussed by engineers around the world through the IETF, revised based on feedback, and only then adopted as official standards. It all began with documents like RFC 54, where key technical decisions were made not by a single company, but by a community of engineers.\n\n## Interesting Links\n\n- [RFC 54 — *An Official Protocol Proffering*](https://www.rfc-editor.org/rfc/rfc54.html)\n",
+  "video_cover_path": "articles/en/jun/29/rfc_54_published_ncp_protocol/video-cover.png",
+  "folder": "articles/en/jun/29/rfc_54_published_ncp_protocol",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 19.956
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 6.652,
+      "text": "June 29 in the History of Computer Science: The first complete draft of the Network Control Protocol, or NCP, was published on this day in 1970 as RFC 54."
+    },
+    {
+      "id": "fact",
+      "start": 14.152,
+      "duration": 6.652,
+      "text": "Rather than declaring a rigid standard, the authors invited open feedback from the networking community."
+    },
+    {
+      "id": "fact",
+      "start": 20.804,
+      "duration": 6.652,
+      "text": "This collaborative process became the foundation for open standards, leading to the way Internet protocols are developed and refined together, even today."
+    },
+    {
+      "id": "cta",
+      "start": 27.456,
+      "duration": 7.296
+    }
+  ],
+  "total_duration": 34.752,
+  "scene_count": 7,
+  "youtube": {
+    "title": "How RFC 54 Sparked Open Standards in Networking (1970)",
+    "description": "On June 29, 1970, RFC 54 introduced the first complete draft of the Network Control Protocol (NCP) and pioneered the open, collaborative approach to developing network standards. Instead of enforcing a rigid protocol, its authors invited community feedback, laying the groundwork for the 'Request for Comments' (RFC) process that still shapes Internet protocols today. Discover how this milestone shaped modern networking.\n\nExplore more IT history:\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme\n\n#Networking #InternetHistory #OpenStandards",
+    "tags": [
+      "RFC 54",
+      "Network Control Protocol",
+      "NCP",
+      "open standards",
+      "Internet history",
+      "ARPANET",
+      "Jon Postel",
+      "Steve Crocker",
+      "Request for Comments",
+      "IETF",
+      "protocol development",
+      "TCP/IP origins",
+      "history of computing",
+      "computer networks",
+      "collaborative engineering"
+    ]
+  }
+}

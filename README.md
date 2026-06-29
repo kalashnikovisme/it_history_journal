@@ -120,6 +120,7 @@ Builds the Docker image and installs gems.
 | `dip audio generate FILE.txt OUTPUT.mp3` | Synthesize text from FILE.txt to MP3 using the same TTS model and voice as the article pipeline |
 | `dip video_shell` | Open a shell in the video container |
 | `dip grow <subcommand>` | Run the growth CLI (SEO, distribution, analytics) |
+| `dip seo` | Run SEO workflow on milestone articles (1w–36m ago); prints a GA4 + GSC summary table at the end |
 | `dip growth_shell` | Open a shell in the growth app container |
 | `dip grow_test` | Run growth tests |
 

@@ -204,16 +204,21 @@ module IthGrowth
       end
       say ""
 
+      seo_workflow = ctx.workflow(:seo)
+      processed = []
+
       queue.each_with_index do |info, i|
         path = info[:path]
         say "(#{i + 1}/#{queue.size}) #{info[:label]} — #{path}".bold
         ctx.workflow(:analysis).run(path)
-        workflow = ctx.workflow(:seo)
         rel_dir = article_rel_dir(path, config)
-        print_seo_progress(rel_dir, workflow.load_metrics(rel_dir), report_dates: workflow.load_report_dates(rel_dir))
-        workflow.run(path)
+        print_seo_progress(rel_dir, seo_workflow.load_metrics(rel_dir), report_dates: seo_workflow.load_report_dates(rel_dir))
+        seo_workflow.run(path)
+        processed << { rel_dir: rel_dir, label: info[:label] }
         say ""
       end
+
+      print_summary_table(processed, seo_workflow)
     end
 
     private

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/en/jun/29/rfc_54_published_ncp_protocol/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 19.956
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 6.652,
+    "text": "June 29 in the History of Computer Science: The first complete draft of the Network Control Protocol, or NCP, was published on this day in 1970 as RFC 54."
+  },
+  {
+    "id": "fact",
+    "start": 14.152,
+    "duration": 6.652,
+    "text": "Rather than declaring a rigid standard, the authors invited open feedback from the networking community."
+  },
+  {
+    "id": "fact",
+    "start": 20.804,
+    "duration": 6.652,
+    "text": "This collaborative process became the foundation for open standards, leading to the way Internet protocols are developed and refined together, even today."
+  },
+  {
+    "id": "cta",
+    "start": 27.456,
+    "duration": 6.504,
+    "audio": "video/audio/samples/tiktok.mp3"
+  }
+]
