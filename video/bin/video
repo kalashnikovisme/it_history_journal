@@ -32,21 +32,23 @@ def usage
   puts "  video part calendar articles/ru/jun/21/tim_bray_was_born # calendar only, no audio"
   puts
   puts "Options:"
-  puts "  --force-text    Regenerate narration.txt even if it exists"
-  puts "  --force-audio   Regenerate narration.mp3 even if it exists"
-  puts "  --force-scenes  Regenerate platform scene files even if they exist"
-  puts "  --force-youtube Regenerate YouTube title, description, and tags"
-  puts "  --verbose       Show ffmpeg output during video composition"
+  puts "  --force-text      Regenerate narration.txt even if it exists"
+  puts "  --force-audio     Regenerate narration.mp3 even if it exists"
+  puts "  --force-scenes    Regenerate platform scene files even if they exist"
+  puts "  --force-emotions  Re-transcribe and re-detect emotions even if already annotated"
+  puts "  --force-youtube   Regenerate YouTube title, description, and tags"
+  puts "  --verbose         Show ffmpeg output during video composition"
   exit 1
 end
 
 argv = ARGV.dup
-force_text    = argv.delete("--force-text")
-force_audio   = argv.delete("--force-audio")
-force_scenes  = argv.delete("--force-scenes")
-force_youtube = argv.delete("--force-youtube")
-no_upload     = argv.delete("--no-upload")
-verbose       = argv.delete("--verbose")
+force_text     = argv.delete("--force-text")
+force_audio    = argv.delete("--force-audio")
+force_scenes   = argv.delete("--force-scenes")
+force_emotions = argv.delete("--force-emotions")
+force_youtube  = argv.delete("--force-youtube")
+no_upload      = argv.delete("--no-upload")
+verbose        = argv.delete("--verbose")
 
 usage if argv.empty?
 
@@ -138,6 +140,7 @@ begin
     exit 0
   end
 
+
   # Audio — reuse if exists; Russian requires manual recording (no TTS)
   audio_gen = Video::AudioGenerator.new(paths, client)
   if File.exist?(paths.narration_mp3) && !force_audio
@@ -180,6 +183,16 @@ begin
   else
     puts "[video] Platform scene files written (CTA at #{duration.round(1)}s).".green
   end
+
+  # EmotionDetect — transcribe narration.mp3, align to scene windows, inject emotions
+  puts "[video] Detecting emotions...".cyan
+  detector = Video::EmotionDetect.new(paths, client)
+  if detector.detect(force: force_emotions || force_scenes)
+    puts "[video] Emotions detected and injected into scene files.".green
+  else
+    puts "[video] Emotions: using cached annotations.".yellow
+  end
+  detector.validate_emotion_images!
 
   youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
   youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)

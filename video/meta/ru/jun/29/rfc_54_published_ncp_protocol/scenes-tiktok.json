@@ -1,0 +1,163 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/ru/jun/29/rfc_54_published_ncp_protocol/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 104.93102
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.0,
+    "text": "29 июня в",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "fact",
+    "start": 12.5,
+    "duration": 5.0,
+    "text": "истории IT: опубликован",
+    "emotion": "thinking"
+  },
+  {
+    "id": "fact",
+    "start": 17.5,
+    "duration": 5.0,
+    "text": "первый проект сетевого",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 22.5,
+    "duration": 5.0,
+    "text": "протокола ARPANET. В",
+    "emotion": "excited"
+  },
+  {
+    "id": "fact",
+    "start": 27.5,
+    "duration": 5.0,
+    "text": "1970 году вышел",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 32.5,
+    "duration": 5.0,
+    "text": "RFC 54 —",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 37.5,
+    "duration": 5.0,
+    "text": "документ с описанием",
+    "emotion": "idea"
+  },
+  {
+    "id": "fact",
+    "start": 42.5,
+    "duration": 5.0,
+    "text": "Network Control Protocol,",
+    "emotion": "analyzing"
+  },
+  {
+    "id": "fact",
+    "start": 47.5,
+    "duration": 5.0,
+    "text": "предшественника TCP/IP. Важно,",
+    "emotion": "shocked"
+  },
+  {
+    "id": "fact",
+    "start": 52.5,
+    "duration": 5.0,
+    "text": "что его сделали",
+    "emotion": "mind_blown"
+  },
+  {
+    "id": "fact",
+    "start": 57.5,
+    "duration": 5.0,
+    "text": "открытым предложением для",
+    "emotion": "progress"
+  },
+  {
+    "id": "fact",
+    "start": 62.5,
+    "duration": 5.0,
+    "text": "обсуждения. Так родилась",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 67.5,
+    "duration": 5.0,
+    "text": "традиция публичных стандартов,",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "fact",
+    "start": 72.5,
+    "duration": 5.0,
+    "text": "которая до сих",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 77.5,
+    "duration": 5.0,
+    "text": "пор лежит в",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "fact",
+    "start": 82.5,
+    "duration": 5.0,
+    "text": "основе всех современных",
+    "emotion": "neutral"
+  },
+  {
+    "id": "fact",
+    "start": 87.5,
+    "duration": 5.0,
+    "text": "интернет-технологий и протоколов.",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "fact",
+    "start": 92.5,
+    "duration": 5.0,
+    "text": "Подписывайтесь на IT",
+    "emotion": "thumbs_up"
+  },
+  {
+    "id": "fact",
+    "start": 97.5,
+    "duration": 5.0,
+    "text": "History Journal —",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "fact",
+    "start": 102.5,
+    "duration": 5.0,
+    "text": "ссылка в описании.",
+    "emotion": "sleeping"
+  },
+  {
+    "id": "cta",
+    "start": 107.431,
+    "duration": 5.0
+  }
+]

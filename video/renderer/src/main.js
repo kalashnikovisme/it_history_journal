@@ -37,14 +37,14 @@
   // ---------------------------------------------------------------------------
   const app = document.getElementById('app');
 
-  const calendarScene  = new CalendarScene(config);
-  const titleScene     = new TitleCardScene(config);
-  const coverScene     = new CoverScene(config);
-  const ctaScene       = new CTAScene(config);
+  const calendarScene   = new CalendarScene(config);
+  const titleScene      = new TitleCardScene(config);
+  const factsScene      = new FactsScene(config);
+  const ctaScene        = new CTAScene(config);
 
   calendarScene.mount(app);
   titleScene.mount(app);
-  coverScene.mount(app);
+  factsScene.mount(app);
   ctaScene.mount(app);
 
   // ---------------------------------------------------------------------------
@@ -66,11 +66,11 @@
 
   let calShown      = false;
   let titleShown    = false;
-  let coverShown    = false;
+  let factsShown    = false;
   let ctaShown      = false;
   let calHidden     = false;
   let titleHidden   = false;
-  let coverHidden   = false;
+  let factsHidden   = false;
 
   const totalDuration = config.total_duration || 55;
   let completed = false;
@@ -103,19 +103,21 @@
       titleScene.hide();
     }
 
-    // Cover stays visible until the CTA starts
-    if (coverScCfg && elapsed >= coverScCfg.start && !coverShown) {
-      coverShown = true;
-      coverScene.show();
+    // Fact scene — cover top + title left + emotion right
+    if (coverScCfg && elapsed >= coverScCfg.start && !factsShown) {
+      factsShown = true;
+      factsScene.show();
     }
 
-    // Hide cover when CTA starts
+    factsScene.tick(elapsed);
+
+    // Hide fact scene when CTA starts
     if (ctaScCfg && elapsed >= ctaScCfg.start) {
       if (!ctaShown) {
         ctaShown = true;
-        if (!coverHidden) {
-          coverHidden = true;
-          coverScene.hide();
+        if (!factsHidden) {
+          factsHidden = true;
+          factsScene.hide();
         }
         ctaScene.show();
       }

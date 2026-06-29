@@ -233,29 +233,81 @@ body {
   transition: transform 20s linear;
 }
 
-/* Facts overlay on top of cover */
-.facts-scene {
+/* Fact scene — cover (top) + title left + emotion image right */
+.fact-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 1920px;
   z-index: 15;
-  background: transparent;
-  padding: 0 60px 100px;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.fact-text {
-  font-size: 54px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.88);
-  line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-page);
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  max-width: 960px;
+  transition: opacity 0.5s ease;
 }
 
-.fact-text.visible {
+.fact-scene.active {
   opacity: 1;
-  transform: translateY(0);
+}
+
+.fact-cover-wrap {
+  width: 1080px;
+  height: 1180px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.fact-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--color-raised);
+}
+
+.fact-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform-origin: center center;
+}
+
+.fact-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 60px 80px;
+  gap: 48px;
+}
+
+.fact-title {
+  flex: 0 0 calc(60% - 24px);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.3;
+}
+
+.fact-emotion-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.fact-emotion-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.fact-emotion-img.emotion-visible {
+  opacity: 1;
 }
 
 /* CTA scene */

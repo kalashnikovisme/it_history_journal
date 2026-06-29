@@ -76,6 +76,8 @@ module Video
         .reject(&:empty?)
     end
 
+    FACT_TARGET_DURATION = 5.0
+
     def build_scenes(sentences, narration_duration, cta_duration, cta_start = narration_duration)
       scenes = []
 
@@ -97,20 +99,26 @@ module Video
         "duration" => [narration_duration - COVER_START, COVER_DURATION].max
       }
 
-      # Facts fill the full narration window
+      # Facts fill from cover start to CTA start, one scene per ~5 s
       facts_start  = COVER_START
-      facts_window = narration_duration - facts_start
+      facts_window = cta_start - facts_start
 
-      fact_sentences = sentences.select { |s| s.length > 5 }.first(10)
-      fact_sentences = ["..."] if fact_sentences.empty?
+      words = sentences.select { |s| s.length > 5 }.join(" ").split
+      words = ["..."] if words.empty?
 
-      per_fact = facts_window / fact_sentences.size.to_f
-      fact_sentences.each_with_index do |sentence, i|
+      n_facts = [(facts_window / FACT_TARGET_DURATION).ceil, 1].max
+
+      n_facts.times do |i|
+        word_start = ((i.to_f / n_facts) * words.size).round
+        word_end   = [(((i + 1).to_f / n_facts) * words.size).round, words.size].min
+        text = words[word_start...word_end].join(" ").strip
+        text = words.last(3).join(" ") if text.empty?
+
         scenes << {
           "id"       => "fact",
-          "start"    => (facts_start + i * per_fact).round(3),
-          "duration" => per_fact.round(3),
-          "text"     => sentence
+          "start"    => (facts_start + i * FACT_TARGET_DURATION).round(3),
+          "duration" => FACT_TARGET_DURATION,
+          "text"     => text
         }
       end
 

@@ -8,11 +8,14 @@ Generates branded short vertical videos (1080×1920) from IT History Journal art
 Article content.md
   → ScriptGenerator (OpenAI GPT-4.1) → narration.txt
   → AudioGenerator  (OpenAI TTS tts-1-hd, voice: onyx) → narration.mp3
-  → ScenePlanner → scenes.json
+  → ScenePlanner → scenes-{platform}.json
+  → EmotionDetect (Whisper STT + GPT-4.1-mini) → emotions injected into scenes-{platform}.json
   → YoutubeMetadataGenerator → metadata.json
   → Renderer (Playwright + record.js) → browser-recording.webm
   → FfmpegComposer → final.mp4
 ```
+
+For Russian articles, `AudioGenerator` is skipped (TTS not used). The pipeline pauses and asks you to record `narration.mp3` manually. Re-run the same command once the file exists to continue from `EmotionDetect` onward.
 
 ## Dependencies
 
@@ -56,10 +59,11 @@ dip video send articles/ru/jun/21/tim_bray_was_born
 ## Flags
 
 ```
---force-text    Regenerate narration.txt even if it already exists
---force-audio   Regenerate narration.mp3 even if it already exists
---force-scenes  Regenerate scenes.json even if it already exists
---force-youtube Regenerate YouTube title, description, and tags
+--force-text      Regenerate narration.txt even if it already exists
+--force-audio     Regenerate narration.mp3 even if it already exists
+--force-scenes    Regenerate scenes.json even if it already exists
+--force-emotions  Re-transcribe narration.mp3 and re-detect emotions even if already annotated
+--force-youtube   Regenerate YouTube title, description, and tags
 ```
 
 ## Output files
@@ -71,8 +75,9 @@ Output is written to `video/output/{lang}/{mon}/{dd}/{slug}/`:
 | `prompt.txt` | The full prompt sent to OpenAI |
 | `narration.txt` | Generated narration (edit to adjust) |
 | `tts-request.json` | TTS API request parameters |
-| `narration.mp3` | Audio narration (TTS) |
-| `scenes.json` | Scene timing plan |
+| `narration.mp3` | Audio narration (TTS or manual recording) |
+| `transcript.json` | Word-level timestamps from Whisper STT (cached by EmotionDetect) |
+| `scenes-{platform}.json` | Scene timing plan with per-fact emotion annotations |
 | `metadata.json` | Article/scene data plus optimized YouTube Shorts title, tags, and a description linking to the journal, Patreon, and PayPal |
 | `render-config.json` | Config for JS renderer |
 | `calendar-render-config.json` | Renderer config for the standalone calendar segment |
@@ -109,11 +114,12 @@ video/
     video/
       article_loader.rb    # Parse article content.md
       output_paths.rb      # Output file paths
-      openai_client.rb     # OpenAI wrapper (chat + TTS)
+      openai_client.rb     # OpenAI wrapper (chat, TTS, Whisper STT)
       script_generator.rb  # Narration text via GPT-4.1
       youtube_metadata_generator.rb # YouTube Shorts metadata via GPT-4.1
       audio_generator.rb   # TTS via tts-1-hd
       scene_planner.rb     # Scene timing calculation
+      emotion_detect.rb    # Whisper transcription + GPT emotion assignment per scene
       renderer.rb          # Calls record.js via Node
       ffmpeg_composer.rb   # Combines webm + mp3 → mp4
   renderer/

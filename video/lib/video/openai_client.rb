@@ -35,5 +35,17 @@ module Video
       )
       File.binwrite(output_path, response)
     end
+
+    # Transcribes an MP3 file and returns the transcript as a plain String.
+    def transcribe(mp3_path)
+      response = @client.audio.transcribe(
+        parameters: {
+          model:           "gpt-4o-mini-transcribe",
+          file:            File.open(mp3_path, "rb"),
+          response_format: "json"
+        }
+      )
+      response["text"].to_s.strip
+    end
   end
 end

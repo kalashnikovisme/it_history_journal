@@ -187,6 +187,7 @@ dip video_shell
 | `--force-text` | Regenerate narration.txt even if it already exists |
 | `--force-audio` | Regenerate narration.mp3 even if it already exists |
 | `--force-scenes` | Regenerate scenes.json even if it already exists |
+| `--force-emotions` | Re-transcribe narration.mp3 and re-detect emotions even if already annotated |
 | `--force-youtube` | Regenerate the YouTube Shorts title, description, and tags |
 
 ### Output files

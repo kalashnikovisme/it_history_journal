@@ -93,7 +93,7 @@ const serveStatic = (rootDir, coverPath, assetsDir) => {
     const requestPath = decodeURIComponent(req.url.split('?')[0]);
 
     if (requestPath.startsWith('/assets/')) {
-      const assetPath = path.join(assetsDir, path.basename(requestPath));
+      const assetPath = path.join(assetsDir, requestPath.replace(/^\/assets\//, ''));
       if (fs.existsSync(assetPath)) {
         fs.readFile(assetPath, (err, data) => {
           if (err) {
