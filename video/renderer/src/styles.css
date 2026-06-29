@@ -254,7 +254,7 @@ body {
 
 .fact-cover-wrap {
   width: 1080px;
-  height: 1180px;
+  height: 1020px;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -296,11 +296,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  overflow: visible;
 }
 
 .fact-emotion-img {
-  width: 100%;
-  height: auto;
+  height: 720px;
+  width: auto;
+  max-width: none;
   object-fit: contain;
   opacity: 0;
   transition: opacity 0.25s ease;

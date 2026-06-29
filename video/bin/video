@@ -201,6 +201,9 @@ begin
   youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)
   puts youtube_reused ? "[video] Reusing YouTube metadata.".yellow : "[video] YouTube metadata saved.".green
 
+  # Reload platform scenes so the render config includes emotion annotations written by detector
+  scenes = JSON.parse(File.read(paths.platform_scenes_json("instagram")))
+
   # Render: narration + CTA in one pass; Russian has no CTA sample so video ends with narration
   total_recording_duration = info[:lang] == "ru" ? duration : duration + max_sample_duration
   puts "[video] Rendering browser frames (#{total_recording_duration.round(1)}s total)...".cyan

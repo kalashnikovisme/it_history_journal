@@ -6,7 +6,7 @@ module Video
       normal_smile happy excited confident mischievous thinking analyzing
       neutral tired sleeping shocked mind_blown panic nervous crying angry
       furious embarrassed eye_roll facepalm shrug thumbs_up thumbs_down
-      victory dead progress disaster idea coding coffee
+      victory dead progress disaster idea coding coffee the_first_in_history
     ].freeze
 
     TRANSCRIPT_FILE = "transcript.json"
@@ -110,9 +110,19 @@ module Video
       end
     end
 
+    EMOTION_WINDOW = 15.0  # seconds per emotion
+
     def assign_emotions(segments, transcript)
-      numbered = segments.each_with_index.map do |seg, i|
-        "#{i + 1}. [#{fmt_time(seg[:start])} – #{fmt_time(seg[:end])}] #{seg[:text]}"
+      # Group 5s scenes into ~15s windows; ask GPT for one emotion per window,
+      # then spread it across all scenes in the window.
+      total = segments.sum { |s| s[:end] - s[:start] }
+      n_groups = [(total / EMOTION_WINDOW).round, 1].max
+      group_size = [(segments.size.to_f / n_groups).ceil, 1].max
+      groups = segments.each_slice(group_size).to_a
+
+      numbered = groups.each_with_index.map do |group, i|
+        text = group.map { |s| s[:text] }.reject(&:empty?).join(" ")
+        "#{i + 1}. [#{fmt_time(group.first[:start])} – #{fmt_time(group.last[:end])}] #{text}"
       end.join("\n")
 
       response = @client.chat(
@@ -125,19 +135,28 @@ module Video
       return fallback(segments.size) unless json_match
 
       parsed = JSON.parse(json_match[0])
-      raw = parsed.map { |e| EMOTIONS.include?(e.to_s) ? e.to_s : "normal_smile" }
-      deduplicate(raw)
+
+      # Each group entry maps to one emotion; spread it across all scenes in the group
+      emotions = groups.each_with_index.flat_map do |group, i|
+        emotion = EMOTIONS.include?(parsed[i].to_s) ? parsed[i].to_s : "normal_smile"
+        Array.new(group.size, emotion)
+      end
+
+      deduplicate(emotions)
     rescue => e
       warn "[emotion_detect] Emotion assignment failed: #{e.message}"
       fallback(segments.size)
     end
 
 
+    # Same emotion is allowed for at most 4 consecutive segments (15-20 s).
+    # A fifth consecutive match is replaced with something different.
     def deduplicate(emotions)
       result = emotions.dup
-      result.each_with_index do |emotion, i|
-        next if i.zero?
-        next unless result[i] == result[i - 1]
+      result.each_with_index do |_emotion, i|
+        next if i < 4
+        next unless result[i] == result[i - 1] && result[i] == result[i - 2] &&
+                    result[i] == result[i - 3] && result[i] == result[i - 4]
 
         next_emotion = result[i + 1]
         pool = EMOTIONS.reject { |e| e == result[i - 1] || e == next_emotion }
@@ -162,6 +181,11 @@ module Video
         You assign character emotions to narration segments for a short IT history documentary video.
         The character is a friendly programmer mascot who visually reacts to each moment being described.
 
+        STRICT RULE — FORBIDDEN emotions. You may NOT use these unless the segment describes an
+        explicit, unambiguous catastrophe, mass failure, tragedy, or extreme outrage with no positive angle:
+        panic, nervous, crying, angry, furious, embarrassed, facepalm, thumbs_down, dead, disaster
+        When in any doubt, pick a positive or neutral emotion instead. Most IT history is positive.
+
         Available emotions (use exact spelling):
         normal_smile — relaxed smile, default storytelling
         happy — big smile, genuinely positive moment
@@ -171,28 +195,19 @@ module Video
         thinking — hand on chin, looking up; complex or speculative topic
         analyzing — carefully inspecting; technical deep-dive or detailed explanation
         neutral — expressionless; dry purely factual delivery
-        tired — sleepy, low energy; tedious or exhausting context
-        sleeping — asleep; something remarkably boring
         shocked — eyes wide, mouth open; genuinely surprising revelation
         mind_blown — "brain exploded"; paradigm shift, changed everything
-        panic — scared, hands on head; something went very wrong
-        nervous — awkward smile, sweat drop; uncertain or risky outcome
-        crying — tears; sad, tragic, or deeply disappointing event
-        angry — clearly angry; injustice or frustrating outcome
-        furious — maximum rage; extreme outrage
-        embarrassed — awkward smile; uncomfortable or unfortunate situation
         eye_roll — rolling eyes; obvious, overdue, or ironic development
-        facepalm — hand covering face; clearly wrong decision was made
         shrug — "I don't know"; still debated or nobody knows
         thumbs_up — success; clear achievement or positive result
-        thumbs_down — failure; clear setback or negative result
         victory — celebrating; major win or landmark moment
-        dead — comedic "I'm dead" reaction to absurdity
         progress — happy with results; gradual step forward
-        disaster — disappointed; things collapsed or went badly
         idea — lightbulb moment; breakthrough or insight
         coding — focused at the computer; intense technical work
         coffee — exhausted programmer with coffee; long hard effort
+        tired — sleepy, low energy; tedious or exhausting context
+        sleeping — asleep; something remarkably boring
+        the_first_in_history — awe and pride; this is a historic first, a pioneering moment
 
         Full transcript (actual speech):
         #{transcript}
@@ -201,7 +216,8 @@ module Video
         #{numbered_segments}
 
         Rules:
-        - NEVER repeat the same emotion for two consecutive segments — always switch
+        - Each entry is a ~15-second window; assign exactly one emotion per entry
+        - Never use the same emotion for two consecutive entries — always vary
         - Default to normal_smile for calm historical narration
         - Return ONLY a JSON array of emotion strings, one per segment, in order
         - Example for 4 segments: ["normal_smile", "excited", "mind_blown", "thumbs_up"]

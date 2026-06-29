@@ -32,14 +32,14 @@
       "start": 7.5,
       "duration": 5.0,
       "text": "29 июня в истории",
-      "emotion": "normal_smile"
+      "emotion": "excited"
     },
     {
       "id": "fact",
       "start": 12.5,
       "duration": 5.0,
       "text": "IT: опубликован первый",
-      "emotion": "happy"
+      "emotion": "excited"
     },
     {
       "id": "fact",
@@ -53,84 +53,84 @@
       "start": 22.5,
       "duration": 5.0,
       "text": "В 1970 году",
-      "emotion": "confident"
+      "emotion": "thinking"
     },
     {
       "id": "fact",
       "start": 27.5,
       "duration": 5.0,
       "text": "вышел RFC 54 —",
-      "emotion": "idea"
+      "emotion": "thinking"
     },
     {
       "id": "fact",
       "start": 32.5,
       "duration": 5.0,
       "text": "документ с описанием",
-      "emotion": "analyzing"
+      "emotion": "thinking"
     },
     {
       "id": "fact",
       "start": 37.5,
       "duration": 5.0,
       "text": "Network Control Protocol, предшественника",
-      "emotion": "facepalm"
+      "emotion": "analyzing"
     },
     {
       "id": "fact",
       "start": 42.5,
       "duration": 5.0,
       "text": "TCP/IP. Важно, что",
-      "emotion": "thinking"
+      "emotion": "analyzing"
     },
     {
       "id": "fact",
       "start": 47.5,
       "duration": 5.0,
       "text": "его сделали открытым предложением",
-      "emotion": "mischievous"
+      "emotion": "analyzing"
     },
     {
       "id": "fact",
       "start": 52.5,
       "duration": 5.0,
       "text": "для обсуждения. Так",
-      "emotion": "neutral"
+      "emotion": "confident"
     },
     {
       "id": "fact",
       "start": 57.5,
       "duration": 5.0,
       "text": "родилась традиция публичных стандартов,",
-      "emotion": "progress"
+      "emotion": "confident"
     },
     {
       "id": "fact",
       "start": 62.5,
       "duration": 5.0,
       "text": "которая до сих",
-      "emotion": "normal_smile"
+      "emotion": "confident"
     },
     {
       "id": "fact",
       "start": 67.5,
       "duration": 5.0,
       "text": "пор лежит в основе",
-      "emotion": "mischievous"
+      "emotion": "happy"
     },
     {
       "id": "fact",
       "start": 72.5,
       "duration": 5.0,
       "text": "всех современных интернет-технологий",
-      "emotion": "normal_smile"
+      "emotion": "happy"
     },
     {
       "id": "fact",
       "start": 77.5,
       "duration": 5.0,
       "text": "и протоколов. Подписывайтесь на",
-      "emotion": "thumbs_down"
+      "emotion": "happy"
     },
     {
       "id": "fact",
@@ -144,7 +144,7 @@
       "start": 87.5,
       "duration": 5.0,
       "text": "— ссылка в описании.",
-      "emotion": "coding"
+      "emotion": "normal_smile"
     },
     {
       "id": "cta",
