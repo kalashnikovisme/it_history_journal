@@ -5,6 +5,7 @@ class FactsScene {
     this.config = config;
     this.facts = (config.scenes || []).filter(s => s.id === 'fact' && s.emotion);
     this.currentFactIdx = -1;
+    this.currentEmotion = null;
     this._active = false;
     this.el = null;
     this.emotionImg = null;
@@ -68,7 +69,11 @@ class FactsScene {
     this.currentFactIdx = activeIdx;
 
     if (activeIdx !== -1) {
-      this._setEmotion(this.facts[activeIdx].emotion, activeIdx);
+      const emotion = this.facts[activeIdx].emotion;
+      if (emotion !== this.currentEmotion) {
+        this.currentEmotion = emotion;
+        this._setEmotion(emotion, activeIdx);
+      }
     }
   }
 
