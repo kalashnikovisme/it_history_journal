@@ -1,0 +1,107 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/ru/jun/30/bell_labs_announced_transistor/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 61.541633000000004
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.0,
+    "text": "30 июня в истории IT:",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 12.5,
+    "duration": 5.0,
+    "text": "впервые миру показали транзистор.",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 17.5,
+    "duration": 5.0,
+    "text": "В 1948 году Bell Labs",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 22.5,
+    "duration": 5.0,
+    "text": "провела в Нью-Йорке пресс-конференцию, на",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 27.5,
+    "duration": 5.0,
+    "text": "которой продемонстрировала новый полупроводниковый",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 32.5,
+    "duration": 5.0,
+    "text": "прибор как компактную альтернативу электронным",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 37.5,
+    "duration": 5.0,
+    "text": "лампам. Это открытие дало старт",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 42.5,
+    "duration": 5.0,
+    "text": "массовому развитию электроники. Уже",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 47.5,
+    "duration": 5.0,
+    "text": "в 1950-х транзисторы стали основой",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 52.5,
+    "duration": 5.0,
+    "text": "радиоприёмников, телефонов и первых компьютеров.",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "fact",
+    "start": 57.5,
+    "duration": 5.0,
+    "text": "Подписывайтесь на IT History",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "fact",
+    "start": 62.5,
+    "duration": 5.0,
+    "text": "Journal — ссылка в описании.",
+    "emotion": "normal_smile"
+  },
+  {
+    "id": "cta",
+    "start": 64.042,
+    "duration": 5.0
+  }
+]

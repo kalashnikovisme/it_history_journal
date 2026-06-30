@@ -1,0 +1,54 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/en/jun/30/bell_labs_announced_transistor/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 21.756
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.0,
+    "text": "June 30 in the History of Computer Science: on this day in 1948, Bell"
+  },
+  {
+    "id": "fact",
+    "start": 12.5,
+    "duration": 5.0,
+    "text": "Labs publicly unveiled the transistor in New York City. Developed by Bardeen, Brattain,"
+  },
+  {
+    "id": "fact",
+    "start": 17.5,
+    "duration": 5.0,
+    "text": "and Shockley, this tiny semiconductor device offered a reliable alternative to bulky vacuum tubes."
+  },
+  {
+    "id": "fact",
+    "start": 22.5,
+    "duration": 5.0,
+    "text": "Its introduction launched a new era in electronics, enabling smaller, more efficient radios"
+  },
+  {
+    "id": "fact",
+    "start": 27.5,
+    "duration": 5.0,
+    "text": "and computers. The transistor soon became the foundation for integrated circuits and modern computing."
+  },
+  {
+    "id": "cta",
+    "start": 29.256,
+    "duration": 6.504,
+    "audio": "video/audio/samples/tiktok.mp3"
+  }
+]

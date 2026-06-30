@@ -1,0 +1,6 @@
+{
+  "model": "tts-1",
+  "input": "June 30 in the History of Computer Science: on this day in 1948, Bell Labs publicly unveiled the transistor in New York City. Developed by Bardeen, Brattain, and Shockley, this tiny semiconductor device offered a reliable alternative to bulky vacuum tubes. Its introduction launched a new era in electronics, enabling smaller, more efficient radios and computers. The transistor soon became the foundation for integrated circuits and modern computing.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

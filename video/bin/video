@@ -188,14 +188,17 @@ begin
   end
 
   # EmotionDetect — transcribe narration.mp3, align to scene windows, inject emotions
-  puts "[video] Detecting emotions...".cyan
-  detector = Video::EmotionDetect.new(paths, client)
-  if detector.detect(force: force_emotions || force_scenes)
-    puts "[video] Emotions detected and injected into scene files.".green
-  else
-    puts "[video] Emotions: using cached annotations.".yellow
+  # Skipped for English articles (no mascot character in EN videos)
+  if info[:lang] != "en"
+    puts "[video] Detecting emotions...".cyan
+    detector = Video::EmotionDetect.new(paths, client)
+    if detector.detect(force: force_emotions || force_scenes)
+      puts "[video] Emotions detected and injected into scene files.".green
+    else
+      puts "[video] Emotions: using cached annotations.".yellow
+    end
+    detector.validate_emotion_images!
   end
-  detector.validate_emotion_images!
 
   youtube_generator = Video::YoutubeMetadataGenerator.new(info, paths, client)
   youtube, youtube_reused = youtube_generator.generate(narration, force: force_youtube)

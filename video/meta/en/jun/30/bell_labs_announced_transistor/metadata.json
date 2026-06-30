@@ -1,0 +1,91 @@
+{
+  "lang": "en",
+  "month_abbr": "jun",
+  "month_num": 6,
+  "month_name": "June",
+  "day": 30,
+  "year": "1948",
+  "slug": "bell-labs-announced-transistor",
+  "slug_dir": "bell_labs_announced_transistor",
+  "title": "The Invention That Changed Electronics: Bell Labs Unveils the Transistor (1948)",
+  "date_display": "June 30, 1948",
+  "date_month_day": "June 30",
+  "content_md": "On June 30, 1948, Bell Labs held a press conference in New York City to officially introduce the transistor to the world. Although the first working prototype had been demonstrated in December 1947, this public announcement marked the beginning of the transistor's industrial history.\n\nDuring the presentation, Bell Labs research director Ralph Bown introduced the new semiconductor device, and journalists were shown how it could amplify electrical signals. The transistor was presented as a compact, more reliable alternative to vacuum tubes.\n\nThe device was developed by John Bardeen, Walter Brattain, and William Shockley. A few years later, the three scientists were awarded the Nobel Prize in Physics for their work on the invention of the transistor.\n\nFollowing the public announcement, Bell Labs began licensing the technology to other companies, accelerating its adoption throughout the electronics industry. During the 1950s, transistors gradually replaced vacuum tubes in radios, telephone equipment, and computers, eventually becoming the foundation of integrated circuits and modern microprocessors.\n",
+  "video_cover_path": "articles/en/jun/30/bell_labs_announced_transistor/video-cover.png",
+  "folder": "articles/en/jun/30/bell_labs_announced_transistor",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 21.756
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.0,
+      "text": "June 30 in the History of Computer Science: on this day in 1948, Bell"
+    },
+    {
+      "id": "fact",
+      "start": 12.5,
+      "duration": 5.0,
+      "text": "Labs publicly unveiled the transistor in New York City. Developed by Bardeen, Brattain,"
+    },
+    {
+      "id": "fact",
+      "start": 17.5,
+      "duration": 5.0,
+      "text": "and Shockley, this tiny semiconductor device offered a reliable alternative to bulky vacuum tubes."
+    },
+    {
+      "id": "fact",
+      "start": 22.5,
+      "duration": 5.0,
+      "text": "Its introduction launched a new era in electronics, enabling smaller, more efficient radios"
+    },
+    {
+      "id": "fact",
+      "start": 27.5,
+      "duration": 5.0,
+      "text": "and computers. The transistor soon became the foundation for integrated circuits and modern computing."
+    },
+    {
+      "id": "cta",
+      "start": 29.256,
+      "duration": 7.296
+    }
+  ],
+  "total_duration": 36.552,
+  "scene_count": 9,
+  "youtube": {
+    "title": "How the Transistor Debut at Bell Labs Sparked Modern Electronics (1948)",
+    "description": "On June 30, 1948, Bell Labs introduced the world to the transistor—a compact, reliable alternative to vacuum tubes. Developed by Bardeen, Brattain, and Shockley, this invention transformed electronics, paving the way for smaller radios, computers, and eventually integrated circuits. Discover how this breakthrough changed technology forever. For more IT history, visit IT History Journal.\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme\n#transistor #computinghistory #electronics",
+    "tags": [
+      "transistor",
+      "Bell Labs",
+      "computer history",
+      "electronics",
+      "John Bardeen",
+      "Walter Brattain",
+      "William Shockley",
+      "vacuum tube",
+      "integrated circuits",
+      "microprocessor",
+      "1948",
+      "technology history",
+      "Nobel Prize",
+      "semiconductors",
+      "radio history"
+    ]
+  }
+}
