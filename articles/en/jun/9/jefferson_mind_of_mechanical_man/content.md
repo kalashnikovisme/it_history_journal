@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "June 9, 1949: Exploring the Limits of Machine Intelligence"
+title: "June 9, 1949: The Origins of Machine Consciousness Debate"
 date: "June 9, 1949"
-excerpt: "Explore Geoffrey Jefferson's 1949 insights on machine intelligence and the enduring debate about whether machines can truly think or understand."
-updated_at: "2026-06-20"
+excerpt: "Discover Geoffrey Jefferson’s 1949 insights on machine intelligence, consciousness, and the enduring debate about whether machines can truly think."
+updated_at: "2026-06-30"
 ru: "/ru/jun/9/jefferson-mind-of-mechanical-man"
 ---
 "Can machines think?" That question has been on everyone's mind over the last few years. The rise and widespread adoption of neural networks has sparked large-scale discussions about intelligence, the nature of consciousness, emotions, and many other related topics.

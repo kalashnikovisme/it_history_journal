@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Alan Turing: The Father of Modern Computing and His Legacy"
+title: "Alan Turing: Pioneering Computing, WWII Codebreaking, and Biological Innovation"
 date: "June 23, 1912"
-excerpt: "Discover Alan Turing’s life, groundbreaking work in computing, cryptography, AI, and his lasting legacy in technology today."
-updated_at: "2026-06-23"
+excerpt: "Explore Alan Turing's groundbreaking contributions to computing, cryptography, AI, and biology, and learn how his legacy shapes technology today."
+updated_at: "2026-06-30"
 ru: "/ru/jun/23/alan-turing-was-born"
 sources:
   - title: "Alan Turing — King's College Cambridge"

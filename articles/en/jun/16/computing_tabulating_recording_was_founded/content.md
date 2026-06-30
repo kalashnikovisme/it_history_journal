@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "The Birth of IBM: How the Computing-Tabulating-Recording Company Laid Its Foundations in 1911"
+title: "How IBM Began: The 1911 Formation of the Computing-Tabulating-Recording Company"
 date: "June 16, 1911"
-excerpt: "Discover how IBM was founded in 1911 as CTR, shaping the future of computing technology and industry."
-updated_at: "2026-06-20"
+excerpt: "Learn how IBM was founded in 1911 as CTR, setting the stage for a legacy that transformed the technology industry."
+updated_at: "2026-06-30"
 ru: "/ru/jun/16/computing-tabulating-recording-was-founded"
 ---
 IBM is, without exaggeration, one of the greatest companies in the history of information technology. Although ordinary users have rarely interacted directly with its products — which is fitting given the name International Business Machines — its influence on the development of the entire industry is hard to overstate.

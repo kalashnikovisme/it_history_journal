@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Claude Shannon: The Father of Information Theory Born April 30, 1916"
+title: "Celebrating Claude Shannon: The Innovator Who Defined the Bit and Shaped Digital Communication"
 date: "April 30, 1916"
-excerpt: "Discover Claude Shannon's life and groundbreaking work in information theory, shaping digital communication and data encoding."
-updated_at: "2026-06-20"
+excerpt: "Explore Claude Shannon’s groundbreaking work in information theory, the invention of the bit, and his impact on digital communication and computing."
+updated_at: "2026-06-30"
 ru: "/ru/apr/30/claude-shannon-was-born"
 ---
 Claude Shannon was a mathematician and the author of information theory. He showed that information can be measured — that it can be encoded, compressed, transmitted, and restored. People had practical ideas about this before him, but Shannon turned it into mathematics.

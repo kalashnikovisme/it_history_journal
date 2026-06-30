@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Douglas Engelbart: The Pioneer Who Changed Computing Forever"
+title: "Douglas Engelbart: The Visionary Behind Modern Computing"
 date: "January 30, 1925"
-excerpt: "Discover how Douglas Engelbart’s 1968 demo revolutionized computing with mouse, hypertext, and multi-window interfaces. A tech pioneer’s legacy."
-updated_at: "2026-06-20"
+excerpt: "Discover Douglas Engelbart’s 1968 demo showcasing the mouse, hypertext, and multi-window interfaces—technologies that revolutionized computing."
+updated_at: "2026-06-30"
 ru: "/ru/jan/30/douglas-engelbart-was-born"
 ---
 If you think Steve Jobs or Bill Gates invented the modern computer, you’re mistaken. They packaged and sold ideas that Douglas Engelbart had already shown to the world back in the 1960s and 70s.
