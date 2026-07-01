@@ -1,0 +1,58 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/ru/jul/02/bittorrent_protocol_was_introduced/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 29.802857000000003
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.0,
+    "text": "2 июля в истории IT: впервые представлен протокол BitTorrent, позволяющий миллионам пользователей",
+    "emotion": "excited"
+  },
+  {
+    "id": "fact",
+    "start": 12.5,
+    "duration": 5.0,
+    "text": "обмениваться файлами напрямую друг с другом. В 2001 году Брэм Коэн выпускает",
+    "emotion": "excited"
+  },
+  {
+    "id": "fact",
+    "start": 17.5,
+    "duration": 5.0,
+    "text": "первую версию клиента и публикует описание протокола. BitTorrent сделал возможной быструю и",
+    "emotion": "excited"
+  },
+  {
+    "id": "fact",
+    "start": 22.5,
+    "duration": 5.0,
+    "text": "масштабируемую передачу больших данных без мощных серверов и лег в основу многих",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 27.5,
+    "duration": 5.0,
+    "text": "современных децентрализованных технологий. Подписывайтесь на IT History Journal — ссылка в описании.",
+    "emotion": "happy"
+  },
+  {
+    "id": "cta",
+    "start": 32.303,
+    "duration": 5.0
+  }
+]

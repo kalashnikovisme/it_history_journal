@@ -1,0 +1,6 @@
+{
+  "model": "tts-1",
+  "input": "July 2 in the History of Computer Science: the BitTorrent protocol is introduced, enabling users to share files not from a central server, but directly with each other. On this day in 2001, Bram Cohen released BitTorrent and announced it to the world. This decentralized approach made large-scale file distribution efficient and accessible, influencing not just open-source projects but the design of peer-to-peer systems for decades to come.",
+  "voice": "onyx",
+  "response_format": "mp3"
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/en/jul/02/bittorrent_protocol_was_introduced/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 20.628
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.0,
+    "text": "July 2 in the History of Computer Science: the BitTorrent protocol is introduced, enabling"
+  },
+  {
+    "id": "fact",
+    "start": 12.5,
+    "duration": 5.0,
+    "text": "users to share files not from a central server, but directly with each"
+  },
+  {
+    "id": "fact",
+    "start": 17.5,
+    "duration": 5.0,
+    "text": "other. On this day in 2001, Bram Cohen released BitTorrent and announced it to"
+  },
+  {
+    "id": "fact",
+    "start": 22.5,
+    "duration": 5.0,
+    "text": "the world. This decentralized approach made large-scale file distribution efficient and accessible, influencing"
+  },
+  {
+    "id": "fact",
+    "start": 27.5,
+    "duration": 5.0,
+    "text": "not just open-source projects but the design of peer-to-peer systems for decades to come."
+  },
+  {
+    "id": "cta",
+    "start": 28.128,
+    "duration": 6.504,
+    "audio": "video/audio/samples/tiktok.mp3"
+  }
+]
