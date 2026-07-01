@@ -1,0 +1,91 @@
+{
+  "lang": "en",
+  "month_abbr": "jul",
+  "month_num": 7,
+  "month_name": "July",
+  "day": 1,
+  "year": "1975",
+  "slug": "altair-basic-2-was-released",
+  "slug_dir": "altair_basic_2_was_released",
+  "title": "Altair BASIC 2.0: Microsoft's First Commercial Software Product (1975)",
+  "date_display": "July 1, 1975",
+  "date_month_day": "July 1",
+  "content_md": "On July 1, 1975, MITS officially began shipping Altair BASIC 2.0, the first commercial version of the BASIC interpreter for the Altair 8800. The software was developed by Bill Gates, Paul Allen, and Monte Davidoff. The release marked the debut of Micro-Soft's (the original name of Microsoft) first major software product and one of the earliest examples of commercial software for microcomputers.\n\nWork on BASIC had begun months earlier, but only a preliminary version was initially available. Gates and Allen completed the first version on February 1, 1975, and demonstrated it to MITS founder Ed Roberts in March. Following the successful demonstration, MITS agreed to distribute the interpreter alongside the Altair 8800.\n\nIn the spring of 1975, MITS embarked on a promotional tour across the United States with its MITS Mobile demonstration van. An early version of BASIC was used during these demonstrations. Around that time, a member of the Homebrew Computer Club made an unauthorized copy of the program's paper tape. The copies quickly spread among hobbyists, becoming one of the earliest major incidents of software piracy in the personal computer era.\n\nThe commercial release of Altair BASIC 2.0, however, differed significantly from the prerelease version. Over the following months, Gates, Allen, and Monte Davidoff extensively refined the software. They reduced its memory requirements, optimized the interpreter, and replaced longer commands with more compact ones. While the early version required at least 6 KB of RAM, the commercial release became available in both 4 KB and 8 KB editions.\n\nMITS officially began shipping Altair BASIC 2.0 on July 1, although the formal written agreement between the developers and the company was not signed until July 22. Under the terms of the contract, the Micro-Soft partnership received an advance payment of $3,000, followed by royalties for every copy sold. MITS was granted exclusive worldwide distribution rights for the interpreter for ten years.\n\nAltair BASIC was distributed on both paper tape and audio cassette. One of the surviving pieces of evidence for the release date is an original paper tape labeled **\"BASIC 8K without cassette\"**, dated **July 2, 1975**.\n\nDevelopment took place on a DEC PDP-10 minicomputer using the MACRO-10 assembler, while the interpreter itself was written in Intel 8080 assembly language. One of its key technical features was a routine called **CRUNCH**, which automatically converted BASIC keywords into compact one-byte tokens. This reduced memory usage and improved execution speed. Monte Davidoff was responsible for implementing the floating-point arithmetic package.\n\nSome sources claim that Altair BASIC 2.0 was not released until October 1975. Our research indicates that this confusion stems not from the actual release date but from a later reorganization of MITS's software business. That autumn, the company revised its pricing, began actively promoting Extended BASIC, and prepared software for the new Altair 680 computer. The commercial debut of Altair BASIC 2.0 itself took place on **July 1, 1975**.\n\n## Sources\n\n* [Microsoft Timeline (archived via Wayback Machine)](https://web.archive.org/web/20080514211138/http://www.thocp.net/companies/microsoft/microsoft_company.htm)\n* [Bill Gates and Paul Allen Sign a Licensing Agreement with MITS — Computing History](https://www.computinghistory.org.uk/det/5946/Bill-Gates-and-Paul-Allen-sign-a-licensing-agreement-with-MITS/)\n",
+  "video_cover_path": "articles/en/jul/1/altair_basic_2_was_released/video-cover.png",
+  "folder": "articles/en/jul/1/altair_basic_2_was_released",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 22.236
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.0,
+      "text": "July 1 in the History of Computer Science: On this day in 1975,"
+    },
+    {
+      "id": "fact",
+      "start": 12.5,
+      "duration": 5.0,
+      "text": "MITS began shipping Altair BASIC 2.0—the first commercial software product from the young company"
+    },
+    {
+      "id": "fact",
+      "start": 17.5,
+      "duration": 5.0,
+      "text": "then called Micro-Soft. Written by Bill Gates, Paul Allen, and Monte Davidoff, this"
+    },
+    {
+      "id": "fact",
+      "start": 22.5,
+      "duration": 5.0,
+      "text": "BASIC interpreter made programming accessible to Altair 8800 owners, establishing commercial software for microcomputers."
+    },
+    {
+      "id": "fact",
+      "start": 27.5,
+      "duration": 5.0,
+      "text": "It marked the beginning of an industry that would soon transform personal computing."
+    },
+    {
+      "id": "cta",
+      "start": 29.736,
+      "duration": 7.296
+    }
+  ],
+  "total_duration": 37.032,
+  "scene_count": 9,
+  "youtube": {
+    "title": "Altair BASIC 2.0: Microsoft’s First Software Release Changed Computing (1975)",
+    "description": "On July 1, 1975, MITS began shipping Altair BASIC 2.0—the first commercial software product from the then-new Micro-Soft, developed by Bill Gates, Paul Allen, and Monte Davidoff. This BASIC interpreter made programming accessible to Altair 8800 owners and marked the start of commercial software for microcomputers, laying the groundwork for the modern software industry. Discover how a small team’s work on Altair BASIC helped launch Microsoft and shaped personal computing history. \n\nLearn more with IT History Journal.\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme\n#Microsoft #Altair8800 #ComputerHistory",
+    "tags": [
+      "Altair BASIC",
+      "Microsoft history",
+      "Bill Gates",
+      "Paul Allen",
+      "Monte Davidoff",
+      "MITS",
+      "Altair 8800",
+      "computer history",
+      "software history",
+      "BASIC interpreter",
+      "1975 technology",
+      "personal computing",
+      "Homebrew Computer Club",
+      "software piracy",
+      "DEC PDP-10"
+    ]
+  }
+}

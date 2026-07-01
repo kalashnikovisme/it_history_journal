@@ -299,6 +299,30 @@ body {
   overflow: visible;
 }
 
+.fact-bottom.has-cta .fact-title {
+  flex: 0 0 calc(50% - 24px);
+}
+
+.fact-cta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 0 8px;
+}
+
+.fact-cta-line {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-accent-muted);
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
 .fact-emotion-img {
   height: 720px;
   width: auto;

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/ru/jul/01/altair_basic_2_was_released/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 44.300816
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.0,
+    "text": "1 июля в истории IT — именно в",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 12.5,
+    "duration": 5.0,
+    "text": "этот день в 1975 году компания MITS",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 17.5,
+    "duration": 5.0,
+    "text": "начала официальные поставки Altair BASIC 2.0, первой коммерческой",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 22.5,
+    "duration": 5.0,
+    "text": "программы Micro-Soft для микрокомпьютеров. Этот релиз стал",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 27.5,
+    "duration": 5.0,
+    "text": "отправной точкой для коммерческого программного обеспечения и партнерства",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 32.5,
+    "duration": 5.0,
+    "text": "Билла Гейтса и Пола Аллена. Вскоре Micro-Soft",
+    "emotion": "confident"
+  },
+  {
+    "id": "fact",
+    "start": 37.5,
+    "duration": 5.0,
+    "text": "стала ведущим игроком на рынке ПО. Подписывайтесь на",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 42.5,
+    "duration": 5.0,
+    "text": "IT History Journal — ссылка в описании.",
+    "emotion": "happy"
+  },
+  {
+    "id": "cta",
+    "start": 46.801,
+    "duration": 5.0
+  }
+]

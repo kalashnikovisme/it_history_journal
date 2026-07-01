@@ -209,9 +209,10 @@ begin
 
   # Render: narration + CTA in one pass; Russian has no CTA sample so video ends with narration
   total_recording_duration = info[:lang] == "ru" ? duration : duration + max_sample_duration
+  en_cta_text = info[:lang] == "en" ? "IT History Journal\nhistory.purple-magic.com" : nil
   puts "[video] Rendering browser frames (#{total_recording_duration.round(1)}s total)...".cyan
   renderer = Video::Renderer.new(info, paths, verbose: verbose)
-  renderer.render(scenes, total_recording_duration)
+  renderer.render(scenes, total_recording_duration, cta_text: en_cta_text)
   puts "[video] Browser recording saved to #{paths.browser_recording_webm}".green
 
   puts "[video] Composing platform videos...".cyan

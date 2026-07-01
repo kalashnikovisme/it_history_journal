@@ -32,7 +32,7 @@ module Video
         File.exist?(@paths.platform_scenes_json(p))
       end
 
-      if platform_files_exist && !force
+      if platform_files_exist && !force && audio_refs_valid?
         base = JSON.parse(File.read(@paths.platform_scenes_json("instagram")))
         return [base, true]
       end
@@ -67,6 +67,16 @@ module Video
     end
 
     private
+
+    def audio_refs_valid?
+      FfmpegComposer::PLATFORMS.keys.all? do |platform|
+        path = @paths.platform_scenes_json(platform)
+        next false unless File.exist?(path)
+        JSON.parse(File.read(path))
+          .select { |s| s["audio"] }
+          .all?   { |s| File.exist?(s["audio"]) }
+      end
+    end
 
     def split_sentences(text)
       text

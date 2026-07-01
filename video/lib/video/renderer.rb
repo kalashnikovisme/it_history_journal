@@ -11,12 +11,13 @@ module Video
     end
 
     def render(scenes, audio_duration, port: nil, output_path: @paths.browser_recording_webm,
-               config_path: @paths.render_config_json)
+               config_path: @paths.render_config_json, cta_text: nil)
       @paths.ensure_dir!
       ensure_node!
       install_renderer_deps
 
       config = build_render_config(scenes, audio_duration, port)
+      config["cta_text"] = cta_text if cta_text
       File.write(config_path, JSON.pretty_generate(config))
 
       record_js = File.join(RENDERER_DIR, "record.js")

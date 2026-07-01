@@ -68,7 +68,7 @@ module Video
           scenes.map { |s| s["start"].to_f + s["duration"].to_f }.max
         end
         output = @paths.platform_mp4(platform)
-        n              = audio_segments.size
+        n      = audio_segments.size
 
         args = ["ffmpeg", "-y"]
         args += ["-loglevel", "quiet"] unless @verbose

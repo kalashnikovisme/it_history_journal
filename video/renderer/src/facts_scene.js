@@ -20,13 +20,17 @@ class FactsScene {
       ? `<img class="fact-cover-img" src="${this._esc(this.config.cover_url)}" alt="" />`
       : `<div class="fact-cover-placeholder"></div>`;
 
+    const ctaText = this.config.cta_text || null;
+    const ctaLines = ctaText ? ctaText.split('\n') : [];
+    const rightSlot = ctaText
+      ? `<div class="fact-cta">${ctaLines.map(l => `<span class="fact-cta-line">${this._esc(l)}</span>`).join('')}</div>`
+      : `<div class="fact-emotion-wrap"><img class="fact-emotion-img" src="" alt="" /></div>`;
+
     el.innerHTML = `
       <div class="fact-cover-wrap">${coverHtml}</div>
-      <div class="fact-bottom">
+      <div class="fact-bottom${ctaText ? ' has-cta' : ''}">
         <div class="fact-title">${this._esc(this.config.title || '')}</div>
-        <div class="fact-emotion-wrap">
-          <img class="fact-emotion-img" src="" alt="" />
-        </div>
+        ${rightSlot}
       </div>
     `;
 
