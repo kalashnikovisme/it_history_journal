@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "March 1, 1960: The Birth of LISP and Its Revolutionary Impact on AI"
+title: "How LISP Pioneered AI Programming: A Historic Perspective from 1960"
 date: "March 1, 1960"
-excerpt: "Discover the origins of LISP, the first AI programming language, published on March 1, 1960, and its lasting influence on computing."
-updated_at: "2026-06-20"
+excerpt: "Discover how LISP, introduced on March 1, 1960, revolutionized AI and programming with symbolic processing and recursion, shaping modern computing."
+updated_at: "2026-07-01"
 ---
 On March 1, 1960, John McCarthy published the first official description of the LISP programming language.
 

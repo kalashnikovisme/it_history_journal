@@ -2,7 +2,7 @@
 author: "Pasha Kalashnikov"
 title: "Altair BASIC 2.0: Microsoft's First Commercial Software Product (1975)"
 date: "July 1, 1975"
-excerpt: "On July 1, 1975, MITS began shipping Altair BASIC 2.0 — the first commercial BASIC interpreter for microcomputers, developed by Bill Gates, Paul Allen, and Monte Davidoff."
+excerpt: "Discover how Altair BASIC 2.0 in 1975 marked Microsoft's first commercial software and revolutionized microcomputer programming."
 updated_at: "2026-07-01"
 ru: "/ru/jul/1/altair-basic-2-was-released"
 ---

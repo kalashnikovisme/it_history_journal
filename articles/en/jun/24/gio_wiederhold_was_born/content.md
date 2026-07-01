@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Gio Wiederhold and the Evolution of Data Integration and Semantic Technologies"
+title: "Gio Wiederhold: Advancing Data Integration, Semantics, and AI"
 date: "June 24, 1931"
-excerpt: "Discover Gio Wiederhold’s pioneering work on databases, semantic integration, and AI, shaping modern information systems and data interoperability."
-updated_at: "2026-06-24"
+excerpt: "Explore Gio Wiederhold’s pioneering role in data integration, semantic technologies, and AI, shaping modern information systems and interoperability."
+updated_at: "2026-07-01"
 ru: "/ru/jun/24/gio-wiederhold-was-born"
 sources:
   - title: "Gio Wiederhold — SIGMOD Blog"

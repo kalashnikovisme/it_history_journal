@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "The Rise and Fall of FTX: A Complete History from 2019 to Bankruptcy"
+title: "FTX's Rapid Rise and Catastrophic Collapse: A 2019-2022 Crypto Saga"
 date: "May 1, 2019"
-excerpt: "Explore FTX’s rapid growth, innovative crypto tools, and its shocking collapse in 2022, leading to criminal charges against its leadership."
-updated_at: "2026-06-20"
+excerpt: "Trace FTX's explosive growth and sudden fall from 2019 to 2022, revealing fraud, legal charges, and lessons from one of crypto's biggest scandals."
+updated_at: "2026-07-01"
 ru: "/ru/may/1/ftx-was-founded"
 ---
 FTX was one of the most unusual IT companies in history. It stood out for its incredibly fast rise: its founder, Sam Bankman-Fried, became a billionaire in less than two years after the company was founded. It stood out for its advanced and versatile crypto trading tools, some of which appeared there for the first time. It stood out for the people who ran it — a group of young, ambitious professionals living together in a luxury penthouse in the Bahamas. And it also stood out for its sudden and massive collapse, which unfolded over just a few days, wiping out billions of dollars belonging to investors and users and leading to criminal charges against the company's leadership.

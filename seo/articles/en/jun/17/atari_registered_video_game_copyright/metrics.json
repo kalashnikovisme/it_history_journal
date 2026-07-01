@@ -7,5 +7,14 @@
       "avg_duration": 21.1610155
     },
     "gsc": []
+  },
+  {
+    "date": "2026-07-01",
+    "ga4": {
+      "views": 7,
+      "bounce_rate": 0.25,
+      "avg_duration": 21.1610155
+    },
+    "gsc": []
   }
 ]

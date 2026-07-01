@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Atari’s 1980 Legal Breakthrough: Recognizing Video Games as Creative Works"
+title: "Atari’s 1980 Legal Milestone: Defining Video Games as Creative Works"
 date: "June 17, 1980"
 excerpt: "In 1980, Atari's copyright registration for key games established legal protections, transforming video games into recognized creative works."
-updated_at: "2026-06-24"
+updated_at: "2026-07-01"
 ru: "/ru/jun/17/atari-registered-video-game-copyright"
 ---
 On June 17, 1980, Atari registered copyrights for the games *Asteroids* and *Lunar Lander*. Today that may sound like a routine legal formality, but at the time it was something unusual for the entire video game industry.

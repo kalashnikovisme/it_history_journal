@@ -1,9 +1,9 @@
 ---
 author: "Pasha Kalashnikov"
-title: "Friedrich Bauer: Architect of Software Engineering and Compiler Innovation"
+title: "Friedrich Bauer: Pioneering Software Engineering and Compiler Design"
 date: "June 10, 1924"
-excerpt: "Explore Friedrich Bauer’s groundbreaking work in software engineering, ALGOL development, and cryptography, shaping modern computing and compiler design."
-updated_at: "2026-06-20"
+excerpt: "Discover Friedrich Bauer’s contributions to software engineering, ALGOL, and cryptography, shaping key concepts in modern computing and compiler technology."
+updated_at: "2026-07-01"
 ru: "/ru/jun/10/friedrich-ludwig-bauer-was-born"
 ---
 Friedrich Ludwig Bauer was a German mathematician and one of the most influential European computer scientists of the postwar era. His name is far less well known than those of Turing or Dijkstra, yet many ideas that are now considered fundamental to programming are closely associated with his work.
