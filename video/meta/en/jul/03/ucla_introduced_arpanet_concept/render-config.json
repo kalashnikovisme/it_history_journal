@@ -1,0 +1,68 @@
+{
+  "language": "en",
+  "title": "UCLA Introduced the ARPANET Concept to the Public (1969)",
+  "date_display": "July 3, 1969",
+  "day": "3",
+  "month_name": "July",
+  "year": "1969",
+  "slug": "ucla-introduced-arpanet-concept",
+  "cover_filename": "video-cover.png",
+  "site_url": "history.purple-magic.com",
+  "cta_language": "en",
+  "total_duration": 35.472,
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0,
+      "audio": "video/output/en/jul/03/ucla_introduced_arpanet_concept/narration.mp3"
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 20.676
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.0,
+      "text": "July 3 in the History of Computer Science: On this day in 1969, UCLA"
+    },
+    {
+      "id": "fact",
+      "start": 12.5,
+      "duration": 5.0,
+      "text": "publicly announced it would host the first node of a nationwide computer network—ARPANET."
+    },
+    {
+      "id": "fact",
+      "start": 17.5,
+      "duration": 5.0,
+      "text": "This press release marked the world’s first public introduction to the idea of interconnected"
+    },
+    {
+      "id": "fact",
+      "start": 22.5,
+      "duration": 5.0,
+      "text": "computers. Funded by ARPA, this network would soon link major universities. Though little"
+    },
+    {
+      "id": "fact",
+      "start": 27.5,
+      "duration": 5.0,
+      "text": "noticed then, this announcement signaled the dawn of what would become the modern Internet."
+    },
+    {
+      "id": "cta",
+      "start": 28.176,
+      "duration": 6.504,
+      "audio": "video/audio/samples/instagram.mp3"
+    }
+  ],
+  "cta_text": "IT History Journal\nhistory.purple-magic.com"
+}

@@ -1,0 +1,91 @@
+{
+  "lang": "en",
+  "month_abbr": "jul",
+  "month_num": 7,
+  "month_name": "July",
+  "day": 3,
+  "year": "1969",
+  "slug": "ucla-introduced-arpanet-concept",
+  "slug_dir": "ucla_introduced_arpanet_concept",
+  "title": "UCLA Introduced the ARPANET Concept to the Public (1969)",
+  "date_display": "July 3, 1969",
+  "date_month_day": "July 3",
+  "content_md": "On this day, UCLA's Office of Public Information issued a press release titled:\n\n> **\"UCLA TO BE FIRST STATION IN NATIONWIDE COMPUTER NETWORK.\"**\n\nThe announcement explained that:\n\n* UCLA would become the first node of the new network;\n* the network would connect computers from different manufacturers and with different architectures;\n* the project was funded by ARPA;\n* the first phase of the network would become operational in the fall of 1969, linking UCLA, Stanford Research Institute, the University of California, Santa Barbara, and the University of Utah;\n* in the future, the network could grow into a large-scale communications system.\n\nParticularly remarkable was a statement by Professor Leonard Kleinrock, which turned out to be remarkably prophetic:\n\n> \"As of now, computer networks are still in their infancy, but as they grow up and become more sophisticated, we will probably see the spread of 'computer utilities' which, like present electric and telephone utilities, will service individual homes and offices across the country.\"\n\nKleinrock later wrote that this press release was effectively **the first public announcement of the coming Internet**, even though it attracted very little attention at the time.\n\n**July 3, 1969** was not the day ARPANET went live. Instead, it marked **the first official public announcement of the network's creation**. Since ARPANET became the direct predecessor of today's Internet, this announcement represents an important milestone in Internet history.\n\n## Sources\n\n* [The Forgotten Press Release That Announced the Birth of the Internet (Paleofuture)](https://paleofuture.com/blog/2023/11/17/the-forgotten-press-release-that-announced-the-impending-birth-of-the-internet-in-1969)\n* [Leonard Kleinrock — The Internet Rules of Engagement Then and Now (PDF)](https://www.lk.cs.ucla.edu/data/files/Kleinrock/The%20Internet%20Rules%20of%20Engagement%20Then%20and%20Now.pdf)\n",
+  "video_cover_path": "articles/en/jul/3/ucla_introduced_arpanet_concept/video-cover.png",
+  "folder": "articles/en/jul/3/ucla_introduced_arpanet_concept",
+  "scenes": [
+    {
+      "id": "calendar",
+      "start": 0.0,
+      "duration": 4.0
+    },
+    {
+      "id": "title_card",
+      "start": 4.0,
+      "duration": 3.5
+    },
+    {
+      "id": "cover",
+      "start": 7.5,
+      "duration": 20.676
+    },
+    {
+      "id": "fact",
+      "start": 7.5,
+      "duration": 5.0,
+      "text": "July 3 in the History of Computer Science: On this day in 1969, UCLA"
+    },
+    {
+      "id": "fact",
+      "start": 12.5,
+      "duration": 5.0,
+      "text": "publicly announced it would host the first node of a nationwide computer network—ARPANET."
+    },
+    {
+      "id": "fact",
+      "start": 17.5,
+      "duration": 5.0,
+      "text": "This press release marked the world’s first public introduction to the idea of interconnected"
+    },
+    {
+      "id": "fact",
+      "start": 22.5,
+      "duration": 5.0,
+      "text": "computers. Funded by ARPA, this network would soon link major universities. Though little"
+    },
+    {
+      "id": "fact",
+      "start": 27.5,
+      "duration": 5.0,
+      "text": "noticed then, this announcement signaled the dawn of what would become the modern Internet."
+    },
+    {
+      "id": "cta",
+      "start": 28.176,
+      "duration": 7.296
+    }
+  ],
+  "total_duration": 35.472,
+  "scene_count": 9,
+  "youtube": {
+    "title": "The 1969 UCLA Announcement That Predicted the Internet's Future",
+    "description": "On July 3, 1969, UCLA publicly announced it would host the first node of ARPANET, introducing the concept of a nationwide network of interconnected computers—what would become the Internet. This little-noticed press release, featuring a prophetic statement by Professor Leonard Kleinrock, marked a pivotal moment in computer science history. Discover more milestones with IT History Journal.\n\nhttps://history.purple-magic.com\nhttps://patreon.com/cw/kalashnikovisme\nhttps://paypal.me/kalashnikovisme\n\n#InternetHistory #ARPANET #UCLA",
+    "tags": [
+      "ARPANET",
+      "Internet history",
+      "UCLA",
+      "Leonard Kleinrock",
+      "computer networks",
+      "1969 technology",
+      "public announcement",
+      "IT history",
+      "Stanford Research Institute",
+      "University of Utah",
+      "University of California Santa Barbara",
+      "ARPA",
+      "computer science",
+      "networking milestones",
+      "technology milestones"
+    ]
+  }
+}

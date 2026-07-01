@@ -1,0 +1,86 @@
+[
+  {
+    "id": "calendar",
+    "start": 0.0,
+    "duration": 4.0,
+    "audio": "video/output/ru/jul/03/ucla_introduced_arpanet_concept/narration.mp3"
+  },
+  {
+    "id": "title_card",
+    "start": 4.0,
+    "duration": 3.5
+  },
+  {
+    "id": "cover",
+    "start": 7.5,
+    "duration": 47.174286
+  },
+  {
+    "id": "fact",
+    "start": 7.5,
+    "duration": 5.0,
+    "text": "3 июля в истории IT: впервые официально",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 12.5,
+    "duration": 5.0,
+    "text": "объявлено о создании ARPANET — предшественника",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 17.5,
+    "duration": 5.0,
+    "text": "интернета. В 1969 году UCLA опубликовал пресс-релиз",
+    "emotion": "the_first_in_history"
+  },
+  {
+    "id": "fact",
+    "start": 22.5,
+    "duration": 5.0,
+    "text": "о запуске первой в мире компьютерной сети,",
+    "emotion": "excited"
+  },
+  {
+    "id": "fact",
+    "start": 27.5,
+    "duration": 5.0,
+    "text": "объединяющей разные университеты и компьютеры. Это",
+    "emotion": "excited"
+  },
+  {
+    "id": "fact",
+    "start": 32.5,
+    "duration": 5.0,
+    "text": "стало отправной точкой для развития глобальных сетей,",
+    "emotion": "excited"
+  },
+  {
+    "id": "fact",
+    "start": 37.5,
+    "duration": 5.0,
+    "text": "которые позже легли в основу интернета, изменив",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 42.5,
+    "duration": 5.0,
+    "text": "взаимодействие людей и технологий. Подписывайтесь на",
+    "emotion": "happy"
+  },
+  {
+    "id": "fact",
+    "start": 47.5,
+    "duration": 5.0,
+    "text": "IT History Journal — ссылка в описании.",
+    "emotion": "happy"
+  },
+  {
+    "id": "cta",
+    "start": 49.674,
+    "duration": 5.0
+  }
+]
